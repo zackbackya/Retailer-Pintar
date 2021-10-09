@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class MainFrm
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class MainFrm
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(MainFrm))
         Me.menuStrip1 = New System.Windows.Forms.MenuStrip()
@@ -104,7 +104,6 @@ Partial Class MainFrm
         Me.sbOperator = New System.Windows.Forms.ToolStripStatusLabel()
         Me.ToolStripStatusLabel4 = New System.Windows.Forms.ToolStripStatusLabel()
         Me.ToolStripStatusLabel7 = New System.Windows.Forms.ToolStripStatusLabel()
-        Me.CobaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.menuStrip1.SuspendLayout()
         Me.toolStrip1.SuspendLayout()
         Me.StatusStrip1.SuspendLayout()
@@ -112,10 +111,11 @@ Partial Class MainFrm
         '
         'menuStrip1
         '
-        Me.menuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mnuReferensi, Me.mnuTransaksi, Me.mnuPengeluaran, Me.mnuLaporan, Me.mnuPengaturan, Me.mnuBantuan, Me.mnuKeluar, Me.CobaToolStripMenuItem})
+        Me.menuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mnuReferensi, Me.mnuTransaksi, Me.mnuPengeluaran, Me.mnuLaporan, Me.mnuPengaturan, Me.mnuBantuan, Me.mnuKeluar})
         Me.menuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.menuStrip1.Name = "menuStrip1"
-        Me.menuStrip1.Size = New System.Drawing.Size(1148, 24)
+        Me.menuStrip1.Padding = New System.Windows.Forms.Padding(8, 2, 0, 2)
+        Me.menuStrip1.Size = New System.Drawing.Size(1284, 24)
         Me.menuStrip1.TabIndex = 5
         Me.menuStrip1.Text = "menuStrip1"
         '
@@ -485,13 +485,13 @@ Partial Class MainFrm
         'mnuGantiUser
         '
         Me.mnuGantiUser.Name = "mnuGantiUser"
-        Me.mnuGantiUser.Size = New System.Drawing.Size(180, 22)
+        Me.mnuGantiUser.Size = New System.Drawing.Size(174, 22)
         Me.mnuGantiUser.Text = "Ganti User"
         '
         'mnuKeluarDariProgram
         '
         Me.mnuKeluarDariProgram.Name = "mnuKeluarDariProgram"
-        Me.mnuKeluarDariProgram.Size = New System.Drawing.Size(180, 22)
+        Me.mnuKeluarDariProgram.Size = New System.Drawing.Size(174, 22)
         Me.mnuKeluarDariProgram.Text = "Keluar dari Aplikasi"
         '
         'toolStrip1
@@ -500,7 +500,7 @@ Partial Class MainFrm
         Me.toolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tbGolongan, Me.tbProduk, Me.tbPromoProduk, Me.tbPenyesuaianStok, Me.toolStripSeparator9, Me.tbSupplier, Me.tbCustomer, Me.toolStripSeparator10, Me.tbPembelianProduk, Me.toolStripSeparator11, Me.tbPengeluaranBiaya, Me.toolStripSeparator12, Me.tbLapPembelianProduk, Me.tbLapPenjualanProduk})
         Me.toolStrip1.Location = New System.Drawing.Point(0, 24)
         Me.toolStrip1.Name = "toolStrip1"
-        Me.toolStrip1.Size = New System.Drawing.Size(1148, 39)
+        Me.toolStrip1.Size = New System.Drawing.Size(1284, 39)
         Me.toolStrip1.TabIndex = 20
         Me.toolStrip1.Text = "toolStrip1"
         '
@@ -627,9 +627,10 @@ Partial Class MainFrm
         'StatusStrip1
         '
         Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.sbJam, Me.ToolStripStatusLabel2, Me.sbTanggal, Me.ToolStripStatusLabel6, Me.sbOperator, Me.ToolStripStatusLabel4, Me.ToolStripStatusLabel7})
-        Me.StatusStrip1.Location = New System.Drawing.Point(0, 648)
+        Me.StatusStrip1.Location = New System.Drawing.Point(0, 803)
         Me.StatusStrip1.Name = "StatusStrip1"
-        Me.StatusStrip1.Size = New System.Drawing.Size(1148, 22)
+        Me.StatusStrip1.Padding = New System.Windows.Forms.Padding(1, 0, 19, 0)
+        Me.StatusStrip1.Size = New System.Drawing.Size(1284, 22)
         Me.StatusStrip1.TabIndex = 22
         Me.StatusStrip1.Text = "StatusStrip1"
         '
@@ -678,23 +679,18 @@ Partial Class MainFrm
         Me.ToolStripStatusLabel7.Size = New System.Drawing.Size(228, 17)
         Me.ToolStripStatusLabel7.Text = "Retailer Pintar Versi  1.0.0 - Copyright 2021"
         '
-        'CobaToolStripMenuItem
-        '
-        Me.CobaToolStripMenuItem.Name = "CobaToolStripMenuItem"
-        Me.CobaToolStripMenuItem.Size = New System.Drawing.Size(45, 20)
-        Me.CobaToolStripMenuItem.Text = "coba"
-        '
         'MainFrm
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1148, 670)
+        Me.ClientSize = New System.Drawing.Size(1284, 825)
         Me.Controls.Add(Me.StatusStrip1)
         Me.Controls.Add(Me.toolStrip1)
         Me.Controls.Add(Me.menuStrip1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.IsMdiContainer = True
         Me.MainMenuStrip = Me.menuStrip1
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "MainFrm"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Main / Retailer Pintar Versi  1.0.0 - Copyright 2021"
@@ -790,5 +786,4 @@ Partial Class MainFrm
     Friend WithEvents sbOperator As ToolStripStatusLabel
     Friend WithEvents ToolStripStatusLabel4 As ToolStripStatusLabel
     Friend WithEvents ToolStripStatusLabel7 As ToolStripStatusLabel
-    Friend WithEvents CobaToolStripMenuItem As ToolStripMenuItem
 End Class
