@@ -104,6 +104,7 @@ Partial Class MainFrm
         Me.sbOperator = New System.Windows.Forms.ToolStripStatusLabel()
         Me.ToolStripStatusLabel4 = New System.Windows.Forms.ToolStripStatusLabel()
         Me.ToolStripStatusLabel7 = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.CobaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.menuStrip1.SuspendLayout()
         Me.toolStrip1.SuspendLayout()
         Me.StatusStrip1.SuspendLayout()
@@ -111,7 +112,7 @@ Partial Class MainFrm
         '
         'menuStrip1
         '
-        Me.menuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mnuReferensi, Me.mnuTransaksi, Me.mnuPengeluaran, Me.mnuLaporan, Me.mnuPengaturan, Me.mnuBantuan, Me.mnuKeluar})
+        Me.menuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mnuReferensi, Me.mnuTransaksi, Me.mnuPengeluaran, Me.mnuLaporan, Me.mnuPengaturan, Me.mnuBantuan, Me.mnuKeluar, Me.CobaToolStripMenuItem})
         Me.menuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.menuStrip1.Name = "menuStrip1"
         Me.menuStrip1.Size = New System.Drawing.Size(1148, 24)
@@ -471,7 +472,7 @@ Partial Class MainFrm
         'mnuAbout
         '
         Me.mnuAbout.Name = "mnuAbout"
-        Me.mnuAbout.Size = New System.Drawing.Size(180, 22)
+        Me.mnuAbout.Size = New System.Drawing.Size(107, 22)
         Me.mnuAbout.Text = "About"
         '
         'mnuKeluar
@@ -677,6 +678,12 @@ Partial Class MainFrm
         Me.ToolStripStatusLabel7.Size = New System.Drawing.Size(228, 17)
         Me.ToolStripStatusLabel7.Text = "Retailer Pintar Versi  1.0.0 - Copyright 2021"
         '
+        'CobaToolStripMenuItem
+        '
+        Me.CobaToolStripMenuItem.Name = "CobaToolStripMenuItem"
+        Me.CobaToolStripMenuItem.Size = New System.Drawing.Size(45, 20)
+        Me.CobaToolStripMenuItem.Text = "coba"
+        '
         'MainFrm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -783,4 +790,5 @@ Partial Class MainFrm
     Friend WithEvents sbOperator As ToolStripStatusLabel
     Friend WithEvents ToolStripStatusLabel4 As ToolStripStatusLabel
     Friend WithEvents ToolStripStatusLabel7 As ToolStripStatusLabel
+    Friend WithEvents CobaToolStripMenuItem As ToolStripMenuItem
 End Class
