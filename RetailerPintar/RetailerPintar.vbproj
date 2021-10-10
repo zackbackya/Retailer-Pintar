@@ -132,6 +132,12 @@
     <Compile Include="Referensi\Golongan\EditGolonganFrm.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Referensi\Golongan\GolonganFrm.Designer.vb">
+      <DependentUpon>GolonganFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Referensi\Golongan\GolonganFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Referensi\Kartu\EditKartuFrm.Designer.vb">
       <DependentUpon>EditKartuFrm.vb</DependentUpon>
     </Compile>
@@ -142,12 +148,6 @@
       <DependentUpon>EditProdukFrm.vb</DependentUpon>
     </Compile>
     <Compile Include="Referensi\Produk\EditProdukFrm.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Referensi\Golongan\GolonganFrm.Designer.vb">
-      <DependentUpon>GolonganFrm.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Referensi\Golongan\GolonganFrm.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Referensi\Kartu\KartuFrm.Designer.vb">
@@ -200,14 +200,14 @@
     <EmbeddedResource Include="Referensi\Golongan\EditGolonganFrm.resx">
       <DependentUpon>EditGolonganFrm.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Referensi\Golongan\GolonganFrm.resx">
+      <DependentUpon>GolonganFrm.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Referensi\Kartu\EditKartuFrm.resx">
       <DependentUpon>EditKartuFrm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Referensi\Produk\EditProdukFrm.resx">
       <DependentUpon>EditProdukFrm.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Referensi\Golongan\GolonganFrm.resx">
-      <DependentUpon>GolonganFrm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Referensi\Kartu\KartuFrm.resx">
       <DependentUpon>KartuFrm.vb</DependentUpon>
@@ -246,6 +246,7 @@
     <Folder Include="Laporan\" />
     <Folder Include="Pengaturan\" />
     <Folder Include="Pengeluaran\" />
+    <Folder Include="Referensi\Supplier\" />
     <Folder Include="Transaksi\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />

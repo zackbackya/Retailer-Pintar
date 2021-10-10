@@ -27,21 +27,21 @@ Partial Class TambahProdukFrm
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.btnSimpan = New System.Windows.Forms.Button()
         Me.btnSelesai = New System.Windows.Forms.Button()
-        Me.txtIdKartu = New System.Windows.Forms.TextBox()
+        Me.txtIdProduk = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.txtNamaKartu = New System.Windows.Forms.TextBox()
+        Me.txtBarcode = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
+        Me.txtNamaProduk = New System.Windows.Forms.TextBox()
+        Me.txtNamaPendekProduk = New System.Windows.Forms.TextBox()
+        Me.txtIdSupplier = New System.Windows.Forms.TextBox()
+        Me.txtIdGolongan = New System.Windows.Forms.TextBox()
         Me.TextBox6 = New System.Windows.Forms.TextBox()
         Me.TextBox7 = New System.Windows.Forms.TextBox()
-        Me.TextBox8 = New System.Windows.Forms.TextBox()
+        Me.txtLokasiProduk = New System.Windows.Forms.TextBox()
         Me.pictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.TextBox9 = New System.Windows.Forms.TextBox()
-        Me.TextBox10 = New System.Windows.Forms.TextBox()
-        Me.TextBox11 = New System.Windows.Forms.TextBox()
+        Me.txtHargaBeliProduk = New System.Windows.Forms.TextBox()
+        Me.txtHargaJualProduk = New System.Windows.Forms.TextBox()
+        Me.txtStokProduk = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
@@ -51,7 +51,7 @@ Partial Class TambahProdukFrm
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Label12 = New System.Windows.Forms.Label()
-        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
+        Me.cbAktifProduk = New System.Windows.Forms.CheckBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.pnlHeader.SuspendLayout()
         Me.Panel1.SuspendLayout()
@@ -116,14 +116,14 @@ Partial Class TambahProdukFrm
         Me.btnSelesai.Text = "Esc Selesai"
         Me.btnSelesai.UseVisualStyleBackColor = True
         '
-        'txtIdKartu
+        'txtIdProduk
         '
-        Me.txtIdKartu.Location = New System.Drawing.Point(134, 44)
-        Me.txtIdKartu.MaxLength = 6
-        Me.txtIdKartu.Name = "txtIdKartu"
-        Me.txtIdKartu.ReadOnly = True
-        Me.txtIdKartu.Size = New System.Drawing.Size(119, 20)
-        Me.txtIdKartu.TabIndex = 1
+        Me.txtIdProduk.Location = New System.Drawing.Point(134, 44)
+        Me.txtIdProduk.MaxLength = 6
+        Me.txtIdProduk.Name = "txtIdProduk"
+        Me.txtIdProduk.ReadOnly = True
+        Me.txtIdProduk.Size = New System.Drawing.Size(119, 20)
+        Me.txtIdProduk.TabIndex = 1
         '
         'Label3
         '
@@ -135,13 +135,13 @@ Partial Class TambahProdukFrm
         Me.Label3.Text = "Id Produk"
         Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'txtNamaKartu
+        'txtBarcode
         '
-        Me.txtNamaKartu.Location = New System.Drawing.Point(134, 70)
-        Me.txtNamaKartu.MaxLength = 50
-        Me.txtNamaKartu.Name = "txtNamaKartu"
-        Me.txtNamaKartu.Size = New System.Drawing.Size(445, 20)
-        Me.txtNamaKartu.TabIndex = 2
+        Me.txtBarcode.Location = New System.Drawing.Point(134, 70)
+        Me.txtBarcode.MaxLength = 50
+        Me.txtBarcode.Name = "txtBarcode"
+        Me.txtBarcode.Size = New System.Drawing.Size(445, 20)
+        Me.txtBarcode.TabIndex = 2
         '
         'Label1
         '
@@ -153,37 +153,37 @@ Partial Class TambahProdukFrm
         Me.Label1.Text = "Barcode"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'TextBox1
+        'txtNamaProduk
         '
-        Me.TextBox1.Location = New System.Drawing.Point(134, 96)
-        Me.TextBox1.MaxLength = 50
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(445, 20)
-        Me.TextBox1.TabIndex = 3
+        Me.txtNamaProduk.Location = New System.Drawing.Point(134, 96)
+        Me.txtNamaProduk.MaxLength = 50
+        Me.txtNamaProduk.Name = "txtNamaProduk"
+        Me.txtNamaProduk.Size = New System.Drawing.Size(445, 20)
+        Me.txtNamaProduk.TabIndex = 3
         '
-        'TextBox2
+        'txtNamaPendekProduk
         '
-        Me.TextBox2.Location = New System.Drawing.Point(134, 122)
-        Me.TextBox2.MaxLength = 17
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(200, 20)
-        Me.TextBox2.TabIndex = 4
+        Me.txtNamaPendekProduk.Location = New System.Drawing.Point(134, 122)
+        Me.txtNamaPendekProduk.MaxLength = 17
+        Me.txtNamaPendekProduk.Name = "txtNamaPendekProduk"
+        Me.txtNamaPendekProduk.Size = New System.Drawing.Size(200, 20)
+        Me.txtNamaPendekProduk.TabIndex = 4
         '
-        'TextBox4
+        'txtIdSupplier
         '
-        Me.TextBox4.Location = New System.Drawing.Point(134, 174)
-        Me.TextBox4.MaxLength = 6
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(116, 20)
-        Me.TextBox4.TabIndex = 7
+        Me.txtIdSupplier.Location = New System.Drawing.Point(134, 174)
+        Me.txtIdSupplier.MaxLength = 6
+        Me.txtIdSupplier.Name = "txtIdSupplier"
+        Me.txtIdSupplier.Size = New System.Drawing.Size(116, 20)
+        Me.txtIdSupplier.TabIndex = 7
         '
-        'TextBox5
+        'txtIdGolongan
         '
-        Me.TextBox5.Location = New System.Drawing.Point(134, 200)
-        Me.TextBox5.MaxLength = 6
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(116, 20)
-        Me.TextBox5.TabIndex = 37
+        Me.txtIdGolongan.Location = New System.Drawing.Point(134, 200)
+        Me.txtIdGolongan.MaxLength = 6
+        Me.txtIdGolongan.Name = "txtIdGolongan"
+        Me.txtIdGolongan.Size = New System.Drawing.Size(116, 20)
+        Me.txtIdGolongan.TabIndex = 37
         '
         'TextBox6
         '
@@ -201,13 +201,13 @@ Partial Class TambahProdukFrm
         Me.TextBox7.Size = New System.Drawing.Size(440, 20)
         Me.TextBox7.TabIndex = 8
         '
-        'TextBox8
+        'txtLokasiProduk
         '
-        Me.TextBox8.Location = New System.Drawing.Point(134, 226)
-        Me.TextBox8.MaxLength = 25
-        Me.TextBox8.Name = "TextBox8"
-        Me.TextBox8.Size = New System.Drawing.Size(445, 20)
-        Me.TextBox8.TabIndex = 10
+        Me.txtLokasiProduk.Location = New System.Drawing.Point(134, 226)
+        Me.txtLokasiProduk.MaxLength = 25
+        Me.txtLokasiProduk.Name = "txtLokasiProduk"
+        Me.txtLokasiProduk.Size = New System.Drawing.Size(445, 20)
+        Me.txtLokasiProduk.TabIndex = 10
         '
         'pictureBox1
         '
@@ -219,29 +219,29 @@ Partial Class TambahProdukFrm
         Me.pictureBox1.TabIndex = 41
         Me.pictureBox1.TabStop = False
         '
-        'TextBox9
+        'txtHargaBeliProduk
         '
-        Me.TextBox9.Location = New System.Drawing.Point(134, 252)
-        Me.TextBox9.MaxLength = 12
-        Me.TextBox9.Name = "TextBox9"
-        Me.TextBox9.Size = New System.Drawing.Size(200, 20)
-        Me.TextBox9.TabIndex = 11
+        Me.txtHargaBeliProduk.Location = New System.Drawing.Point(134, 252)
+        Me.txtHargaBeliProduk.MaxLength = 12
+        Me.txtHargaBeliProduk.Name = "txtHargaBeliProduk"
+        Me.txtHargaBeliProduk.Size = New System.Drawing.Size(200, 20)
+        Me.txtHargaBeliProduk.TabIndex = 11
         '
-        'TextBox10
+        'txtHargaJualProduk
         '
-        Me.TextBox10.Location = New System.Drawing.Point(134, 278)
-        Me.TextBox10.MaxLength = 12
-        Me.TextBox10.Name = "TextBox10"
-        Me.TextBox10.Size = New System.Drawing.Size(200, 20)
-        Me.TextBox10.TabIndex = 12
+        Me.txtHargaJualProduk.Location = New System.Drawing.Point(134, 278)
+        Me.txtHargaJualProduk.MaxLength = 12
+        Me.txtHargaJualProduk.Name = "txtHargaJualProduk"
+        Me.txtHargaJualProduk.Size = New System.Drawing.Size(200, 20)
+        Me.txtHargaJualProduk.TabIndex = 12
         '
-        'TextBox11
+        'txtStokProduk
         '
-        Me.TextBox11.Location = New System.Drawing.Point(134, 304)
-        Me.TextBox11.MaxLength = 12
-        Me.TextBox11.Name = "TextBox11"
-        Me.TextBox11.Size = New System.Drawing.Size(116, 20)
-        Me.TextBox11.TabIndex = 13
+        Me.txtStokProduk.Location = New System.Drawing.Point(134, 304)
+        Me.txtStokProduk.MaxLength = 12
+        Me.txtStokProduk.Name = "txtStokProduk"
+        Me.txtStokProduk.Size = New System.Drawing.Size(116, 20)
+        Me.txtStokProduk.TabIndex = 13
         '
         'Label2
         '
@@ -333,15 +333,15 @@ Partial Class TambahProdukFrm
         Me.Label12.Text = "*untuk nama distruk"
         Me.Label12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'CheckBox1
+        'cbAktifProduk
         '
-        Me.CheckBox1.AutoSize = True
-        Me.CheckBox1.Location = New System.Drawing.Point(134, 148)
-        Me.CheckBox1.Name = "CheckBox1"
-        Me.CheckBox1.Size = New System.Drawing.Size(47, 17)
-        Me.CheckBox1.TabIndex = 5
-        Me.CheckBox1.Text = "Aktif"
-        Me.CheckBox1.UseVisualStyleBackColor = True
+        Me.cbAktifProduk.AutoSize = True
+        Me.cbAktifProduk.Location = New System.Drawing.Point(134, 148)
+        Me.cbAktifProduk.Name = "cbAktifProduk"
+        Me.cbAktifProduk.Size = New System.Drawing.Size(47, 17)
+        Me.cbAktifProduk.TabIndex = 5
+        Me.cbAktifProduk.Text = "Aktif"
+        Me.cbAktifProduk.UseVisualStyleBackColor = True
         '
         'Label4
         '
@@ -360,7 +360,7 @@ Partial Class TambahProdukFrm
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(699, 369)
         Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.CheckBox1)
+        Me.Controls.Add(Me.cbAktifProduk)
         Me.Controls.Add(Me.Label12)
         Me.Controls.Add(Me.Label11)
         Me.Controls.Add(Me.Label10)
@@ -370,21 +370,21 @@ Partial Class TambahProdukFrm
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.TextBox11)
-        Me.Controls.Add(Me.TextBox10)
-        Me.Controls.Add(Me.TextBox9)
+        Me.Controls.Add(Me.txtStokProduk)
+        Me.Controls.Add(Me.txtHargaJualProduk)
+        Me.Controls.Add(Me.txtHargaBeliProduk)
         Me.Controls.Add(Me.pictureBox1)
-        Me.Controls.Add(Me.TextBox8)
+        Me.Controls.Add(Me.txtLokasiProduk)
         Me.Controls.Add(Me.TextBox7)
         Me.Controls.Add(Me.TextBox6)
-        Me.Controls.Add(Me.TextBox5)
-        Me.Controls.Add(Me.TextBox4)
-        Me.Controls.Add(Me.TextBox2)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.txtIdGolongan)
+        Me.Controls.Add(Me.txtIdSupplier)
+        Me.Controls.Add(Me.txtNamaPendekProduk)
+        Me.Controls.Add(Me.txtNamaProduk)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.txtNamaKartu)
+        Me.Controls.Add(Me.txtBarcode)
         Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.txtIdKartu)
+        Me.Controls.Add(Me.txtIdProduk)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.pnlHeader)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
@@ -393,7 +393,7 @@ Partial Class TambahProdukFrm
         Me.Name = "TambahProdukFrm"
         Me.ShowIcon = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "TambahProdukFrm"
+        Me.Text = "Retailer Pintar"
         Me.pnlHeader.ResumeLayout(False)
         Me.pnlHeader.PerformLayout()
         Me.Panel1.ResumeLayout(False)
@@ -408,21 +408,21 @@ Partial Class TambahProdukFrm
     Private WithEvents Panel1 As Panel
     Private WithEvents btnSimpan As Button
     Private WithEvents btnSelesai As Button
-    Friend WithEvents txtIdKartu As TextBox
+    Friend WithEvents txtIdProduk As TextBox
     Friend WithEvents Label3 As Label
-    Friend WithEvents txtNamaKartu As TextBox
+    Friend WithEvents txtBarcode As TextBox
     Friend WithEvents Label1 As Label
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents TextBox4 As TextBox
-    Friend WithEvents TextBox5 As TextBox
+    Friend WithEvents txtNamaProduk As TextBox
+    Friend WithEvents txtNamaPendekProduk As TextBox
+    Friend WithEvents txtIdSupplier As TextBox
+    Friend WithEvents txtIdGolongan As TextBox
     Friend WithEvents TextBox6 As TextBox
     Friend WithEvents TextBox7 As TextBox
-    Friend WithEvents TextBox8 As TextBox
+    Friend WithEvents txtLokasiProduk As TextBox
     Private WithEvents pictureBox1 As PictureBox
-    Friend WithEvents TextBox9 As TextBox
-    Friend WithEvents TextBox10 As TextBox
-    Friend WithEvents TextBox11 As TextBox
+    Friend WithEvents txtHargaBeliProduk As TextBox
+    Friend WithEvents txtHargaJualProduk As TextBox
+    Friend WithEvents txtStokProduk As TextBox
     Friend WithEvents Label2 As Label
     Friend WithEvents Label5 As Label
     Friend WithEvents Label6 As Label
@@ -432,6 +432,6 @@ Partial Class TambahProdukFrm
     Friend WithEvents Label10 As Label
     Friend WithEvents Label11 As Label
     Friend WithEvents Label12 As Label
-    Friend WithEvents CheckBox1 As CheckBox
+    Friend WithEvents cbAktifProduk As CheckBox
     Friend WithEvents Label4 As Label
 End Class

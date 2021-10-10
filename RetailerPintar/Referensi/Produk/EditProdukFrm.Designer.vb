@@ -393,7 +393,7 @@ Partial Class EditProdukFrm
         Me.Name = "EditProdukFrm"
         Me.ShowIcon = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "EditProdukFrm"
+        Me.Text = "Retailer Pintar"
         CType(Me.pictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
         Me.pnlHeader.ResumeLayout(False)

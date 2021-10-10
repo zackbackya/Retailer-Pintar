@@ -52,10 +52,10 @@
 
     Private Sub mnuGolongan_Click(sender As Object, e As EventArgs) Handles mnuGolongan.Click
         Me.WindowState = FormWindowState.Maximized
-        GolonganFrm.MdiParent = Me
-        GolonganFrm.Dock = DockStyle.Fill
-        GolonganFrm.Show()
-        GolonganFrm.Focus()
+        SupplierFrm.MdiParent = Me
+        SupplierFrm.Dock = DockStyle.Fill
+        SupplierFrm.Show()
+        SupplierFrm.Focus()
     End Sub
 
     Private Sub mnuProduk_Click(sender As Object, e As EventArgs) Handles mnuProduk.Click
@@ -76,11 +76,17 @@
 
     Private Sub tbGolongan_Click(sender As Object, e As EventArgs) Handles tbGolongan.Click
         Me.WindowState = FormWindowState.Maximized
-        GolonganFrm.MdiParent = Me
-        GolonganFrm.Dock = DockStyle.Fill
-        GolonganFrm.Show()
-        GolonganFrm.Focus()
+        SupplierFrm.MdiParent = Me
+        SupplierFrm.Dock = DockStyle.Fill
+        SupplierFrm.Show()
+        SupplierFrm.Focus()
     End Sub
 
-
+    Private Sub mnuSupplier_Click(sender As Object, e As EventArgs) Handles mnuSupplier.Click
+        Me.WindowState = FormWindowState.Maximized
+        SupplierFrm.MdiParent = Me
+        SupplierFrm.Dock = DockStyle.Fill
+        SupplierFrm.Show()
+        SupplierFrm.Focus()
+    End Sub
 End Class
