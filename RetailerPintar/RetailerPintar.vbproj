@@ -180,6 +180,24 @@
     <Compile Include="Referensi\Produk\TambahProdukFrm.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Referensi\Supplier\EditSupplierFrm.Designer.vb">
+      <DependentUpon>EditSupplierFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Referensi\Supplier\EditSupplierFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Referensi\Supplier\SupplierFrm.Designer.vb">
+      <DependentUpon>SupplierFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Referensi\Supplier\SupplierFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Referensi\Supplier\TambahSupplierFrm.Designer.vb">
+      <DependentUpon>TambahSupplierFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Referensi\Supplier\TambahSupplierFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="HomeFrm.resx">
@@ -224,6 +242,9 @@
     <EmbeddedResource Include="Referensi\Produk\TambahProdukFrm.resx">
       <DependentUpon>TambahProdukFrm.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Referensi\Supplier\SupplierFrm.resx">
+      <DependentUpon>SupplierFrm.vb</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <None Include="My Project\Application.myapp">
@@ -246,7 +267,6 @@
     <Folder Include="Laporan\" />
     <Folder Include="Pengaturan\" />
     <Folder Include="Pengeluaran\" />
-    <Folder Include="Referensi\Supplier\" />
     <Folder Include="Transaksi\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
