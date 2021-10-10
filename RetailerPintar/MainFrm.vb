@@ -83,6 +83,10 @@
     End Sub
 
     Private Sub mnuSupplier_Click(sender As Object, e As EventArgs) Handles mnuSupplier.Click
-
+        Me.WindowState = FormWindowState.Maximized
+        SupplierFrm.MdiParent = Me
+        SupplierFrm.Dock = DockStyle.Fill
+        SupplierFrm.Show()
+        SupplierFrm.Focus()
     End Sub
 End Class

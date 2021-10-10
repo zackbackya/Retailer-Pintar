@@ -242,8 +242,14 @@
     <EmbeddedResource Include="Referensi\Produk\TambahProdukFrm.resx">
       <DependentUpon>TambahProdukFrm.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Referensi\Supplier\EditSupplierFrm.resx">
+      <DependentUpon>EditSupplierFrm.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Referensi\Supplier\SupplierFrm.resx">
       <DependentUpon>SupplierFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Referensi\Supplier\TambahSupplierFrm.resx">
+      <DependentUpon>TambahSupplierFrm.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
