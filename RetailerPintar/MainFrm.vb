@@ -41,4 +41,46 @@
 
         End If
     End Sub
+
+    Private Sub mnuKartu_Click(sender As Object, e As EventArgs) Handles mnuKartu.Click
+        Me.WindowState = FormWindowState.Maximized
+        KartuFrm.MdiParent = Me
+        KartuFrm.Dock = DockStyle.Fill
+        KartuFrm.Show()
+        KartuFrm.Focus()
+    End Sub
+
+    Private Sub mnuGolongan_Click(sender As Object, e As EventArgs) Handles mnuGolongan.Click
+        Me.WindowState = FormWindowState.Maximized
+        GolonganFrm.MdiParent = Me
+        GolonganFrm.Dock = DockStyle.Fill
+        GolonganFrm.Show()
+        GolonganFrm.Focus()
+    End Sub
+
+    Private Sub mnuProduk_Click(sender As Object, e As EventArgs) Handles mnuProduk.Click
+        Me.WindowState = FormWindowState.Maximized
+        ProdukFrm.MdiParent = Me
+        ProdukFrm.Dock = DockStyle.Fill
+        ProdukFrm.Show()
+        ProdukFrm.Focus()
+    End Sub
+
+    Private Sub tbProduk_Click(sender As Object, e As EventArgs) Handles tbProduk.Click
+        Me.WindowState = FormWindowState.Maximized
+        ProdukFrm.MdiParent = Me
+        ProdukFrm.Dock = DockStyle.Fill
+        ProdukFrm.Show()
+        ProdukFrm.Focus()
+    End Sub
+
+    Private Sub tbGolongan_Click(sender As Object, e As EventArgs) Handles tbGolongan.Click
+        Me.WindowState = FormWindowState.Maximized
+        GolonganFrm.MdiParent = Me
+        GolonganFrm.Dock = DockStyle.Fill
+        GolonganFrm.Show()
+        GolonganFrm.Focus()
+    End Sub
+
+
 End Class

@@ -50,10 +50,26 @@
     <ApplicationIcon>logo retailerpintar.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MySqlConnector, Version=1.0.0.0, Culture=neutral, PublicKeyToken=d33d3e53aa5f8c92, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySqlConnector.1.3.13\lib\net45\MySqlConnector.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.4.0\lib\netstandard1.1\System.Buffers.dll</HintPath>
+    </Reference>
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Memory, Version=4.0.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.0\lib\netstandard1.1\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.5.0\lib\netstandard1.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.1.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.3.0\lib\portable-net45+win8+wp8+wpa81\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Transactions" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
@@ -94,6 +110,7 @@
     <Compile Include="MainFrm.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="ModuleKoneksidb.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -109,58 +126,58 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="Referensi\EditGolonganFrm.Designer.vb">
+    <Compile Include="Referensi\Golongan\EditGolonganFrm.Designer.vb">
       <DependentUpon>EditGolonganFrm.vb</DependentUpon>
     </Compile>
-    <Compile Include="Referensi\EditGolonganFrm.vb">
+    <Compile Include="Referensi\Golongan\EditGolonganFrm.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Referensi\EditKartuFrm.Designer.vb">
+    <Compile Include="Referensi\Kartu\EditKartuFrm.Designer.vb">
       <DependentUpon>EditKartuFrm.vb</DependentUpon>
     </Compile>
-    <Compile Include="Referensi\EditKartuFrm.vb">
+    <Compile Include="Referensi\Kartu\EditKartuFrm.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Referensi\EditProdukFrm.Designer.vb">
+    <Compile Include="Referensi\Produk\EditProdukFrm.Designer.vb">
       <DependentUpon>EditProdukFrm.vb</DependentUpon>
     </Compile>
-    <Compile Include="Referensi\EditProdukFrm.vb">
+    <Compile Include="Referensi\Produk\EditProdukFrm.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Referensi\GolonganFrm.Designer.vb">
+    <Compile Include="Referensi\Golongan\GolonganFrm.Designer.vb">
       <DependentUpon>GolonganFrm.vb</DependentUpon>
     </Compile>
-    <Compile Include="Referensi\GolonganFrm.vb">
+    <Compile Include="Referensi\Golongan\GolonganFrm.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Referensi\KartuFrm.Designer.vb">
+    <Compile Include="Referensi\Kartu\KartuFrm.Designer.vb">
       <DependentUpon>KartuFrm.vb</DependentUpon>
     </Compile>
-    <Compile Include="Referensi\KartuFrm.vb">
+    <Compile Include="Referensi\Kartu\KartuFrm.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Referensi\ProdukFrm.Designer.vb">
+    <Compile Include="Referensi\Produk\ProdukFrm.Designer.vb">
       <DependentUpon>ProdukFrm.vb</DependentUpon>
     </Compile>
-    <Compile Include="Referensi\ProdukFrm.vb">
+    <Compile Include="Referensi\Produk\ProdukFrm.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Referensi\TambahGolonganFrm.Designer.vb">
+    <Compile Include="Referensi\Golongan\TambahGolonganFrm.Designer.vb">
       <DependentUpon>TambahGolonganFrm.vb</DependentUpon>
     </Compile>
-    <Compile Include="Referensi\TambahGolonganFrm.vb">
+    <Compile Include="Referensi\Golongan\TambahGolonganFrm.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Referensi\TambahKartuFrm.Designer.vb">
+    <Compile Include="Referensi\Kartu\TambahKartuFrm.Designer.vb">
       <DependentUpon>TambahKartuFrm.vb</DependentUpon>
     </Compile>
-    <Compile Include="Referensi\TambahKartuFrm.vb">
+    <Compile Include="Referensi\Kartu\TambahKartuFrm.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Referensi\TambahProdukFrm.Designer.vb">
+    <Compile Include="Referensi\Produk\TambahProdukFrm.Designer.vb">
       <DependentUpon>TambahProdukFrm.vb</DependentUpon>
     </Compile>
-    <Compile Include="Referensi\TambahProdukFrm.vb">
+    <Compile Include="Referensi\Produk\TambahProdukFrm.vb">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
@@ -180,31 +197,31 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Referensi\EditGolonganFrm.resx">
+    <EmbeddedResource Include="Referensi\Golongan\EditGolonganFrm.resx">
       <DependentUpon>EditGolonganFrm.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Referensi\EditKartuFrm.resx">
+    <EmbeddedResource Include="Referensi\Kartu\EditKartuFrm.resx">
       <DependentUpon>EditKartuFrm.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Referensi\EditProdukFrm.resx">
+    <EmbeddedResource Include="Referensi\Produk\EditProdukFrm.resx">
       <DependentUpon>EditProdukFrm.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Referensi\GolonganFrm.resx">
+    <EmbeddedResource Include="Referensi\Golongan\GolonganFrm.resx">
       <DependentUpon>GolonganFrm.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Referensi\KartuFrm.resx">
+    <EmbeddedResource Include="Referensi\Kartu\KartuFrm.resx">
       <DependentUpon>KartuFrm.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Referensi\ProdukFrm.resx">
+    <EmbeddedResource Include="Referensi\Produk\ProdukFrm.resx">
       <DependentUpon>ProdukFrm.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Referensi\TambahGolonganFrm.resx">
+    <EmbeddedResource Include="Referensi\Golongan\TambahGolonganFrm.resx">
       <DependentUpon>TambahGolonganFrm.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Referensi\TambahKartuFrm.resx">
+    <EmbeddedResource Include="Referensi\Kartu\TambahKartuFrm.resx">
       <DependentUpon>TambahKartuFrm.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Referensi\TambahProdukFrm.resx">
+    <EmbeddedResource Include="Referensi\Produk\TambahProdukFrm.resx">
       <DependentUpon>TambahProdukFrm.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
@@ -219,6 +236,7 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <None Include="App.config" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="logo retailerpintar.ico" />

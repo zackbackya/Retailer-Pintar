@@ -44,3 +44,36 @@ D:\Programming\VB.net\Project\Retailer Pintar\Retailer-Pintar\RetailerPintar\obj
 D:\Programming\VB.net\Project\Retailer Pintar\Retailer-Pintar\RetailerPintar\obj\Debug\RetailerPintar.exe
 D:\Programming\VB.net\Project\Retailer Pintar\Retailer-Pintar\RetailerPintar\obj\Debug\RetailerPintar.xml
 D:\Programming\VB.net\Project\Retailer Pintar\Retailer-Pintar\RetailerPintar\obj\Debug\RetailerPintar.pdb
+D:\Programming\VB.net\Project\Retailer-Pintar\RetailerPintar\bin\Debug\RetailerPintar.exe.config
+D:\Programming\VB.net\Project\Retailer-Pintar\RetailerPintar\bin\Debug\RetailerPintar.exe
+D:\Programming\VB.net\Project\Retailer-Pintar\RetailerPintar\bin\Debug\RetailerPintar.pdb
+D:\Programming\VB.net\Project\Retailer-Pintar\RetailerPintar\bin\Debug\RetailerPintar.xml
+D:\Programming\VB.net\Project\Retailer-Pintar\RetailerPintar\bin\Debug\MySqlConnector.dll
+D:\Programming\VB.net\Project\Retailer-Pintar\RetailerPintar\bin\Debug\System.Buffers.dll
+D:\Programming\VB.net\Project\Retailer-Pintar\RetailerPintar\bin\Debug\System.Memory.dll
+D:\Programming\VB.net\Project\Retailer-Pintar\RetailerPintar\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+D:\Programming\VB.net\Project\Retailer-Pintar\RetailerPintar\bin\Debug\System.Threading.Tasks.Extensions.dll
+D:\Programming\VB.net\Project\Retailer-Pintar\RetailerPintar\bin\Debug\MySqlConnector.xml
+D:\Programming\VB.net\Project\Retailer-Pintar\RetailerPintar\bin\Debug\System.Buffers.xml
+D:\Programming\VB.net\Project\Retailer-Pintar\RetailerPintar\bin\Debug\System.Memory.xml
+D:\Programming\VB.net\Project\Retailer-Pintar\RetailerPintar\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+D:\Programming\VB.net\Project\Retailer-Pintar\RetailerPintar\bin\Debug\System.Threading.Tasks.Extensions.xml
+D:\Programming\VB.net\Project\Retailer-Pintar\RetailerPintar\obj\Debug\RetailerPintar.vbproj.AssemblyReference.cache
+D:\Programming\VB.net\Project\Retailer-Pintar\RetailerPintar\obj\Debug\RetailerPintar.HomeFrm.resources
+D:\Programming\VB.net\Project\Retailer-Pintar\RetailerPintar\obj\Debug\RetailerPintar.LoginFrm.resources
+D:\Programming\VB.net\Project\Retailer-Pintar\RetailerPintar\obj\Debug\RetailerPintar.MainFrm.resources
+D:\Programming\VB.net\Project\Retailer-Pintar\RetailerPintar\obj\Debug\RetailerPintar.Resources.resources
+D:\Programming\VB.net\Project\Retailer-Pintar\RetailerPintar\obj\Debug\RetailerPintar.EditGolonganFrm.resources
+D:\Programming\VB.net\Project\Retailer-Pintar\RetailerPintar\obj\Debug\RetailerPintar.EditKartuFrm.resources
+D:\Programming\VB.net\Project\Retailer-Pintar\RetailerPintar\obj\Debug\RetailerPintar.EditProdukFrm.resources
+D:\Programming\VB.net\Project\Retailer-Pintar\RetailerPintar\obj\Debug\RetailerPintar.GolonganFrm.resources
+D:\Programming\VB.net\Project\Retailer-Pintar\RetailerPintar\obj\Debug\RetailerPintar.KartuFrm.resources
+D:\Programming\VB.net\Project\Retailer-Pintar\RetailerPintar\obj\Debug\RetailerPintar.ProdukFrm.resources
+D:\Programming\VB.net\Project\Retailer-Pintar\RetailerPintar\obj\Debug\RetailerPintar.TambahGolonganFrm.resources
+D:\Programming\VB.net\Project\Retailer-Pintar\RetailerPintar\obj\Debug\RetailerPintar.TambahKartuFrm.resources
+D:\Programming\VB.net\Project\Retailer-Pintar\RetailerPintar\obj\Debug\RetailerPintar.TambahProdukFrm.resources
+D:\Programming\VB.net\Project\Retailer-Pintar\RetailerPintar\obj\Debug\RetailerPintar.vbproj.GenerateResource.cache
+D:\Programming\VB.net\Project\Retailer-Pintar\RetailerPintar\obj\Debug\RetailerPintar.vbproj.CoreCompileInputs.cache
+D:\Programming\VB.net\Project\Retailer-Pintar\RetailerPintar\obj\Debug\RetailerPintar.exe
+D:\Programming\VB.net\Project\Retailer-Pintar\RetailerPintar\obj\Debug\RetailerPintar.xml
+D:\Programming\VB.net\Project\Retailer-Pintar\RetailerPintar\obj\Debug\RetailerPintar.pdb
