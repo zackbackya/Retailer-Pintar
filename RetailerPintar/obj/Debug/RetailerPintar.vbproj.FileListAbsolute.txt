@@ -112,3 +112,6 @@ D:\Programming\VB.net\Project\Retailer-Pintar\RetailerPintar\obj\Debug\RetailerP
 D:\Programming\VB.net\Project\Retailer-Pintar\RetailerPintar\obj\Debug\RetailerPintar.vbproj.AssemblyReference.cache
 D:\Programming\VB.net\Project\Retailer-Pintar\RetailerPintar\obj\Debug\RetailerPintar.EditSupplierFrm.resources
 D:\Programming\VB.net\Project\Retailer-Pintar\RetailerPintar\obj\Debug\RetailerPintar.TambahSupplierFrm.resources
+D:\Programming\VB.net\Project\Retailer-Pintar\RetailerPintar\obj\Debug\RetailerPintar.CustomerFrm.resources
+D:\Programming\VB.net\Project\Retailer-Pintar\RetailerPintar\obj\Debug\RetailerPintar.EditCustomerFrm.resources
+D:\Programming\VB.net\Project\Retailer-Pintar\RetailerPintar\obj\Debug\RetailerPintar.TambahCustomerFrm.resources

@@ -89,4 +89,12 @@
         SupplierFrm.Show()
         SupplierFrm.Focus()
     End Sub
+
+    Private Sub mnuCustomer_Click(sender As Object, e As EventArgs) Handles mnuCustomer.Click
+        Me.WindowState = FormWindowState.Maximized
+        CustomerFrm.MdiParent = Me
+        CustomerFrm.Dock = DockStyle.Fill
+        CustomerFrm.Show()
+        CustomerFrm.Focus()
+    End Sub
 End Class
