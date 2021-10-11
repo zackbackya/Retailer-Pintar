@@ -109,4 +109,8 @@
     Private Sub tbPembelianProduk_Click(sender As Object, e As EventArgs) Handles tbPembelianProduk.Click
 
     End Sub
+
+    Private Sub mnuPromoProduk_Click(sender As Object, e As EventArgs) Handles mnuPromoProduk.Click
+
+    End Sub
 End Class

@@ -1,20 +1,17 @@
 ﻿Imports MySqlConnector
 
 Public Class ProdukFrm
-    Public id_produk, barcode, nama_produk, nama_pendek, aktif, id_supplier, id_golongan, lokasi As String
-    Public harga_beli, harga_jual, stok As Integer
+    Public id_produk, barcode, nama_produk, nama_pendek, aktif, id_supplier, id_golongan_terpilih, lokasi As String
+    Public harga_beli, harga_jual, stok, id_golongan As Integer
     Private Sub btnTambah_Click(sender As Object, e As EventArgs) Handles btnTambah.Click
         TambahProdukFrm.ShowDialog()
 
     End Sub
-
-
     Private Sub ProdukFrm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        Call tampilGolongan()
         Call tampilData()
 
     End Sub
-
     Private Sub ProdukFrm_KeyDown(sender As Object, e As KeyEventArgs) Handles Me.KeyDown
         If e.KeyCode = Keys.Escape Then
             Me.Close()
@@ -118,4 +115,43 @@ Public Class ProdukFrm
         End Try
     End Sub
 
+    Public Sub tampilGolongan()
+        Try
+            Call koneksi()
+
+            'cmd = New MySqlCommand("select * from ms_golongan", conn)
+
+            da = New MySqlDataAdapter("select * from ms_golongan", conn)
+            ds = New DataSet
+            da.Fill(ds)
+            cbGolongan.DataSource = ds.Tables(0)
+            cbGolongan.ValueMember = "id_golongan"
+            cbGolongan.DisplayMember = "nama_golongan"
+            conn.Close()
+
+        Catch ex As Exception
+
+        End Try
+    End Sub
+
+
+
+    Private Sub cbGolongan_SelectionChangeCommitted(sender As Object, e As EventArgs) Handles cbGolongan.SelectionChangeCommitted
+        id_golongan = cbGolongan.SelectedValue
+
+        Try
+            Call koneksi()
+
+
+            da = New MySqlDataAdapter("select * from ms_Produk where id_golongan = '" & id_golongan & "'", conn)
+            ds = New DataSet
+            da.Fill(ds)
+            DataGridView1.DataSource = ds.Tables(0)
+            DataGridView1.ReadOnly = True
+            conn.Close()
+
+        Catch ex As Exception
+
+        End Try
+    End Sub
 End Class
