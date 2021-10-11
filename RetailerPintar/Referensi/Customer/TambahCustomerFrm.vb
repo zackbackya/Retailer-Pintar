@@ -13,7 +13,7 @@
                 jenis_kelamin = "P"
             End If
 
-            str = "insert into ms_Customer values ('" & txtIdCustomer.Text & "','" & txtNamaCustomer.Text & "','" & txtAlamatCustomer.Text & "','" & jenis_kelamin & "','" & txtTeleponCustomer.Text & "')"
+            str = "insert into ms_Customer values ('" & txtIdCustomer.Text & "','" & txtNIKCustomer.Text & "','" & txtNamaCustomer.Text & "','" & txtAlamatCustomer.Text & "','" & jenis_kelamin & "','" & txtTeleponCustomer.Text & "')"
             cmd = New MySqlConnector.MySqlCommand(str, conn)
             cmd.ExecuteNonQuery()
 
@@ -21,6 +21,7 @@
 
             Call CustomerFrm.tampilData()
             Call GenTempID()
+            txtNIKCustomer.Text = ""
             txtNamaCustomer.Text = ""
             txtAlamatCustomer.Text = ""
             txtTeleponCustomer.Text = ""
@@ -55,11 +56,11 @@
     End Sub
 
 
-    Private Sub btnSimpan_Click_1(sender As Object, e As EventArgs)
+    Private Sub btnSimpan_Click_1(sender As Object, e As EventArgs) Handles btnSimpan.Click
         Call tambahData()
     End Sub
 
-    Private Sub btnSelesai_Click_1(sender As Object, e As EventArgs)
+    Private Sub btnSelesai_Click_1(sender As Object, e As EventArgs) Handles btnSelesai.Click
         Me.Close()
     End Sub
 End Class

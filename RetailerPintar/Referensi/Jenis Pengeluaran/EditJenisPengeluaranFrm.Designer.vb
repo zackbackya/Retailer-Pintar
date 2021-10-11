@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class EditGolonganFrm
+Partial Class EditJenisPengeluaranFrm
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -28,8 +28,8 @@ Partial Class EditGolonganFrm
         Me.btnSimpan = New System.Windows.Forms.Button()
         Me.btnSelesai = New System.Windows.Forms.Button()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.txtIdGolongan = New System.Windows.Forms.TextBox()
-        Me.txtNamaGolongan = New System.Windows.Forms.TextBox()
+        Me.txtIdJenisPengeluaran = New System.Windows.Forms.TextBox()
+        Me.txtNamaJenisPengeluaran = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.pnlHeader.SuspendLayout()
         Me.Panel1.SuspendLayout()
@@ -42,10 +42,10 @@ Partial Class EditGolonganFrm
         Me.pnlHeader.BackColor = System.Drawing.Color.FromArgb(CType(CType(13, Byte), Integer), CType(CType(59, Byte), Integer), CType(CType(102, Byte), Integer))
         Me.pnlHeader.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.pnlHeader.Controls.Add(Me.lblHeader)
-        Me.pnlHeader.Location = New System.Drawing.Point(3, 3)
+        Me.pnlHeader.Location = New System.Drawing.Point(3, 4)
         Me.pnlHeader.Name = "pnlHeader"
         Me.pnlHeader.Size = New System.Drawing.Size(421, 35)
-        Me.pnlHeader.TabIndex = 26
+        Me.pnlHeader.TabIndex = 32
         '
         'lblHeader
         '
@@ -54,9 +54,9 @@ Partial Class EditGolonganFrm
         Me.lblHeader.ForeColor = System.Drawing.Color.White
         Me.lblHeader.Location = New System.Drawing.Point(3, 7)
         Me.lblHeader.Name = "lblHeader"
-        Me.lblHeader.Size = New System.Drawing.Size(141, 17)
+        Me.lblHeader.Size = New System.Drawing.Size(163, 17)
         Me.lblHeader.TabIndex = 0
-        Me.lblHeader.Text = "Edit Data Golongan"
+        Me.lblHeader.Text = "Edit Jenis Pengeluaran"
         '
         'Panel1
         '
@@ -66,10 +66,10 @@ Partial Class EditGolonganFrm
         Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Panel1.Controls.Add(Me.btnSimpan)
         Me.Panel1.Controls.Add(Me.btnSelesai)
-        Me.Panel1.Location = New System.Drawing.Point(3, 95)
+        Me.Panel1.Location = New System.Drawing.Point(3, 96)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(421, 35)
-        Me.Panel1.TabIndex = 27
+        Me.Panel1.TabIndex = 33
         '
         'btnSimpan
         '
@@ -96,57 +96,52 @@ Partial Class EditGolonganFrm
         'Label3
         '
         Me.Label3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Label3.Location = New System.Drawing.Point(3, 44)
+        Me.Label3.Location = New System.Drawing.Point(3, 45)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(125, 20)
-        Me.Label3.TabIndex = 29
-        Me.Label3.Text = "Id Golongan"
+        Me.Label3.Size = New System.Drawing.Size(141, 20)
+        Me.Label3.TabIndex = 35
+        Me.Label3.Text = "Id Jenis Pengeluaran"
         Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'txtIdGolongan
+        'txtIdJenisPengeluaran
         '
-        Me.txtIdGolongan.Location = New System.Drawing.Point(134, 44)
-        Me.txtIdGolongan.MaxLength = 6
-        Me.txtIdGolongan.Name = "txtIdGolongan"
-        Me.txtIdGolongan.ReadOnly = True
-        Me.txtIdGolongan.Size = New System.Drawing.Size(119, 20)
-        Me.txtIdGolongan.TabIndex = 1
+        Me.txtIdJenisPengeluaran.Location = New System.Drawing.Point(150, 45)
+        Me.txtIdJenisPengeluaran.MaxLength = 6
+        Me.txtIdJenisPengeluaran.Name = "txtIdJenisPengeluaran"
+        Me.txtIdJenisPengeluaran.ReadOnly = True
+        Me.txtIdJenisPengeluaran.Size = New System.Drawing.Size(103, 20)
+        Me.txtIdJenisPengeluaran.TabIndex = 30
         '
-        'txtNamaGolongan
+        'txtNamaJenisPengeluaran
         '
-        Me.txtNamaGolongan.Location = New System.Drawing.Point(134, 70)
-        Me.txtNamaGolongan.MaxLength = 25
-        Me.txtNamaGolongan.Name = "txtNamaGolongan"
-        Me.txtNamaGolongan.Size = New System.Drawing.Size(290, 20)
-        Me.txtNamaGolongan.TabIndex = 2
+        Me.txtNamaJenisPengeluaran.Location = New System.Drawing.Point(150, 71)
+        Me.txtNamaJenisPengeluaran.MaxLength = 25
+        Me.txtNamaJenisPengeluaran.Name = "txtNamaJenisPengeluaran"
+        Me.txtNamaJenisPengeluaran.Size = New System.Drawing.Size(274, 20)
+        Me.txtNamaJenisPengeluaran.TabIndex = 31
         '
         'Label2
         '
         Me.Label2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Label2.Location = New System.Drawing.Point(3, 70)
+        Me.Label2.Location = New System.Drawing.Point(3, 71)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(125, 20)
-        Me.Label2.TabIndex = 28
-        Me.Label2.Text = "Nama Golongan"
+        Me.Label2.Size = New System.Drawing.Size(141, 20)
+        Me.Label2.TabIndex = 34
+        Me.Label2.Text = "Nama Jenis Pengeluaran"
         Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'EditGolonganFrm
+        'EditJenisPengeluaranFrm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(427, 134)
         Me.Controls.Add(Me.pnlHeader)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.txtIdGolongan)
-        Me.Controls.Add(Me.txtNamaGolongan)
+        Me.Controls.Add(Me.txtIdJenisPengeluaran)
+        Me.Controls.Add(Me.txtNamaJenisPengeluaran)
         Me.Controls.Add(Me.Label2)
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
-        Me.MaximizeBox = False
-        Me.MinimizeBox = False
-        Me.Name = "EditGolonganFrm"
-        Me.ShowIcon = False
+        Me.Name = "EditJenisPengeluaranFrm"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Retailer Pintar"
         Me.pnlHeader.ResumeLayout(False)
@@ -163,7 +158,7 @@ Partial Class EditGolonganFrm
     Private WithEvents btnSimpan As Button
     Private WithEvents btnSelesai As Button
     Friend WithEvents Label3 As Label
-    Friend WithEvents txtIdGolongan As TextBox
-    Friend WithEvents txtNamaGolongan As TextBox
+    Friend WithEvents txtIdJenisPengeluaran As TextBox
+    Friend WithEvents txtNamaJenisPengeluaran As TextBox
     Friend WithEvents Label2 As Label
 End Class

@@ -1,10 +1,8 @@
 ﻿Imports MySqlConnector
+Public Class JenisPengeluaranFrm
+    Public id_Jenis_Pengeluaran, nama_Jenis_Pengeluaran As String
 
-Public Class CustomerFrm
-
-    Public nik, id_Customer, nama_Customer, alamat_Customer, jenis_kelamin, telepon_Customer As String
-
-    Private Sub CustomerFrm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Private Sub JenisPengeluaranFrm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Call tampilData()
     End Sub
 
@@ -15,15 +13,15 @@ Public Class CustomerFrm
 
     End Sub
 
-    Private Sub CustomerFrm_KeyDown(sender As Object, e As KeyEventArgs) Handles Me.KeyDown
+    Private Sub JenisPengeluaranFrm_KeyDown(sender As Object, e As KeyEventArgs) Handles Me.KeyDown
         If e.KeyCode = Keys.Escape Then
             Me.Close()
         ElseIf e.KeyCode = Keys.F8 Then
-            Call tambahCustomer()
+            Call tambahJenisPengeluaran()
         ElseIf e.KeyCode = Keys.F9 Then
-            Call editCustomer()
+            Call editJenisPengeluaran()
         ElseIf e.KeyCode = Keys.F10 Then
-            Call hapusCustomer()
+            Call hapusJenisPengeluaran()
         End If
 
 
@@ -32,28 +30,23 @@ Public Class CustomerFrm
 
     Private Sub btnTambah_Click(sender As Object, e As EventArgs) Handles btnTambah.Click
 
-        Call tambahCustomer()
+        Call tambahJenisPengeluaran()
 
     End Sub
 
-    Private Sub tambahCustomer()
+    Private Sub tambahJenisPengeluaran()
         Try
-            TambahCustomerFrm.ShowDialog()
+            TambahJenisPengeluaranFrm.ShowDialog()
         Catch ex As Exception
 
         End Try
     End Sub
 
-    Private Sub editCustomer()
+    Private Sub editJenisPengeluaran()
         Try
-
-            id_Customer = DataGridView1.CurrentRow.Cells(0).Value.ToString
-            nik = DataGridView1.CurrentRow.Cells(1).Value.ToString
-            nama_Customer = DataGridView1.CurrentRow.Cells(2).Value.ToString
-            alamat_Customer = DataGridView1.CurrentRow.Cells(3).Value.ToString
-            jenis_kelamin = DataGridView1.CurrentRow.Cells(4).Value.ToString
-            telepon_Customer = DataGridView1.CurrentRow.Cells(5).Value.ToString
-            EditCustomerFrm.ShowDialog()
+            id_Jenis_Pengeluaran = DataGridView1.CurrentRow.Cells(0).Value.ToString
+            nama_Jenis_Pengeluaran = DataGridView1.CurrentRow.Cells(1).Value.ToString
+            EditJenisPengeluaranFrm.ShowDialog()
 
 
 
@@ -64,7 +57,7 @@ Public Class CustomerFrm
         End Try
     End Sub
 
-    Private Sub hapusCustomer()
+    Private Sub hapusJenisPengeluaran()
         Try
 
             Dim x As Object = MessageBox.Show("Apakah Yakin Data Akan dihapus ?", "Retail Pintar",
@@ -76,7 +69,7 @@ Public Class CustomerFrm
                 Call koneksi()
 
                 Dim id As String = DataGridView1.CurrentRow.Cells(0).Value.ToString
-                str = "delete from ms_Customer where id = '" & id & "'"
+                str = "delete from ms_Jenis_Pengeluaran where id_Jenis_Pengeluaran = '" & id & "'"
                 cmd = New MySqlCommand(str, conn)
                 cmd.ExecuteNonQuery()
 
@@ -97,7 +90,7 @@ Public Class CustomerFrm
         Try
             Call koneksi()
 
-            da = New MySqlDataAdapter("select * from ms_Customer", conn)
+            da = New MySqlDataAdapter("select * from ms_Jenis_Pengeluaran", conn)
             ds = New DataSet
             da.Fill(ds)
             DataGridView1.DataSource = ds.Tables(0)
@@ -110,10 +103,10 @@ Public Class CustomerFrm
     End Sub
 
     Private Sub btnHapus_Click(sender As Object, e As EventArgs) Handles btnHapus.Click
-        Call hapusCustomer()
+        Call hapusJenisPengeluaran()
     End Sub
 
     Private Sub btnPerbaiki_Click(sender As Object, e As EventArgs) Handles btnPerbaiki.Click
-        Call editCustomer()
+        Call editJenisPengeluaran()
     End Sub
 End Class

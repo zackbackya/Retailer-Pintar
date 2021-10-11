@@ -97,4 +97,16 @@
         CustomerFrm.Show()
         CustomerFrm.Focus()
     End Sub
+
+    Private Sub mnuJenisPengeluaran_Click(sender As Object, e As EventArgs) Handles mnuJenisPengeluaran.Click
+        Me.WindowState = FormWindowState.Maximized
+        JenisPengeluaranFrm.MdiParent = Me
+        JenisPengeluaranFrm.Dock = DockStyle.Fill
+        JenisPengeluaranFrm.Show()
+        JenisPengeluaranFrm.Focus()
+    End Sub
+
+    Private Sub tbPembelianProduk_Click(sender As Object, e As EventArgs) Handles tbPembelianProduk.Click
+
+    End Sub
 End Class

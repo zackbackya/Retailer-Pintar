@@ -1,4 +1,4 @@
-﻿Public Class TambahGolonganFrm
+﻿Public Class TambahJenisPengeluaranFrm
     Private Sub btnSimpan_Click(sender As Object, e As EventArgs) Handles btnSimpan.Click
         Call tambahData()
     End Sub
@@ -7,16 +7,16 @@
         Call koneksi()
         Try
 
-            str = "insert into ms_golongan values ('" & txtIdGolongan.Text & "','" & txtNamaGolongan.Text & "')"
+            str = "insert into ms_Jenis_Pengeluaran values ('" & txtIdJenisPengeluaran.Text & "','" & txtNamaJenisPengeluaran.Text & "')"
             cmd = New MySqlConnector.MySqlCommand(str, conn)
             cmd.ExecuteNonQuery()
 
             MessageBox.Show("Data Berhasil Ditambah", "Retail Pintar", MessageBoxButtons.OK, MessageBoxIcon.Information)
 
-            Call GolonganFrm.tampilData()
+            Call JenisPengeluaranFrm.tampilData()
             Call GenTempID()
-            txtNamaGolongan.Text = ""
-            txtNamaGolongan.Focus()
+            txtNamaJenisPengeluaran.Text = ""
+            txtNamaJenisPengeluaran.Focus()
 
 
         Catch ex As Exception
@@ -26,16 +26,16 @@
         End Try
     End Sub
 
-    Private Sub TambahGolonganFrm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Private Sub TambahJenisPengeluaranFrm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Call GenTempID()
-        txtNamaGolongan.Focus()
+        txtNamaJenisPengeluaran.Focus()
     End Sub
 
     Private Sub btnSelesai_Click(sender As Object, e As EventArgs) Handles btnSelesai.Click
         Me.Close()
     End Sub
 
-    Private Sub TambahGolonganFrm_KeyDown(sender As Object, e As KeyEventArgs) Handles Me.KeyDown
+    Private Sub TambahJenisPengeluaranFrm_KeyDown(sender As Object, e As KeyEventArgs) Handles Me.KeyDown
         If e.KeyCode = Keys.Escape Then
             Me.Close()
         End If
@@ -43,7 +43,7 @@
 
     Public Sub GenTempID()
         Dim idjam As String = Format(Now(), "HHmmss")
-        txtIdGolongan.Text = idjam
+        txtIdJenisPengeluaran.Text = idjam
     End Sub
 
 

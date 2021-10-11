@@ -17,7 +17,7 @@
             End If
 
 
-            cmd = New MySqlConnector.MySqlCommand("update ms_Customer set nik = '" & txtNIKCustomer.Text & "', nama_Customer = '" & txtNamaCustomer.Text & "', alamat = '" & txtAlamatCustomer.Text & "', jenis_kelamin = '" & jenis_kelamin & "',telepon = '" & txtTeleponCustomer.Text & "' where id_Customer = '" & txtIdCustomer.Text & "'", conn)
+            cmd = New MySqlConnector.MySqlCommand("update ms_Customer set nik = '" & txtNIKCustomer.Text & "', nama = '" & txtNamaCustomer.Text & "', alamat = '" & txtAlamatCustomer.Text & "', jenis_kelamin = '" & jenis_kelamin & "', telepon = '" & txtTeleponCustomer.Text & "' where id  = '" & txtIdCustomer.Text & "'", conn)
             cmd.ExecuteNonQuery()
 
             MessageBox.Show("Data Berhasil Diupdate", "Retail Pintar", MessageBoxButtons.OK, MessageBoxIcon.Information)

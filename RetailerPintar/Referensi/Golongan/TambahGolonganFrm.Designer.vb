@@ -28,8 +28,8 @@ Partial Class TambahGolonganFrm
         Me.btnSimpan = New System.Windows.Forms.Button()
         Me.btnSelesai = New System.Windows.Forms.Button()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.txtIdKartu = New System.Windows.Forms.TextBox()
-        Me.txtNamaKartu = New System.Windows.Forms.TextBox()
+        Me.txtIdGolongan = New System.Windows.Forms.TextBox()
+        Me.txtNamaGolongan = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.pnlHeader.SuspendLayout()
         Me.Panel1.SuspendLayout()
@@ -103,22 +103,22 @@ Partial Class TambahGolonganFrm
         Me.Label3.Text = "Id Golongan"
         Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'txtIdKartu
+        'txtIdGolongan
         '
-        Me.txtIdKartu.Location = New System.Drawing.Point(134, 44)
-        Me.txtIdKartu.MaxLength = 6
-        Me.txtIdKartu.Name = "txtIdKartu"
-        Me.txtIdKartu.ReadOnly = True
-        Me.txtIdKartu.Size = New System.Drawing.Size(119, 20)
-        Me.txtIdKartu.TabIndex = 1
+        Me.txtIdGolongan.Location = New System.Drawing.Point(134, 44)
+        Me.txtIdGolongan.MaxLength = 6
+        Me.txtIdGolongan.Name = "txtIdGolongan"
+        Me.txtIdGolongan.ReadOnly = True
+        Me.txtIdGolongan.Size = New System.Drawing.Size(119, 20)
+        Me.txtIdGolongan.TabIndex = 1
         '
-        'txtNamaKartu
+        'txtNamaGolongan
         '
-        Me.txtNamaKartu.Location = New System.Drawing.Point(134, 70)
-        Me.txtNamaKartu.MaxLength = 25
-        Me.txtNamaKartu.Name = "txtNamaKartu"
-        Me.txtNamaKartu.Size = New System.Drawing.Size(290, 20)
-        Me.txtNamaKartu.TabIndex = 2
+        Me.txtNamaGolongan.Location = New System.Drawing.Point(134, 70)
+        Me.txtNamaGolongan.MaxLength = 25
+        Me.txtNamaGolongan.Name = "txtNamaGolongan"
+        Me.txtNamaGolongan.Size = New System.Drawing.Size(290, 20)
+        Me.txtNamaGolongan.TabIndex = 2
         '
         'Label2
         '
@@ -139,8 +139,8 @@ Partial Class TambahGolonganFrm
         Me.Controls.Add(Me.pnlHeader)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.txtIdKartu)
-        Me.Controls.Add(Me.txtNamaKartu)
+        Me.Controls.Add(Me.txtIdGolongan)
+        Me.Controls.Add(Me.txtNamaGolongan)
         Me.Controls.Add(Me.Label2)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.MaximizeBox = False
@@ -148,7 +148,7 @@ Partial Class TambahGolonganFrm
         Me.Name = "TambahGolonganFrm"
         Me.ShowIcon = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "TambahGolonganFrm"
+        Me.Text = "Retailer Pintar"
         Me.pnlHeader.ResumeLayout(False)
         Me.pnlHeader.PerformLayout()
         Me.Panel1.ResumeLayout(False)
@@ -163,7 +163,7 @@ Partial Class TambahGolonganFrm
     Private WithEvents btnSimpan As Button
     Private WithEvents btnSelesai As Button
     Friend WithEvents Label3 As Label
-    Friend WithEvents txtIdKartu As TextBox
-    Friend WithEvents txtNamaKartu As TextBox
+    Friend WithEvents txtIdGolongan As TextBox
+    Friend WithEvents txtNamaGolongan As TextBox
     Friend WithEvents Label2 As Label
 End Class

@@ -247,7 +247,7 @@ Partial Class MainFrm
         'mnuPengeluaranBiaya
         '
         Me.mnuPengeluaranBiaya.Name = "mnuPengeluaranBiaya"
-        Me.mnuPengeluaranBiaya.Size = New System.Drawing.Size(171, 22)
+        Me.mnuPengeluaranBiaya.Size = New System.Drawing.Size(180, 22)
         Me.mnuPengeluaranBiaya.Tag = "FrmListPengeluaranBiaya"
         Me.mnuPengeluaranBiaya.Text = "Pengeluaran Biaya"
         '

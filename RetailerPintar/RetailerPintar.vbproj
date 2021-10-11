@@ -156,6 +156,24 @@
     <Compile Include="Referensi\Golongan\GolonganFrm.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Referensi\Jenis Pengeluaran\EditJenisPengeluaranFrm.Designer.vb">
+      <DependentUpon>EditJenisPengeluaranFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Referensi\Jenis Pengeluaran\EditJenisPengeluaranFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Referensi\Jenis Pengeluaran\JenisPengeluaranFrm.Designer.vb">
+      <DependentUpon>JenisPengeluaranFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Referensi\Jenis Pengeluaran\JenisPengeluaranFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Referensi\Jenis Pengeluaran\TambahJenisPengeluaranFrm.Designer.vb">
+      <DependentUpon>TambahJenisPengeluaranFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Referensi\Jenis Pengeluaran\TambahJenisPengeluaranFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Referensi\Kartu\EditKartuFrm.Designer.vb">
       <DependentUpon>EditKartuFrm.vb</DependentUpon>
     </Compile>
@@ -247,6 +265,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Referensi\Golongan\GolonganFrm.resx">
       <DependentUpon>GolonganFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Referensi\Jenis Pengeluaran\EditJenisPengeluaranFrm.resx">
+      <DependentUpon>EditJenisPengeluaranFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Referensi\Jenis Pengeluaran\JenisPengeluaranFrm.resx">
+      <DependentUpon>JenisPengeluaranFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Referensi\Jenis Pengeluaran\TambahJenisPengeluaranFrm.resx">
+      <DependentUpon>TambahJenisPengeluaranFrm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Referensi\Kartu\EditKartuFrm.resx">
       <DependentUpon>EditKartuFrm.vb</DependentUpon>
