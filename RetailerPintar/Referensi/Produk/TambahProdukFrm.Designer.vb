@@ -35,8 +35,6 @@ Partial Class TambahProdukFrm
         Me.txtNamaPendekProduk = New System.Windows.Forms.TextBox()
         Me.txtIdSupplier = New System.Windows.Forms.TextBox()
         Me.txtIdGolongan = New System.Windows.Forms.TextBox()
-        Me.TextBox6 = New System.Windows.Forms.TextBox()
-        Me.TextBox7 = New System.Windows.Forms.TextBox()
         Me.txtLokasiProduk = New System.Windows.Forms.TextBox()
         Me.pictureBox1 = New System.Windows.Forms.PictureBox()
         Me.txtHargaBeliProduk = New System.Windows.Forms.TextBox()
@@ -53,6 +51,8 @@ Partial Class TambahProdukFrm
         Me.Label12 = New System.Windows.Forms.Label()
         Me.cbAktifProduk = New System.Windows.Forms.CheckBox()
         Me.Label4 = New System.Windows.Forms.Label()
+        Me.cbSupplier = New System.Windows.Forms.ComboBox()
+        Me.cbGolongan = New System.Windows.Forms.ComboBox()
         Me.pnlHeader.SuspendLayout()
         Me.Panel1.SuspendLayout()
         CType(Me.pictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -184,22 +184,6 @@ Partial Class TambahProdukFrm
         Me.txtIdGolongan.Name = "txtIdGolongan"
         Me.txtIdGolongan.Size = New System.Drawing.Size(116, 20)
         Me.txtIdGolongan.TabIndex = 37
-        '
-        'TextBox6
-        '
-        Me.TextBox6.Location = New System.Drawing.Point(256, 174)
-        Me.TextBox6.MaxLength = 25
-        Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.Size = New System.Drawing.Size(440, 20)
-        Me.TextBox6.TabIndex = 6
-        '
-        'TextBox7
-        '
-        Me.TextBox7.Location = New System.Drawing.Point(256, 200)
-        Me.TextBox7.MaxLength = 25
-        Me.TextBox7.Name = "TextBox7"
-        Me.TextBox7.Size = New System.Drawing.Size(440, 20)
-        Me.TextBox7.TabIndex = 8
         '
         'txtLokasiProduk
         '
@@ -353,12 +337,30 @@ Partial Class TambahProdukFrm
         Me.Label4.Text = "/ pcs"
         Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
+        'cbSupplier
+        '
+        Me.cbSupplier.FormattingEnabled = True
+        Me.cbSupplier.Location = New System.Drawing.Point(259, 173)
+        Me.cbSupplier.Name = "cbSupplier"
+        Me.cbSupplier.Size = New System.Drawing.Size(437, 21)
+        Me.cbSupplier.TabIndex = 57
+        '
+        'cbGolongan
+        '
+        Me.cbGolongan.FormattingEnabled = True
+        Me.cbGolongan.Location = New System.Drawing.Point(259, 201)
+        Me.cbGolongan.Name = "cbGolongan"
+        Me.cbGolongan.Size = New System.Drawing.Size(437, 21)
+        Me.cbGolongan.TabIndex = 58
+        '
         'TambahProdukFrm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(699, 369)
+        Me.Controls.Add(Me.cbGolongan)
+        Me.Controls.Add(Me.cbSupplier)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.cbAktifProduk)
         Me.Controls.Add(Me.Label12)
@@ -375,8 +377,6 @@ Partial Class TambahProdukFrm
         Me.Controls.Add(Me.txtHargaBeliProduk)
         Me.Controls.Add(Me.pictureBox1)
         Me.Controls.Add(Me.txtLokasiProduk)
-        Me.Controls.Add(Me.TextBox7)
-        Me.Controls.Add(Me.TextBox6)
         Me.Controls.Add(Me.txtIdGolongan)
         Me.Controls.Add(Me.txtIdSupplier)
         Me.Controls.Add(Me.txtNamaPendekProduk)
@@ -416,8 +416,6 @@ Partial Class TambahProdukFrm
     Friend WithEvents txtNamaPendekProduk As TextBox
     Friend WithEvents txtIdSupplier As TextBox
     Friend WithEvents txtIdGolongan As TextBox
-    Friend WithEvents TextBox6 As TextBox
-    Friend WithEvents TextBox7 As TextBox
     Friend WithEvents txtLokasiProduk As TextBox
     Private WithEvents pictureBox1 As PictureBox
     Friend WithEvents txtHargaBeliProduk As TextBox
@@ -434,4 +432,6 @@ Partial Class TambahProdukFrm
     Friend WithEvents Label12 As Label
     Friend WithEvents cbAktifProduk As CheckBox
     Friend WithEvents Label4 As Label
+    Friend WithEvents cbSupplier As ComboBox
+    Friend WithEvents cbGolongan As ComboBox
 End Class
