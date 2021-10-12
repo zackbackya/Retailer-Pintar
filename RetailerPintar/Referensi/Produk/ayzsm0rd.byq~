@@ -1,0 +1,77 @@
+﻿Public Class EditProdukFrm
+    Private Sub btnSimpan_Click(sender As Object, e As EventArgs)
+
+        Call editProduk()
+
+    End Sub
+
+    Private Sub editProduk()
+        Call koneksi()
+        Try
+            Dim aktif As String
+
+            If cbAktifProduk.Checked = True Then
+                aktif = "T"
+            Else
+                aktif = "F"
+            End If
+
+
+            cmd = New MySqlConnector.MySqlCommand("update ms_Produk set barcode = '" & txtBarcode.Text & "', nama_produk = '" & txtNamaProduk.Text & "',
+                                                    nama_pendek = '" & txtNamaPendekProduk.Text & "', aktif = '" & aktif & "', 
+                                                    id_supplier = '" & txtIdSupplier.Text & "', id_golongan = '" & txtIdGolongan.Text & "',
+                                                    lokasi = '" & txtLokasiProduk.Text & "',harga_beli = '" & txtHargaBeliProduk.Text & "',
+                                                    harga_jual = '" & txtIdSupplier.Text & "',stok = '" & txtStokProduk.Text & "',
+                                                    where id  = '" & txtIdProduk.Text & "'", conn)
+            cmd.ExecuteNonQuery()
+
+            MessageBox.Show("Data Berhasil Diupdate", "Retail Pintar", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            Call ProdukFrm.tampilData()
+
+        Catch ex As Exception
+
+            MsgBox(ex.ToString)
+
+        End Try
+    End Sub
+
+    Private Sub EditProdukFrm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+        txtBarcode.Text = ProdukFrm.barcode
+        txtNamaProduk.Text = ProdukFrm.nama_produk
+        txtNamaPendekProduk.Text = ProdukFrm.nama_pendek
+        txtIdSupplier.Text = ProdukFrm.id_supplier
+        txtIdGolongan.Text = ProdukFrm.id_golongan
+        txtLokasiProduk.Text = ProdukFrm.lokasi
+        txtHargaBeliProduk.Text = ProdukFrm.harga_beli
+        txtHargaJualProduk.Text = ProdukFrm.harga_jual
+        txtStokProduk.Text = ProdukFrm.stok
+
+
+        If ProdukFrm.aktif = "T" Then
+            cbAktifProduk.Checked = True
+        Else
+            cbAktifProduk.Checked = False
+        End If
+
+        txtNamaProduk.Focus()
+
+    End Sub
+
+    Private Sub btnSelesai_Click(sender As Object, e As EventArgs)
+        Me.Close()
+    End Sub
+
+    Private Sub EditProdukFrm_KeyDown(sender As Object, e As KeyEventArgs) Handles Me.KeyDown
+
+        If e.KeyCode = Keys.Escape Then
+            Me.Close()
+        ElseIf e.KeyCode = Keys.F11 Then
+            Call editProduk()
+        End If
+
+
+
+
+    End Sub
+End Class
