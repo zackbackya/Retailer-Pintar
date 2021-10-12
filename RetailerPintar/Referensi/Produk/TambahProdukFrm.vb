@@ -1,7 +1,4 @@
-﻿Imports MySqlConnector
-
-Public Class TambahProdukFrm
-    Dim id_supplier, id_golongan As Integer
+﻿Public Class TambahProdukFrm
     Private Sub btnSimpan_Click(sender As Object, e As EventArgs) Handles btnSimpan.Click
         Call tambahData()
     End Sub
@@ -46,17 +43,13 @@ Public Class TambahProdukFrm
         Catch ex As Exception
 
             MsgBox(ex.ToString)
-            i
+
         End Try
     End Sub
 
     Private Sub TambahProdukFrm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        txtIdSupplier.Text = ""
-        txtIdGolongan.Text = ""
         Call GenTempID()
-
         txtNamaProduk.Focus()
-
     End Sub
 
     Private Sub btnSelesai_Click(sender As Object, e As EventArgs) Handles btnSelesai.Click
@@ -74,61 +67,5 @@ Public Class TambahProdukFrm
         txtIdProduk.Text = idjam
     End Sub
 
-    Private Sub loadSupplier()
-        Try
-            Call koneksi()
 
-            da = New MySqlDataAdapter("select * from ms_supplier", conn)
-            ds = New DataSet
-            da.Fill(ds)
-            cbSupplier.DataSource = ds.Tables(0)
-            cbSupplier.ValueMember = "id_supplier"
-            cbSupplier.DisplayMember = "nama_supplier"
-            conn.Close()
-
-        Catch ex As Exception
-
-        End Try
-    End Sub
-
-    Private Sub loadGolongan()
-        Try
-            Call koneksi()
-
-            da = New MySqlDataAdapter("select * from ms_golongan", conn)
-            ds = New DataSet
-            da.Fill(ds)
-            cbGolongan.DataSource = ds.Tables(0)
-            cbGolongan.ValueMember = "id_golongan"
-            cbGolongan.DisplayMember = "nama_golongan"
-            conn.Close()
-
-        Catch ex As Exception
-
-        End Try
-    End Sub
-
-    Private Sub cbGolongan_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbGolongan.SelectedIndexChanged
-        txtIdGolongan.Text = cbGolongan.SelectedValue.ToString
-    End Sub
-
-    Private Sub CbSupplier_SelectionChangeCommitted(sender As Object, e As EventArgs) Handles cbSupplier.SelectedIndexChanged
-
-        txtIdSupplier.Text = cbSupplier.SelectedValue.ToString
-
-    End Sub
-
-    Private Sub cbSupplier_KeyPress(sender As Object, e As KeyPressEventArgs) Handles cbSupplier.KeyPress
-        e.Handled = True
-    End Sub
-
-    Private Sub cbGolongan_KeyPress(sender As Object, e As KeyPressEventArgs) Handles cbGolongan.KeyPress
-        e.Handled = True
-    End Sub
-    Private Sub cbSupplier_Click(sender As Object, e As EventArgs) Handles cbSupplier.Click
-        Call loadSupplier()
-    End Sub
-    Private Sub cbGolongan_Click(sender As Object, e As EventArgs) Handles cbGolongan.Click
-        Call loadGolongan()
-    End Sub
 End Class

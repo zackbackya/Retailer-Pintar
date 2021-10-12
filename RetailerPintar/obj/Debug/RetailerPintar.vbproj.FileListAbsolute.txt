@@ -85,9 +85,6 @@ D:\Programming\VB.net\Project\Retailer-Pintar\RetailerPintar\obj\Debug\RetailerP
 D:\Programming\VB.net\Project\Retailer-Pintar\RetailerPintar\obj\Debug\RetailerPintar.TambahCustomerFrm.resources
 D:\Programming\VB.net\Project\Retailer-Pintar\RetailerPintar\obj\Debug\RetailerPintar.EditGolonganFrm.resources
 D:\Programming\VB.net\Project\Retailer-Pintar\RetailerPintar\obj\Debug\RetailerPintar.GolonganFrm.resources
-D:\Programming\VB.net\Project\Retailer-Pintar\RetailerPintar\obj\Debug\RetailerPintar.EditJenisPengeluaranFrm.resources
-D:\Programming\VB.net\Project\Retailer-Pintar\RetailerPintar\obj\Debug\RetailerPintar.JenisPengeluaranFrm.resources
-D:\Programming\VB.net\Project\Retailer-Pintar\RetailerPintar\obj\Debug\RetailerPintar.TambahJenisPengeluaranFrm.resources
 D:\Programming\VB.net\Project\Retailer-Pintar\RetailerPintar\obj\Debug\RetailerPintar.EditKartuFrm.resources
 D:\Programming\VB.net\Project\Retailer-Pintar\RetailerPintar\obj\Debug\RetailerPintar.EditProdukFrm.resources
 D:\Programming\VB.net\Project\Retailer-Pintar\RetailerPintar\obj\Debug\RetailerPintar.KartuFrm.resources
@@ -117,3 +114,7 @@ D:\Programming\VB.net\Project\Retailer-Pintar\RetailerPintar\bin\Debug\System.Th
 D:\Programming\VB.net\Project\Retailer-Pintar\RetailerPintar\obj\Debug\RetailerPintar.exe
 D:\Programming\VB.net\Project\Retailer-Pintar\RetailerPintar\obj\Debug\RetailerPintar.xml
 D:\Programming\VB.net\Project\Retailer-Pintar\RetailerPintar\obj\Debug\RetailerPintar.pdb
+D:\Programming\VB.net\Project\Retailer-Pintar\RetailerPintar\obj\Debug\RetailerPintar.vbproj.AssemblyReference.cache
+D:\Programming\VB.net\Project\Retailer-Pintar\RetailerPintar\obj\Debug\RetailerPintar.EditJenisPengeluaranFrm.resources
+D:\Programming\VB.net\Project\Retailer-Pintar\RetailerPintar\obj\Debug\RetailerPintar.JenisPengeluaranFrm.resources
+D:\Programming\VB.net\Project\Retailer-Pintar\RetailerPintar\obj\Debug\RetailerPintar.TambahJenisPengeluaranFrm.resources

@@ -1,6 +1,4 @@
-﻿
-
-Imports MySqlConnector
+﻿Imports MySqlConnector
 
 Public Class CustomerFrm
 
