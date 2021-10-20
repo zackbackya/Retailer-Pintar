@@ -9,6 +9,7 @@ Module ModuleKoneksidb
     Public rd_1, rd_2 As MySqlDataReader
     Public da As MySqlDataAdapter
     Public ds As DataSet
+    Public dt As DataTable
     Public bs As BindingSource
     Public str As String
 

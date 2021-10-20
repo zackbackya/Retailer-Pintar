@@ -216,6 +216,24 @@
     <Compile Include="Referensi\Produk\TambahProdukFrm.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Referensi\Promo\EditPromoFrm.Designer.vb">
+      <DependentUpon>EditPromoFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Referensi\Promo\EditPromoFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Referensi\Promo\PromoFrm.Designer.vb">
+      <DependentUpon>PromoFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Referensi\Promo\PromoFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Referensi\Promo\TambahPromoFrm.Designer.vb">
+      <DependentUpon>TambahPromoFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Referensi\Promo\TambahPromoFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Referensi\Supplier\EditSupplierFrm.Designer.vb">
       <DependentUpon>EditSupplierFrm.vb</DependentUpon>
     </Compile>
@@ -232,6 +250,24 @@
       <DependentUpon>TambahSupplierFrm.vb</DependentUpon>
     </Compile>
     <Compile Include="Referensi\Supplier\TambahSupplierFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Referensi\Toko\EditTokoFrm.Designer.vb">
+      <DependentUpon>EditTokoFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Referensi\Toko\EditTokoFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Referensi\Toko\TambahTokoFrm.Designer.vb">
+      <DependentUpon>TambahTokoFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Referensi\Toko\TambahTokoFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Referensi\Toko\TokoFrm.Designer.vb">
+      <DependentUpon>TokoFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Referensi\Toko\TokoFrm.vb">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
@@ -296,6 +332,15 @@
     <EmbeddedResource Include="Referensi\Produk\TambahProdukFrm.resx">
       <DependentUpon>TambahProdukFrm.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Referensi\Promo\EditPromoFrm.resx">
+      <DependentUpon>EditPromoFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Referensi\Promo\PromoFrm.resx">
+      <DependentUpon>PromoFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Referensi\Promo\TambahPromoFrm.resx">
+      <DependentUpon>TambahPromoFrm.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Referensi\Supplier\EditSupplierFrm.resx">
       <DependentUpon>EditSupplierFrm.vb</DependentUpon>
     </EmbeddedResource>
@@ -304,6 +349,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Referensi\Supplier\TambahSupplierFrm.resx">
       <DependentUpon>TambahSupplierFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Referensi\Toko\EditTokoFrm.resx">
+      <DependentUpon>EditTokoFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Referensi\Toko\TambahTokoFrm.resx">
+      <DependentUpon>TambahTokoFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Referensi\Toko\TokoFrm.resx">
+      <DependentUpon>TokoFrm.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

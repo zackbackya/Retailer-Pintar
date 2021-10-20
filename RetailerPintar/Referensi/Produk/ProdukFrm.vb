@@ -12,11 +12,15 @@ Public Class ProdukFrm
         Call tampilData()
 
     End Sub
+
     Private Sub ProdukFrm_KeyDown(sender As Object, e As KeyEventArgs) Handles Me.KeyDown
         If e.KeyCode = Keys.Escape Then
             Me.Close()
+            e.Handled = True
+
         ElseIf e.KeyCode = Keys.F8 Then
             Call tambahProduk()
+            e.Handled = True
         ElseIf e.KeyCode = Keys.F9 Then
             Call editProduk()
         ElseIf e.KeyCode = Keys.F10 Then

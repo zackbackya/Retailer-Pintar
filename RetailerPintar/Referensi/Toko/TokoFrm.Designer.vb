@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class ProdukFrm
+Partial Class TokoFrm
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -22,7 +22,6 @@ Partial Class ProdukFrm
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ProdukFrm))
         Me.pnlHeader = New System.Windows.Forms.Panel()
         Me.lblHeader = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
@@ -31,9 +30,6 @@ Partial Class ProdukFrm
         Me.btnPerbaiki = New System.Windows.Forms.Button()
         Me.btnTambah = New System.Windows.Forms.Button()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.txtCari = New System.Windows.Forms.TextBox()
-        Me.btnCari = New System.Windows.Forms.Button()
-        Me.cbGolongan = New System.Windows.Forms.ComboBox()
         Me.pnlHeader.SuspendLayout()
         Me.Panel1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -46,10 +42,10 @@ Partial Class ProdukFrm
         Me.pnlHeader.BackColor = System.Drawing.Color.FromArgb(CType(CType(13, Byte), Integer), CType(CType(59, Byte), Integer), CType(CType(102, Byte), Integer))
         Me.pnlHeader.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.pnlHeader.Controls.Add(Me.lblHeader)
-        Me.pnlHeader.Location = New System.Drawing.Point(3, 3)
+        Me.pnlHeader.Location = New System.Drawing.Point(2, 3)
         Me.pnlHeader.Name = "pnlHeader"
         Me.pnlHeader.Size = New System.Drawing.Size(1142, 35)
-        Me.pnlHeader.TabIndex = 6
+        Me.pnlHeader.TabIndex = 12
         '
         'lblHeader
         '
@@ -58,9 +54,9 @@ Partial Class ProdukFrm
         Me.lblHeader.ForeColor = System.Drawing.Color.White
         Me.lblHeader.Location = New System.Drawing.Point(3, 7)
         Me.lblHeader.Name = "lblHeader"
-        Me.lblHeader.Size = New System.Drawing.Size(58, 17)
+        Me.lblHeader.Size = New System.Drawing.Size(43, 17)
         Me.lblHeader.TabIndex = 0
-        Me.lblHeader.Text = "Produk"
+        Me.lblHeader.Text = "Toko"
         '
         'Panel1
         '
@@ -72,10 +68,10 @@ Partial Class ProdukFrm
         Me.Panel1.Controls.Add(Me.btnSelesai)
         Me.Panel1.Controls.Add(Me.btnPerbaiki)
         Me.Panel1.Controls.Add(Me.btnTambah)
-        Me.Panel1.Location = New System.Drawing.Point(3, 567)
+        Me.Panel1.Location = New System.Drawing.Point(2, 567)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(972, 35)
-        Me.Panel1.TabIndex = 7
+        Me.Panel1.TabIndex = 13
         '
         'btnHapus
         '
@@ -83,7 +79,7 @@ Partial Class ProdukFrm
         Me.btnHapus.Location = New System.Drawing.Point(166, 5)
         Me.btnHapus.Name = "btnHapus"
         Me.btnHapus.Size = New System.Drawing.Size(75, 23)
-        Me.btnHapus.TabIndex = 6
+        Me.btnHapus.TabIndex = 3
         Me.btnHapus.Text = "F10 Hapus"
         Me.btnHapus.UseVisualStyleBackColor = True
         '
@@ -93,7 +89,7 @@ Partial Class ProdukFrm
         Me.btnSelesai.Location = New System.Drawing.Point(891, 5)
         Me.btnSelesai.Name = "btnSelesai"
         Me.btnSelesai.Size = New System.Drawing.Size(75, 23)
-        Me.btnSelesai.TabIndex = 7
+        Me.btnSelesai.TabIndex = 4
         Me.btnSelesai.Text = "Esc Selesai"
         Me.btnSelesai.UseVisualStyleBackColor = True
         '
@@ -103,7 +99,7 @@ Partial Class ProdukFrm
         Me.btnPerbaiki.Location = New System.Drawing.Point(85, 5)
         Me.btnPerbaiki.Name = "btnPerbaiki"
         Me.btnPerbaiki.Size = New System.Drawing.Size(75, 23)
-        Me.btnPerbaiki.TabIndex = 5
+        Me.btnPerbaiki.TabIndex = 2
         Me.btnPerbaiki.Text = "F9 Perbaiki"
         Me.btnPerbaiki.UseVisualStyleBackColor = True
         '
@@ -113,7 +109,7 @@ Partial Class ProdukFrm
         Me.btnTambah.Location = New System.Drawing.Point(4, 5)
         Me.btnTambah.Name = "btnTambah"
         Me.btnTambah.Size = New System.Drawing.Size(75, 23)
-        Me.btnTambah.TabIndex = 4
+        Me.btnTambah.TabIndex = 1
         Me.btnTambah.Text = "F8 Tambah"
         Me.btnTambah.UseVisualStyleBackColor = True
         '
@@ -124,61 +120,27 @@ Partial Class ProdukFrm
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.DataGridView1.BackgroundColor = System.Drawing.Color.White
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(3, 73)
+        Me.DataGridView1.Location = New System.Drawing.Point(2, 44)
         Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(1142, 488)
-        Me.DataGridView1.TabIndex = 8
+        Me.DataGridView1.Size = New System.Drawing.Size(1142, 517)
+        Me.DataGridView1.TabIndex = 14
         '
-        'txtCari
-        '
-        Me.txtCari.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.txtCari.Location = New System.Drawing.Point(621, 47)
-        Me.txtCari.MaxLength = 25
-        Me.txtCari.Name = "txtCari"
-        Me.txtCari.Size = New System.Drawing.Size(342, 20)
-        Me.txtCari.TabIndex = 1
-        '
-        'btnCari
-        '
-        Me.btnCari.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnCari.Image = CType(resources.GetObject("btnCari.Image"), System.Drawing.Image)
-        Me.btnCari.Location = New System.Drawing.Point(1102, 44)
-        Me.btnCari.Name = "btnCari"
-        Me.btnCari.Size = New System.Drawing.Size(43, 23)
-        Me.btnCari.TabIndex = 2
-        Me.btnCari.UseVisualStyleBackColor = True
-        '
-        'cbGolongan
-        '
-        Me.cbGolongan.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cbGolongan.FormattingEnabled = True
-        Me.cbGolongan.Location = New System.Drawing.Point(3, 46)
-        Me.cbGolongan.Name = "cbGolongan"
-        Me.cbGolongan.Size = New System.Drawing.Size(242, 21)
-        Me.cbGolongan.TabIndex = 3
-        '
-        'ProdukFrm
+        'TokoFrm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(975, 604)
-        Me.Controls.Add(Me.cbGolongan)
-        Me.Controls.Add(Me.btnCari)
-        Me.Controls.Add(Me.txtCari)
         Me.Controls.Add(Me.pnlHeader)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.DataGridView1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Name = "ProdukFrm"
-        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Retailer Pintar"
+        Me.Name = "TokoFrm"
+        Me.Text = "TokoFrm"
         Me.pnlHeader.ResumeLayout(False)
         Me.pnlHeader.PerformLayout()
         Me.Panel1.ResumeLayout(False)
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
 
@@ -190,7 +152,4 @@ Partial Class ProdukFrm
     Private WithEvents btnPerbaiki As Button
     Private WithEvents btnTambah As Button
     Friend WithEvents DataGridView1 As DataGridView
-    Friend WithEvents txtCari As TextBox
-    Private WithEvents btnCari As Button
-    Friend WithEvents cbGolongan As ComboBox
 End Class

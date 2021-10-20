@@ -38,6 +38,7 @@ Partial Class MainFrm
         Me.mnuJabatan = New System.Windows.Forms.ToolStripMenuItem()
         Me.toolStripSeparator3 = New System.Windows.Forms.ToolStripSeparator()
         Me.mnuJenisPengeluaran = New System.Windows.Forms.ToolStripMenuItem()
+        Me.TokoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnuTransaksi = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnuPembelianProduk = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnuPembayaranHutangPembelianProduk = New System.Windows.Forms.ToolStripMenuItem()
@@ -120,7 +121,7 @@ Partial Class MainFrm
         '
         'mnuReferensi
         '
-        Me.mnuReferensi.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mnuKartu, Me.toolStripSeparator17, Me.mnuGolongan, Me.mnuProduk, Me.mnuPromoProduk, Me.mnuCetakLabelBarcodeProduk, Me.mnuPenyesuaianStok, Me.toolStripSeparator1, Me.mnuSupplier, Me.mnuCustomer, Me.mnuJabatan, Me.toolStripSeparator3, Me.mnuJenisPengeluaran})
+        Me.mnuReferensi.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mnuKartu, Me.toolStripSeparator17, Me.mnuGolongan, Me.mnuProduk, Me.mnuPromoProduk, Me.mnuCetakLabelBarcodeProduk, Me.mnuPenyesuaianStok, Me.toolStripSeparator1, Me.mnuSupplier, Me.mnuCustomer, Me.mnuJabatan, Me.toolStripSeparator3, Me.mnuJenisPengeluaran, Me.TokoToolStripMenuItem})
         Me.mnuReferensi.Name = "mnuReferensi"
         Me.mnuReferensi.Size = New System.Drawing.Size(67, 20)
         Me.mnuReferensi.Text = "Referensi"
@@ -209,6 +210,12 @@ Partial Class MainFrm
         Me.mnuJenisPengeluaran.Tag = "FrmListJenisPengeluaran"
         Me.mnuJenisPengeluaran.Text = "Jenis Pengeluaran"
         '
+        'TokoToolStripMenuItem
+        '
+        Me.TokoToolStripMenuItem.Name = "TokoToolStripMenuItem"
+        Me.TokoToolStripMenuItem.Size = New System.Drawing.Size(222, 22)
+        Me.TokoToolStripMenuItem.Text = "Toko"
+        '
         'mnuTransaksi
         '
         Me.mnuTransaksi.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mnuPembelianProduk, Me.mnuPembayaranHutangPembelianProduk, Me.mnuReturPembelianProduk})
@@ -247,7 +254,7 @@ Partial Class MainFrm
         'mnuPengeluaranBiaya
         '
         Me.mnuPengeluaranBiaya.Name = "mnuPengeluaranBiaya"
-        Me.mnuPengeluaranBiaya.Size = New System.Drawing.Size(180, 22)
+        Me.mnuPengeluaranBiaya.Size = New System.Drawing.Size(171, 22)
         Me.mnuPengeluaranBiaya.Tag = "FrmListPengeluaranBiaya"
         Me.mnuPengeluaranBiaya.Text = "Pengeluaran Biaya"
         '
@@ -783,4 +790,5 @@ Partial Class MainFrm
     Friend WithEvents sbOperator As ToolStripStatusLabel
     Friend WithEvents ToolStripStatusLabel4 As ToolStripStatusLabel
     Friend WithEvents ToolStripStatusLabel7 As ToolStripStatusLabel
+    Friend WithEvents TokoToolStripMenuItem As ToolStripMenuItem
 End Class

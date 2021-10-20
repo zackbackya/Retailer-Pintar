@@ -111,6 +111,18 @@
     End Sub
 
     Private Sub mnuPromoProduk_Click(sender As Object, e As EventArgs) Handles mnuPromoProduk.Click
+        Me.WindowState = FormWindowState.Maximized
+        PromoFrm.MdiParent = Me
+        PromoFrm.Dock = DockStyle.Fill
+        PromoFrm.Show()
+        PromoFrm.Focus()
+    End Sub
 
+    Private Sub TokoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles TokoToolStripMenuItem.Click
+        Me.WindowState = FormWindowState.Maximized
+        TokoFrm.MdiParent = Me
+        TokoFrm.Dock = DockStyle.Fill
+        TokoFrm.Show()
+        TokoFrm.Focus()
     End Sub
 End Class
