@@ -258,6 +258,12 @@
     <Compile Include="Referensi\Toko\EditTokoFrm.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Transaksi\PenyesuaianStok\PenyesuaianStokFrm.Designer.vb">
+      <DependentUpon>PenyesuaianStokFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Transaksi\PenyesuaianStok\PenyesuaianStokFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Referensi\Toko\TambahTokoFrm.Designer.vb">
       <DependentUpon>TambahTokoFrm.vb</DependentUpon>
     </Compile>
@@ -268,6 +274,12 @@
       <DependentUpon>TokoFrm.vb</DependentUpon>
     </Compile>
     <Compile Include="Referensi\Toko\TokoFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaksi\PenyesuaianStok\TambahPenyesuaianStokFrm.Designer.vb">
+      <DependentUpon>TambahPenyesuaianStokFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Transaksi\PenyesuaianStok\TambahPenyesuaianStokFrm.vb">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
@@ -359,6 +371,12 @@
     <EmbeddedResource Include="Referensi\Toko\TokoFrm.resx">
       <DependentUpon>TokoFrm.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Transaksi\PenyesuaianStok\PenyesuaianStokFrm.resx">
+      <DependentUpon>PenyesuaianStokFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaksi\PenyesuaianStok\TambahPenyesuaianStokFrm.resx">
+      <DependentUpon>TambahPenyesuaianStokFrm.vb</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <None Include="My Project\Application.myapp">
@@ -381,7 +399,6 @@
     <Folder Include="Laporan\" />
     <Folder Include="Pengaturan\" />
     <Folder Include="Pengeluaran\" />
-    <Folder Include="Transaksi\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
