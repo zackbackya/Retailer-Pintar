@@ -27,7 +27,6 @@ Partial Class PenyesuaianStokFrm
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.btnHapus = New System.Windows.Forms.Button()
         Me.btnSelesai = New System.Windows.Forms.Button()
-        Me.btnPerbaiki = New System.Windows.Forms.Button()
         Me.btnTambah = New System.Windows.Forms.Button()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.pnlHeader.SuspendLayout()
@@ -66,7 +65,6 @@ Partial Class PenyesuaianStokFrm
         Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Panel1.Controls.Add(Me.btnHapus)
         Me.Panel1.Controls.Add(Me.btnSelesai)
-        Me.Panel1.Controls.Add(Me.btnPerbaiki)
         Me.Panel1.Controls.Add(Me.btnTambah)
         Me.Panel1.Location = New System.Drawing.Point(3, 567)
         Me.Panel1.Name = "Panel1"
@@ -76,7 +74,7 @@ Partial Class PenyesuaianStokFrm
         'btnHapus
         '
         Me.btnHapus.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.btnHapus.Location = New System.Drawing.Point(166, 5)
+        Me.btnHapus.Location = New System.Drawing.Point(85, 6)
         Me.btnHapus.Name = "btnHapus"
         Me.btnHapus.Size = New System.Drawing.Size(75, 23)
         Me.btnHapus.TabIndex = 3
@@ -92,16 +90,6 @@ Partial Class PenyesuaianStokFrm
         Me.btnSelesai.TabIndex = 4
         Me.btnSelesai.Text = "Esc Selesai"
         Me.btnSelesai.UseVisualStyleBackColor = True
-        '
-        'btnPerbaiki
-        '
-        Me.btnPerbaiki.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.btnPerbaiki.Location = New System.Drawing.Point(85, 5)
-        Me.btnPerbaiki.Name = "btnPerbaiki"
-        Me.btnPerbaiki.Size = New System.Drawing.Size(75, 23)
-        Me.btnPerbaiki.TabIndex = 2
-        Me.btnPerbaiki.Text = "F9 Perbaiki"
-        Me.btnPerbaiki.UseVisualStyleBackColor = True
         '
         'btnTambah
         '
@@ -120,12 +108,12 @@ Partial Class PenyesuaianStokFrm
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.DataGridView1.BackgroundColor = System.Drawing.Color.White
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(3, 44)
+        Me.DataGridView1.Location = New System.Drawing.Point(8, 44)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.Size = New System.Drawing.Size(1142, 517)
         Me.DataGridView1.TabIndex = 17
         '
-        'PenyesuaianStok
+        'PenyesuaianStokFrm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -134,7 +122,7 @@ Partial Class PenyesuaianStokFrm
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.DataGridView1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Name = "PenyesuaianStok"
+        Me.Name = "PenyesuaianStokFrm"
         Me.Text = "PenyesuaianStok"
         Me.pnlHeader.ResumeLayout(False)
         Me.pnlHeader.PerformLayout()
@@ -149,7 +137,6 @@ Partial Class PenyesuaianStokFrm
     Private WithEvents Panel1 As Panel
     Private WithEvents btnHapus As Button
     Private WithEvents btnSelesai As Button
-    Private WithEvents btnPerbaiki As Button
     Private WithEvents btnTambah As Button
     Friend WithEvents DataGridView1 As DataGridView
 End Class

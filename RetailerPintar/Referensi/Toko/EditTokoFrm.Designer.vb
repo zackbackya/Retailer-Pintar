@@ -22,6 +22,7 @@ Partial Class EditTokoFrm
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(EditTokoFrm))
         Me.dtTanggalBuka = New System.Windows.Forms.DateTimePicker()
         Me.txtKotaToko = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -229,9 +230,10 @@ Partial Class EditTokoFrm
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.txtIdToko)
         Me.Controls.Add(Me.txtTeleponToko)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "EditTokoFrm"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "EditTokoFrm"
+        Me.Text = "Retailer Pintar"
         Me.pnlHeader.ResumeLayout(False)
         Me.pnlHeader.PerformLayout()
         Me.Panel1.ResumeLayout(False)

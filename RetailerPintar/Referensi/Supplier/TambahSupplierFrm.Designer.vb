@@ -22,6 +22,7 @@ Partial Class TambahSupplierFrm
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(TambahSupplierFrm))
         Me.pnlHeader = New System.Windows.Forms.Panel()
         Me.lblHeader = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
@@ -186,6 +187,7 @@ Partial Class TambahSupplierFrm
         Me.Controls.Add(Me.txtIdSupplier)
         Me.Controls.Add(Me.txtNamaSupplier)
         Me.Controls.Add(Me.Label2)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "TambahSupplierFrm"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Retailer Pintar"

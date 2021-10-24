@@ -10,12 +10,13 @@ Public Class ProdukFrm
     Private Sub ProdukFrm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Call tampilGolongan()
         Call tampilData()
+        Me.KeyPreview = True
 
     End Sub
 
     Private Sub ProdukFrm_KeyDown(sender As Object, e As KeyEventArgs) Handles Me.KeyDown
         If e.KeyCode = Keys.Escape Then
-            Me.Close()
+            Me.Dispose()
             e.Handled = True
 
         ElseIf e.KeyCode = Keys.F8 Then
@@ -29,7 +30,7 @@ Public Class ProdukFrm
     End Sub
 
     Private Sub btnSelesai_Click(sender As Object, e As EventArgs) Handles btnSelesai.Click
-        Me.Close()
+        Me.Dispose()
     End Sub
 
     Private Sub tambahProduk()

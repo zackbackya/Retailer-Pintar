@@ -22,6 +22,7 @@ Partial Class EditSupplierFrm
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(EditSupplierFrm))
         Me.pnlHeader = New System.Windows.Forms.Panel()
         Me.lblHeader = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
@@ -187,6 +188,7 @@ Partial Class EditSupplierFrm
         Me.Controls.Add(Me.txtIdSupplier)
         Me.Controls.Add(Me.txtNamaSupplier)
         Me.Controls.Add(Me.Label2)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "EditSupplierFrm"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Retailer Pintar"

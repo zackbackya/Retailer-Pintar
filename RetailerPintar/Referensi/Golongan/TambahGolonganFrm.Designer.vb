@@ -22,6 +22,7 @@ Partial Class TambahGolonganFrm
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(TambahGolonganFrm))
         Me.pnlHeader = New System.Windows.Forms.Panel()
         Me.lblHeader = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
@@ -143,6 +144,7 @@ Partial Class TambahGolonganFrm
         Me.Controls.Add(Me.txtNamaGolongan)
         Me.Controls.Add(Me.Label2)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "TambahGolonganFrm"

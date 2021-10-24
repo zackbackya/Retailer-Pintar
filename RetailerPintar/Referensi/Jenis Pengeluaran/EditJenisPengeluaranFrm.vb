@@ -27,17 +27,18 @@
         txtIdJenisPengeluaran.Text = JenisPengeluaranFrm.id_Jenis_Pengeluaran
         txtNamaJenisPengeluaran.Text = JenisPengeluaranFrm.nama_Jenis_Pengeluaran
         txtNamaJenisPengeluaran.Focus()
+        Me.KeyPreview = True
 
     End Sub
 
     Private Sub btnSelesai_Click(sender As Object, e As EventArgs) Handles btnSelesai.Click
-        Me.Close()
+        Me.Dispose()
     End Sub
 
     Private Sub EditJenisPengeluaranFrm_KeyDown(sender As Object, e As KeyEventArgs) Handles Me.KeyDown
 
         If e.KeyCode = Keys.Escape Then
-            Me.Close()
+            Me.Dispose()
         ElseIf e.KeyCode = Keys.F11 Then
             Call editJenisPengeluaran()
 

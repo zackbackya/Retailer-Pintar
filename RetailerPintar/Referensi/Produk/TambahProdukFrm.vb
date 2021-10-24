@@ -56,16 +56,17 @@ Public Class TambahProdukFrm
         Call GenTempID()
 
         txtNamaProduk.Focus()
+        Me.KeyPreview = True
 
     End Sub
 
     Private Sub btnSelesai_Click(sender As Object, e As EventArgs) Handles btnSelesai.Click
-        Me.Close()
+        Me.Dispose()
     End Sub
 
     Private Sub TambahProdukFrm_KeyDown(sender As Object, e As KeyEventArgs) Handles Me.KeyDown
         If e.KeyCode = Keys.Escape Then
-            Me.Close()
+            Me.Dispose()
         End If
     End Sub
 

@@ -22,6 +22,7 @@ Partial Class EditPromoFrm
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(EditPromoFrm))
         Me.dtTanggalAkhir = New System.Windows.Forms.DateTimePicker()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.txtIdProduk = New System.Windows.Forms.TextBox()
@@ -227,9 +228,10 @@ Partial Class EditPromoFrm
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.pnlHeader)
         Me.Controls.Add(Me.Panel1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "EditPromoFrm"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "EditPromoFrm"
+        Me.Text = "Retailer Pintar"
         Me.pnlHeader.ResumeLayout(False)
         Me.Panel1.ResumeLayout(False)
         Me.ResumeLayout(False)

@@ -22,6 +22,7 @@ Partial Class TambahTokoFrm
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(TambahTokoFrm))
         Me.btnSelesai = New System.Windows.Forms.Button()
         Me.txtNamaToko = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
@@ -171,7 +172,7 @@ Partial Class TambahTokoFrm
         'txtIdToko
         '
         Me.txtIdToko.Location = New System.Drawing.Point(139, 43)
-        Me.txtIdToko.MaxLength = 6
+        Me.txtIdToko.MaxLength = 5
         Me.txtIdToko.Name = "txtIdToko"
         Me.txtIdToko.ReadOnly = True
         Me.txtIdToko.Size = New System.Drawing.Size(119, 20)
@@ -229,9 +230,10 @@ Partial Class TambahTokoFrm
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.txtIdToko)
         Me.Controls.Add(Me.txtTeleponToko)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "TambahTokoFrm"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "TambahTokoFrm"
+        Me.Text = "Retailer Pintar"
         Me.pnlHeader.ResumeLayout(False)
         Me.pnlHeader.PerformLayout()
         Me.Panel1.ResumeLayout(False)

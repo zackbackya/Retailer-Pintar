@@ -124,3 +124,5 @@ D:\Programming\VB.net\Project\Retailer-Pintar\RetailerPintar\obj\Debug\RetailerP
 D:\Programming\VB.net\Project\Retailer-Pintar\RetailerPintar\obj\Debug\RetailerPintar.xml
 D:\Programming\VB.net\Project\Retailer-Pintar\RetailerPintar\obj\Debug\RetailerPintar.pdb
 D:\Programming\VB.net\Project\Retailer-Pintar\RetailerPintar\obj\Debug\RetailerPintar.vbproj.AssemblyReference.cache
+D:\Programming\VB.net\Project\Retailer-Pintar\RetailerPintar\obj\Debug\RetailerPintar.PenyesuaianStokFrm.resources
+D:\Programming\VB.net\Project\Retailer-Pintar\RetailerPintar\obj\Debug\RetailerPintar.TambahPenyesuaianStokFrm.resources

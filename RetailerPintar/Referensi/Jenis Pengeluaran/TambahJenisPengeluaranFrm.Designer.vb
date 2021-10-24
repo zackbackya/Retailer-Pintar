@@ -22,6 +22,7 @@ Partial Class TambahJenisPengeluaranFrm
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(TambahJenisPengeluaranFrm))
         Me.pnlHeader = New System.Windows.Forms.Panel()
         Me.lblHeader = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
@@ -141,6 +142,7 @@ Partial Class TambahJenisPengeluaranFrm
         Me.Controls.Add(Me.txtIdJenisPengeluaran)
         Me.Controls.Add(Me.txtNamaJenisPengeluaran)
         Me.Controls.Add(Me.Label2)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "TambahJenisPengeluaranFrm"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Retailer Pintar"

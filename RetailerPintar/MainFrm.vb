@@ -21,7 +21,7 @@
     Private Sub MnuGantiUser_Click(sender As Object, e As EventArgs) Handles mnuGantiUser.Click
         Dim quit As String = MessageBox.Show("Apakah proses ingin dilanjutkan?", "Konfirmasi", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
         If quit = DialogResult.Yes Then
-            Me.Close()
+            Me.Dispose()
             LoginFrm.Show()
             LoginFrm.txtUsername.Text = ""
             LoginFrm.txtPassword.Text = ""
@@ -35,7 +35,7 @@
     Private Sub MnuKeluarDariProgram_Click(sender As Object, e As EventArgs) Handles mnuKeluarDariProgram.Click
         Dim quit As String = MessageBox.Show("Apakah proses ingin dilanjutkan?", "Konfirmasi", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
         If quit = DialogResult.Yes Then
-            Me.Close()
+            Me.Dispose()
             LoginFrm.Close()
         ElseIf quit = DialogResult.No Then
 
@@ -124,5 +124,13 @@
         TokoFrm.Dock = DockStyle.Fill
         TokoFrm.Show()
         TokoFrm.Focus()
+    End Sub
+
+    Private Sub mnuPenyesuaianStok_Click(sender As Object, e As EventArgs) Handles mnuPenyesuaianStok.Click
+        Me.WindowState = FormWindowState.Maximized
+        PenyesuaianStokFrm.MdiParent = Me
+        PenyesuaianStokFrm.Dock = DockStyle.Fill
+        PenyesuaianStokFrm.Show()
+        PenyesuaianStokFrm.Focus()
     End Sub
 End Class

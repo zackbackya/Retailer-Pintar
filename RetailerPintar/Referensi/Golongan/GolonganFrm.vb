@@ -6,18 +6,19 @@ Public Class GolonganFrm
 
     Private Sub GolonganFrm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Call tampilData()
+        Me.KeyPreview = True
     End Sub
 
     Private Sub btnSelesai_Click(sender As Object, e As EventArgs) Handles btnSelesai.Click
 
-        Me.Close()
+        Me.Dispose()
 
 
     End Sub
 
     Private Sub GolonganFrm_KeyDown(sender As Object, e As KeyEventArgs) Handles Me.KeyDown
         If e.KeyCode = Keys.Escape Then
-            Me.Close()
+            Me.Dispose()
         ElseIf e.KeyCode = Keys.F8 Then
             Call tambahGolongan()
         ElseIf e.KeyCode = Keys.F9 Then

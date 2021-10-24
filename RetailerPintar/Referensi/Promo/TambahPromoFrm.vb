@@ -41,21 +41,22 @@ Public Class TambahPromoFrm
         Call GenTempID()
         Call AutoText()
         txtNamaPromo.Focus()
+        Me.KeyPreview = True
     End Sub
 
     Private Sub btnSelesai_Click(sender As Object, e As EventArgs)
-        Me.Close()
+        Me.Dispose()
     End Sub
 
     Private Sub TambahPromoFrm_KeyDown(sender As Object, e As KeyEventArgs) Handles Me.KeyDown
         If e.KeyCode = Keys.Escape Then
-            Me.Close()
+            Me.Dispose()
         End If
     End Sub
 
     Public Sub GenTempID()
         Dim idjam As String = Format(Now(), "HHmmss")
-        txtIdPromo.Text = idjam
+        txtIdPromo.Text = "PR-" + idjam
     End Sub
 
 
@@ -66,7 +67,7 @@ Public Class TambahPromoFrm
     End Sub
 
     Private Sub btnSelesai_Click_1(sender As Object, e As EventArgs) Handles btnSelesai.Click
-        Me.Close()
+        Me.Dispose()
     End Sub
 
     Private Sub AutoText()
@@ -97,6 +98,19 @@ Public Class TambahPromoFrm
     End Sub
 
     Private Sub txtNamaProduk_LostFocus(sender As Object, e As EventArgs) Handles txtNamaProduk.LostFocus
+        Call getIdProduk()
+    End Sub
+
+    Private Sub txtNamaProduk_TextChanged(sender As Object, e As EventArgs) Handles txtNamaProduk.TextChanged
+
+        If txtNamaProduk.Text = "" Then
+            txtIdProduk.Text = ""
+        Else
+            Call getIdProduk()
+        End If
+
+    End Sub
+    Private Sub getIdProduk()
         Dim id_produk As String
         Call koneksi()
 

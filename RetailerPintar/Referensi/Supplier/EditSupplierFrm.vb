@@ -30,17 +30,18 @@
         txtTeleponSupplier.Text = SupplierFrm.telepon_Supplier
 
         txtNamaSupplier.Focus()
+        Me.KeyPreview = True
 
     End Sub
 
     Private Sub btnSelesai_Click(sender As Object, e As EventArgs) Handles btnSelesai.Click
-        Me.Close()
+        Me.Dispose()
     End Sub
 
     Private Sub EditSupplierFrm_KeyDown(sender As Object, e As KeyEventArgs) Handles Me.KeyDown
 
         If e.KeyCode = Keys.Escape Then
-            Me.Close()
+            Me.Dispose()
         ElseIf e.KeyCode = Keys.F11 Then
             Call editSupplier()
         End If

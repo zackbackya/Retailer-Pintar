@@ -22,6 +22,7 @@ Partial Class TambahPromoFrm
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(TambahPromoFrm))
         Me.dtTanggalAwal = New System.Windows.Forms.DateTimePicker()
         Me.txtNamaProduk = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -228,9 +229,10 @@ Partial Class TambahPromoFrm
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.txtIdPromo)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "TambahPromoFrm"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "TambahPromoFrm"
+        Me.Text = "Retailer Pintar"
         Me.pnlHeader.ResumeLayout(False)
         Me.pnlHeader.PerformLayout()
         Me.Panel1.ResumeLayout(False)

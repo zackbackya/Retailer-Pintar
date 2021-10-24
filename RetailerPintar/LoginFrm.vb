@@ -33,6 +33,6 @@
     End Sub
 
     Private Sub BtnBatal_Click(sender As Object, e As EventArgs) Handles btnBatal.Click
-        Me.Close()
+        Me.Dispose()
     End Sub
 End Class

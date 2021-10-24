@@ -58,17 +58,18 @@ Public Class EditProdukFrm
         End If
 
         txtNamaProduk.Focus()
+        Me.KeyPreview = True
 
     End Sub
 
     Private Sub btnSelesai_Click(sender As Object, e As EventArgs)
-        Me.Close()
+        Me.Dispose()
     End Sub
 
     Private Sub EditProdukFrm_KeyDown(sender As Object, e As KeyEventArgs) Handles Me.KeyDown
 
         If e.KeyCode = Keys.Escape Then
-            Me.Close()
+            Me.Dispose()
         ElseIf e.KeyCode = Keys.F11 Then
             Call editProduk()
         End If
@@ -199,6 +200,6 @@ Public Class EditProdukFrm
     End Sub
 
     Private Sub btnSelesai_Click_1(sender As Object, e As EventArgs) Handles btnSelesai.Click
-        Me.Close()
+        Me.Dispose()
     End Sub
 End Class

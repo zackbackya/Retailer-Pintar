@@ -22,6 +22,7 @@ Partial Class EditProdukFrm
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(EditProdukFrm))
         Me.cbGolongan = New System.Windows.Forms.ComboBox()
         Me.cbSupplier = New System.Windows.Forms.ComboBox()
         Me.Label4 = New System.Windows.Forms.Label()
@@ -388,6 +389,7 @@ Partial Class EditProdukFrm
         Me.Controls.Add(Me.pictureBox1)
         Me.Controls.Add(Me.pnlHeader)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "EditProdukFrm"
