@@ -47,9 +47,9 @@ Partial Class EditSupplierFrm
         Me.pnlHeader.BackColor = System.Drawing.Color.FromArgb(CType(CType(13, Byte), Integer), CType(CType(59, Byte), Integer), CType(CType(102, Byte), Integer))
         Me.pnlHeader.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.pnlHeader.Controls.Add(Me.lblHeader)
-        Me.pnlHeader.Location = New System.Drawing.Point(2, 3)
+        Me.pnlHeader.Location = New System.Drawing.Point(3, 3)
         Me.pnlHeader.Name = "pnlHeader"
-        Me.pnlHeader.Size = New System.Drawing.Size(421, 35)
+        Me.pnlHeader.Size = New System.Drawing.Size(422, 35)
         Me.pnlHeader.TabIndex = 32
         '
         'lblHeader
@@ -71,19 +71,19 @@ Partial Class EditSupplierFrm
         Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Panel1.Controls.Add(Me.btnSimpan)
         Me.Panel1.Controls.Add(Me.btnSelesai)
-        Me.Panel1.Location = New System.Drawing.Point(2, 199)
+        Me.Panel1.Location = New System.Drawing.Point(3, 190)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(421, 35)
+        Me.Panel1.Size = New System.Drawing.Size(422, 35)
         Me.Panel1.TabIndex = 33
         '
         'btnSimpan
         '
         Me.btnSimpan.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnSimpan.Location = New System.Drawing.Point(259, 5)
+        Me.btnSimpan.Location = New System.Drawing.Point(260, 5)
         Me.btnSimpan.Name = "btnSimpan"
         Me.btnSimpan.Size = New System.Drawing.Size(75, 23)
-        Me.btnSimpan.TabIndex = 3
+        Me.btnSimpan.TabIndex = 5
         Me.btnSimpan.Text = "F11 Simpan"
         Me.btnSimpan.UseVisualStyleBackColor = True
         '
@@ -91,17 +91,17 @@ Partial Class EditSupplierFrm
         '
         Me.btnSelesai.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnSelesai.Location = New System.Drawing.Point(340, 5)
+        Me.btnSelesai.Location = New System.Drawing.Point(341, 5)
         Me.btnSelesai.Name = "btnSelesai"
         Me.btnSelesai.Size = New System.Drawing.Size(75, 23)
-        Me.btnSelesai.TabIndex = 4
+        Me.btnSelesai.TabIndex = 6
         Me.btnSelesai.Text = "Esc Selesai"
         Me.btnSelesai.UseVisualStyleBackColor = True
         '
         'Label3
         '
         Me.Label3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Label3.Location = New System.Drawing.Point(2, 44)
+        Me.Label3.Location = New System.Drawing.Point(3, 44)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(125, 20)
         Me.Label3.TabIndex = 35
@@ -110,25 +110,25 @@ Partial Class EditSupplierFrm
         '
         'txtIdSupplier
         '
-        Me.txtIdSupplier.Location = New System.Drawing.Point(133, 44)
-        Me.txtIdSupplier.MaxLength = 6
+        Me.txtIdSupplier.Location = New System.Drawing.Point(134, 44)
+        Me.txtIdSupplier.MaxLength = 10
         Me.txtIdSupplier.Name = "txtIdSupplier"
         Me.txtIdSupplier.ReadOnly = True
-        Me.txtIdSupplier.Size = New System.Drawing.Size(119, 20)
-        Me.txtIdSupplier.TabIndex = 30
+        Me.txtIdSupplier.Size = New System.Drawing.Size(133, 20)
+        Me.txtIdSupplier.TabIndex = 1
         '
         'txtNamaSupplier
         '
-        Me.txtNamaSupplier.Location = New System.Drawing.Point(133, 70)
+        Me.txtNamaSupplier.Location = New System.Drawing.Point(134, 70)
         Me.txtNamaSupplier.MaxLength = 25
         Me.txtNamaSupplier.Name = "txtNamaSupplier"
-        Me.txtNamaSupplier.Size = New System.Drawing.Size(290, 20)
-        Me.txtNamaSupplier.TabIndex = 31
+        Me.txtNamaSupplier.Size = New System.Drawing.Size(291, 20)
+        Me.txtNamaSupplier.TabIndex = 2
         '
         'Label2
         '
         Me.Label2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Label2.Location = New System.Drawing.Point(2, 70)
+        Me.Label2.Location = New System.Drawing.Point(3, 70)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(125, 20)
         Me.Label2.TabIndex = 34
@@ -137,17 +137,17 @@ Partial Class EditSupplierFrm
         '
         'txtAlamatSupplier
         '
-        Me.txtAlamatSupplier.Location = New System.Drawing.Point(133, 96)
-        Me.txtAlamatSupplier.MaxLength = 25
+        Me.txtAlamatSupplier.Location = New System.Drawing.Point(134, 96)
+        Me.txtAlamatSupplier.MaxLength = 50
         Me.txtAlamatSupplier.Multiline = True
         Me.txtAlamatSupplier.Name = "txtAlamatSupplier"
-        Me.txtAlamatSupplier.Size = New System.Drawing.Size(290, 60)
-        Me.txtAlamatSupplier.TabIndex = 36
+        Me.txtAlamatSupplier.Size = New System.Drawing.Size(291, 60)
+        Me.txtAlamatSupplier.TabIndex = 3
         '
         'Label1
         '
         Me.Label1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Label1.Location = New System.Drawing.Point(2, 96)
+        Me.Label1.Location = New System.Drawing.Point(3, 95)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(125, 20)
         Me.Label1.TabIndex = 37
@@ -156,16 +156,16 @@ Partial Class EditSupplierFrm
         '
         'txtTeleponSupplier
         '
-        Me.txtTeleponSupplier.Location = New System.Drawing.Point(133, 165)
+        Me.txtTeleponSupplier.Location = New System.Drawing.Point(134, 162)
         Me.txtTeleponSupplier.MaxLength = 25
         Me.txtTeleponSupplier.Name = "txtTeleponSupplier"
-        Me.txtTeleponSupplier.Size = New System.Drawing.Size(290, 20)
-        Me.txtTeleponSupplier.TabIndex = 38
+        Me.txtTeleponSupplier.Size = New System.Drawing.Size(291, 20)
+        Me.txtTeleponSupplier.TabIndex = 4
         '
         'Label4
         '
         Me.Label4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Label4.Location = New System.Drawing.Point(2, 165)
+        Me.Label4.Location = New System.Drawing.Point(3, 162)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(125, 20)
         Me.Label4.TabIndex = 39
@@ -177,7 +177,7 @@ Partial Class EditSupplierFrm
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(428, 236)
+        Me.ClientSize = New System.Drawing.Size(428, 227)
         Me.Controls.Add(Me.txtTeleponSupplier)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.txtAlamatSupplier)
@@ -188,7 +188,10 @@ Partial Class EditSupplierFrm
         Me.Controls.Add(Me.txtIdSupplier)
         Me.Controls.Add(Me.txtNamaSupplier)
         Me.Controls.Add(Me.Label2)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
         Me.Name = "EditSupplierFrm"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Retailer Pintar"

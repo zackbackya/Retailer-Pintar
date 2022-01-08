@@ -6,14 +6,12 @@ Public Class PenyesuaianStokFrm
 
     Private Sub PenyesuaianStokFrm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Call tampilData()
+        Call CheckRole()
         Me.KeyPreview = True
     End Sub
 
     Private Sub btnSelesai_Click(sender As Object, e As EventArgs) Handles btnSelesai.Click
-
         Me.Dispose()
-
-
     End Sub
 
     Private Sub PenyesuaianStokFrm_KeyDown(sender As Object, e As KeyEventArgs) Handles Me.KeyDown
@@ -22,17 +20,16 @@ Public Class PenyesuaianStokFrm
         ElseIf e.KeyCode = Keys.F8 Then
             Call tambahPenyesuaianStok()
         ElseIf e.KeyCode = Keys.F10 Then
+            If LoginFrm.RoleName = "ADMIN" Then
+                ''
+            End If
+        Else
             Call hapusPenyesuaianStok()
         End If
-
-
-
     End Sub
 
     Private Sub btnTambah_Click(sender As Object, e As EventArgs) Handles btnTambah.Click
-
         Call tambahPenyesuaianStok()
-
     End Sub
 
     Private Sub tambahPenyesuaianStok()
@@ -90,6 +87,15 @@ Public Class PenyesuaianStokFrm
 
     Private Sub btnHapus_Click(sender As Object, e As EventArgs) Handles btnHapus.Click
         Call hapusPenyesuaianStok()
+    End Sub
+
+    Private Sub CheckRole()
+
+        If LoginFrm.RoleName = "ADMIN" Then
+            'admin role
+            btnHapus.Enabled = False
+        End If
+
     End Sub
 
 End Class

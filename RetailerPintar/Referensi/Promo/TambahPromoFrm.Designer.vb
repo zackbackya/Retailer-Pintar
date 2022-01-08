@@ -24,8 +24,6 @@ Partial Class TambahPromoFrm
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(TambahPromoFrm))
         Me.dtTanggalAwal = New System.Windows.Forms.DateTimePicker()
-        Me.txtNamaProduk = New System.Windows.Forms.TextBox()
-        Me.Label2 = New System.Windows.Forms.Label()
         Me.txtNamaPromo = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.pnlHeader = New System.Windows.Forms.Panel()
@@ -36,51 +34,38 @@ Partial Class TambahPromoFrm
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.txtIdPromo = New System.Windows.Forms.TextBox()
-        Me.cbAktifPromo = New System.Windows.Forms.CheckBox()
-        Me.txtIdProduk = New System.Windows.Forms.TextBox()
         Me.dtTanggalAkhir = New System.Windows.Forms.DateTimePicker()
-        Me.Label1 = New System.Windows.Forms.Label()
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.id_produk = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.produk = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.harga_promo = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.aksi = New System.Windows.Forms.DataGridViewButtonColumn()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.pnlHeader.SuspendLayout()
         Me.Panel1.SuspendLayout()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'dtTanggalAwal
         '
-        Me.dtTanggalAwal.Location = New System.Drawing.Point(138, 137)
+        Me.dtTanggalAwal.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.dtTanggalAwal.Location = New System.Drawing.Point(138, 96)
         Me.dtTanggalAwal.Name = "dtTanggalAwal"
-        Me.dtTanggalAwal.Size = New System.Drawing.Size(200, 20)
-        Me.dtTanggalAwal.TabIndex = 100
-        '
-        'txtNamaProduk
-        '
-        Me.txtNamaProduk.Location = New System.Drawing.Point(263, 104)
-        Me.txtNamaProduk.MaxLength = 25
-        Me.txtNamaProduk.Name = "txtNamaProduk"
-        Me.txtNamaProduk.Size = New System.Drawing.Size(257, 20)
-        Me.txtNamaProduk.TabIndex = 98
-        '
-        'Label2
-        '
-        Me.Label2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Label2.Location = New System.Drawing.Point(3, 103)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(125, 20)
-        Me.Label2.TabIndex = 99
-        Me.Label2.Text = "Nama Produk"
-        Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.dtTanggalAwal.Size = New System.Drawing.Size(153, 20)
+        Me.dtTanggalAwal.TabIndex = 3
         '
         'txtNamaPromo
         '
-        Me.txtNamaPromo.Location = New System.Drawing.Point(138, 77)
+        Me.txtNamaPromo.Location = New System.Drawing.Point(138, 70)
         Me.txtNamaPromo.MaxLength = 25
         Me.txtNamaPromo.Name = "txtNamaPromo"
-        Me.txtNamaPromo.Size = New System.Drawing.Size(382, 20)
-        Me.txtNamaPromo.TabIndex = 96
+        Me.txtNamaPromo.Size = New System.Drawing.Size(499, 20)
+        Me.txtNamaPromo.TabIndex = 2
         '
         'Label6
         '
         Me.Label6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Label6.Location = New System.Drawing.Point(3, 76)
+        Me.Label6.Location = New System.Drawing.Point(3, 70)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(125, 20)
         Me.Label6.TabIndex = 97
@@ -96,7 +81,7 @@ Partial Class TambahPromoFrm
         Me.pnlHeader.Controls.Add(Me.lblHeader)
         Me.pnlHeader.Location = New System.Drawing.Point(3, 3)
         Me.pnlHeader.Name = "pnlHeader"
-        Me.pnlHeader.Size = New System.Drawing.Size(517, 35)
+        Me.pnlHeader.Size = New System.Drawing.Size(876, 35)
         Me.pnlHeader.TabIndex = 88
         '
         'lblHeader
@@ -118,41 +103,41 @@ Partial Class TambahPromoFrm
         Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Panel1.Controls.Add(Me.btnSimpan)
         Me.Panel1.Controls.Add(Me.btnSelesai)
-        Me.Panel1.Location = New System.Drawing.Point(3, 192)
+        Me.Panel1.Location = New System.Drawing.Point(3, 523)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(517, 41)
+        Me.Panel1.Size = New System.Drawing.Size(876, 35)
         Me.Panel1.TabIndex = 89
         '
         'btnSimpan
         '
         Me.btnSimpan.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnSimpan.Location = New System.Drawing.Point(355, 5)
+        Me.btnSimpan.Location = New System.Drawing.Point(714, 5)
         Me.btnSimpan.Name = "btnSimpan"
-        Me.btnSimpan.Size = New System.Drawing.Size(75, 29)
-        Me.btnSimpan.TabIndex = 3
-        Me.btnSimpan.Text = "F11 Simpan"
+        Me.btnSimpan.Size = New System.Drawing.Size(75, 23)
+        Me.btnSimpan.TabIndex = 6
+        Me.btnSimpan.Text = "F11 Ambil"
         Me.btnSimpan.UseVisualStyleBackColor = True
         '
         'btnSelesai
         '
         Me.btnSelesai.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnSelesai.Location = New System.Drawing.Point(436, 5)
+        Me.btnSelesai.Location = New System.Drawing.Point(795, 5)
         Me.btnSelesai.Name = "btnSelesai"
-        Me.btnSelesai.Size = New System.Drawing.Size(75, 29)
-        Me.btnSelesai.TabIndex = 4
+        Me.btnSelesai.Size = New System.Drawing.Size(75, 23)
+        Me.btnSelesai.TabIndex = 7
         Me.btnSelesai.Text = "Esc Selesai"
         Me.btnSelesai.UseVisualStyleBackColor = True
         '
         'Label5
         '
         Me.Label5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Label5.Location = New System.Drawing.Point(3, 137)
+        Me.Label5.Location = New System.Drawing.Point(3, 96)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(125, 20)
         Me.Label5.TabIndex = 95
-        Me.Label5.Text = "Tanggal Awal"
+        Me.Label5.Text = "Tanggal Promo"
         Me.Label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'Label3
@@ -168,60 +153,80 @@ Partial Class TambahPromoFrm
         'txtIdPromo
         '
         Me.txtIdPromo.Location = New System.Drawing.Point(138, 44)
-        Me.txtIdPromo.MaxLength = 6
+        Me.txtIdPromo.MaxLength = 10
         Me.txtIdPromo.Name = "txtIdPromo"
         Me.txtIdPromo.ReadOnly = True
         Me.txtIdPromo.Size = New System.Drawing.Size(119, 20)
-        Me.txtIdPromo.TabIndex = 87
-        '
-        'cbAktifPromo
-        '
-        Me.cbAktifPromo.AutoSize = True
-        Me.cbAktifPromo.Location = New System.Drawing.Point(359, 142)
-        Me.cbAktifPromo.Name = "cbAktifPromo"
-        Me.cbAktifPromo.Size = New System.Drawing.Size(47, 17)
-        Me.cbAktifPromo.TabIndex = 101
-        Me.cbAktifPromo.Text = "Aktif"
-        Me.cbAktifPromo.UseVisualStyleBackColor = True
-        '
-        'txtIdProduk
-        '
-        Me.txtIdProduk.Location = New System.Drawing.Point(138, 104)
-        Me.txtIdProduk.MaxLength = 6
-        Me.txtIdProduk.Name = "txtIdProduk"
-        Me.txtIdProduk.ReadOnly = True
-        Me.txtIdProduk.Size = New System.Drawing.Size(119, 20)
-        Me.txtIdProduk.TabIndex = 102
+        Me.txtIdPromo.TabIndex = 1
         '
         'dtTanggalAkhir
         '
-        Me.dtTanggalAkhir.Location = New System.Drawing.Point(138, 163)
+        Me.dtTanggalAkhir.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.dtTanggalAkhir.Location = New System.Drawing.Point(335, 96)
         Me.dtTanggalAkhir.Name = "dtTanggalAkhir"
-        Me.dtTanggalAkhir.Size = New System.Drawing.Size(200, 20)
-        Me.dtTanggalAkhir.TabIndex = 104
+        Me.dtTanggalAkhir.Size = New System.Drawing.Size(153, 20)
+        Me.dtTanggalAkhir.TabIndex = 4
         '
-        'Label1
+        'DataGridView1
         '
-        Me.Label1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Label1.Location = New System.Drawing.Point(3, 163)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(125, 20)
-        Me.Label1.TabIndex = 103
-        Me.Label1.Text = "Tanggal Akhir"
-        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.DataGridView1.AllowUserToAddRows = False
+        Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.DataGridView1.BackgroundColor = System.Drawing.Color.White
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.id_produk, Me.produk, Me.harga_promo, Me.aksi})
+        Me.DataGridView1.GridColor = System.Drawing.Color.WhiteSmoke
+        Me.DataGridView1.Location = New System.Drawing.Point(3, 122)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.Size = New System.Drawing.Size(876, 395)
+        Me.DataGridView1.TabIndex = 5
+        '
+        'id_produk
+        '
+        Me.id_produk.FillWeight = 67.68188!
+        Me.id_produk.HeaderText = "Id Produk"
+        Me.id_produk.Name = "id_produk"
+        '
+        'produk
+        '
+        Me.produk.FillWeight = 218.7095!
+        Me.produk.HeaderText = "Produk"
+        Me.produk.Name = "produk"
+        '
+        'harga_promo
+        '
+        Me.harga_promo.FillWeight = 65.51924!
+        Me.harga_promo.HeaderText = "Harga Promo"
+        Me.harga_promo.Name = "harga_promo"
+        '
+        'aksi
+        '
+        Me.aksi.FillWeight = 48.08933!
+        Me.aksi.HeaderText = "Aksi"
+        Me.aksi.Name = "aksi"
+        Me.aksi.Text = "Hapus"
+        Me.aksi.ToolTipText = "Hapus"
+        Me.aksi.UseColumnTextForButtonValue = True
+        '
+        'Label2
+        '
+        Me.Label2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.Label2.Location = New System.Drawing.Point(297, 96)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(32, 20)
+        Me.Label2.TabIndex = 107
+        Me.Label2.Text = "s.d"
+        Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'TambahPromoFrm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(525, 234)
-        Me.Controls.Add(Me.dtTanggalAkhir)
-        Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.txtIdProduk)
-        Me.Controls.Add(Me.cbAktifPromo)
-        Me.Controls.Add(Me.dtTanggalAwal)
-        Me.Controls.Add(Me.txtNamaProduk)
+        Me.BackColor = System.Drawing.Color.White
+        Me.ClientSize = New System.Drawing.Size(884, 561)
         Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.DataGridView1)
+        Me.Controls.Add(Me.dtTanggalAkhir)
+        Me.Controls.Add(Me.dtTanggalAwal)
         Me.Controls.Add(Me.txtNamaPromo)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.pnlHeader)
@@ -229,21 +234,23 @@ Partial Class TambahPromoFrm
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.txtIdPromo)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
         Me.Name = "TambahPromoFrm"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Retailer Pintar"
         Me.pnlHeader.ResumeLayout(False)
         Me.pnlHeader.PerformLayout()
         Me.Panel1.ResumeLayout(False)
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
 
     Friend WithEvents dtTanggalAwal As DateTimePicker
-    Friend WithEvents txtNamaProduk As TextBox
-    Friend WithEvents Label2 As Label
     Friend WithEvents txtNamaPromo As TextBox
     Friend WithEvents Label6 As Label
     Private WithEvents pnlHeader As Panel
@@ -254,8 +261,11 @@ Partial Class TambahPromoFrm
     Friend WithEvents Label5 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents txtIdPromo As TextBox
-    Friend WithEvents cbAktifPromo As CheckBox
-    Friend WithEvents txtIdProduk As TextBox
     Friend WithEvents dtTanggalAkhir As DateTimePicker
-    Friend WithEvents Label1 As Label
+    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents Label2 As Label
+    Friend WithEvents id_produk As DataGridViewTextBoxColumn
+    Friend WithEvents produk As DataGridViewTextBoxColumn
+    Friend WithEvents harga_promo As DataGridViewTextBoxColumn
+    Friend WithEvents aksi As DataGridViewButtonColumn
 End Class

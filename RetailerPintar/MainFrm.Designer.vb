@@ -22,6 +22,7 @@ Partial Class MainFrm
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(MainFrm))
         Me.menuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.mnuReferensi = New System.Windows.Forms.ToolStripMenuItem()
@@ -43,6 +44,7 @@ Partial Class MainFrm
         Me.mnuPembelianProduk = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnuPembayaranHutangPembelianProduk = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnuReturPembelianProduk = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PenyesuaianStokToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnuPengeluaran = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnuPengeluaranBiaya = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnuLaporan = New System.Windows.Forms.ToolStripMenuItem()
@@ -102,9 +104,12 @@ Partial Class MainFrm
         Me.ToolStripStatusLabel2 = New System.Windows.Forms.ToolStripStatusLabel()
         Me.sbTanggal = New System.Windows.Forms.ToolStripStatusLabel()
         Me.ToolStripStatusLabel6 = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.ToolStripStatusLabel1 = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.ToolStripStatusLabel3 = New System.Windows.Forms.ToolStripStatusLabel()
         Me.sbOperator = New System.Windows.Forms.ToolStripStatusLabel()
         Me.ToolStripStatusLabel4 = New System.Windows.Forms.ToolStripStatusLabel()
         Me.ToolStripStatusLabel7 = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.menuStrip1.SuspendLayout()
         Me.toolStrip1.SuspendLayout()
         Me.StatusStrip1.SuspendLayout()
@@ -218,7 +223,7 @@ Partial Class MainFrm
         '
         'mnuTransaksi
         '
-        Me.mnuTransaksi.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mnuPembelianProduk, Me.mnuPembayaranHutangPembelianProduk, Me.mnuReturPembelianProduk})
+        Me.mnuTransaksi.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mnuPembelianProduk, Me.mnuPembayaranHutangPembelianProduk, Me.mnuReturPembelianProduk, Me.PenyesuaianStokToolStripMenuItem})
         Me.mnuTransaksi.Name = "mnuTransaksi"
         Me.mnuTransaksi.Size = New System.Drawing.Size(66, 20)
         Me.mnuTransaksi.Text = "Transaksi"
@@ -243,6 +248,12 @@ Partial Class MainFrm
         Me.mnuReturPembelianProduk.Size = New System.Drawing.Size(283, 22)
         Me.mnuReturPembelianProduk.Tag = "FrmListReturPembelianProduk"
         Me.mnuReturPembelianProduk.Text = "Retur Pembelian Produk"
+        '
+        'PenyesuaianStokToolStripMenuItem
+        '
+        Me.PenyesuaianStokToolStripMenuItem.Name = "PenyesuaianStokToolStripMenuItem"
+        Me.PenyesuaianStokToolStripMenuItem.Size = New System.Drawing.Size(283, 22)
+        Me.PenyesuaianStokToolStripMenuItem.Text = "Penyesuaian Stok"
         '
         'mnuPengeluaran
         '
@@ -632,7 +643,7 @@ Partial Class MainFrm
         '
         'StatusStrip1
         '
-        Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.sbJam, Me.ToolStripStatusLabel2, Me.sbTanggal, Me.ToolStripStatusLabel6, Me.sbOperator, Me.ToolStripStatusLabel4, Me.ToolStripStatusLabel7})
+        Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.sbJam, Me.ToolStripStatusLabel2, Me.sbTanggal, Me.ToolStripStatusLabel6, Me.ToolStripStatusLabel1, Me.ToolStripStatusLabel3, Me.sbOperator, Me.ToolStripStatusLabel4, Me.ToolStripStatusLabel7})
         Me.StatusStrip1.Location = New System.Drawing.Point(0, 648)
         Me.StatusStrip1.Name = "StatusStrip1"
         Me.StatusStrip1.Size = New System.Drawing.Size(963, 22)
@@ -665,6 +676,19 @@ Partial Class MainFrm
         Me.ToolStripStatusLabel6.Size = New System.Drawing.Size(10, 17)
         Me.ToolStripStatusLabel6.Text = "|"
         '
+        'ToolStripStatusLabel1
+        '
+        Me.ToolStripStatusLabel1.Image = CType(resources.GetObject("ToolStripStatusLabel1.Image"), System.Drawing.Image)
+        Me.ToolStripStatusLabel1.Name = "ToolStripStatusLabel1"
+        Me.ToolStripStatusLabel1.Size = New System.Drawing.Size(78, 17)
+        Me.ToolStripStatusLabel1.Text = "Kode Toko"
+        '
+        'ToolStripStatusLabel3
+        '
+        Me.ToolStripStatusLabel3.Name = "ToolStripStatusLabel3"
+        Me.ToolStripStatusLabel3.Size = New System.Drawing.Size(10, 17)
+        Me.ToolStripStatusLabel3.Text = "|"
+        '
         'sbOperator
         '
         Me.sbOperator.Image = CType(resources.GetObject("sbOperator.Image"), System.Drawing.Image)
@@ -683,6 +707,9 @@ Partial Class MainFrm
         Me.ToolStripStatusLabel7.Name = "ToolStripStatusLabel7"
         Me.ToolStripStatusLabel7.Size = New System.Drawing.Size(228, 17)
         Me.ToolStripStatusLabel7.Text = "Retailer Pintar Versi  1.0.0 - Copyright 2021"
+        '
+        'Timer1
+        '
         '
         'MainFrm
         '
@@ -791,4 +818,8 @@ Partial Class MainFrm
     Friend WithEvents ToolStripStatusLabel4 As ToolStripStatusLabel
     Friend WithEvents ToolStripStatusLabel7 As ToolStripStatusLabel
     Friend WithEvents TokoToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ToolStripStatusLabel1 As ToolStripStatusLabel
+    Friend WithEvents ToolStripStatusLabel3 As ToolStripStatusLabel
+    Friend WithEvents PenyesuaianStokToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents Timer1 As Timer
 End Class

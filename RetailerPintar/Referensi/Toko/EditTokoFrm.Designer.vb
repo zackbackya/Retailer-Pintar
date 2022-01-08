@@ -46,23 +46,24 @@ Partial Class EditTokoFrm
         '
         'dtTanggalBuka
         '
-        Me.dtTanggalBuka.Location = New System.Drawing.Point(139, 199)
+        Me.dtTanggalBuka.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.dtTanggalBuka.Location = New System.Drawing.Point(135, 197)
         Me.dtTanggalBuka.Name = "dtTanggalBuka"
-        Me.dtTanggalBuka.Size = New System.Drawing.Size(200, 20)
-        Me.dtTanggalBuka.TabIndex = 100
+        Me.dtTanggalBuka.Size = New System.Drawing.Size(115, 20)
+        Me.dtTanggalBuka.TabIndex = 5
         '
         'txtKotaToko
         '
-        Me.txtKotaToko.Location = New System.Drawing.Point(134, 171)
+        Me.txtKotaToko.Location = New System.Drawing.Point(135, 171)
         Me.txtKotaToko.MaxLength = 25
         Me.txtKotaToko.Name = "txtKotaToko"
-        Me.txtKotaToko.Size = New System.Drawing.Size(290, 20)
-        Me.txtKotaToko.TabIndex = 98
+        Me.txtKotaToko.Size = New System.Drawing.Size(330, 20)
+        Me.txtKotaToko.TabIndex = 4
         '
         'Label2
         '
         Me.Label2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Label2.Location = New System.Drawing.Point(3, 171)
+        Me.Label2.Location = New System.Drawing.Point(4, 171)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(125, 20)
         Me.Label2.TabIndex = 99
@@ -71,16 +72,16 @@ Partial Class EditTokoFrm
         '
         'txtNamaToko
         '
-        Me.txtNamaToko.Location = New System.Drawing.Point(135, 76)
+        Me.txtNamaToko.Location = New System.Drawing.Point(135, 69)
         Me.txtNamaToko.MaxLength = 25
         Me.txtNamaToko.Name = "txtNamaToko"
-        Me.txtNamaToko.Size = New System.Drawing.Size(290, 20)
-        Me.txtNamaToko.TabIndex = 96
+        Me.txtNamaToko.Size = New System.Drawing.Size(330, 20)
+        Me.txtNamaToko.TabIndex = 2
         '
         'Label6
         '
         Me.Label6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Label6.Location = New System.Drawing.Point(4, 75)
+        Me.Label6.Location = New System.Drawing.Point(4, 69)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(125, 20)
         Me.Label6.TabIndex = 97
@@ -96,7 +97,7 @@ Partial Class EditTokoFrm
         Me.pnlHeader.Controls.Add(Me.lblHeader)
         Me.pnlHeader.Location = New System.Drawing.Point(4, 2)
         Me.pnlHeader.Name = "pnlHeader"
-        Me.pnlHeader.Size = New System.Drawing.Size(421, 35)
+        Me.pnlHeader.Size = New System.Drawing.Size(461, 35)
         Me.pnlHeader.TabIndex = 88
         '
         'lblHeader
@@ -120,17 +121,17 @@ Partial Class EditTokoFrm
         Me.Panel1.Controls.Add(Me.btnSelesai)
         Me.Panel1.Location = New System.Drawing.Point(4, 253)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(421, 35)
+        Me.Panel1.Size = New System.Drawing.Size(461, 35)
         Me.Panel1.TabIndex = 89
         '
         'btnSimpan
         '
         Me.btnSimpan.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnSimpan.Location = New System.Drawing.Point(259, 5)
+        Me.btnSimpan.Location = New System.Drawing.Point(299, 5)
         Me.btnSimpan.Name = "btnSimpan"
         Me.btnSimpan.Size = New System.Drawing.Size(75, 23)
-        Me.btnSimpan.TabIndex = 3
+        Me.btnSimpan.TabIndex = 7
         Me.btnSimpan.Text = "F11 Simpan"
         Me.btnSimpan.UseVisualStyleBackColor = True
         '
@@ -138,17 +139,17 @@ Partial Class EditTokoFrm
         '
         Me.btnSelesai.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnSelesai.Location = New System.Drawing.Point(340, 5)
+        Me.btnSelesai.Location = New System.Drawing.Point(380, 5)
         Me.btnSelesai.Name = "btnSelesai"
         Me.btnSelesai.Size = New System.Drawing.Size(75, 23)
-        Me.btnSelesai.TabIndex = 4
+        Me.btnSelesai.TabIndex = 8
         Me.btnSelesai.Text = "Esc Selesai"
         Me.btnSelesai.UseVisualStyleBackColor = True
         '
         'Label5
         '
         Me.Label5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Label5.Location = New System.Drawing.Point(4, 199)
+        Me.Label5.Location = New System.Drawing.Point(4, 197)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(125, 20)
         Me.Label5.TabIndex = 95
@@ -158,7 +159,7 @@ Partial Class EditTokoFrm
         'Label4
         '
         Me.Label4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Label4.Location = New System.Drawing.Point(4, 227)
+        Me.Label4.Location = New System.Drawing.Point(4, 223)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(125, 20)
         Me.Label4.TabIndex = 94
@@ -167,17 +168,17 @@ Partial Class EditTokoFrm
         '
         'txtAlamatToko
         '
-        Me.txtAlamatToko.Location = New System.Drawing.Point(135, 103)
-        Me.txtAlamatToko.MaxLength = 25
+        Me.txtAlamatToko.Location = New System.Drawing.Point(135, 95)
+        Me.txtAlamatToko.MaxLength = 50
         Me.txtAlamatToko.Multiline = True
         Me.txtAlamatToko.Name = "txtAlamatToko"
-        Me.txtAlamatToko.Size = New System.Drawing.Size(290, 60)
-        Me.txtAlamatToko.TabIndex = 91
+        Me.txtAlamatToko.Size = New System.Drawing.Size(330, 70)
+        Me.txtAlamatToko.TabIndex = 3
         '
         'Label1
         '
         Me.Label1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Label1.Location = New System.Drawing.Point(4, 103)
+        Me.Label1.Location = New System.Drawing.Point(4, 95)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(125, 20)
         Me.Label1.TabIndex = 92
@@ -196,26 +197,27 @@ Partial Class EditTokoFrm
         '
         'txtIdToko
         '
-        Me.txtIdToko.Location = New System.Drawing.Point(139, 43)
-        Me.txtIdToko.MaxLength = 6
+        Me.txtIdToko.Location = New System.Drawing.Point(135, 43)
+        Me.txtIdToko.MaxLength = 10
         Me.txtIdToko.Name = "txtIdToko"
         Me.txtIdToko.ReadOnly = True
         Me.txtIdToko.Size = New System.Drawing.Size(119, 20)
-        Me.txtIdToko.TabIndex = 87
+        Me.txtIdToko.TabIndex = 1
         '
         'txtTeleponToko
         '
-        Me.txtTeleponToko.Location = New System.Drawing.Point(135, 227)
-        Me.txtTeleponToko.MaxLength = 25
+        Me.txtTeleponToko.Location = New System.Drawing.Point(135, 223)
+        Me.txtTeleponToko.MaxLength = 12
         Me.txtTeleponToko.Name = "txtTeleponToko"
         Me.txtTeleponToko.Size = New System.Drawing.Size(290, 20)
-        Me.txtTeleponToko.TabIndex = 93
+        Me.txtTeleponToko.TabIndex = 6
         '
         'EditTokoFrm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(428, 291)
+        Me.BackColor = System.Drawing.Color.White
+        Me.ClientSize = New System.Drawing.Size(468, 291)
         Me.Controls.Add(Me.dtTanggalBuka)
         Me.Controls.Add(Me.txtKotaToko)
         Me.Controls.Add(Me.Label2)

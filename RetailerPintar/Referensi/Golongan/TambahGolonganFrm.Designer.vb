@@ -107,7 +107,7 @@ Partial Class TambahGolonganFrm
         'txtIdGolongan
         '
         Me.txtIdGolongan.Location = New System.Drawing.Point(134, 44)
-        Me.txtIdGolongan.MaxLength = 6
+        Me.txtIdGolongan.MaxLength = 10
         Me.txtIdGolongan.Name = "txtIdGolongan"
         Me.txtIdGolongan.ReadOnly = True
         Me.txtIdGolongan.Size = New System.Drawing.Size(119, 20)
@@ -148,7 +148,6 @@ Partial Class TambahGolonganFrm
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "TambahGolonganFrm"
-        Me.ShowIcon = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Retailer Pintar"
         Me.pnlHeader.ResumeLayout(False)

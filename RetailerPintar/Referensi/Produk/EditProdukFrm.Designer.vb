@@ -25,9 +25,7 @@ Partial Class EditProdukFrm
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(EditProdukFrm))
         Me.cbGolongan = New System.Windows.Forms.ComboBox()
         Me.cbSupplier = New System.Windows.Forms.ComboBox()
-        Me.Label4 = New System.Windows.Forms.Label()
         Me.cbAktifProduk = New System.Windows.Forms.CheckBox()
-        Me.Label12 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
@@ -52,38 +50,29 @@ Partial Class EditProdukFrm
         Me.btnSelesai = New System.Windows.Forms.Button()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.lblHeader = New System.Windows.Forms.Label()
-        Me.pictureBox1 = New System.Windows.Forms.PictureBox()
         Me.pnlHeader = New System.Windows.Forms.Panel()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label12 = New System.Windows.Forms.Label()
+        Me.Label13 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
-        CType(Me.pictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnlHeader.SuspendLayout()
         Me.SuspendLayout()
         '
         'cbGolongan
         '
         Me.cbGolongan.FormattingEnabled = True
-        Me.cbGolongan.Location = New System.Drawing.Point(259, 201)
+        Me.cbGolongan.Location = New System.Drawing.Point(134, 253)
         Me.cbGolongan.Name = "cbGolongan"
-        Me.cbGolongan.Size = New System.Drawing.Size(437, 21)
-        Me.cbGolongan.TabIndex = 86
+        Me.cbGolongan.Size = New System.Drawing.Size(312, 21)
+        Me.cbGolongan.TabIndex = 9
         '
         'cbSupplier
         '
         Me.cbSupplier.FormattingEnabled = True
-        Me.cbSupplier.Location = New System.Drawing.Point(259, 173)
+        Me.cbSupplier.Location = New System.Drawing.Point(134, 200)
         Me.cbSupplier.Name = "cbSupplier"
-        Me.cbSupplier.Size = New System.Drawing.Size(437, 21)
-        Me.cbSupplier.TabIndex = 85
-        '
-        'Label4
-        '
-        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(256, 303)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(78, 20)
-        Me.Label4.TabIndex = 84
-        Me.Label4.Text = "/ pcs"
-        Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.cbSupplier.Size = New System.Drawing.Size(312, 21)
+        Me.cbSupplier.TabIndex = 7
         '
         'cbAktifProduk
         '
@@ -91,24 +80,14 @@ Partial Class EditProdukFrm
         Me.cbAktifProduk.Location = New System.Drawing.Point(134, 148)
         Me.cbAktifProduk.Name = "cbAktifProduk"
         Me.cbAktifProduk.Size = New System.Drawing.Size(47, 17)
-        Me.cbAktifProduk.TabIndex = 64
+        Me.cbAktifProduk.TabIndex = 5
         Me.cbAktifProduk.Text = "Aktif"
         Me.cbAktifProduk.UseVisualStyleBackColor = True
-        '
-        'Label12
-        '
-        Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label12.Location = New System.Drawing.Point(340, 122)
-        Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(125, 20)
-        Me.Label12.TabIndex = 83
-        Me.Label12.Text = "*untuk nama distruk"
-        Me.Label12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'Label11
         '
         Me.Label11.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Label11.Location = New System.Drawing.Point(3, 304)
+        Me.Label11.Location = New System.Drawing.Point(3, 358)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(125, 20)
         Me.Label11.TabIndex = 82
@@ -118,7 +97,7 @@ Partial Class EditProdukFrm
         'Label10
         '
         Me.Label10.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Label10.Location = New System.Drawing.Point(3, 278)
+        Me.Label10.Location = New System.Drawing.Point(3, 332)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(125, 20)
         Me.Label10.TabIndex = 81
@@ -128,7 +107,7 @@ Partial Class EditProdukFrm
         'Label7
         '
         Me.Label7.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Label7.Location = New System.Drawing.Point(3, 252)
+        Me.Label7.Location = New System.Drawing.Point(3, 306)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(125, 20)
         Me.Label7.TabIndex = 80
@@ -138,7 +117,7 @@ Partial Class EditProdukFrm
         'Label8
         '
         Me.Label8.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Label8.Location = New System.Drawing.Point(3, 226)
+        Me.Label8.Location = New System.Drawing.Point(3, 280)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(125, 20)
         Me.Label8.TabIndex = 79
@@ -148,7 +127,7 @@ Partial Class EditProdukFrm
         'Label9
         '
         Me.Label9.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Label9.Location = New System.Drawing.Point(3, 200)
+        Me.Label9.Location = New System.Drawing.Point(3, 227)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(125, 20)
         Me.Label9.TabIndex = 78
@@ -187,51 +166,53 @@ Partial Class EditProdukFrm
         '
         'txtStokProduk
         '
-        Me.txtStokProduk.Location = New System.Drawing.Point(134, 304)
+        Me.txtStokProduk.Location = New System.Drawing.Point(134, 358)
         Me.txtStokProduk.MaxLength = 12
         Me.txtStokProduk.Name = "txtStokProduk"
         Me.txtStokProduk.Size = New System.Drawing.Size(116, 20)
-        Me.txtStokProduk.TabIndex = 69
+        Me.txtStokProduk.TabIndex = 13
         '
         'txtHargaJualProduk
         '
-        Me.txtHargaJualProduk.Location = New System.Drawing.Point(134, 278)
+        Me.txtHargaJualProduk.Location = New System.Drawing.Point(134, 332)
         Me.txtHargaJualProduk.MaxLength = 12
         Me.txtHargaJualProduk.Name = "txtHargaJualProduk"
         Me.txtHargaJualProduk.Size = New System.Drawing.Size(200, 20)
-        Me.txtHargaJualProduk.TabIndex = 68
+        Me.txtHargaJualProduk.TabIndex = 12
         '
         'txtHargaBeliProduk
         '
-        Me.txtHargaBeliProduk.Location = New System.Drawing.Point(134, 252)
+        Me.txtHargaBeliProduk.Location = New System.Drawing.Point(134, 306)
         Me.txtHargaBeliProduk.MaxLength = 12
         Me.txtHargaBeliProduk.Name = "txtHargaBeliProduk"
         Me.txtHargaBeliProduk.Size = New System.Drawing.Size(200, 20)
-        Me.txtHargaBeliProduk.TabIndex = 67
+        Me.txtHargaBeliProduk.TabIndex = 11
         '
         'txtLokasiProduk
         '
-        Me.txtLokasiProduk.Location = New System.Drawing.Point(134, 226)
+        Me.txtLokasiProduk.Location = New System.Drawing.Point(134, 280)
         Me.txtLokasiProduk.MaxLength = 25
         Me.txtLokasiProduk.Name = "txtLokasiProduk"
-        Me.txtLokasiProduk.Size = New System.Drawing.Size(445, 20)
-        Me.txtLokasiProduk.TabIndex = 66
+        Me.txtLokasiProduk.Size = New System.Drawing.Size(312, 20)
+        Me.txtLokasiProduk.TabIndex = 10
         '
         'txtIdGolongan
         '
-        Me.txtIdGolongan.Location = New System.Drawing.Point(134, 200)
-        Me.txtIdGolongan.MaxLength = 6
+        Me.txtIdGolongan.BackColor = System.Drawing.SystemColors.Control
+        Me.txtIdGolongan.Location = New System.Drawing.Point(134, 227)
+        Me.txtIdGolongan.MaxLength = 10
         Me.txtIdGolongan.Name = "txtIdGolongan"
         Me.txtIdGolongan.Size = New System.Drawing.Size(116, 20)
-        Me.txtIdGolongan.TabIndex = 73
+        Me.txtIdGolongan.TabIndex = 8
         '
         'txtIdSupplier
         '
+        Me.txtIdSupplier.BackColor = System.Drawing.SystemColors.Control
         Me.txtIdSupplier.Location = New System.Drawing.Point(134, 174)
-        Me.txtIdSupplier.MaxLength = 6
+        Me.txtIdSupplier.MaxLength = 10
         Me.txtIdSupplier.Name = "txtIdSupplier"
         Me.txtIdSupplier.Size = New System.Drawing.Size(116, 20)
-        Me.txtIdSupplier.TabIndex = 65
+        Me.txtIdSupplier.TabIndex = 6
         '
         'txtNamaPendekProduk
         '
@@ -239,15 +220,15 @@ Partial Class EditProdukFrm
         Me.txtNamaPendekProduk.MaxLength = 17
         Me.txtNamaPendekProduk.Name = "txtNamaPendekProduk"
         Me.txtNamaPendekProduk.Size = New System.Drawing.Size(200, 20)
-        Me.txtNamaPendekProduk.TabIndex = 63
+        Me.txtNamaPendekProduk.TabIndex = 4
         '
         'txtNamaProduk
         '
         Me.txtNamaProduk.Location = New System.Drawing.Point(134, 96)
         Me.txtNamaProduk.MaxLength = 50
         Me.txtNamaProduk.Name = "txtNamaProduk"
-        Me.txtNamaProduk.Size = New System.Drawing.Size(445, 20)
-        Me.txtNamaProduk.TabIndex = 61
+        Me.txtNamaProduk.Size = New System.Drawing.Size(471, 20)
+        Me.txtNamaProduk.TabIndex = 3
         '
         'Label1
         '
@@ -264,8 +245,8 @@ Partial Class EditProdukFrm
         Me.txtBarcode.Location = New System.Drawing.Point(134, 70)
         Me.txtBarcode.MaxLength = 50
         Me.txtBarcode.Name = "txtBarcode"
-        Me.txtBarcode.Size = New System.Drawing.Size(445, 20)
-        Me.txtBarcode.TabIndex = 60
+        Me.txtBarcode.Size = New System.Drawing.Size(471, 20)
+        Me.txtBarcode.TabIndex = 2
         '
         'Label3
         '
@@ -280,17 +261,17 @@ Partial Class EditProdukFrm
         'txtIdProduk
         '
         Me.txtIdProduk.Location = New System.Drawing.Point(134, 44)
-        Me.txtIdProduk.MaxLength = 6
+        Me.txtIdProduk.MaxLength = 10
         Me.txtIdProduk.Name = "txtIdProduk"
         Me.txtIdProduk.ReadOnly = True
         Me.txtIdProduk.Size = New System.Drawing.Size(119, 20)
-        Me.txtIdProduk.TabIndex = 59
+        Me.txtIdProduk.TabIndex = 1
         '
         'btnSimpan
         '
         Me.btnSimpan.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnSimpan.Location = New System.Drawing.Point(531, 5)
+        Me.btnSimpan.Location = New System.Drawing.Point(440, 5)
         Me.btnSimpan.Name = "btnSimpan"
         Me.btnSimpan.Size = New System.Drawing.Size(75, 23)
         Me.btnSimpan.TabIndex = 14
@@ -301,7 +282,7 @@ Partial Class EditProdukFrm
         '
         Me.btnSelesai.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnSelesai.Location = New System.Drawing.Point(612, 5)
+        Me.btnSelesai.Location = New System.Drawing.Point(521, 5)
         Me.btnSelesai.Name = "btnSelesai"
         Me.btnSelesai.Size = New System.Drawing.Size(75, 23)
         Me.btnSelesai.TabIndex = 15
@@ -316,9 +297,9 @@ Partial Class EditProdukFrm
         Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Panel1.Controls.Add(Me.btnSimpan)
         Me.Panel1.Controls.Add(Me.btnSelesai)
-        Me.Panel1.Location = New System.Drawing.Point(3, 330)
+        Me.Panel1.Location = New System.Drawing.Point(3, 395)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(693, 35)
+        Me.Panel1.Size = New System.Drawing.Size(602, 35)
         Me.Panel1.TabIndex = 70
         '
         'lblHeader
@@ -328,19 +309,9 @@ Partial Class EditProdukFrm
         Me.lblHeader.ForeColor = System.Drawing.Color.White
         Me.lblHeader.Location = New System.Drawing.Point(3, 7)
         Me.lblHeader.Name = "lblHeader"
-        Me.lblHeader.Size = New System.Drawing.Size(154, 17)
+        Me.lblHeader.Size = New System.Drawing.Size(125, 17)
         Me.lblHeader.TabIndex = 0
-        Me.lblHeader.Text = "Tambah Data Produk"
-        '
-        'pictureBox1
-        '
-        Me.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.pictureBox1.Location = New System.Drawing.Point(585, 44)
-        Me.pictureBox1.Name = "pictureBox1"
-        Me.pictureBox1.Size = New System.Drawing.Size(111, 121)
-        Me.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.pictureBox1.TabIndex = 74
-        Me.pictureBox1.TabStop = False
+        Me.lblHeader.Text = "Edit Data Produk"
         '
         'pnlHeader
         '
@@ -351,20 +322,51 @@ Partial Class EditProdukFrm
         Me.pnlHeader.Controls.Add(Me.lblHeader)
         Me.pnlHeader.Location = New System.Drawing.Point(3, 3)
         Me.pnlHeader.Name = "pnlHeader"
-        Me.pnlHeader.Size = New System.Drawing.Size(693, 35)
+        Me.pnlHeader.Size = New System.Drawing.Size(602, 35)
         Me.pnlHeader.TabIndex = 62
+        '
+        'Label4
+        '
+        Me.Label4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.Label4.Location = New System.Drawing.Point(256, 358)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(78, 20)
+        Me.Label4.TabIndex = 87
+        Me.Label4.Text = "/ Pcs"
+        Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'Label12
+        '
+        Me.Label12.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.Label12.Location = New System.Drawing.Point(3, 201)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(125, 20)
+        Me.Label12.TabIndex = 88
+        Me.Label12.Text = "Nama Supplier"
+        Me.Label12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'Label13
+        '
+        Me.Label13.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.Label13.Location = New System.Drawing.Point(3, 254)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(125, 20)
+        Me.Label13.TabIndex = 89
+        Me.Label13.Text = "Nama Golongan"
+        Me.Label13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'EditProdukFrm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(699, 369)
+        Me.ClientSize = New System.Drawing.Size(608, 434)
+        Me.Controls.Add(Me.Label13)
+        Me.Controls.Add(Me.Label12)
+        Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.cbGolongan)
         Me.Controls.Add(Me.cbSupplier)
-        Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.cbAktifProduk)
-        Me.Controls.Add(Me.Label12)
         Me.Controls.Add(Me.Label11)
         Me.Controls.Add(Me.Label10)
         Me.Controls.Add(Me.Label7)
@@ -386,18 +388,15 @@ Partial Class EditProdukFrm
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.txtIdProduk)
         Me.Controls.Add(Me.Panel1)
-        Me.Controls.Add(Me.pictureBox1)
         Me.Controls.Add(Me.pnlHeader)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "EditProdukFrm"
-        Me.ShowIcon = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Retailer Pintar"
         Me.Panel1.ResumeLayout(False)
-        CType(Me.pictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.pnlHeader.ResumeLayout(False)
         Me.pnlHeader.PerformLayout()
         Me.ResumeLayout(False)
@@ -407,9 +406,7 @@ Partial Class EditProdukFrm
 
     Friend WithEvents cbGolongan As ComboBox
     Friend WithEvents cbSupplier As ComboBox
-    Friend WithEvents Label4 As Label
     Friend WithEvents cbAktifProduk As CheckBox
-    Friend WithEvents Label12 As Label
     Friend WithEvents Label11 As Label
     Friend WithEvents Label10 As Label
     Friend WithEvents Label7 As Label
@@ -434,6 +431,8 @@ Partial Class EditProdukFrm
     Private WithEvents btnSelesai As Button
     Private WithEvents Panel1 As Panel
     Private WithEvents lblHeader As Label
-    Private WithEvents pictureBox1 As PictureBox
     Private WithEvents pnlHeader As Panel
+    Friend WithEvents Label4 As Label
+    Friend WithEvents Label12 As Label
+    Friend WithEvents Label13 As Label
 End Class

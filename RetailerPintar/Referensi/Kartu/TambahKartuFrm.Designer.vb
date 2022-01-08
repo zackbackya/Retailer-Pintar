@@ -150,7 +150,7 @@ Partial Class TambahKartuFrm
         'txtIdKartu
         '
         Me.txtIdKartu.Location = New System.Drawing.Point(134, 44)
-        Me.txtIdKartu.MaxLength = 6
+        Me.txtIdKartu.MaxLength = 10
         Me.txtIdKartu.Name = "txtIdKartu"
         Me.txtIdKartu.ReadOnly = True
         Me.txtIdKartu.Size = New System.Drawing.Size(119, 20)
@@ -186,7 +186,6 @@ Partial Class TambahKartuFrm
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "TambahKartuFrm"
-        Me.ShowIcon = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Retailer Pintar"
         Me.pnlHeader.ResumeLayout(False)

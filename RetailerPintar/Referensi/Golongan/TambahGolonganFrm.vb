@@ -11,7 +11,7 @@
             cmd = New MySqlConnector.MySqlCommand(str, conn)
             cmd.ExecuteNonQuery()
 
-            MessageBox.Show("Data Berhasil Ditambah", "Retail Pintar", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            MessageBox.Show("Data Anda berhasil ditambah", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information)
 
             Call GolonganFrm.tampilData()
             Call GenTempID()
@@ -21,7 +21,7 @@
 
         Catch ex As Exception
 
-            MsgBox(ex.ToString)
+            MessageBox.Show("Tambah data gagal, Silahkan cek kembali data Anda", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
 
         End Try
     End Sub
@@ -47,5 +47,12 @@
         txtIdGolongan.Text = "GO-" + idjam
     End Sub
 
+    Private Sub txtNamaGolongan_GotFocus(sender As Object, e As EventArgs) Handles txtNamaGolongan.GotFocus
+        txtNamaGolongan.BackColor = Color.LightYellow
+    End Sub
+
+    Private Sub txtNamaGolongan_LostFocus(sender As Object, e As EventArgs) Handles txtNamaGolongan.LostFocus
+        txtNamaGolongan.BackColor = Color.White
+    End Sub
 
 End Class

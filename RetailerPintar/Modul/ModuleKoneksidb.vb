@@ -15,8 +15,9 @@ Module ModuleKoneksidb
 
     Sub koneksi()
         Try
-            Dim str As String = "Server=localhost;user id=root;password=;database=db_pbos"
+            Dim str As String = "Server=localhost;user id=root;password=;database=db_pbos;Convert Zero Datetime=True"
             conn = New MySqlConnection(str)
+
             If conn.State = ConnectionState.Closed Then
                 conn.Open()
             End If

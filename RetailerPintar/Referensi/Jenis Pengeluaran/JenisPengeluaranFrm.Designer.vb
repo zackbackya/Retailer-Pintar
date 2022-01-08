@@ -30,6 +30,7 @@ Partial Class JenisPengeluaranFrm
         Me.btnPerbaiki = New System.Windows.Forms.Button()
         Me.btnTambah = New System.Windows.Forms.Button()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.txtCari = New System.Windows.Forms.TextBox()
         Me.pnlHeader.SuspendLayout()
         Me.Panel1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -42,9 +43,9 @@ Partial Class JenisPengeluaranFrm
         Me.pnlHeader.BackColor = System.Drawing.Color.FromArgb(CType(CType(13, Byte), Integer), CType(CType(59, Byte), Integer), CType(CType(102, Byte), Integer))
         Me.pnlHeader.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.pnlHeader.Controls.Add(Me.lblHeader)
-        Me.pnlHeader.Location = New System.Drawing.Point(2, 3)
+        Me.pnlHeader.Location = New System.Drawing.Point(3, 3)
         Me.pnlHeader.Name = "pnlHeader"
-        Me.pnlHeader.Size = New System.Drawing.Size(1142, 35)
+        Me.pnlHeader.Size = New System.Drawing.Size(969, 35)
         Me.pnlHeader.TabIndex = 6
         '
         'lblHeader
@@ -68,9 +69,9 @@ Partial Class JenisPengeluaranFrm
         Me.Panel1.Controls.Add(Me.btnSelesai)
         Me.Panel1.Controls.Add(Me.btnPerbaiki)
         Me.Panel1.Controls.Add(Me.btnTambah)
-        Me.Panel1.Location = New System.Drawing.Point(2, 567)
+        Me.Panel1.Location = New System.Drawing.Point(3, 567)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(972, 35)
+        Me.Panel1.Size = New System.Drawing.Size(969, 35)
         Me.Panel1.TabIndex = 7
         '
         'btnHapus
@@ -86,7 +87,7 @@ Partial Class JenisPengeluaranFrm
         'btnSelesai
         '
         Me.btnSelesai.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnSelesai.Location = New System.Drawing.Point(891, 5)
+        Me.btnSelesai.Location = New System.Drawing.Point(888, 5)
         Me.btnSelesai.Name = "btnSelesai"
         Me.btnSelesai.Size = New System.Drawing.Size(75, 23)
         Me.btnSelesai.TabIndex = 4
@@ -115,21 +116,35 @@ Partial Class JenisPengeluaranFrm
         '
         'DataGridView1
         '
+        Me.DataGridView1.AllowUserToAddRows = False
         Me.DataGridView1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.DataGridView1.BackgroundColor = System.Drawing.Color.White
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(2, 44)
+        Me.DataGridView1.GridColor = System.Drawing.Color.WhiteSmoke
+        Me.DataGridView1.Location = New System.Drawing.Point(2, 70)
         Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(1142, 517)
-        Me.DataGridView1.TabIndex = 8
+        Me.DataGridView1.Size = New System.Drawing.Size(969, 491)
+        Me.DataGridView1.TabIndex = 5
+        '
+        'txtCari
+        '
+        Me.txtCari.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.txtCari.Location = New System.Drawing.Point(630, 44)
+        Me.txtCari.MaxLength = 25
+        Me.txtCari.Name = "txtCari"
+        Me.txtCari.Size = New System.Drawing.Size(342, 20)
+        Me.txtCari.TabIndex = 6
         '
         'JenisPengeluaranFrm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(975, 604)
+        Me.Controls.Add(Me.txtCari)
         Me.Controls.Add(Me.pnlHeader)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.DataGridView1)
@@ -141,6 +156,7 @@ Partial Class JenisPengeluaranFrm
         Me.Panel1.ResumeLayout(False)
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 
@@ -152,4 +168,5 @@ Partial Class JenisPengeluaranFrm
     Private WithEvents btnPerbaiki As Button
     Private WithEvents btnTambah As Button
     Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents txtCari As TextBox
 End Class

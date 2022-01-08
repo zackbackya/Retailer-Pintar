@@ -13,7 +13,7 @@
             cmd = New MySqlConnector.MySqlCommand(str, conn)
             cmd.ExecuteNonQuery()
 
-            MessageBox.Show("Data Berhasil Ditambah", "Retail Pintar", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            MessageBox.Show("Data Anda berhasil ditambah", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information)
 
             Call TokoFrm.tampilData()
             Call GenTempID()
@@ -25,7 +25,7 @@
 
         Catch ex As Exception
 
-            MsgBox(ex.ToString)
+            MessageBox.Show("Tambah data gagal, Silahkan cek kembali data Anda", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
 
         End Try
     End Sub
@@ -60,5 +60,37 @@
 
     Private Sub btnSelesai_Click_1(sender As Object, e As EventArgs) Handles btnSelesai.Click
         Me.Dispose()
+    End Sub
+
+    Private Sub txtAlamatToko_GotFocus(sender As Object, e As EventArgs) Handles txtAlamatToko.GotFocus
+        txtAlamatToko.BackColor = Color.LightYellow
+    End Sub
+
+    Private Sub txtAlamatToko_LostFocus(sender As Object, e As EventArgs) Handles txtAlamatToko.LostFocus
+        txtAlamatToko.BackColor = Color.White
+    End Sub
+
+    Private Sub txtKotaToko_GotFocus(sender As Object, e As EventArgs) Handles txtKotaToko.GotFocus
+        txtKotaToko.BackColor = Color.LightYellow
+    End Sub
+
+    Private Sub txtKotaToko_LostFocus(sender As Object, e As EventArgs) Handles txtKotaToko.LostFocus
+        txtKotaToko.BackColor = Color.White
+    End Sub
+
+    Private Sub txtNamaToko_GotFocus(sender As Object, e As EventArgs) Handles txtNamaToko.GotFocus
+        txtNamaToko.BackColor = Color.LightYellow
+    End Sub
+
+    Private Sub txtNamaToko_LostFocus(sender As Object, e As EventArgs) Handles txtNamaToko.LostFocus
+        txtNamaToko.BackColor = Color.White
+    End Sub
+
+    Private Sub txtTeleponToko_GotFocus(sender As Object, e As EventArgs) Handles txtTeleponToko.GotFocus
+        txtTeleponToko.BackColor = Color.LightYellow
+    End Sub
+
+    Private Sub txtTeleponToko_LostFocus(sender As Object, e As EventArgs) Handles txtTeleponToko.LostFocus
+        txtTeleponToko.BackColor = Color.White
     End Sub
 End Class

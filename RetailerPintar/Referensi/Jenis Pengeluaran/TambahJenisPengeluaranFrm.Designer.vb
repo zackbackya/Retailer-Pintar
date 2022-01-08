@@ -107,11 +107,11 @@ Partial Class TambahJenisPengeluaranFrm
         'txtIdJenisPengeluaran
         '
         Me.txtIdJenisPengeluaran.Location = New System.Drawing.Point(150, 45)
-        Me.txtIdJenisPengeluaran.MaxLength = 6
+        Me.txtIdJenisPengeluaran.MaxLength = 10
         Me.txtIdJenisPengeluaran.Name = "txtIdJenisPengeluaran"
         Me.txtIdJenisPengeluaran.ReadOnly = True
-        Me.txtIdJenisPengeluaran.Size = New System.Drawing.Size(103, 20)
-        Me.txtIdJenisPengeluaran.TabIndex = 36
+        Me.txtIdJenisPengeluaran.Size = New System.Drawing.Size(140, 20)
+        Me.txtIdJenisPengeluaran.TabIndex = 1
         '
         'txtNamaJenisPengeluaran
         '
@@ -119,7 +119,7 @@ Partial Class TambahJenisPengeluaranFrm
         Me.txtNamaJenisPengeluaran.MaxLength = 25
         Me.txtNamaJenisPengeluaran.Name = "txtNamaJenisPengeluaran"
         Me.txtNamaJenisPengeluaran.Size = New System.Drawing.Size(274, 20)
-        Me.txtNamaJenisPengeluaran.TabIndex = 37
+        Me.txtNamaJenisPengeluaran.TabIndex = 2
         '
         'Label2
         '
@@ -135,6 +135,7 @@ Partial Class TambahJenisPengeluaranFrm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(427, 134)
         Me.Controls.Add(Me.pnlHeader)
         Me.Controls.Add(Me.Panel1)
@@ -142,7 +143,10 @@ Partial Class TambahJenisPengeluaranFrm
         Me.Controls.Add(Me.txtIdJenisPengeluaran)
         Me.Controls.Add(Me.txtNamaJenisPengeluaran)
         Me.Controls.Add(Me.Label2)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
         Me.Name = "TambahJenisPengeluaranFrm"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Retailer Pintar"

@@ -11,8 +11,9 @@
     <AssemblyName>RetailerPintar</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MyType>WindowsForms</MyType>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
     <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -91,10 +92,40 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Ambil\AmbilProdukPembelianFrm.Designer.vb">
+      <DependentUpon>AmbilProdukPembelianFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ambil\AmbilProdukPembelianFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ambil\AmbilSupplierFrm.Designer.vb">
+      <DependentUpon>AmbilSupplierFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ambil\AmbilSupplierFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ambil\AmbilProdukProdukFrm.Designer.vb">
+      <DependentUpon>AmbilProdukProdukFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ambil\AmbilProdukProdukFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ambil\AmbilProdukPenyesuaianStokFrm.Designer.vb">
+      <DependentUpon>AmbilProdukPenyesuaianStokFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ambil\AmbilProdukPenyesuaianStokFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="HomeFrm.Designer.vb">
       <DependentUpon>HomeFrm.vb</DependentUpon>
     </Compile>
     <Compile Include="HomeFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Laporan\Pembelian\BeliProdukFrm.Designer.vb">
+      <DependentUpon>BeliProdukFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Laporan\Pembelian\BeliProdukFrm.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="LoginFrm.vb">
@@ -110,11 +141,13 @@
     <Compile Include="MainFrm.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ModuleKoneksidb.vb" />
+    <Compile Include="Modul\ModuleHitung.vb" />
+    <Compile Include="Modul\ModuleKoneksidb.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
       <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="My Project\Resources.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -125,6 +158,42 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Pengaturan\Manajemen Operator\EditUserFrm.Designer.vb">
+      <DependentUpon>EditUserFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Pengaturan\Manajemen Operator\EditUserFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pengaturan\Manajemen Operator\ManajemenUserFrm.Designer.vb">
+      <DependentUpon>ManajemenUserFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Pengaturan\Manajemen Operator\ManajemenUserFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pengaturan\Manajemen Operator\TambahUserFrm.Designer.vb">
+      <DependentUpon>TambahUserFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Pengaturan\Manajemen Operator\TambahUserFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pengaturan\Pengaturan Umum\PengaturanUmumFrm.Designer.vb">
+      <DependentUpon>PengaturanUmumFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Pengaturan\Pengaturan Umum\PengaturanUmumFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pengaturan\Profil Perusahaan\ProfilPerusahaanFrm.Designer.vb">
+      <DependentUpon>ProfilPerusahaanFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Pengaturan\Profil Perusahaan\ProfilPerusahaanFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pengeluaran\PengeluaranBiayaFrm.Designer.vb">
+      <DependentUpon>PengeluaranBiayaFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Pengeluaran\PengeluaranBiayaFrm.vb">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="Referensi\Customer\CustomerFrm.Designer.vb">
       <DependentUpon>CustomerFrm.vb</DependentUpon>
@@ -216,12 +285,6 @@
     <Compile Include="Referensi\Produk\TambahProdukFrm.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Referensi\Promo\EditPromoFrm.Designer.vb">
-      <DependentUpon>EditPromoFrm.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Referensi\Promo\EditPromoFrm.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Referensi\Promo\PromoFrm.Designer.vb">
       <DependentUpon>PromoFrm.vb</DependentUpon>
     </Compile>
@@ -258,10 +321,34 @@
     <Compile Include="Referensi\Toko\EditTokoFrm.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Transaksi\PenyesuaianStok\PenyesuaianStokFrm.Designer.vb">
+    <Compile Include="Transaksi\Pembayaran Hutang Pembelian\PembayaranHutangPembelianFrm.Designer.vb">
+      <DependentUpon>PembayaranHutangPembelianFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Transaksi\Pembayaran Hutang Pembelian\PembayaranHutangPembelianFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaksi\Pembayaran Hutang Pembelian\TambahPembayaranHutangPembelianFrm.Designer.vb">
+      <DependentUpon>TambahPembayaranHutangPembelianFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Transaksi\Pembayaran Hutang Pembelian\TambahPembayaranHutangPembelianFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaksi\Pembelian Produk\PembelianProdukFrm.Designer.vb">
+      <DependentUpon>PembelianProdukFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Transaksi\Pembelian Produk\PembelianProdukFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaksi\Pembelian Produk\TambahPembelianProdukFrm.Designer.vb">
+      <DependentUpon>TambahPembelianProdukFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Transaksi\Pembelian Produk\TambahPembelianProdukFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaksi\Penyesuaian Stok\PenyesuaianStokFrm.Designer.vb">
       <DependentUpon>PenyesuaianStokFrm.vb</DependentUpon>
     </Compile>
-    <Compile Include="Transaksi\PenyesuaianStok\PenyesuaianStokFrm.vb">
+    <Compile Include="Transaksi\Penyesuaian Stok\PenyesuaianStokFrm.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Referensi\Toko\TambahTokoFrm.Designer.vb">
@@ -276,16 +363,37 @@
     <Compile Include="Referensi\Toko\TokoFrm.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Transaksi\PenyesuaianStok\TambahPenyesuaianStokFrm.Designer.vb">
+    <Compile Include="Transaksi\Penyesuaian Stok\TambahPenyesuaianStokFrm.Designer.vb">
       <DependentUpon>TambahPenyesuaianStokFrm.vb</DependentUpon>
     </Compile>
-    <Compile Include="Transaksi\PenyesuaianStok\TambahPenyesuaianStokFrm.vb">
+    <Compile Include="Transaksi\Penyesuaian Stok\TambahPenyesuaianStokFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaksi\Retur Pembelian\ReturPembelianProdukFrm.Designer.vb">
+      <DependentUpon>ReturPembelianProdukFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Transaksi\Retur Pembelian\ReturPembelianProdukFrm.vb">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Ambil\AmbilProdukPembelianFrm.resx">
+      <DependentUpon>AmbilProdukPembelianFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ambil\AmbilProdukProdukFrm.resx">
+      <DependentUpon>AmbilProdukProdukFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ambil\AmbilProdukPenyesuaianStokFrm.resx">
+      <DependentUpon>AmbilProdukPenyesuaianStokFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ambil\AmbilSupplierFrm.resx">
+      <DependentUpon>AmbilSupplierFrm.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="HomeFrm.resx">
       <DependentUpon>HomeFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Laporan\Pembelian\BeliProdukFrm.resx">
+      <DependentUpon>BeliProdukFrm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginFrm.resx">
       <DependentUpon>LoginFrm.vb</DependentUpon>
@@ -298,6 +406,24 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pengaturan\Manajemen Operator\EditUserFrm.resx">
+      <DependentUpon>EditUserFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pengaturan\Manajemen Operator\ManajemenUserFrm.resx">
+      <DependentUpon>ManajemenUserFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pengaturan\Manajemen Operator\TambahUserFrm.resx">
+      <DependentUpon>TambahUserFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pengaturan\Pengaturan Umum\PengaturanUmumFrm.resx">
+      <DependentUpon>PengaturanUmumFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pengaturan\Profil Perusahaan\ProfilPerusahaanFrm.resx">
+      <DependentUpon>ProfilPerusahaanFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pengeluaran\PengeluaranBiayaFrm.resx">
+      <DependentUpon>PengeluaranBiayaFrm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Referensi\Customer\CustomerFrm.resx">
       <DependentUpon>CustomerFrm.vb</DependentUpon>
@@ -344,9 +470,6 @@
     <EmbeddedResource Include="Referensi\Produk\TambahProdukFrm.resx">
       <DependentUpon>TambahProdukFrm.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Referensi\Promo\EditPromoFrm.resx">
-      <DependentUpon>EditPromoFrm.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Referensi\Promo\PromoFrm.resx">
       <DependentUpon>PromoFrm.vb</DependentUpon>
     </EmbeddedResource>
@@ -371,11 +494,26 @@
     <EmbeddedResource Include="Referensi\Toko\TokoFrm.resx">
       <DependentUpon>TokoFrm.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Transaksi\PenyesuaianStok\PenyesuaianStokFrm.resx">
+    <EmbeddedResource Include="Transaksi\Pembayaran Hutang Pembelian\PembayaranHutangPembelianFrm.resx">
+      <DependentUpon>PembayaranHutangPembelianFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaksi\Pembayaran Hutang Pembelian\TambahPembayaranHutangPembelianFrm.resx">
+      <DependentUpon>TambahPembayaranHutangPembelianFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaksi\Pembelian Produk\PembelianProdukFrm.resx">
+      <DependentUpon>PembelianProdukFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaksi\Pembelian Produk\TambahPembelianProdukFrm.resx">
+      <DependentUpon>TambahPembelianProdukFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaksi\Penyesuaian Stok\PenyesuaianStokFrm.resx">
       <DependentUpon>PenyesuaianStokFrm.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Transaksi\PenyesuaianStok\TambahPenyesuaianStokFrm.resx">
+    <EmbeddedResource Include="Transaksi\Penyesuaian Stok\TambahPenyesuaianStokFrm.resx">
       <DependentUpon>TambahPenyesuaianStokFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaksi\Retur Pembelian\ReturPembelianProdukFrm.resx">
+      <DependentUpon>ReturPembelianProdukFrm.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -396,9 +534,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Bantuan\" />
-    <Folder Include="Laporan\" />
-    <Folder Include="Pengaturan\" />
-    <Folder Include="Pengeluaran\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

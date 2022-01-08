@@ -12,12 +12,12 @@
             cmd = New MySqlConnector.MySqlCommand("update ms_Supplier set nama_Supplier = '" & txtNamaSupplier.Text & "', alamat = '" & txtAlamatSupplier.Text & "', telepon = '" & txtTeleponSupplier.Text & "' where id_Supplier = '" & txtIdSupplier.Text & "'", conn)
             cmd.ExecuteNonQuery()
 
-            MessageBox.Show("Data Berhasil Diupdate", "Retail Pintar", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            MessageBox.Show("Data Anda berhasil diupdate", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information)
             Call SupplierFrm.tampilData()
 
         Catch ex As Exception
 
-            MsgBox(ex.ToString)
+            MessageBox.Show("Update data gagal, Silahkan cek kembali data Anda", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
 
         End Try
     End Sub
@@ -46,8 +46,29 @@
             Call editSupplier()
         End If
 
+    End Sub
 
+    Private Sub txtAlamatSupplier_GotFocus(sender As Object, e As EventArgs) Handles txtAlamatSupplier.GotFocus
+        txtAlamatSupplier.BackColor = Color.LightYellow
+    End Sub
 
+    Private Sub txtAlamatSupplier_LostFocus(sender As Object, e As EventArgs) Handles txtAlamatSupplier.LostFocus
+        txtAlamatSupplier.BackColor = Color.White
+    End Sub
 
+    Private Sub txtNamaSupplier_GotFocus(sender As Object, e As EventArgs) Handles txtNamaSupplier.GotFocus
+        txtNamaSupplier.BackColor = Color.LightYellow
+    End Sub
+
+    Private Sub txtNamaSupplier_LostFocus(sender As Object, e As EventArgs) Handles txtNamaSupplier.LostFocus
+        txtNamaSupplier.BackColor = Color.White
+    End Sub
+
+    Private Sub txtTeleponSupplier_GotFocus(sender As Object, e As EventArgs) Handles txtTeleponSupplier.GotFocus
+        txtTeleponSupplier.BackColor = Color.LightYellow
+    End Sub
+
+    Private Sub txtTeleponSupplier_LostFocus(sender As Object, e As EventArgs) Handles txtTeleponSupplier.LostFocus
+        txtTeleponSupplier.BackColor = Color.White
     End Sub
 End Class

@@ -11,7 +11,7 @@
             cmd = New MySqlConnector.MySqlCommand(str, conn)
             cmd.ExecuteNonQuery()
 
-            MessageBox.Show("Data Berhasil Ditambah", "Retail Pintar", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            MessageBox.Show("Data Anda berhasil ditambah", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information)
 
             Call SupplierFrm.tampilData()
             Call GenTempID()
@@ -23,7 +23,7 @@
 
         Catch ex As Exception
 
-            MsgBox(ex.ToString)
+            MessageBox.Show("Tambah data gagal, Silahkan cek kembali data Anda", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
 
         End Try
     End Sub
@@ -49,5 +49,27 @@
         txtIdSupplier.Text = "SP-" + idjam
     End Sub
 
+    Private Sub txtAlamatSupplier_GotFocus(sender As Object, e As EventArgs) Handles txtAlamatSupplier.GotFocus
+        txtAlamatSupplier.BackColor = Color.LightYellow
+    End Sub
 
+    Private Sub txtAlamatSupplier_LostFocus(sender As Object, e As EventArgs) Handles txtAlamatSupplier.LostFocus
+        txtAlamatSupplier.BackColor = Color.White
+    End Sub
+
+    Private Sub txtNamaSupplier_GotFocus(sender As Object, e As EventArgs) Handles txtNamaSupplier.GotFocus
+        txtNamaSupplier.BackColor = Color.LightYellow
+    End Sub
+
+    Private Sub txtNamaSupplier_LostFocus(sender As Object, e As EventArgs) Handles txtNamaSupplier.LostFocus
+        txtNamaSupplier.BackColor = Color.White
+    End Sub
+
+    Private Sub txtTeleponSupplier_GotFocus(sender As Object, e As EventArgs) Handles txtTeleponSupplier.GotFocus
+        txtTeleponSupplier.BackColor = Color.LightYellow
+    End Sub
+
+    Private Sub txtTeleponSupplier_LostFocus(sender As Object, e As EventArgs) Handles txtTeleponSupplier.LostFocus
+        txtTeleponSupplier.BackColor = Color.White
+    End Sub
 End Class

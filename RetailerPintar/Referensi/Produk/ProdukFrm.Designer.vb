@@ -48,7 +48,7 @@ Partial Class ProdukFrm
         Me.pnlHeader.Controls.Add(Me.lblHeader)
         Me.pnlHeader.Location = New System.Drawing.Point(3, 3)
         Me.pnlHeader.Name = "pnlHeader"
-        Me.pnlHeader.Size = New System.Drawing.Size(1142, 35)
+        Me.pnlHeader.Size = New System.Drawing.Size(969, 35)
         Me.pnlHeader.TabIndex = 6
         '
         'lblHeader
@@ -74,7 +74,7 @@ Partial Class ProdukFrm
         Me.Panel1.Controls.Add(Me.btnTambah)
         Me.Panel1.Location = New System.Drawing.Point(3, 567)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(972, 35)
+        Me.Panel1.Size = New System.Drawing.Size(969, 35)
         Me.Panel1.TabIndex = 7
         '
         'btnHapus
@@ -90,7 +90,7 @@ Partial Class ProdukFrm
         'btnSelesai
         '
         Me.btnSelesai.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnSelesai.Location = New System.Drawing.Point(891, 5)
+        Me.btnSelesai.Location = New System.Drawing.Point(888, 5)
         Me.btnSelesai.Name = "btnSelesai"
         Me.btnSelesai.Size = New System.Drawing.Size(75, 23)
         Me.btnSelesai.TabIndex = 7
@@ -119,24 +119,27 @@ Partial Class ProdukFrm
         '
         'DataGridView1
         '
+        Me.DataGridView1.AllowUserToAddRows = False
         Me.DataGridView1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.DataGridView1.BackgroundColor = System.Drawing.Color.White
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.GridColor = System.Drawing.Color.WhiteSmoke
         Me.DataGridView1.Location = New System.Drawing.Point(3, 73)
         Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(1142, 488)
-        Me.DataGridView1.TabIndex = 8
+        Me.DataGridView1.Size = New System.Drawing.Size(969, 488)
+        Me.DataGridView1.TabIndex = 3
         '
         'txtCari
         '
         Me.txtCari.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.txtCari.Location = New System.Drawing.Point(621, 47)
+        Me.txtCari.Location = New System.Drawing.Point(630, 47)
         Me.txtCari.MaxLength = 25
         Me.txtCari.Name = "txtCari"
         Me.txtCari.Size = New System.Drawing.Size(342, 20)
-        Me.txtCari.TabIndex = 1
+        Me.txtCari.TabIndex = 2
         '
         'btnCari
         '
@@ -152,10 +155,10 @@ Partial Class ProdukFrm
         '
         Me.cbGolongan.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbGolongan.FormattingEnabled = True
-        Me.cbGolongan.Location = New System.Drawing.Point(3, 46)
+        Me.cbGolongan.Location = New System.Drawing.Point(3, 47)
         Me.cbGolongan.Name = "cbGolongan"
         Me.cbGolongan.Size = New System.Drawing.Size(242, 21)
-        Me.cbGolongan.TabIndex = 3
+        Me.cbGolongan.TabIndex = 1
         '
         'ProdukFrm
         '

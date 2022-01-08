@@ -12,12 +12,13 @@
             cmd = New MySqlConnector.MySqlCommand("update ms_golongan set nama_golongan = '" & txtNamaGolongan.Text & "' where id_golongan = '" & txtIdGolongan.Text & "'", conn)
             cmd.ExecuteNonQuery()
 
-            MessageBox.Show("Data Berhasil Diupdate", "Retail Pintar", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            MessageBox.Show("Data Anda berhasil diupdate", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information)
             Call GolonganFrm.tampilData()
+            Me.Close()
 
         Catch ex As Exception
 
-            MsgBox(ex.ToString)
+            MessageBox.Show("Update data gagal, Silahkan cek kembali data Anda", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
 
         End Try
     End Sub
@@ -47,5 +48,13 @@
 
 
 
+    End Sub
+
+    Private Sub txtNamaGolongan_GotFocus(sender As Object, e As EventArgs) Handles txtNamaGolongan.GotFocus
+        txtNamaGolongan.BackColor = Color.LightYellow
+    End Sub
+
+    Private Sub txtNamaGolongan_LostFocus(sender As Object, e As EventArgs) Handles txtNamaGolongan.LostFocus
+        txtNamaGolongan.BackColor = Color.White
     End Sub
 End Class

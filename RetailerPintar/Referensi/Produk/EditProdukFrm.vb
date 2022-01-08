@@ -22,12 +22,13 @@ Public Class EditProdukFrm
                                                     where id_produk  = '" & txtIdProduk.Text & "'", conn)
             cmd.ExecuteNonQuery()
 
-            MessageBox.Show("Data Berhasil Diupdate", "Retail Pintar", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            MessageBox.Show("Data Anda berhasil diupdate", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information)
             Call ProdukFrm.tampilData()
+            Me.Close()
 
         Catch ex As Exception
 
-            MsgBox(ex.ToString)
+            MessageBox.Show("Update data gagal, Silahkan cek kembali data Anda", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
 
         End Try
     End Sub
@@ -201,5 +202,77 @@ Public Class EditProdukFrm
 
     Private Sub btnSelesai_Click_1(sender As Object, e As EventArgs) Handles btnSelesai.Click
         Me.Dispose()
+    End Sub
+
+    Private Sub txtBarcode_GotFocus(sender As Object, e As EventArgs) Handles txtBarcode.GotFocus
+        txtBarcode.BackColor = Color.LightYellow
+    End Sub
+
+    Private Sub txtBarcode_LostFocus(sender As Object, e As EventArgs) Handles txtBarcode.LostFocus
+        txtBarcode.BackColor = Color.White
+    End Sub
+
+    Private Sub txtHargaBeliProduk_GotFocus(sender As Object, e As EventArgs) Handles txtHargaBeliProduk.GotFocus
+        txtHargaBeliProduk.BackColor = Color.LightYellow
+    End Sub
+
+    Private Sub txtHargaBeliProduk_LostFocus(sender As Object, e As EventArgs) Handles txtHargaBeliProduk.LostFocus
+        txtHargaBeliProduk.BackColor = Color.White
+    End Sub
+
+    Private Sub txtHargaJualProduk_GotFocus(sender As Object, e As EventArgs) Handles txtHargaJualProduk.GotFocus
+        txtHargaJualProduk.BackColor = Color.LightYellow
+    End Sub
+
+    Private Sub txtHargaJualProduk_LostFocus(sender As Object, e As EventArgs) Handles txtHargaJualProduk.LostFocus
+        txtHargaJualProduk.BackColor = Color.White
+    End Sub
+
+    Private Sub txtLokasiProduk_GotFocus(sender As Object, e As EventArgs) Handles txtLokasiProduk.GotFocus
+        txtLokasiProduk.BackColor = Color.LightYellow
+    End Sub
+
+    Private Sub txtLokasiProduk_LostFocus(sender As Object, e As EventArgs) Handles txtLokasiProduk.LostFocus
+        txtLokasiProduk.BackColor = Color.White
+    End Sub
+
+    Private Sub txtNamaPendekProduk_GotFocus(sender As Object, e As EventArgs) Handles txtNamaPendekProduk.GotFocus
+        txtNamaPendekProduk.BackColor = Color.LightYellow
+    End Sub
+
+    Private Sub txtNamaPendekProduk_LostFocus(sender As Object, e As EventArgs) Handles txtNamaPendekProduk.LostFocus
+        txtNamaPendekProduk.BackColor = Color.White
+    End Sub
+
+    Private Sub txtNamaProduk_GotFocus(sender As Object, e As EventArgs) Handles txtNamaProduk.GotFocus
+        txtNamaProduk.BackColor = Color.LightYellow
+    End Sub
+
+    Private Sub txtNamaProduk_LostFocus(sender As Object, e As EventArgs) Handles txtNamaProduk.LostFocus
+        txtNamaProduk.BackColor = Color.White
+    End Sub
+
+    Private Sub txtStokProduk_GotFocus(sender As Object, e As EventArgs) Handles txtStokProduk.GotFocus
+        txtStokProduk.BackColor = Color.LightYellow
+    End Sub
+
+    Private Sub txtStokProduk_LostFocus(sender As Object, e As EventArgs) Handles txtStokProduk.LostFocus
+        txtStokProduk.BackColor = Color.White
+    End Sub
+
+    Private Sub cbGolongan_GotFocus(sender As Object, e As EventArgs) Handles cbGolongan.GotFocus
+        cbGolongan.BackColor = Color.LightYellow
+    End Sub
+
+    Private Sub cbGolongan_LostFocus(sender As Object, e As EventArgs) Handles cbGolongan.LostFocus
+        cbGolongan.BackColor = Color.White
+    End Sub
+
+    Private Sub cbSupplier_GotFocus(sender As Object, e As EventArgs) Handles cbSupplier.GotFocus
+        cbSupplier.BackColor = Color.LightYellow
+    End Sub
+
+    Private Sub cbSupplier_LostFocus(sender As Object, e As EventArgs) Handles cbSupplier.LostFocus
+        cbSupplier.BackColor = Color.White
     End Sub
 End Class

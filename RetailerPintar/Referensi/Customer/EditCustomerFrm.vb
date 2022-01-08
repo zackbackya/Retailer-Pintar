@@ -20,12 +20,12 @@
             cmd = New MySqlConnector.MySqlCommand("update ms_Customer set nik = '" & txtNIKCustomer.Text & "', nama = '" & txtNamaCustomer.Text & "', alamat = '" & txtAlamatCustomer.Text & "', jenis_kelamin = '" & jenis_kelamin & "', telepon = '" & txtTeleponCustomer.Text & "' where id  = '" & txtIdCustomer.Text & "'", conn)
             cmd.ExecuteNonQuery()
 
-            MessageBox.Show("Data Berhasil Diupdate", "Retail Pintar", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            MessageBox.Show("Data Anda berhasil diupdate", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information)
             Call CustomerFrm.tampilData()
 
         Catch ex As Exception
 
-            MsgBox(ex.ToString)
+            MessageBox.Show("Update data gagal, Silahkan cek kembali data Anda", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
 
         End Try
     End Sub
@@ -59,9 +59,37 @@
         ElseIf e.KeyCode = Keys.F11 Then
             Call editCustomer()
         End If
+    End Sub
 
+    Private Sub txtAlamatCustomer_GotFocus(sender As Object, e As EventArgs) Handles txtAlamatCustomer.GotFocus
+        txtAlamatCustomer.BackColor = Color.LightYellow
+    End Sub
 
+    Private Sub txtAlamatCustomer_LostFocus(sender As Object, e As EventArgs) Handles txtAlamatCustomer.LostFocus
+        txtAlamatCustomer.BackColor = Color.White
+    End Sub
 
+    Private Sub txtNamaCustomer_GotFocus(sender As Object, e As EventArgs) Handles txtNamaCustomer.GotFocus
+        txtNamaCustomer.BackColor = Color.LightYellow
+    End Sub
 
+    Private Sub txtNamaCustomere_LostFocus(sender As Object, e As EventArgs) Handles txtNamaCustomer.LostFocus
+        txtNamaCustomer.BackColor = Color.White
+    End Sub
+
+    Private Sub txtNIKCustomer_GotFocus(sender As Object, e As EventArgs) Handles txtNIKCustomer.GotFocus
+        txtNIKCustomer.BackColor = Color.LightYellow
+    End Sub
+
+    Private Sub txtNIKCustomer_LostFocus(sender As Object, e As EventArgs) Handles txtNIKCustomer.LostFocus
+        txtNIKCustomer.BackColor = Color.White
+    End Sub
+
+    Private Sub txtTeleponCustomer_GotFocus(sender As Object, e As EventArgs) Handles txtTeleponCustomer.GotFocus
+        txtTeleponCustomer.BackColor = Color.LightYellow
+    End Sub
+
+    Private Sub txtTeleponCustomer_LostFocus(sender As Object, e As EventArgs) Handles txtTeleponCustomer.LostFocus
+        txtTeleponCustomer.BackColor = Color.White
     End Sub
 End Class

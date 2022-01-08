@@ -1,8 +1,8 @@
 ﻿Imports MySqlConnector
 
 Public Class ProdukFrm
-    Public id_produk, barcode, nama_produk, nama_pendek, aktif, id_supplier, id_golongan_terpilih, lokasi As String
-    Public harga_beli, harga_jual, stok, id_golongan As Integer
+    Public id_produk, barcode, nama_produk, nama_pendek, aktif, id_supplier, id_golongan_terpilih, lokasi, id_golongan As String
+    Public harga_beli, harga_jual, stok As Integer
     Private Sub btnTambah_Click(sender As Object, e As EventArgs) Handles btnTambah.Click
         TambahProdukFrm.ShowDialog()
 
@@ -70,10 +70,7 @@ Public Class ProdukFrm
     Private Sub hapusProduk()
         Try
 
-            Dim x As Object = MessageBox.Show("Apakah Yakin Data Akan dihapus ?", "Retail Pintar",
-                         MessageBoxButtons.YesNo,
-                         MessageBoxIcon.Question)
-
+            Dim x As Object = MessageBox.Show("Apakah Anda ingin menghapus id " & DataGridView1.CurrentRow.Cells(0).Value & " ?", "Konfirmasi", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
             If x = Windows.Forms.DialogResult.Yes Then
 
                 Call koneksi()
@@ -83,7 +80,7 @@ Public Class ProdukFrm
                 cmd = New MySqlCommand(str, conn)
                 cmd.ExecuteNonQuery()
 
-                MessageBox.Show("Data Terhapus", "Retail Pintar", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                MessageBox.Show("Data Anda berhasil dihapus", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information)
 
                 Call tampilData()
 
@@ -92,7 +89,7 @@ Public Class ProdukFrm
             End If
 
         Catch ex As Exception
-            'MsgBox(ex.ToString)
+            MessageBox.Show("Hapus data gagal, Silahkan cek kembali data Anda", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -142,13 +139,9 @@ Public Class ProdukFrm
 
 
     Private Sub cbGolongan_SelectionChangeCommitted(sender As Object, e As EventArgs) Handles cbGolongan.SelectionChangeCommitted
-        id_golongan = cbGolongan.SelectedValue
-
         Try
             Call koneksi()
-
-
-            da = New MySqlDataAdapter("select * from ms_Produk where id_golongan = '" & id_golongan & "'", conn)
+            da = New MySqlDataAdapter("Select * From ms_produk Where id_golongan In (Select id_golongan from ms_golongan where nama_golongan = '" & cbGolongan.Text & "')", conn)
             ds = New DataSet
             da.Fill(ds)
             DataGridView1.DataSource = ds.Tables(0)
@@ -158,5 +151,13 @@ Public Class ProdukFrm
         Catch ex As Exception
 
         End Try
+    End Sub
+
+    Private Sub txtCari_GotFocus(sender As Object, e As EventArgs) Handles txtCari.GotFocus
+        txtCari.BackColor = Color.LightYellow
+    End Sub
+
+    Private Sub txtCari_LostFocus(sender As Object, e As EventArgs) Handles txtCari.LostFocus
+        txtCari.BackColor = Color.White
     End Sub
 End Class

@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class TambahCustomerFrm
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class TambahCustomerFrm
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(TambahCustomerFrm))
         Me.pnlHeader = New System.Windows.Forms.Panel()
@@ -28,6 +28,8 @@ Partial Class TambahCustomerFrm
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.btnSimpan = New System.Windows.Forms.Button()
         Me.btnSelesai = New System.Windows.Forms.Button()
+        Me.txtNIKCustomer = New System.Windows.Forms.TextBox()
+        Me.Label6 = New System.Windows.Forms.Label()
         Me.rdPerempuan = New System.Windows.Forms.RadioButton()
         Me.rdLakiLaki = New System.Windows.Forms.RadioButton()
         Me.Label5 = New System.Windows.Forms.Label()
@@ -39,8 +41,6 @@ Partial Class TambahCustomerFrm
         Me.txtIdCustomer = New System.Windows.Forms.TextBox()
         Me.txtNamaCustomer = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.txtNIKCustomer = New System.Windows.Forms.TextBox()
-        Me.Label6 = New System.Windows.Forms.Label()
         Me.pnlHeader.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
@@ -76,7 +76,7 @@ Partial Class TambahCustomerFrm
         Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Panel1.Controls.Add(Me.btnSimpan)
         Me.Panel1.Controls.Add(Me.btnSelesai)
-        Me.Panel1.Location = New System.Drawing.Point(4, 254)
+        Me.Panel1.Location = New System.Drawing.Point(4, 240)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(421, 35)
         Me.Panel1.TabIndex = 57
@@ -103,13 +103,31 @@ Partial Class TambahCustomerFrm
         Me.btnSelesai.Text = "Esc Selesai"
         Me.btnSelesai.UseVisualStyleBackColor = True
         '
+        'txtNIKCustomer
+        '
+        Me.txtNIKCustomer.Location = New System.Drawing.Point(135, 70)
+        Me.txtNIKCustomer.MaxLength = 16
+        Me.txtNIKCustomer.Name = "txtNIKCustomer"
+        Me.txtNIKCustomer.Size = New System.Drawing.Size(290, 20)
+        Me.txtNIKCustomer.TabIndex = 59
+        '
+        'Label6
+        '
+        Me.Label6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.Label6.Location = New System.Drawing.Point(4, 70)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(125, 20)
+        Me.Label6.TabIndex = 70
+        Me.Label6.Text = "NIK"
+        Me.Label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
         'rdPerempuan
         '
         Me.rdPerempuan.AutoSize = True
-        Me.rdPerempuan.Location = New System.Drawing.Point(219, 200)
+        Me.rdPerempuan.Location = New System.Drawing.Point(221, 188)
         Me.rdPerempuan.Name = "rdPerempuan"
         Me.rdPerempuan.Size = New System.Drawing.Size(79, 17)
-        Me.rdPerempuan.TabIndex = 66
+        Me.rdPerempuan.TabIndex = 63
         Me.rdPerempuan.TabStop = True
         Me.rdPerempuan.Text = "Perempuan"
         Me.rdPerempuan.UseVisualStyleBackColor = True
@@ -117,10 +135,10 @@ Partial Class TambahCustomerFrm
         'rdLakiLaki
         '
         Me.rdLakiLaki.AutoSize = True
-        Me.rdLakiLaki.Location = New System.Drawing.Point(135, 200)
+        Me.rdLakiLaki.Location = New System.Drawing.Point(137, 188)
         Me.rdLakiLaki.Name = "rdLakiLaki"
         Me.rdLakiLaki.Size = New System.Drawing.Size(64, 17)
-        Me.rdLakiLaki.TabIndex = 65
+        Me.rdLakiLaki.TabIndex = 62
         Me.rdLakiLaki.TabStop = True
         Me.rdLakiLaki.Text = "Laki-laki"
         Me.rdLakiLaki.UseVisualStyleBackColor = True
@@ -128,47 +146,48 @@ Partial Class TambahCustomerFrm
         'Label5
         '
         Me.Label5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Label5.Location = New System.Drawing.Point(4, 200)
+        Me.Label5.Location = New System.Drawing.Point(4, 186)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(125, 20)
-        Me.Label5.TabIndex = 64
+        Me.Label5.TabIndex = 69
         Me.Label5.Text = "Jenis Kelamin"
         Me.Label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'txtTeleponCustomer
         '
-        Me.txtTeleponCustomer.Location = New System.Drawing.Point(135, 228)
-        Me.txtTeleponCustomer.MaxLength = 25
+        Me.txtTeleponCustomer.Location = New System.Drawing.Point(135, 211)
+        Me.txtTeleponCustomer.MaxLength = 12
         Me.txtTeleponCustomer.Name = "txtTeleponCustomer"
         Me.txtTeleponCustomer.Size = New System.Drawing.Size(290, 20)
-        Me.txtTeleponCustomer.TabIndex = 62
+        Me.txtTeleponCustomer.TabIndex = 64
         '
         'Label4
         '
         Me.Label4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Label4.Location = New System.Drawing.Point(4, 228)
+        Me.Label4.Location = New System.Drawing.Point(4, 211)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(125, 20)
-        Me.Label4.TabIndex = 63
+        Me.Label4.TabIndex = 68
         Me.Label4.Text = "Telepon"
         Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'txtAlamatCustomer
         '
-        Me.txtAlamatCustomer.Location = New System.Drawing.Point(135, 129)
-        Me.txtAlamatCustomer.MaxLength = 25
+        Me.txtAlamatCustomer.Location = New System.Drawing.Point(135, 122)
+        Me.txtAlamatCustomer.MaxLength = 50
         Me.txtAlamatCustomer.Multiline = True
         Me.txtAlamatCustomer.Name = "txtAlamatCustomer"
         Me.txtAlamatCustomer.Size = New System.Drawing.Size(290, 60)
-        Me.txtAlamatCustomer.TabIndex = 60
+        Me.txtAlamatCustomer.TabIndex = 61
+        Me.txtAlamatCustomer.Text = " "
         '
         'Label1
         '
         Me.Label1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Label1.Location = New System.Drawing.Point(4, 129)
+        Me.Label1.Location = New System.Drawing.Point(4, 122)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(125, 20)
-        Me.Label1.TabIndex = 61
+        Me.Label1.TabIndex = 67
         Me.Label1.Text = "Alamat Customer"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
@@ -178,64 +197,45 @@ Partial Class TambahCustomerFrm
         Me.Label3.Location = New System.Drawing.Point(4, 44)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(125, 20)
-        Me.Label3.TabIndex = 59
+        Me.Label3.TabIndex = 66
         Me.Label3.Text = "Id Customer"
         Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'txtIdCustomer
         '
         Me.txtIdCustomer.Location = New System.Drawing.Point(135, 44)
-        Me.txtIdCustomer.MaxLength = 6
+        Me.txtIdCustomer.MaxLength = 10
         Me.txtIdCustomer.Name = "txtIdCustomer"
         Me.txtIdCustomer.ReadOnly = True
         Me.txtIdCustomer.Size = New System.Drawing.Size(119, 20)
-        Me.txtIdCustomer.TabIndex = 54
+        Me.txtIdCustomer.TabIndex = 58
         '
         'txtNamaCustomer
         '
-        Me.txtNamaCustomer.Location = New System.Drawing.Point(135, 103)
+        Me.txtNamaCustomer.Location = New System.Drawing.Point(135, 96)
         Me.txtNamaCustomer.MaxLength = 25
         Me.txtNamaCustomer.Name = "txtNamaCustomer"
         Me.txtNamaCustomer.Size = New System.Drawing.Size(290, 20)
-        Me.txtNamaCustomer.TabIndex = 55
+        Me.txtNamaCustomer.TabIndex = 60
         '
         'Label2
         '
         Me.Label2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Label2.Location = New System.Drawing.Point(4, 103)
+        Me.Label2.Location = New System.Drawing.Point(4, 96)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(125, 20)
-        Me.Label2.TabIndex = 58
+        Me.Label2.TabIndex = 65
         Me.Label2.Text = "Nama  Customer"
         Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'txtNIKCustomer
-        '
-        Me.txtNIKCustomer.Location = New System.Drawing.Point(135, 77)
-        Me.txtNIKCustomer.MaxLength = 25
-        Me.txtNIKCustomer.Name = "txtNIKCustomer"
-        Me.txtNIKCustomer.Size = New System.Drawing.Size(290, 20)
-        Me.txtNIKCustomer.TabIndex = 67
-        '
-        'Label6
-        '
-        Me.Label6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Label6.Location = New System.Drawing.Point(4, 76)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(125, 20)
-        Me.Label6.TabIndex = 68
-        Me.Label6.Text = "NIK"
-        Me.Label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'TambahCustomerFrm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(428, 291)
+        Me.BackColor = System.Drawing.Color.White
+        Me.ClientSize = New System.Drawing.Size(428, 277)
         Me.Controls.Add(Me.txtNIKCustomer)
         Me.Controls.Add(Me.Label6)
-        Me.Controls.Add(Me.pnlHeader)
-        Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.rdPerempuan)
         Me.Controls.Add(Me.rdLakiLaki)
         Me.Controls.Add(Me.Label5)
@@ -247,7 +247,12 @@ Partial Class TambahCustomerFrm
         Me.Controls.Add(Me.txtIdCustomer)
         Me.Controls.Add(Me.txtNamaCustomer)
         Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.pnlHeader)
+        Me.Controls.Add(Me.Panel1)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
         Me.Name = "TambahCustomerFrm"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Retailer Pintar"
@@ -264,6 +269,8 @@ Partial Class TambahCustomerFrm
     Private WithEvents Panel1 As Panel
     Private WithEvents btnSimpan As Button
     Private WithEvents btnSelesai As Button
+    Friend WithEvents txtNIKCustomer As TextBox
+    Friend WithEvents Label6 As Label
     Friend WithEvents rdPerempuan As RadioButton
     Friend WithEvents rdLakiLaki As RadioButton
     Friend WithEvents Label5 As Label
@@ -275,6 +282,4 @@ Partial Class TambahCustomerFrm
     Friend WithEvents txtIdCustomer As TextBox
     Friend WithEvents txtNamaCustomer As TextBox
     Friend WithEvents Label2 As Label
-    Friend WithEvents txtNIKCustomer As TextBox
-    Friend WithEvents Label6 As Label
 End Class

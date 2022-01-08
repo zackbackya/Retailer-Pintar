@@ -47,7 +47,6 @@ Public Class CustomerFrm
 
     Private Sub editCustomer()
         Try
-
             id_Customer = DataGridView1.CurrentRow.Cells(0).Value.ToString
             nik = DataGridView1.CurrentRow.Cells(1).Value.ToString
             nama_Customer = DataGridView1.CurrentRow.Cells(2).Value.ToString
@@ -55,23 +54,15 @@ Public Class CustomerFrm
             jenis_kelamin = DataGridView1.CurrentRow.Cells(4).Value.ToString
             telepon_Customer = DataGridView1.CurrentRow.Cells(5).Value.ToString
             EditCustomerFrm.ShowDialog()
-
-
-
         Catch ex As Exception
-
             'MsgBox(ex.ToString)
-
         End Try
     End Sub
 
     Private Sub hapusCustomer()
         Try
 
-            Dim x As Object = MessageBox.Show("Apakah Yakin Data Akan dihapus ?", "Retail Pintar",
-                         MessageBoxButtons.YesNo,
-                         MessageBoxIcon.Question)
-
+            Dim x As Object = MessageBox.Show("Apakah Anda ingin menghapus id " & DataGridView1.CurrentRow.Cells(0).Value & " ?", "Konfirmasi", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
             If x = Windows.Forms.DialogResult.Yes Then
 
                 Call koneksi()
@@ -81,7 +72,7 @@ Public Class CustomerFrm
                 cmd = New MySqlCommand(str, conn)
                 cmd.ExecuteNonQuery()
 
-                MessageBox.Show("Data Terhapus", "Retail Pintar", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                MessageBox.Show("Data Anda berhasil dihapus", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information)
 
                 Call tampilData()
 
@@ -90,21 +81,19 @@ Public Class CustomerFrm
             End If
 
         Catch ex As Exception
-            'MsgBox(ex.ToString)
+            MessageBox.Show("Hapus data gagal, Silahkan cek kembali data Anda", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
     End Sub
 
     Public Sub tampilData()
         Try
             Call koneksi()
-
             da = New MySqlDataAdapter("select * from ms_Customer", conn)
             ds = New DataSet
             da.Fill(ds)
             DataGridView1.DataSource = ds.Tables(0)
             DataGridView1.ReadOnly = True
             conn.Close()
-
         Catch ex As Exception
 
         End Try
@@ -116,5 +105,13 @@ Public Class CustomerFrm
 
     Private Sub btnPerbaiki_Click(sender As Object, e As EventArgs) Handles btnPerbaiki.Click
         Call editCustomer()
+    End Sub
+
+    Private Sub txtCari_GotFocus(sender As Object, e As EventArgs) Handles txtCari.GotFocus
+        txtCari.BackColor = Color.LightYellow
+    End Sub
+
+    Private Sub txtCari_LostFocus(sender As Object, e As EventArgs) Handles txtCari.LostFocus
+        txtCari.BackColor = Color.White
     End Sub
 End Class

@@ -12,12 +12,12 @@
             cmd = New MySqlConnector.MySqlCommand("update ms_Toko set nama_toko = '" & txtNamaToko.Text & "', alamat = '" & txtAlamatToko.Text & "', kota = '" & txtKotaToko.Text & "', tgl_buka = '" & Format(dtTanggalBuka.Value, "yyyy-MM-dd") & "', telepon = '" & txtTeleponToko.Text & "' where id_toko  = '" & txtIdToko.Text & "'", conn)
             cmd.ExecuteNonQuery()
 
-            MessageBox.Show("Data Berhasil Diupdate", "Retail Pintar", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            MessageBox.Show("Data Anda berhasil diupdate", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information)
             Call TokoFrm.tampilData()
 
         Catch ex As Exception
 
-            MsgBox(ex.ToString)
+            MessageBox.Show("Update data gagal, Silahkan cek kembali data Anda", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
 
         End Try
     End Sub
@@ -48,8 +48,37 @@
             Call editToko()
         End If
 
+    End Sub
 
+    Private Sub txtAlamatToko_GotFocus(sender As Object, e As EventArgs) Handles txtAlamatToko.GotFocus
+        txtAlamatToko.BackColor = Color.LightYellow
+    End Sub
 
+    Private Sub txtAlamatToko_LostFocus(sender As Object, e As EventArgs) Handles txtAlamatToko.LostFocus
+        txtAlamatToko.BackColor = Color.White
+    End Sub
 
+    Private Sub txtKotaToko_GotFocus(sender As Object, e As EventArgs) Handles txtKotaToko.GotFocus
+        txtKotaToko.BackColor = Color.LightYellow
+    End Sub
+
+    Private Sub txtKotaToko_LostFocus(sender As Object, e As EventArgs) Handles txtKotaToko.LostFocus
+        txtKotaToko.BackColor = Color.White
+    End Sub
+
+    Private Sub txtNamaToko_GotFocus(sender As Object, e As EventArgs) Handles txtNamaToko.GotFocus
+        txtNamaToko.BackColor = Color.LightYellow
+    End Sub
+
+    Private Sub txtNamaToko_LostFocus(sender As Object, e As EventArgs) Handles txtNamaToko.LostFocus
+        txtNamaToko.BackColor = Color.White
+    End Sub
+
+    Private Sub txtTeleponToko_GotFocus(sender As Object, e As EventArgs) Handles txtTeleponToko.GotFocus
+        txtTeleponToko.BackColor = Color.LightYellow
+    End Sub
+
+    Private Sub txtTeleponToko_LostFocus(sender As Object, e As EventArgs) Handles txtTeleponToko.LostFocus
+        txtTeleponToko.BackColor = Color.White
     End Sub
 End Class

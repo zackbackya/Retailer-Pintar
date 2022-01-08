@@ -6,6 +6,22 @@
             Return param
         End Get
     End Property
+
+    Sub toko()
+        Try
+            Dim filecontents As String = System.IO.File.ReadAllText(Application.StartupPath.ToString & "\Store.ini")
+            Dim lines() As String
+            Dim itung As Integer
+            filecontents = filecontents.Replace(ControlChars.CrLf, ControlChars.Lf)
+            lines = filecontents.Split(New Char() {ControlChars.Lf, ControlChars.Cr})
+            itung = 1
+            Dim isi As String = lines(itung)
+
+            ToolStripStatusLabel1.Text = isi
+        Catch ex As Exception
+            MsgBox(ex.ToString)
+        End Try
+    End Sub
     Private Sub MainFrm_Load(sender As Object, e As EventArgs) Handles Me.Load
         Try
             Me.WindowState = FormWindowState.Maximized
@@ -13,6 +29,10 @@
             HomeFrm.Dock = DockStyle.Fill
             HomeFrm.Show()
             HomeFrm.Focus()
+            toko()
+            sbOperator.Text = LoginFrm.txtUsername.Text
+            Timer1.Start()
+
         Catch ex As Exception
 
         End Try
@@ -132,5 +152,95 @@
         PenyesuaianStokFrm.Dock = DockStyle.Fill
         PenyesuaianStokFrm.Show()
         PenyesuaianStokFrm.Focus()
+    End Sub
+
+    Private Sub MnuPembelianProduk_Click(sender As Object, e As EventArgs) Handles mnuPembelianProduk.Click
+        Me.WindowState = FormWindowState.Maximized
+        PembelianProdukFrm.MdiParent = Me
+        PembelianProdukFrm.Dock = DockStyle.Fill
+        PembelianProdukFrm.Show()
+        PembelianProdukFrm.Focus()
+    End Sub
+
+    Private Sub MnuPembayaranHutangPembelianProduk_Click(sender As Object, e As EventArgs) Handles mnuPembayaranHutangPembelianProduk.Click
+        Me.WindowState = FormWindowState.Maximized
+        PembayaranHutangPembelianFrm.MdiParent = Me
+        PembayaranHutangPembelianFrm.Dock = DockStyle.Fill
+        PembayaranHutangPembelianFrm.Show()
+        PembayaranHutangPembelianFrm.Focus()
+    End Sub
+
+    Private Sub MnuReturPembelianProduk_Click(sender As Object, e As EventArgs) Handles mnuReturPembelianProduk.Click
+        Me.WindowState = FormWindowState.Maximized
+        ReturPembelianProdukFrm.MdiParent = Me
+        ReturPembelianProdukFrm.Dock = DockStyle.Fill
+        ReturPembelianProdukFrm.Show()
+        ReturPembelianProdukFrm.Focus()
+    End Sub
+
+    Private Sub MnuPengeluaranBiaya_Click(sender As Object, e As EventArgs) Handles mnuPengeluaranBiaya.Click
+        Me.WindowState = FormWindowState.Maximized
+        PengeluaranBiayaFrm.MdiParent = Me
+        PengeluaranBiayaFrm.Dock = DockStyle.Fill
+        PengeluaranBiayaFrm.Show()
+        PengeluaranBiayaFrm.Focus()
+    End Sub
+
+    Private Sub CheckRole()
+
+        If LoginFrm.RoleName = "ADMIN" Then
+            'admin role
+
+        ElseIf LoginFrm.RoleName = "SUPERUSER" Then
+
+        End If
+
+    End Sub
+
+    Private Sub tbPenyesuaianStok_Click(sender As Object, e As EventArgs) Handles tbPenyesuaianStok.Click
+        Me.WindowState = FormWindowState.Maximized
+        PenyesuaianStokFrm.MdiParent = Me
+        PenyesuaianStokFrm.Dock = DockStyle.Fill
+        PenyesuaianStokFrm.Show()
+        PenyesuaianStokFrm.Focus()
+    End Sub
+
+    Private Sub PenyesuaianStokToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PenyesuaianStokToolStripMenuItem.Click
+        Me.WindowState = FormWindowState.Maximized
+        PenyesuaianStokFrm.MdiParent = Me
+        PenyesuaianStokFrm.Dock = DockStyle.Fill
+        PenyesuaianStokFrm.Show()
+        PenyesuaianStokFrm.Focus()
+    End Sub
+
+    Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
+        sbJam.Text = DateTime.Now.ToString("hh:mm:ss tt")
+        sbTanggal.Text = DateString
+
+    End Sub
+
+    Private Sub mnuManajemenOperator_Click(sender As Object, e As EventArgs) Handles mnuManajemenOperator.Click
+        Me.WindowState = FormWindowState.Maximized
+        ManajemenUserFrm.MdiParent = Me
+        ManajemenUserFrm.Dock = DockStyle.Fill
+        ManajemenUserFrm.Show()
+        ManajemenUserFrm.Focus()
+    End Sub
+
+    Private Sub mnuProfilPerusahaan_Click(sender As Object, e As EventArgs) Handles mnuProfilPerusahaan.Click
+        ProfilPerusahaanFrm.Show()
+    End Sub
+
+    Private Sub mnuPengaturanUmum_Click(sender As Object, e As EventArgs) Handles mnuPengaturanUmum.Click
+        PengaturanUmumFrm.Show()
+
+    End Sub
+
+    Private Sub mnuLaporan_Click(sender As Object, e As EventArgs) Handles mnuLaporan.Click
+
+    End Sub
+
+    Private Sub mnuLapPembelianProduk_Click(sender As Object, e As EventArgs) Handles mnuLapPembelianProduk.Click
+        BeliProdukFrm.Show()
     End Sub
 End Class

@@ -7,7 +7,6 @@
         Call koneksi()
         Try
             Dim jns_kartu As String
-
             If rdKartuDebit.Checked = True Then
                 jns_kartu = "Debit"
             ElseIf rdKartuKredit.Checked = True Then
@@ -18,17 +17,16 @@
             cmd = New MySqlConnector.MySqlCommand(str, conn)
             cmd.ExecuteNonQuery()
 
-            MessageBox.Show("Data Berhasil Ditambah", "Retail Pintar", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            MessageBox.Show("Data Anda berhasil ditambah", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information)
 
             Call KartuFrm.tampilData()
             Call GenTempID()
             txtNamaKartu.Text = ""
             txtNamaKartu.Focus()
 
-
         Catch ex As Exception
 
-            MsgBox(ex.ToString)
+            MessageBox.Show("Tambah data gagal, Silahkan cek kembali data Anda", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
 
         End Try
     End Sub
@@ -54,5 +52,11 @@
         txtIdKartu.Text = "CA-" + idjam
     End Sub
 
+    Private Sub txtNamaGolongan_GotFocus(sender As Object, e As EventArgs) Handles txtNamaKartu.GotFocus
+        txtNamaKartu.BackColor = Color.LightYellow
+    End Sub
 
+    Private Sub txtNamaGolongan_LostFocus(sender As Object, e As EventArgs) Handles txtNamaKartu.LostFocus
+        txtNamaKartu.BackColor = Color.White
+    End Sub
 End Class

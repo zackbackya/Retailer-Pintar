@@ -20,12 +20,13 @@
             cmd = New MySqlConnector.MySqlCommand("update ms_Kartu set nama_Kartu = '" & txtNamaKartu.Text & "', jenis_kartu = '" & jns_kartu & "' where id_Kartu = '" & txtIdKartu.Text & "'", conn)
             cmd.ExecuteNonQuery()
 
-            MessageBox.Show("Data Berhasil Diupdate", "Retail Pintar", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            MessageBox.Show("Data Anda berhasil diupdate", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information)
             Call KartuFrm.tampilData()
+            Me.Close()
 
         Catch ex As Exception
 
-            MsgBox(ex.ToString)
+            MessageBox.Show("Update data gagal, Silahkan cek kembali data Anda", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
 
         End Try
     End Sub
@@ -61,7 +62,11 @@
 
     End Sub
 
-    Private Sub txtNamaKartu_TextChanged(sender As Object, e As EventArgs) Handles txtNamaKartu.TextChanged
+    Private Sub txtNamaGolongan_GotFocus(sender As Object, e As EventArgs) Handles txtNamaKartu.GotFocus
+        txtNamaKartu.BackColor = Color.LightYellow
+    End Sub
 
+    Private Sub txtNamaGolongan_LostFocus(sender As Object, e As EventArgs) Handles txtNamaKartu.LostFocus
+        txtNamaKartu.BackColor = Color.White
     End Sub
 End Class

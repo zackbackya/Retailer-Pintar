@@ -76,7 +76,7 @@ Partial Class EditCustomerFrm
         Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Panel1.Controls.Add(Me.btnSimpan)
         Me.Panel1.Controls.Add(Me.btnSelesai)
-        Me.Panel1.Location = New System.Drawing.Point(4, 254)
+        Me.Panel1.Location = New System.Drawing.Point(4, 240)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(421, 35)
         Me.Panel1.TabIndex = 43
@@ -88,7 +88,7 @@ Partial Class EditCustomerFrm
         Me.btnSimpan.Location = New System.Drawing.Point(259, 5)
         Me.btnSimpan.Name = "btnSimpan"
         Me.btnSimpan.Size = New System.Drawing.Size(75, 23)
-        Me.btnSimpan.TabIndex = 3
+        Me.btnSimpan.TabIndex = 8
         Me.btnSimpan.Text = "F11 Simpan"
         Me.btnSimpan.UseVisualStyleBackColor = True
         '
@@ -99,22 +99,22 @@ Partial Class EditCustomerFrm
         Me.btnSelesai.Location = New System.Drawing.Point(340, 5)
         Me.btnSelesai.Name = "btnSelesai"
         Me.btnSelesai.Size = New System.Drawing.Size(75, 23)
-        Me.btnSelesai.TabIndex = 4
+        Me.btnSelesai.TabIndex = 9
         Me.btnSelesai.Text = "Esc Selesai"
         Me.btnSelesai.UseVisualStyleBackColor = True
         '
         'txtTeleponCustomer
         '
-        Me.txtTeleponCustomer.Location = New System.Drawing.Point(135, 228)
-        Me.txtTeleponCustomer.MaxLength = 25
+        Me.txtTeleponCustomer.Location = New System.Drawing.Point(135, 211)
+        Me.txtTeleponCustomer.MaxLength = 12
         Me.txtTeleponCustomer.Name = "txtTeleponCustomer"
         Me.txtTeleponCustomer.Size = New System.Drawing.Size(290, 20)
-        Me.txtTeleponCustomer.TabIndex = 48
+        Me.txtTeleponCustomer.TabIndex = 7
         '
         'Label4
         '
         Me.Label4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Label4.Location = New System.Drawing.Point(4, 228)
+        Me.Label4.Location = New System.Drawing.Point(4, 211)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(125, 20)
         Me.Label4.TabIndex = 49
@@ -123,17 +123,17 @@ Partial Class EditCustomerFrm
         '
         'txtAlamatCustomer
         '
-        Me.txtAlamatCustomer.Location = New System.Drawing.Point(135, 129)
-        Me.txtAlamatCustomer.MaxLength = 25
+        Me.txtAlamatCustomer.Location = New System.Drawing.Point(135, 122)
+        Me.txtAlamatCustomer.MaxLength = 50
         Me.txtAlamatCustomer.Multiline = True
         Me.txtAlamatCustomer.Name = "txtAlamatCustomer"
         Me.txtAlamatCustomer.Size = New System.Drawing.Size(290, 60)
-        Me.txtAlamatCustomer.TabIndex = 46
+        Me.txtAlamatCustomer.TabIndex = 4
         '
         'Label1
         '
         Me.Label1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Label1.Location = New System.Drawing.Point(4, 129)
+        Me.Label1.Location = New System.Drawing.Point(4, 122)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(125, 20)
         Me.Label1.TabIndex = 47
@@ -153,24 +153,24 @@ Partial Class EditCustomerFrm
         'txtIdCustomer
         '
         Me.txtIdCustomer.Location = New System.Drawing.Point(135, 44)
-        Me.txtIdCustomer.MaxLength = 6
+        Me.txtIdCustomer.MaxLength = 10
         Me.txtIdCustomer.Name = "txtIdCustomer"
         Me.txtIdCustomer.ReadOnly = True
         Me.txtIdCustomer.Size = New System.Drawing.Size(119, 20)
-        Me.txtIdCustomer.TabIndex = 40
+        Me.txtIdCustomer.TabIndex = 1
         '
         'txtNamaCustomer
         '
-        Me.txtNamaCustomer.Location = New System.Drawing.Point(135, 103)
+        Me.txtNamaCustomer.Location = New System.Drawing.Point(135, 96)
         Me.txtNamaCustomer.MaxLength = 25
         Me.txtNamaCustomer.Name = "txtNamaCustomer"
         Me.txtNamaCustomer.Size = New System.Drawing.Size(290, 20)
-        Me.txtNamaCustomer.TabIndex = 41
+        Me.txtNamaCustomer.TabIndex = 3
         '
         'Label2
         '
         Me.Label2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Label2.Location = New System.Drawing.Point(4, 103)
+        Me.Label2.Location = New System.Drawing.Point(4, 96)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(125, 20)
         Me.Label2.TabIndex = 44
@@ -180,7 +180,7 @@ Partial Class EditCustomerFrm
         'Label5
         '
         Me.Label5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Label5.Location = New System.Drawing.Point(4, 200)
+        Me.Label5.Location = New System.Drawing.Point(4, 186)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(125, 20)
         Me.Label5.TabIndex = 51
@@ -190,10 +190,10 @@ Partial Class EditCustomerFrm
         'rdPerempuan
         '
         Me.rdPerempuan.AutoSize = True
-        Me.rdPerempuan.Location = New System.Drawing.Point(219, 200)
+        Me.rdPerempuan.Location = New System.Drawing.Point(221, 188)
         Me.rdPerempuan.Name = "rdPerempuan"
         Me.rdPerempuan.Size = New System.Drawing.Size(79, 17)
-        Me.rdPerempuan.TabIndex = 53
+        Me.rdPerempuan.TabIndex = 6
         Me.rdPerempuan.TabStop = True
         Me.rdPerempuan.Text = "Perempuan"
         Me.rdPerempuan.UseVisualStyleBackColor = True
@@ -201,26 +201,26 @@ Partial Class EditCustomerFrm
         'rdLakiLaki
         '
         Me.rdLakiLaki.AutoSize = True
-        Me.rdLakiLaki.Location = New System.Drawing.Point(135, 200)
+        Me.rdLakiLaki.Location = New System.Drawing.Point(137, 188)
         Me.rdLakiLaki.Name = "rdLakiLaki"
         Me.rdLakiLaki.Size = New System.Drawing.Size(64, 17)
-        Me.rdLakiLaki.TabIndex = 52
+        Me.rdLakiLaki.TabIndex = 5
         Me.rdLakiLaki.TabStop = True
         Me.rdLakiLaki.Text = "Laki-laki"
         Me.rdLakiLaki.UseVisualStyleBackColor = True
         '
         'txtNIKCustomer
         '
-        Me.txtNIKCustomer.Location = New System.Drawing.Point(135, 77)
-        Me.txtNIKCustomer.MaxLength = 25
+        Me.txtNIKCustomer.Location = New System.Drawing.Point(135, 70)
+        Me.txtNIKCustomer.MaxLength = 16
         Me.txtNIKCustomer.Name = "txtNIKCustomer"
         Me.txtNIKCustomer.Size = New System.Drawing.Size(290, 20)
-        Me.txtNIKCustomer.TabIndex = 54
+        Me.txtNIKCustomer.TabIndex = 2
         '
         'Label6
         '
         Me.Label6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Label6.Location = New System.Drawing.Point(4, 76)
+        Me.Label6.Location = New System.Drawing.Point(4, 70)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(125, 20)
         Me.Label6.TabIndex = 55
@@ -231,7 +231,8 @@ Partial Class EditCustomerFrm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(428, 291)
+        Me.BackColor = System.Drawing.Color.White
+        Me.ClientSize = New System.Drawing.Size(428, 277)
         Me.Controls.Add(Me.txtNIKCustomer)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.rdPerempuan)
@@ -247,7 +248,10 @@ Partial Class EditCustomerFrm
         Me.Controls.Add(Me.txtIdCustomer)
         Me.Controls.Add(Me.txtNamaCustomer)
         Me.Controls.Add(Me.Label2)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
         Me.Name = "EditCustomerFrm"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Retailer Pintar"

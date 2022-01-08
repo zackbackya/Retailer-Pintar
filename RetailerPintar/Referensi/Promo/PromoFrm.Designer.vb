@@ -45,9 +45,9 @@ Partial Class PromoFrm
         Me.pnlHeader.BackColor = System.Drawing.Color.FromArgb(CType(CType(13, Byte), Integer), CType(CType(59, Byte), Integer), CType(CType(102, Byte), Integer))
         Me.pnlHeader.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.pnlHeader.Controls.Add(Me.lblHeader)
-        Me.pnlHeader.Location = New System.Drawing.Point(2, 3)
+        Me.pnlHeader.Location = New System.Drawing.Point(3, 3)
         Me.pnlHeader.Name = "pnlHeader"
-        Me.pnlHeader.Size = New System.Drawing.Size(1142, 35)
+        Me.pnlHeader.Size = New System.Drawing.Size(969, 35)
         Me.pnlHeader.TabIndex = 12
         '
         'lblHeader
@@ -71,48 +71,49 @@ Partial Class PromoFrm
         Me.Panel1.Controls.Add(Me.btnSelesai)
         Me.Panel1.Controls.Add(Me.btnPerbaiki)
         Me.Panel1.Controls.Add(Me.btnTambah)
-        Me.Panel1.Location = New System.Drawing.Point(2, 567)
+        Me.Panel1.Location = New System.Drawing.Point(3, 567)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(972, 35)
+        Me.Panel1.Size = New System.Drawing.Size(969, 35)
         Me.Panel1.TabIndex = 13
         '
         'btnHapus
         '
         Me.btnHapus.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.btnHapus.Location = New System.Drawing.Point(165, 5)
+        Me.btnHapus.Location = New System.Drawing.Point(166, 5)
         Me.btnHapus.Name = "btnHapus"
         Me.btnHapus.Size = New System.Drawing.Size(75, 23)
-        Me.btnHapus.TabIndex = 6
+        Me.btnHapus.TabIndex = 5
         Me.btnHapus.Text = "F10 Hapus"
         Me.btnHapus.UseVisualStyleBackColor = True
         '
         'btnSelesai
         '
         Me.btnSelesai.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnSelesai.Location = New System.Drawing.Point(890, 5)
+        Me.btnSelesai.Location = New System.Drawing.Point(887, 5)
         Me.btnSelesai.Name = "btnSelesai"
         Me.btnSelesai.Size = New System.Drawing.Size(75, 23)
-        Me.btnSelesai.TabIndex = 7
+        Me.btnSelesai.TabIndex = 6
         Me.btnSelesai.Text = "Esc Selesai"
         Me.btnSelesai.UseVisualStyleBackColor = True
         '
         'btnPerbaiki
         '
         Me.btnPerbaiki.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.btnPerbaiki.Location = New System.Drawing.Point(84, 5)
+        Me.btnPerbaiki.Enabled = False
+        Me.btnPerbaiki.Location = New System.Drawing.Point(85, 5)
         Me.btnPerbaiki.Name = "btnPerbaiki"
         Me.btnPerbaiki.Size = New System.Drawing.Size(75, 23)
-        Me.btnPerbaiki.TabIndex = 5
+        Me.btnPerbaiki.TabIndex = 4
         Me.btnPerbaiki.Text = "F9 Perbaiki"
         Me.btnPerbaiki.UseVisualStyleBackColor = True
         '
         'btnTambah
         '
         Me.btnTambah.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.btnTambah.Location = New System.Drawing.Point(3, 5)
+        Me.btnTambah.Location = New System.Drawing.Point(4, 5)
         Me.btnTambah.Name = "btnTambah"
         Me.btnTambah.Size = New System.Drawing.Size(75, 23)
-        Me.btnTambah.TabIndex = 4
+        Me.btnTambah.TabIndex = 3
         Me.btnTambah.Text = "F8 Tambah"
         Me.btnTambah.UseVisualStyleBackColor = True
         '
@@ -129,28 +130,32 @@ Partial Class PromoFrm
         'txtCari
         '
         Me.txtCari.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.txtCari.Location = New System.Drawing.Point(626, 47)
+        Me.txtCari.Location = New System.Drawing.Point(629, 47)
         Me.txtCari.MaxLength = 25
         Me.txtCari.Name = "txtCari"
         Me.txtCari.Size = New System.Drawing.Size(342, 20)
-        Me.txtCari.TabIndex = 9
+        Me.txtCari.TabIndex = 1
         '
         'DataGridView1
         '
+        Me.DataGridView1.AllowUserToAddRows = False
         Me.DataGridView1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.DataGridView1.BackgroundColor = System.Drawing.Color.White
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(2, 73)
+        Me.DataGridView1.GridColor = System.Drawing.Color.WhiteSmoke
+        Me.DataGridView1.Location = New System.Drawing.Point(3, 73)
         Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(1142, 488)
-        Me.DataGridView1.TabIndex = 14
+        Me.DataGridView1.Size = New System.Drawing.Size(969, 488)
+        Me.DataGridView1.TabIndex = 2
         '
         'PromoFrm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(975, 604)
         Me.Controls.Add(Me.pnlHeader)
         Me.Controls.Add(Me.Panel1)
@@ -174,9 +179,9 @@ Partial Class PromoFrm
     Private WithEvents Panel1 As Panel
     Private WithEvents btnHapus As Button
     Private WithEvents btnSelesai As Button
-    Private WithEvents btnPerbaiki As Button
     Private WithEvents btnTambah As Button
     Private WithEvents btnCari As Button
     Friend WithEvents txtCari As TextBox
     Friend WithEvents DataGridView1 As DataGridView
+    Private WithEvents btnPerbaiki As Button
 End Class
