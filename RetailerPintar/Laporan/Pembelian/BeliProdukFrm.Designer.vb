@@ -29,13 +29,13 @@ Partial Class BeliProdukFrm
         Me.btnSelesai = New System.Windows.Forms.Button()
         Me.btnPrint = New System.Windows.Forms.Button()
         Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.btTampil = New System.Windows.Forms.Button()
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.dtTanggalAkhir = New System.Windows.Forms.DateTimePicker()
+        Me.dtTanggalAwal = New System.Windows.Forms.DateTimePicker()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.SaveFileDialog1 = New System.Windows.Forms.SaveFileDialog()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.dtTanggalAwal = New System.Windows.Forms.DateTimePicker()
-        Me.dtTanggalAkhir = New System.Windows.Forms.DateTimePicker()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.btTampil = New System.Windows.Forms.Button()
         Me.Panel2.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.Panel3.SuspendLayout()
@@ -51,7 +51,7 @@ Partial Class BeliProdukFrm
         Me.Panel2.Controls.Add(Me.Label6)
         Me.Panel2.Location = New System.Drawing.Point(3, 3)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(405, 35)
+        Me.Panel2.Size = New System.Drawing.Size(506, 35)
         Me.Panel2.TabIndex = 88
         '
         'Label6
@@ -75,13 +75,13 @@ Partial Class BeliProdukFrm
         Me.Panel1.Controls.Add(Me.btnPrint)
         Me.Panel1.Location = New System.Drawing.Point(3, 422)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(405, 35)
+        Me.Panel1.Size = New System.Drawing.Size(506, 35)
         Me.Panel1.TabIndex = 89
         '
         'btnSelesai
         '
         Me.btnSelesai.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnSelesai.Location = New System.Drawing.Point(320, 5)
+        Me.btnSelesai.Location = New System.Drawing.Point(421, 5)
         Me.btnSelesai.Name = "btnSelesai"
         Me.btnSelesai.Size = New System.Drawing.Size(75, 23)
         Me.btnSelesai.TabIndex = 7
@@ -91,7 +91,8 @@ Partial Class BeliProdukFrm
         'btnPrint
         '
         Me.btnPrint.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.btnPrint.Location = New System.Drawing.Point(225, 5)
+        Me.btnPrint.Enabled = False
+        Me.btnPrint.Location = New System.Drawing.Point(340, 5)
         Me.btnPrint.Name = "btnPrint"
         Me.btnPrint.Size = New System.Drawing.Size(75, 23)
         Me.btnPrint.TabIndex = 6
@@ -109,66 +110,66 @@ Partial Class BeliProdukFrm
         Me.Panel3.Controls.Add(Me.Label1)
         Me.Panel3.Location = New System.Drawing.Point(3, 44)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(459, 372)
+        Me.Panel3.Size = New System.Drawing.Size(506, 372)
         Me.Panel3.TabIndex = 90
-        '
-        'Label1
-        '
-        Me.Label1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Label1.Location = New System.Drawing.Point(8, 6)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(50, 20)
-        Me.Label1.TabIndex = 91
-        Me.Label1.Text = "Tanggal"
-        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'Label2
-        '
-        Me.Label2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Label2.Location = New System.Drawing.Point(225, 5)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(29, 20)
-        Me.Label2.TabIndex = 96
-        Me.Label2.Text = "s.d"
-        Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'dtTanggalAwal
-        '
-        Me.dtTanggalAwal.Location = New System.Drawing.Point(74, 5)
-        Me.dtTanggalAwal.Name = "dtTanggalAwal"
-        Me.dtTanggalAwal.Size = New System.Drawing.Size(135, 20)
-        Me.dtTanggalAwal.TabIndex = 97
-        '
-        'dtTanggalAkhir
-        '
-        Me.dtTanggalAkhir.Location = New System.Drawing.Point(268, 5)
-        Me.dtTanggalAkhir.Name = "dtTanggalAkhir"
-        Me.dtTanggalAkhir.Size = New System.Drawing.Size(135, 20)
-        Me.dtTanggalAkhir.TabIndex = 98
-        '
-        'DataGridView1
-        '
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(3, 58)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(400, 309)
-        Me.DataGridView1.TabIndex = 99
         '
         'btTampil
         '
         Me.btTampil.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.btTampil.Location = New System.Drawing.Point(328, 29)
+        Me.btTampil.Location = New System.Drawing.Point(426, 32)
         Me.btTampil.Name = "btTampil"
         Me.btTampil.Size = New System.Drawing.Size(75, 23)
         Me.btTampil.TabIndex = 8
         Me.btTampil.Text = "F9 Tampil"
         Me.btTampil.UseVisualStyleBackColor = True
         '
+        'DataGridView1
+        '
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Location = New System.Drawing.Point(3, 58)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.Size = New System.Drawing.Size(498, 309)
+        Me.DataGridView1.TabIndex = 99
+        '
+        'dtTanggalAkhir
+        '
+        Me.dtTanggalAkhir.Location = New System.Drawing.Point(315, 6)
+        Me.dtTanggalAkhir.Name = "dtTanggalAkhir"
+        Me.dtTanggalAkhir.Size = New System.Drawing.Size(186, 20)
+        Me.dtTanggalAkhir.TabIndex = 98
+        '
+        'dtTanggalAwal
+        '
+        Me.dtTanggalAwal.Location = New System.Drawing.Point(59, 8)
+        Me.dtTanggalAwal.Name = "dtTanggalAwal"
+        Me.dtTanggalAwal.Size = New System.Drawing.Size(191, 20)
+        Me.dtTanggalAwal.TabIndex = 97
+        '
+        'Label2
+        '
+        Me.Label2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.Label2.Location = New System.Drawing.Point(271, 8)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(29, 20)
+        Me.Label2.TabIndex = 96
+        Me.Label2.Text = "s.d"
+        Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'Label1
+        '
+        Me.Label1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.Label1.Location = New System.Drawing.Point(3, 8)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(50, 20)
+        Me.Label1.TabIndex = 91
+        Me.Label1.Text = "Tanggal"
+        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
         'BeliProdukFrm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(411, 461)
+        Me.ClientSize = New System.Drawing.Size(512, 461)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.Panel3)
