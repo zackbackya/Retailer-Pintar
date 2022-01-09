@@ -3,7 +3,7 @@ Imports MySqlConnector
 
 Public Class PengaturanUmumFrm
 
-
+    Dim path_logo As String
     Private Sub PengaturanUmumFrm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Call tampilData()
         Call Printer()
@@ -22,6 +22,17 @@ Public Class PengaturanUmumFrm
             txtHeader3.Text = rd_1.Item(3)
             txtFooter1.Text = rd_1.Item(4)
             txtFooter2.Text = rd_1.Item(5)
+            txtPath.Text = rd_1.Item(6)
+
+            'PictureBox1.ImageLocation(Application.StartupPath() & "\logo.jpg")
+
+            PictureBox1.ImageLocation = rd_1.Item(6) 'untuk mencari lokasi gambar pada direktori
+            PictureBox1.SizeMode = PictureBoxSizeMode.StretchImage
+
+            If txtPath.Text = "" Then
+                Label7.Visible = True
+                TextBox1.Visible = True
+            End If
 
 
         Catch ex As Exception
@@ -50,7 +61,7 @@ Public Class PengaturanUmumFrm
         Call koneksi()
         Try
 
-            cmd = New MySqlConnector.MySqlCommand("update ms_nota set header_1 = '" & txtHeader1.Text & "', header_2 = '" & txtHeader2.Text & "', header_3 = '" & txtHeader3.Text & "', footer_1 = '" & txtFooter1.Text & "',footer_2 = '" & txtFooter2.Text & "' ", conn)
+            cmd = New MySqlConnector.MySqlCommand("update ms_nota set header_1 = '" & txtHeader1.Text & "', header_2 = '" & txtHeader2.Text & "', header_3 = '" & txtHeader3.Text & "', footer_1 = '" & txtFooter1.Text & "',footer_2 = '" & txtFooter2.Text & "', path_logo = '" & path_logo & "' ", conn)
             cmd.ExecuteNonQuery()
 
             MessageBox.Show("Data Anda berhasil diupdate", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information)
@@ -119,6 +130,43 @@ Public Class PengaturanUmumFrm
             prntDoc = Nothing
         End Try
     End Function
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btGambar.Click
+        Call gambar()
+    End Sub
+
+    Private Sub gambar()
+        On Error Resume Next
+        Dim sfd As OpenFileDialog = New OpenFileDialog()
+        sfd.Filter = "JPG Files(*.jpg)|*.jpg|JPEG Files (*.jpeg)|*.jpeg|GIF Files(*.gif)|*.gif|PNG Files(*.png)|*.png|BMP Files(*.bmp)|*.bmp|TIFF Files(*.tiff)|*.tiff"
+        sfd.FileName = ""
+        If sfd.ShowDialog = Windows.Forms.DialogResult.OK Then
+            PictureBox1.SizeMode = PictureBoxSizeMode.StretchImage
+            PictureBox1.Image = New Bitmap(sfd.FileName)
+            btGambar.Enabled = True
+            path_logo = sfd.FileName
+            'txt_nmgambar.Text = PathFile.Substring(PathFile.LastIndexOf("\") + 1)
+            txtPath.Text = sfd.FileName
+            PictureBox1.Image = Image.FromFile(txtPath.Text)
+        End If
+    End Sub
+
+
+    Private Sub tampilGambar()
+        Call koneksi()
+        Dim sql As String = ("select*from ms_nota where kd_gambar")
+        Dim cmd = New MySqlCommand(sql, conn)
+        Dim rd As MySqlDataReader
+        rd = cmd.ExecuteReader
+        rd.Read()
+        If rd.HasRows Then
+            ' txt_nmgambar.Text = rd.Item("nama")
+            ' lbl_alamat.Text = rd.Item("alamat")
+            ' pct_gambar.ImageLocation = rd.Item("alamat") 'untuk mencari lokasi gambar pada direktori
+            ' pct_gambar.SizeMode = PictureBoxSizeMode.StretchImage
+        End If
+    End Sub
+
 End Class
 
 
