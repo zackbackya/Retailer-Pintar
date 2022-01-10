@@ -34,13 +34,14 @@ Public Class PenjualanProdukFrm
 
             ElseIf cbLaporan.SelectedItem = "Penjualan Per Produk" Then
 
-                str = ""
+                str = "SELECT id_produk, (select nama_produk from ms_produk where id_produk = a.id_produk) Nama_produk, sum(qty) Total_QTY, sum(harga) Total_Harga, sum(diskon) Total_Diskon  FROM `tx_penjualan_det` a where tanggal between '" & Format(dtTanggalAwal.Value, "yyyy-MM-dd") & "' and '" & Format(dtTanggalAkhir.Value, "yyyy-MM-dd") & "' and tipe = 'N' GROUP by id_produk, nama_produk"
+
             ElseIf cbLaporan.SelectedItem = "Penjualan Per Golongan" Then
 
                 str = ""
             ElseIf cbLaporan.SelectedItem = "Penjualan Per Kasir" Then
 
-                str = ""
+                str = "SELECT id_toko, kasir, sum(total_qty) total_qty, sum(total_harga) total_harga, sum(total_diskon) total_diskon FROM tx_penjualan_head where tanggal between '" & Format(dtTanggalAwal.Value, "yyyy-MM-dd") & "' and '" & Format(dtTanggalAkhir.Value, "yyyy-MM-dd") & "' group by id_toko, kasir"
 
             ElseIf cbLaporan.SelectedItem = "Penjualan Produk Favorit" Then
 
@@ -50,7 +51,8 @@ Public Class PenjualanProdukFrm
                 str = ""
             ElseIf cbLaporan.SelectedItem = "Retur Penjualan Produk" Then
 
-                str = ""
+                str = "select * from tx_penjualan_head where tipe = 'X' and tanggal between '" & Format(dtTanggalAwal.Value, "yyyy-MM-dd") & "' and '" & Format(dtTanggalAkhir.Value, "yyyy-MM-dd") & "' "
+
             ElseIf cbLaporan.SelectedItem = "Laba/ Rugi Penjualan" Then
 
                 str = ""

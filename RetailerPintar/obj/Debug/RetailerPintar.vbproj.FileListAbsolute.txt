@@ -286,3 +286,9 @@ D:\Programming\VB.net\Project\Retailer-Pintar\RetailerPintar\bin\Debug\DocumentF
 D:\Programming\VB.net\Project\Retailer-Pintar\RetailerPintar\bin\Debug\ExcelNumberFormat.xml
 D:\Programming\VB.net\Project\Retailer-Pintar\RetailerPintar\obj\Debug\RetailerPintar.vbproj.SuggestedBindingRedirects.cache
 D:\Programming\VB.net\Project\Retailer-Pintar\RetailerPintar\obj\Debug\RetailerPintar.vbproj.ResolveComReference.cache
+D:\Programming\VB.net\Project\Retailer-Pintar\RetailerPintar\obj\Debug\RetailerPintar.KartuStokFrm.resources
+D:\Programming\VB.net\Project\Retailer-Pintar\RetailerPintar\obj\Debug\RetailerPintar.KeluarBiayaFrm.resources
+D:\Programming\VB.net\Project\Retailer-Pintar\RetailerPintar\obj\Debug\RetailerPintar.MasukKeluarFrm.resources
+D:\Programming\VB.net\Project\Retailer-Pintar\RetailerPintar\obj\Debug\RetailerPintar.PenjualanProdukFrm.resources
+D:\Programming\VB.net\Project\Retailer-Pintar\RetailerPintar\obj\Debug\RetailerPintar.SesuaianStokFrm.resources
+D:\Programming\VB.net\Project\Retailer-Pintar\RetailerPintar\obj\Debug\RetailerPintar.StokProdukFrm.resources
