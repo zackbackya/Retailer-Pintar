@@ -25,9 +25,6 @@ Partial Class PengaturanUmumFrm
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(PengaturanUmumFrm))
         Me.tabSetting = New System.Windows.Forms.TabControl()
         Me.tabNota = New System.Windows.Forms.TabPage()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.txtPath = New System.Windows.Forms.TextBox()
         Me.btGambar = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.txtFooter2 = New System.Windows.Forms.TextBox()
@@ -68,9 +65,6 @@ Partial Class PengaturanUmumFrm
         '
         'tabNota
         '
-        Me.tabNota.Controls.Add(Me.Label7)
-        Me.tabNota.Controls.Add(Me.TextBox1)
-        Me.tabNota.Controls.Add(Me.txtPath)
         Me.tabNota.Controls.Add(Me.btGambar)
         Me.tabNota.Controls.Add(Me.PictureBox1)
         Me.tabNota.Controls.Add(Me.txtFooter2)
@@ -91,36 +85,11 @@ Partial Class PengaturanUmumFrm
         Me.tabNota.Text = "Nota Penjualan"
         Me.tabNota.UseVisualStyleBackColor = True
         '
-        'Label7
-        '
-        Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(49, 197)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(37, 13)
-        Me.Label7.TabIndex = 137
-        Me.Label7.Text = "LOGO"
-        '
-        'TextBox1
-        '
-        Me.TextBox1.Location = New System.Drawing.Point(14, 155)
-        Me.TextBox1.Multiline = True
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(109, 102)
-        Me.TextBox1.TabIndex = 136
-        '
-        'txtPath
-        '
-        Me.txtPath.Location = New System.Drawing.Point(160, 177)
-        Me.txtPath.Multiline = True
-        Me.txtPath.Name = "txtPath"
-        Me.txtPath.Size = New System.Drawing.Size(195, 19)
-        Me.txtPath.TabIndex = 135
-        '
         'btGambar
         '
         Me.btGambar.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btGambar.Location = New System.Drawing.Point(361, 173)
+        Me.btGambar.Location = New System.Drawing.Point(160, 230)
         Me.btGambar.Name = "btGambar"
         Me.btGambar.Size = New System.Drawing.Size(75, 27)
         Me.btGambar.TabIndex = 134
@@ -129,7 +98,8 @@ Partial Class PengaturanUmumFrm
         '
         'PictureBox1
         '
-        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
+        Me.PictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.PictureBox1.ImageLocation = ""
         Me.PictureBox1.Location = New System.Drawing.Point(14, 155)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(109, 102)
@@ -358,9 +328,6 @@ Partial Class PengaturanUmumFrm
     Friend WithEvents Label1 As Label
     Friend WithEvents Label5 As Label
     Friend WithEvents ComboBox1 As ComboBox
-    Friend WithEvents txtPath As TextBox
     Private WithEvents btGambar As Button
     Friend WithEvents PictureBox1 As PictureBox
-    Friend WithEvents Label7 As Label
-    Friend WithEvents TextBox1 As TextBox
 End Class

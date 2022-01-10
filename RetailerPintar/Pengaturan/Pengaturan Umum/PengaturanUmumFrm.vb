@@ -4,6 +4,7 @@ Imports MySqlConnector
 Public Class PengaturanUmumFrm
 
     Dim path_logo As String
+    Dim fso = My.Computer.FileSystem
     Private Sub PengaturanUmumFrm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Call tampilData()
         Call Printer()
@@ -22,17 +23,13 @@ Public Class PengaturanUmumFrm
             txtHeader3.Text = rd_1.Item(3)
             txtFooter1.Text = rd_1.Item(4)
             txtFooter2.Text = rd_1.Item(5)
-            txtPath.Text = rd_1.Item(6)
 
-            'PictureBox1.ImageLocation(Application.StartupPath() & "\logo.jpg")
 
-            PictureBox1.ImageLocation = rd_1.Item(6) 'untuk mencari lokasi gambar pada direktori
+
+
+            PictureBox1.Image = Image.FromFile(Application.StartupPath & "\Logo\Logo.jpg")
+            PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
             PictureBox1.SizeMode = PictureBoxSizeMode.StretchImage
-
-            If txtPath.Text = "" Then
-                Label7.Visible = True
-                TextBox1.Visible = True
-            End If
 
 
         Catch ex As Exception
@@ -61,7 +58,7 @@ Public Class PengaturanUmumFrm
         Call koneksi()
         Try
 
-            cmd = New MySqlConnector.MySqlCommand("update ms_nota set header_1 = '" & txtHeader1.Text & "', header_2 = '" & txtHeader2.Text & "', header_3 = '" & txtHeader3.Text & "', footer_1 = '" & txtFooter1.Text & "',footer_2 = '" & txtFooter2.Text & "', path_logo = '" & path_logo & "' ", conn)
+            cmd = New MySqlConnector.MySqlCommand("update ms_nota set header_1 = '" & txtHeader1.Text & "', header_2 = '" & txtHeader2.Text & "', header_3 = '" & txtHeader3.Text & "', footer_1 = '" & txtFooter1.Text & "',footer_2 = '" & txtFooter2.Text & "'", conn)
             cmd.ExecuteNonQuery()
 
             MessageBox.Show("Data Anda berhasil diupdate", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information)
@@ -132,39 +129,68 @@ Public Class PengaturanUmumFrm
     End Function
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btGambar.Click
-        Call gambar()
+        Call Logo()
     End Sub
 
-    Private Sub gambar()
-        On Error Resume Next
-        Dim sfd As OpenFileDialog = New OpenFileDialog()
-        sfd.Filter = "JPG Files(*.jpg)|*.jpg|JPEG Files (*.jpeg)|*.jpeg|GIF Files(*.gif)|*.gif|PNG Files(*.png)|*.png|BMP Files(*.bmp)|*.bmp|TIFF Files(*.tiff)|*.tiff"
-        sfd.FileName = ""
-        If sfd.ShowDialog = Windows.Forms.DialogResult.OK Then
-            PictureBox1.SizeMode = PictureBoxSizeMode.StretchImage
-            PictureBox1.Image = New Bitmap(sfd.FileName)
-            btGambar.Enabled = True
-            path_logo = sfd.FileName
-            'txt_nmgambar.Text = PathFile.Substring(PathFile.LastIndexOf("\") + 1)
-            txtPath.Text = sfd.FileName
-            PictureBox1.Image = Image.FromFile(txtPath.Text)
-        End If
-    End Sub
+    Private Sub Logo()
+
+        PictureBox1.Image = Nothing
 
 
-    Private Sub tampilGambar()
-        Call koneksi()
-        Dim sql As String = ("select*from ms_nota where kd_gambar")
-        Dim cmd = New MySqlCommand(sql, conn)
-        Dim rd As MySqlDataReader
-        rd = cmd.ExecuteReader
-        rd.Read()
-        If rd.HasRows Then
-            ' txt_nmgambar.Text = rd.Item("nama")
-            ' lbl_alamat.Text = rd.Item("alamat")
-            ' pct_gambar.ImageLocation = rd.Item("alamat") 'untuk mencari lokasi gambar pada direktori
-            ' pct_gambar.SizeMode = PictureBoxSizeMode.StretchImage
-        End If
+        Dim SAVE_PATH As String = Application.StartupPath & "\Logo"
+        Dim FileDialog As New OpenFileDialog
+
+
+        With FileDialog
+            If Not fso.DirectoryExists(SAVE_PATH) Then
+                Try
+                    fso.CreateDirectory(SAVE_PATH)
+                Catch ex As Exception
+                    MessageBox.Show("Unable to create folder '" & SAVE_PATH.ToLower &
+                                    "'.  Images will be saved in '" & Application.StartupPath.ToLower &
+                                    "'.", Text, MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                    SAVE_PATH = Application.StartupPath
+                End Try
+            End If
+
+            '.InitialDirectory = SAVE_PATH
+            .Filter = "All Graphic Files|*.bmp;*.gif;*.jpg;*.jpeg;*.png;|" &
+            "Graphic Interchange Format (*.gif)|*.gif|" &
+            "Portable Network Graphics (*.png)|*.png|" &
+            "JPEG File Interchange Format (*.jpg;*.jpeg)|*.jpg;*.jpeg|" &
+            "Windows Bitmap (*.bmp)|*.bmp"
+            .FilterIndex = 1
+            .FileName = ""
+
+            If .ShowDialog = Windows.Forms.DialogResult.OK Then
+                If .FileName.ToUpper = (SAVE_PATH & "\" & fso.GetName(.FileName)).ToUpper Then
+                    MessageBox.Show("Tidak Bisa Mengcopy pada Folder yang Sama",
+                                    Text, MessageBoxButtons.OK, MessageBoxIcon.Error)
+                    Exit Sub
+                ElseIf fso.FileExists(SAVE_PATH & "\" & fso.GetName(.FileName)) Then
+                    Dim Response As DialogResult
+
+                    Response = MessageBox.Show("Nama File '" & fso.GetName(.FileName).ToLower & "' sudah ada pada folder '" &
+                                               SAVE_PATH & "'" & vbCrLf & vbCrLf & "Apakah Akan diganti ?", Text, MessageBoxButtons.YesNo,
+                                               MessageBoxIcon.Question, MessageBoxDefaultButton.Button2)
+
+                    If Response = Windows.Forms.DialogResult.No Then Exit Sub
+                End If
+
+                Try
+                    'fso.CopyFile(.FileName, SAVE_PATH & "\" & fso.GetName(.FileName), True)
+                    fso.CopyFile(.FileName, SAVE_PATH & "\Logo.jpg", True)
+                Catch ex As Exception
+                    MessageBox.Show(ex.Message, Text, MessageBoxButtons.OK, MessageBoxIcon.Error)
+                End Try
+            End If
+        End With
+
+        PictureBox1.ImageLocation = Application.StartupPath & "\Logo\Logo.jpg"
+        PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
+        PictureBox1.SizeMode = PictureBoxSizeMode.StretchImage
+
+
     End Sub
 
 End Class
