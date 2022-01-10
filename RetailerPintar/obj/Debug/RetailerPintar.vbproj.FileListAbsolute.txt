@@ -277,3 +277,12 @@ D:\zacky\project\Retailer-Pintar\RetailerPintar\bin\Debug\DocumentFormat.OpenXml
 D:\zacky\project\Retailer-Pintar\RetailerPintar\bin\Debug\ExcelNumberFormat.xml
 D:\zacky\project\Retailer-Pintar\RetailerPintar\obj\Debug\Interop.Office.dll
 D:\zacky\project\Retailer-Pintar\RetailerPintar\obj\Debug\RetailerPintar.vbproj.ResolveComReference.cache
+D:\Programming\VB.net\Project\Retailer-Pintar\RetailerPintar\bin\Debug\ClosedXML.dll
+D:\Programming\VB.net\Project\Retailer-Pintar\RetailerPintar\bin\Debug\DocumentFormat.OpenXml.dll
+D:\Programming\VB.net\Project\Retailer-Pintar\RetailerPintar\bin\Debug\ExcelNumberFormat.dll
+D:\Programming\VB.net\Project\Retailer-Pintar\RetailerPintar\bin\Debug\ClosedXML.pdb
+D:\Programming\VB.net\Project\Retailer-Pintar\RetailerPintar\bin\Debug\ClosedXML.xml
+D:\Programming\VB.net\Project\Retailer-Pintar\RetailerPintar\bin\Debug\DocumentFormat.OpenXml.xml
+D:\Programming\VB.net\Project\Retailer-Pintar\RetailerPintar\bin\Debug\ExcelNumberFormat.xml
+D:\Programming\VB.net\Project\Retailer-Pintar\RetailerPintar\obj\Debug\RetailerPintar.vbproj.SuggestedBindingRedirects.cache
+D:\Programming\VB.net\Project\Retailer-Pintar\RetailerPintar\obj\Debug\RetailerPintar.vbproj.ResolveComReference.cache

@@ -36,6 +36,8 @@ Partial Class BeliProdukFrm
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.SaveFileDialog1 = New System.Windows.Forms.SaveFileDialog()
+        Me.cbLaporan = New System.Windows.Forms.ComboBox()
+        Me.Label3 = New System.Windows.Forms.Label()
         Me.Panel2.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.Panel3.SuspendLayout()
@@ -102,6 +104,8 @@ Partial Class BeliProdukFrm
         'Panel3
         '
         Me.Panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel3.Controls.Add(Me.Label3)
+        Me.Panel3.Controls.Add(Me.cbLaporan)
         Me.Panel3.Controls.Add(Me.btTampil)
         Me.Panel3.Controls.Add(Me.DataGridView1)
         Me.Panel3.Controls.Add(Me.dtTanggalAkhir)
@@ -116,7 +120,7 @@ Partial Class BeliProdukFrm
         'btTampil
         '
         Me.btTampil.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.btTampil.Location = New System.Drawing.Point(426, 32)
+        Me.btTampil.Location = New System.Drawing.Point(426, 30)
         Me.btTampil.Name = "btTampil"
         Me.btTampil.Size = New System.Drawing.Size(75, 23)
         Me.btTampil.TabIndex = 8
@@ -133,22 +137,22 @@ Partial Class BeliProdukFrm
         '
         'dtTanggalAkhir
         '
-        Me.dtTanggalAkhir.Location = New System.Drawing.Point(315, 6)
+        Me.dtTanggalAkhir.Location = New System.Drawing.Point(272, 31)
         Me.dtTanggalAkhir.Name = "dtTanggalAkhir"
-        Me.dtTanggalAkhir.Size = New System.Drawing.Size(186, 20)
+        Me.dtTanggalAkhir.Size = New System.Drawing.Size(143, 20)
         Me.dtTanggalAkhir.TabIndex = 98
         '
         'dtTanggalAwal
         '
-        Me.dtTanggalAwal.Location = New System.Drawing.Point(59, 8)
+        Me.dtTanggalAwal.Location = New System.Drawing.Point(62, 31)
         Me.dtTanggalAwal.Name = "dtTanggalAwal"
-        Me.dtTanggalAwal.Size = New System.Drawing.Size(191, 20)
+        Me.dtTanggalAwal.Size = New System.Drawing.Size(148, 20)
         Me.dtTanggalAwal.TabIndex = 97
         '
         'Label2
         '
         Me.Label2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Label2.Location = New System.Drawing.Point(271, 8)
+        Me.Label2.Location = New System.Drawing.Point(227, 30)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(29, 20)
         Me.Label2.TabIndex = 96
@@ -158,12 +162,32 @@ Partial Class BeliProdukFrm
         'Label1
         '
         Me.Label1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Label1.Location = New System.Drawing.Point(3, 8)
+        Me.Label1.Location = New System.Drawing.Point(6, 31)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(50, 20)
         Me.Label1.TabIndex = 91
         Me.Label1.Text = "Tanggal"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'cbLaporan
+        '
+        Me.cbLaporan.FormattingEnabled = True
+        Me.cbLaporan.Items.AddRange(New Object() {"Pembelian Produk", "Hutang Pembelian Produk", "Pembayaran Hutang Pembelian Produk", "Kartu Hutang Pembelian Produk", "Retur Pembelian Produk"})
+        Me.cbLaporan.Location = New System.Drawing.Point(119, 4)
+        Me.cbLaporan.Name = "cbLaporan"
+        Me.cbLaporan.Size = New System.Drawing.Size(382, 21)
+        Me.cbLaporan.TabIndex = 102
+        '
+        'Label3
+        '
+        Me.Label3.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.ForeColor = System.Drawing.Color.Black
+        Me.Label3.Location = New System.Drawing.Point(8, -2)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(105, 33)
+        Me.Label3.TabIndex = 83
+        Me.Label3.Text = "Jenis Laporan"
+        Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'BeliProdukFrm
         '
@@ -198,4 +222,6 @@ Partial Class BeliProdukFrm
     Friend WithEvents dtTanggalAwal As DateTimePicker
     Friend WithEvents Label2 As Label
     Private WithEvents btTampil As Button
+    Friend WithEvents cbLaporan As ComboBox
+    Friend WithEvents Label3 As Label
 End Class

@@ -236,11 +236,31 @@
 
     End Sub
 
-    Private Sub mnuLaporan_Click(sender As Object, e As EventArgs) Handles mnuLaporan.Click
-
+    Private Sub mnuLapPembelian_Click(sender As Object, e As EventArgs) Handles mnuLapPembelian.Click
+        BeliProdukFrm.Show()
     End Sub
 
-    Private Sub mnuLapPembelianProduk_Click(sender As Object, e As EventArgs) Handles mnuLapPembelianProduk.Click
-        BeliProdukFrm.Show()
+    Private Sub mnuLapPenjualan_Click(sender As Object, e As EventArgs) Handles mnuLapPenjualan.Click
+        PenjualanProdukFrm.Show()
+    End Sub
+
+    Private Sub mnuLapStokProduk_Click(sender As Object, e As EventArgs) Handles mnuLapStokProduk.Click
+        StokProdukFrm.Show()
+    End Sub
+
+    Private Sub mnuLapPenyesuaianStok_Click(sender As Object, e As EventArgs) Handles mnuLapPenyesuaianStok.Click
+        SesuaianStokFrm.Show()
+    End Sub
+
+    Private Sub mnuLapKartuStokProduk_Click(sender As Object, e As EventArgs) Handles mnuLapKartuStokProduk.Click
+        KartuStokFrm.Show()
+    End Sub
+
+    Private Sub mnuLapPengeluaranBiaya_Click(sender As Object, e As EventArgs) Handles mnuLapPengeluaranBiaya.Click
+        KeluarBiayaFrm.Show()
+    End Sub
+
+    Private Sub mnuLapPemasukanPengeluaran_Click(sender As Object, e As EventArgs) Handles mnuLapPemasukanPengeluaran.Click
+        MasukKeluarFrm.Show()
     End Sub
 End Class

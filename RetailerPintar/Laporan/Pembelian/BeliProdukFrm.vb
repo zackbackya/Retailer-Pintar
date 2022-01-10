@@ -7,7 +7,18 @@ Imports ClosedXML.Excel
 Public Class BeliProdukFrm
     Dim Proses As New Process
     Private Sub btTampil_Click(sender As Object, e As EventArgs) Handles btTampil.Click
-        Call tampilData()
+
+        If cbLaporan.SelectedItem = "" Then
+
+            MessageBox.Show("Mophon Pilih Jenis Laporan Dahulu", "Reatiler Pintar", MessageBoxButtons.OK, MessageBoxIcon.Information)
+
+        Else
+
+            Call tampilData()
+
+        End If
+
+
         Me.KeyPreview = True
     End Sub
 
@@ -15,7 +26,33 @@ Public Class BeliProdukFrm
         Try
             Call koneksi()
 
-            da = New MySqlDataAdapter("SELECT nota, (select nama_toko from ms_toko where id_toko = a.id_toko) nama_toko, tanggal, jatuh_tempo, status_bayar, id_supplier id_produk, (select nama_supplier from ms_supplier where id_supplier = a.id_supplier) nama_supplier ,qty,harga,total_harga,keterangan FROM tx_pembelian_produk a where tanggal between '" & Format(dtTanggalAwal.Value, "yyyy-MM-dd") & "' and '" & Format(dtTanggalAkhir.Value, "yyyy-MM-dd") & "' ", conn)
+            Dim str As String
+
+
+
+            If cbLaporan.SelectedItem = "Pembelian Produk" Then
+
+                str = "SELECT nota, (select nama_toko from ms_toko where id_toko = a.id_toko) nama_toko, tanggal, jatuh_tempo, status_bayar, id_supplier id_produk, (select nama_supplier from ms_supplier where id_supplier = a.id_supplier) nama_supplier ,qty,harga,total_harga,keterangan FROM tx_pembelian_produk a where tanggal between '" & Format(dtTanggalAwal.Value, "yyyy-MM-dd") & "' and '" & Format(dtTanggalAkhir.Value, "yyyy-MM-dd") & "' "
+
+            ElseIf cbLaporan.SelectedItem = "Hutang Pembelian Produk" Then
+
+                str = "SELECT nota, (select nama_toko from ms_toko where id_toko = a.id_toko) nama_toko, tanggal, jatuh_tempo, status_bayar, id_supplier id_produk, (select nama_supplier from ms_supplier where id_supplier = a.id_supplier) nama_supplier ,qty,harga,total_harga,keterangan FROM tx_pembelian_produk a where tanggal between '" & Format(dtTanggalAwal.Value, "yyyy-MM-dd") & "' and '" & Format(dtTanggalAkhir.Value, "yyyy-MM-dd") & "' and status_bayar = 'Kredit'"
+
+            ElseIf cbLaporan.SelectedItem = "Pembayaran Hutang Pembelian Produk" Then
+
+                str = "SELECT * FROM tx_pembayaran_pembelian_produk"
+
+            ElseIf cbLaporan.SelectedItem = "Kartu Hutang Pembelian Produk" Then
+
+                str = ""
+
+            ElseIf cbLaporan.SelectedItem = "Retur Pembelian Produk" Then
+
+                str = "Select nota, (Select nama_toko from ms_toko where id_toko = a.id_toko) nama_toko, tanggal, id_supplier, id_produk, (Select nama_supplier from ms_supplier where id_supplier = a.id_supplier) nama_supplier, nama_produk ,qty,harga,total_harga,keterangan FROM tx_retur_pembelian a  where tanggal between '" & Format(dtTanggalAwal.Value, "yyyy-MM-dd") & "' and '" & Format(dtTanggalAkhir.Value, "yyyy-MM-dd") & "' "
+
+            End If
+
+            da = New MySqlDataAdapter(str, conn)
             ds = New DataSet
             da.Fill(ds)
             DataGridView1.DataSource = ds.Tables(0)
@@ -28,60 +65,40 @@ Public Class BeliProdukFrm
         End Try
     End Sub
 
-    Sub cetakMasEdo()
-
-        SaveFileDialog1.Filter = "Excel 97-2003 Workbook (*.xls)|*xls|All files(*.*)|*.*"
-        SaveFileDialog1.FileName = "Laporan Data Pembelian Produk " + DateTime.Now.ToString("yyyy-MM-dd HH-mm-ss") + ".xls"
-        If SaveFileDialog1.ShowDialog = DialogResult.OK Then
-            Dim objStreamWriter As StreamWriter
-            'Pass the file path and the file name to the StreamWriter constructor.
-            objStreamWriter = New StreamWriter(SaveFileDialog1.FileName)
-            'Write a line of text.
-            objStreamWriter.WriteLine("<HTML>")
-            objStreamWriter.WriteLine("<HEAD>")
-            objStreamWriter.WriteLine("<b>Laporan : " & Label6.Text & "</b>")
-            objStreamWriter.WriteLine("<br>")
-            objStreamWriter.WriteLine("<b>Periode : " & Format(dtTanggalAwal.Value, "dd, MMMM yyyy") & " s.d " & Format(dtTanggalAkhir.Value, "dd, MMMM yyyy") & "</b>")
-            objStreamWriter.WriteLine("<br>")
-            objStreamWriter.WriteLine("<table border=1>")
-            objStreamWriter.WriteLine("<tbody>")
-            objStreamWriter.WriteLine("<tr bgcolor='#ADFF2F'>")
-
-            objStreamWriter.WriteLine("<tr>")
-
-            Call koneksi()
-            cmd = New MySqlCommand("select * from tx_pembelian_produk where tanggal between '" & Format(dtTanggalAwal.Value, "yyyy-MM-dd") & "' and '" & Format(dtTanggalAkhir.Value, "yyyy-MM-dd") & "' ", conn)
-            rd_1 = cmd.ExecuteReader
-            While rd_1.Read
-                objStreamWriter.WriteLine("<tr>")
-
-                objStreamWriter.WriteLine("<td align='left' valign='middle'>" & rd_1.NextResult.ToString & "</td>")
-
-            End While
-            conn.Close()
-            objStreamWriter.Close()
-
-            Dim quit As String = MessageBox.Show("Laporan berhasil dicetak, Apakah ingin membuka file tsb ?", "Konfirmasi", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
-            If quit = DialogResult.Yes Then
-                Proses.StartInfo.FileName = SaveFileDialog1.FileName
-                Proses.Start()
-            ElseIf quit = DialogResult.No Then
-
-            End If
-        End If
-
-    End Sub
-
-
-
     Private Sub btnPrint_Click(sender As Object, e As EventArgs) Handles btnPrint.Click
         Call excel()
     End Sub
 
     Private Sub excel()
 
+        Dim fileName As String
+
+
+        If cbLaporan.SelectedItem = "Pembelian Produk" Then
+
+            fileName = "Laporan Data Pembelian Produk " + DateTime.Now.ToString("yyyy-MM-dd HH-mm-ss") + ".xlsx"
+
+        ElseIf cbLaporan.SelectedItem = "Hutang Pembelian Produk" Then
+
+            fileName = "Laporan Data Hutang Pembelian Produk " + DateTime.Now.ToString("yyyy-MM-dd HH-mm-ss") + ".xlsx"
+
+        ElseIf cbLaporan.SelectedItem = "Pembayaran Hutang Pembelian Produk" Then
+
+            fileName = "Laporan Data Pembayaran Hutang Pembelian Produk " + DateTime.Now.ToString("yyyy-MM-dd HH-mm-ss") + ".xlsx"
+
+        ElseIf cbLaporan.SelectedItem = "Kartu Hutang Pembelian Produk" Then
+
+            fileName = "Laporan Data Kartu Hutang Pembelian Produk " + DateTime.Now.ToString("yyyy-MM-dd HH-mm-ss") + ".xlsx"
+
+        ElseIf cbLaporan.SelectedItem = "retur Pembelian Produk" Then
+
+            fileName = "Laporan Data Retur Pembelian Produk " + DateTime.Now.ToString("yyyy-MM-dd HH-mm-ss") + ".xlsx"
+
+        End If
+
+
         Using sfd As SaveFileDialog = New SaveFileDialog() With {.Filter = "Excel Workbook|*.xlsx"}
-            sfd.FileName = "Laporan Data Pembelian Produk " + DateTime.Now.ToString("yyyy-MM-dd HH-mm-ss") + ".xlsx"
+            sfd.FileName = fileName
             If sfd.ShowDialog() = DialogResult.OK Then
                 Try
                     Using workbook As XLWorkbook = New XLWorkbook()
@@ -118,5 +135,9 @@ Public Class BeliProdukFrm
         ElseIf e.KeyCode = Keys.F11 Then
             Call excel()
         End If
+    End Sub
+
+    Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbLaporan.SelectedIndexChanged
+
     End Sub
 End Class

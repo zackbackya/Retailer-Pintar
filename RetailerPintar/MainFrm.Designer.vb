@@ -49,23 +49,7 @@ Partial Class MainFrm
         Me.mnuPengeluaranBiaya = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnuLaporan = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnuLapPembelian = New System.Windows.Forms.ToolStripMenuItem()
-        Me.mnuLapPembelianProduk = New System.Windows.Forms.ToolStripMenuItem()
-        Me.mnuLapHutangPembelianProduk = New System.Windows.Forms.ToolStripMenuItem()
-        Me.mnuLapPembayaranHutangPembelianProduk = New System.Windows.Forms.ToolStripMenuItem()
-        Me.toolStripSeparator7 = New System.Windows.Forms.ToolStripSeparator()
-        Me.mnuLapKartuHutangPembelianProduk = New System.Windows.Forms.ToolStripMenuItem()
-        Me.mnuLapReturPembelianProduk = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnuLapPenjualan = New System.Windows.Forms.ToolStripMenuItem()
-        Me.mnuLapPenjualanProduk = New System.Windows.Forms.ToolStripMenuItem()
-        Me.mnuLapPenjualanPerProduk = New System.Windows.Forms.ToolStripMenuItem()
-        Me.mnuLapPenjualanPerGolongan = New System.Windows.Forms.ToolStripMenuItem()
-        Me.mnuLapPenjualanPerKasir = New System.Windows.Forms.ToolStripMenuItem()
-        Me.mnuLapPenjualanProdukFavorit = New System.Windows.Forms.ToolStripMenuItem()
-        Me.mnuLapCustomerProduk = New System.Windows.Forms.ToolStripMenuItem()
-        Me.toolStripSeparator19 = New System.Windows.Forms.ToolStripSeparator()
-        Me.mnuLapReturPenjualanProduk = New System.Windows.Forms.ToolStripMenuItem()
-        Me.toolStripSeparator20 = New System.Windows.Forms.ToolStripSeparator()
-        Me.mnuLapLabaRugiPenjualan = New System.Windows.Forms.ToolStripMenuItem()
         Me.toolStripSeparator6 = New System.Windows.Forms.ToolStripSeparator()
         Me.mnuLapStokProduk = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnuLapPenyesuaianStok = New System.Windows.Forms.ToolStripMenuItem()
@@ -278,123 +262,15 @@ Partial Class MainFrm
         '
         'mnuLapPembelian
         '
-        Me.mnuLapPembelian.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mnuLapPembelianProduk, Me.mnuLapHutangPembelianProduk, Me.mnuLapPembayaranHutangPembelianProduk, Me.toolStripSeparator7, Me.mnuLapKartuHutangPembelianProduk, Me.mnuLapReturPembelianProduk})
         Me.mnuLapPembelian.Name = "mnuLapPembelian"
         Me.mnuLapPembelian.Size = New System.Drawing.Size(227, 22)
-        Me.mnuLapPembelian.Text = "Pembelian"
-        '
-        'mnuLapPembelianProduk
-        '
-        Me.mnuLapPembelianProduk.Name = "mnuLapPembelianProduk"
-        Me.mnuLapPembelianProduk.Size = New System.Drawing.Size(283, 22)
-        Me.mnuLapPembelianProduk.Tag = "FrmLapPembelianProduk"
-        Me.mnuLapPembelianProduk.Text = "Pembelian Produk"
-        '
-        'mnuLapHutangPembelianProduk
-        '
-        Me.mnuLapHutangPembelianProduk.Name = "mnuLapHutangPembelianProduk"
-        Me.mnuLapHutangPembelianProduk.Size = New System.Drawing.Size(283, 22)
-        Me.mnuLapHutangPembelianProduk.Tag = "FrmLapHutangPembelianProduk"
-        Me.mnuLapHutangPembelianProduk.Text = "Hutang Pembelian Produk"
-        '
-        'mnuLapPembayaranHutangPembelianProduk
-        '
-        Me.mnuLapPembayaranHutangPembelianProduk.Name = "mnuLapPembayaranHutangPembelianProduk"
-        Me.mnuLapPembayaranHutangPembelianProduk.Size = New System.Drawing.Size(283, 22)
-        Me.mnuLapPembayaranHutangPembelianProduk.Tag = "FrmLapPembayaranHutangPembelianProduk"
-        Me.mnuLapPembayaranHutangPembelianProduk.Text = "Pembayaran Hutang Pembelian Produk"
-        '
-        'toolStripSeparator7
-        '
-        Me.toolStripSeparator7.Name = "toolStripSeparator7"
-        Me.toolStripSeparator7.Size = New System.Drawing.Size(280, 6)
-        '
-        'mnuLapKartuHutangPembelianProduk
-        '
-        Me.mnuLapKartuHutangPembelianProduk.Name = "mnuLapKartuHutangPembelianProduk"
-        Me.mnuLapKartuHutangPembelianProduk.Size = New System.Drawing.Size(283, 22)
-        Me.mnuLapKartuHutangPembelianProduk.Tag = "FrmLapKartuHutangPembelianProduk"
-        Me.mnuLapKartuHutangPembelianProduk.Text = "Kartu Hutang Pembelian Produk"
-        '
-        'mnuLapReturPembelianProduk
-        '
-        Me.mnuLapReturPembelianProduk.Name = "mnuLapReturPembelianProduk"
-        Me.mnuLapReturPembelianProduk.Size = New System.Drawing.Size(283, 22)
-        Me.mnuLapReturPembelianProduk.Tag = "FrmLapReturPembelianProduk"
-        Me.mnuLapReturPembelianProduk.Text = "Retur Pembelian Produk"
+        Me.mnuLapPembelian.Text = "Pembelian Produk"
         '
         'mnuLapPenjualan
         '
-        Me.mnuLapPenjualan.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mnuLapPenjualanProduk, Me.mnuLapPenjualanPerProduk, Me.mnuLapPenjualanPerGolongan, Me.mnuLapPenjualanPerKasir, Me.mnuLapPenjualanProdukFavorit, Me.mnuLapCustomerProduk, Me.toolStripSeparator19, Me.mnuLapReturPenjualanProduk, Me.toolStripSeparator20, Me.mnuLapLabaRugiPenjualan})
         Me.mnuLapPenjualan.Name = "mnuLapPenjualan"
         Me.mnuLapPenjualan.Size = New System.Drawing.Size(227, 22)
-        Me.mnuLapPenjualan.Text = "Penjualan"
-        '
-        'mnuLapPenjualanProduk
-        '
-        Me.mnuLapPenjualanProduk.Name = "mnuLapPenjualanProduk"
-        Me.mnuLapPenjualanProduk.Size = New System.Drawing.Size(206, 22)
-        Me.mnuLapPenjualanProduk.Tag = "FrmLapPenjualanProduk"
-        Me.mnuLapPenjualanProduk.Text = "Penjualan Produk"
-        '
-        'mnuLapPenjualanPerProduk
-        '
-        Me.mnuLapPenjualanPerProduk.Name = "mnuLapPenjualanPerProduk"
-        Me.mnuLapPenjualanPerProduk.Size = New System.Drawing.Size(206, 22)
-        Me.mnuLapPenjualanPerProduk.Tag = "FrmLapPenjualanPerProduk"
-        Me.mnuLapPenjualanPerProduk.Text = "Penjualan Per Produk"
-        '
-        'mnuLapPenjualanPerGolongan
-        '
-        Me.mnuLapPenjualanPerGolongan.Name = "mnuLapPenjualanPerGolongan"
-        Me.mnuLapPenjualanPerGolongan.Size = New System.Drawing.Size(206, 22)
-        Me.mnuLapPenjualanPerGolongan.Tag = "FrmLapPenjualanPerGolongan"
-        Me.mnuLapPenjualanPerGolongan.Text = "Penjualan Per Golongan"
-        '
-        'mnuLapPenjualanPerKasir
-        '
-        Me.mnuLapPenjualanPerKasir.Name = "mnuLapPenjualanPerKasir"
-        Me.mnuLapPenjualanPerKasir.Size = New System.Drawing.Size(206, 22)
-        Me.mnuLapPenjualanPerKasir.Tag = "FrmLapPenjualanPerKasir"
-        Me.mnuLapPenjualanPerKasir.Text = "Penjualan Per Kasir"
-        '
-        'mnuLapPenjualanProdukFavorit
-        '
-        Me.mnuLapPenjualanProdukFavorit.Name = "mnuLapPenjualanProdukFavorit"
-        Me.mnuLapPenjualanProdukFavorit.Size = New System.Drawing.Size(206, 22)
-        Me.mnuLapPenjualanProdukFavorit.Tag = "FrmLapPenjualanProdukFavorit"
-        Me.mnuLapPenjualanProdukFavorit.Text = "Penjualan Produk Favorit"
-        '
-        'mnuLapCustomerProduk
-        '
-        Me.mnuLapCustomerProduk.Name = "mnuLapCustomerProduk"
-        Me.mnuLapCustomerProduk.Size = New System.Drawing.Size(206, 22)
-        Me.mnuLapCustomerProduk.Tag = "FrmLapCustomerProduk"
-        Me.mnuLapCustomerProduk.Text = "Customer Produk"
-        '
-        'toolStripSeparator19
-        '
-        Me.toolStripSeparator19.Name = "toolStripSeparator19"
-        Me.toolStripSeparator19.Size = New System.Drawing.Size(203, 6)
-        '
-        'mnuLapReturPenjualanProduk
-        '
-        Me.mnuLapReturPenjualanProduk.Name = "mnuLapReturPenjualanProduk"
-        Me.mnuLapReturPenjualanProduk.Size = New System.Drawing.Size(206, 22)
-        Me.mnuLapReturPenjualanProduk.Tag = "FrmLapReturPenjualanProduk"
-        Me.mnuLapReturPenjualanProduk.Text = "Retur Penjualan Produk"
-        '
-        'toolStripSeparator20
-        '
-        Me.toolStripSeparator20.Name = "toolStripSeparator20"
-        Me.toolStripSeparator20.Size = New System.Drawing.Size(203, 6)
-        '
-        'mnuLapLabaRugiPenjualan
-        '
-        Me.mnuLapLabaRugiPenjualan.Name = "mnuLapLabaRugiPenjualan"
-        Me.mnuLapLabaRugiPenjualan.Size = New System.Drawing.Size(206, 22)
-        Me.mnuLapLabaRugiPenjualan.Tag = "FrmLapLabaRugiPenjualan"
-        Me.mnuLapLabaRugiPenjualan.Text = "Laba/Rugi Penjualan"
+        Me.mnuLapPenjualan.Text = "Penjualan Produk"
         '
         'toolStripSeparator6
         '
@@ -741,21 +617,7 @@ Partial Class MainFrm
     Private WithEvents mnuPengeluaranBiaya As ToolStripMenuItem
     Private WithEvents mnuLaporan As ToolStripMenuItem
     Private WithEvents mnuLapPembelian As ToolStripMenuItem
-    Private WithEvents mnuLapPembelianProduk As ToolStripMenuItem
-    Private WithEvents mnuLapHutangPembelianProduk As ToolStripMenuItem
-    Private WithEvents mnuLapPembayaranHutangPembelianProduk As ToolStripMenuItem
-    Private WithEvents toolStripSeparator7 As ToolStripSeparator
-    Private WithEvents mnuLapKartuHutangPembelianProduk As ToolStripMenuItem
-    Private WithEvents mnuLapReturPembelianProduk As ToolStripMenuItem
     Private WithEvents mnuLapPenjualan As ToolStripMenuItem
-    Private WithEvents mnuLapPenjualanProduk As ToolStripMenuItem
-    Private WithEvents mnuLapPenjualanPerProduk As ToolStripMenuItem
-    Private WithEvents mnuLapPenjualanPerGolongan As ToolStripMenuItem
-    Private WithEvents mnuLapPenjualanPerKasir As ToolStripMenuItem
-    Private WithEvents mnuLapPenjualanProdukFavorit As ToolStripMenuItem
-    Private WithEvents mnuLapCustomerProduk As ToolStripMenuItem
-    Private WithEvents toolStripSeparator19 As ToolStripSeparator
-    Private WithEvents mnuLapLabaRugiPenjualan As ToolStripMenuItem
     Private WithEvents toolStripSeparator6 As ToolStripSeparator
     Private WithEvents mnuLapStokProduk As ToolStripMenuItem
     Private WithEvents mnuLapPenyesuaianStok As ToolStripMenuItem
@@ -807,8 +669,6 @@ Partial Class MainFrm
     Private WithEvents mnuPembelianProduk As ToolStripMenuItem
     Private WithEvents mnuPembayaranHutangPembelianProduk As ToolStripMenuItem
     Private WithEvents mnuReturPembelianProduk As ToolStripMenuItem
-    Private WithEvents mnuLapReturPenjualanProduk As ToolStripMenuItem
-    Private WithEvents toolStripSeparator20 As ToolStripSeparator
     Friend WithEvents StatusStrip1 As StatusStrip
     Friend WithEvents sbJam As ToolStripStatusLabel
     Friend WithEvents ToolStripStatusLabel2 As ToolStripStatusLabel
