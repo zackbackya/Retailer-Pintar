@@ -28,8 +28,6 @@ Public Class TambahUserFrm
                     role = "SUPERUSER"
                 ElseIf rdKasir.Checked = True Then
                     role = "KASIR"
-                ElseIf rdUser.Checked = True Then
-                    role = "USER"
                 End If
 
                 str = "insert into ms_user values ('" & txtUsername.Text & "','" & TextBox1.Text & "','" & role & "','')"

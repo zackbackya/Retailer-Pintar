@@ -44,6 +44,7 @@ Partial Class MainFrm
         Me.mnuPembelianProduk = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnuPembayaranHutangPembelianProduk = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnuReturPembelianProduk = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripSeparator4 = New System.Windows.Forms.ToolStripSeparator()
         Me.PenyesuaianStokToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnuPengeluaran = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnuPengeluaranBiaya = New System.Windows.Forms.ToolStripMenuItem()
@@ -94,7 +95,6 @@ Partial Class MainFrm
         Me.ToolStripStatusLabel4 = New System.Windows.Forms.ToolStripStatusLabel()
         Me.ToolStripStatusLabel7 = New System.Windows.Forms.ToolStripStatusLabel()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
-        Me.TestToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.menuStrip1.SuspendLayout()
         Me.toolStrip1.SuspendLayout()
         Me.StatusStrip1.SuspendLayout()
@@ -102,7 +102,7 @@ Partial Class MainFrm
         '
         'menuStrip1
         '
-        Me.menuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mnuReferensi, Me.mnuTransaksi, Me.mnuPengeluaran, Me.mnuLaporan, Me.mnuPengaturan, Me.mnuBantuan, Me.mnuKeluar, Me.TestToolStripMenuItem})
+        Me.menuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mnuReferensi, Me.mnuTransaksi, Me.mnuPengeluaran, Me.mnuLaporan, Me.mnuPengaturan, Me.mnuBantuan, Me.mnuKeluar})
         Me.menuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.menuStrip1.Name = "menuStrip1"
         Me.menuStrip1.Size = New System.Drawing.Size(963, 24)
@@ -208,7 +208,7 @@ Partial Class MainFrm
         '
         'mnuTransaksi
         '
-        Me.mnuTransaksi.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mnuPembelianProduk, Me.mnuPembayaranHutangPembelianProduk, Me.mnuReturPembelianProduk, Me.PenyesuaianStokToolStripMenuItem})
+        Me.mnuTransaksi.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mnuPembelianProduk, Me.mnuPembayaranHutangPembelianProduk, Me.mnuReturPembelianProduk, Me.ToolStripSeparator4, Me.PenyesuaianStokToolStripMenuItem})
         Me.mnuTransaksi.Name = "mnuTransaksi"
         Me.mnuTransaksi.Size = New System.Drawing.Size(66, 20)
         Me.mnuTransaksi.Text = "Transaksi"
@@ -233,6 +233,11 @@ Partial Class MainFrm
         Me.mnuReturPembelianProduk.Size = New System.Drawing.Size(283, 22)
         Me.mnuReturPembelianProduk.Tag = "FrmListReturPembelianProduk"
         Me.mnuReturPembelianProduk.Text = "Retur Pembelian Produk"
+        '
+        'ToolStripSeparator4
+        '
+        Me.ToolStripSeparator4.Name = "ToolStripSeparator4"
+        Me.ToolStripSeparator4.Size = New System.Drawing.Size(280, 6)
         '
         'PenyesuaianStokToolStripMenuItem
         '
@@ -582,17 +587,11 @@ Partial Class MainFrm
         'ToolStripStatusLabel7
         '
         Me.ToolStripStatusLabel7.Name = "ToolStripStatusLabel7"
-        Me.ToolStripStatusLabel7.Size = New System.Drawing.Size(228, 17)
-        Me.ToolStripStatusLabel7.Text = "Retailer Pintar Versi  1.0.0 - Copyright 2021"
+        Me.ToolStripStatusLabel7.Size = New System.Drawing.Size(225, 17)
+        Me.ToolStripStatusLabel7.Text = "Retailer Pintar Versi 1.0.0 - Copyright 2021"
         '
         'Timer1
         '
-        '
-        'TestToolStripMenuItem
-        '
-        Me.TestToolStripMenuItem.Name = "TestToolStripMenuItem"
-        Me.TestToolStripMenuItem.Size = New System.Drawing.Size(38, 20)
-        Me.TestToolStripMenuItem.Text = "test"
         '
         'MainFrm
         '
@@ -689,5 +688,5 @@ Partial Class MainFrm
     Friend WithEvents ToolStripStatusLabel3 As ToolStripStatusLabel
     Friend WithEvents PenyesuaianStokToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents Timer1 As Timer
-    Friend WithEvents TestToolStripMenuItem As ToolStripMenuItem
+    Private WithEvents ToolStripSeparator4 As ToolStripSeparator
 End Class

@@ -1,8 +1,8 @@
 ﻿Imports MySqlConnector
 
 Public Class ProdukFrm
-    Public id_produk, barcode, nama_produk, nama_pendek, aktif, id_supplier, id_golongan_terpilih, lokasi, id_golongan As String
-    Public harga_beli, harga_jual, stok As Integer
+    Public id_produk, barcode, nama_produk, nama_pendek, aktif, id_supplier, id_golongan_terpilih, lokasi, id_golongan, flag_min2, flag_min3 As String
+    Public harga_beli, harga_jual1, harga_jual2, min_jual2, harga_jual3, min_jual3, stok As Integer
     Private Sub btnTambah_Click(sender As Object, e As EventArgs) Handles btnTambah.Click
         TambahProdukFrm.ShowDialog()
 

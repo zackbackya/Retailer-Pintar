@@ -307,3 +307,4 @@ C:\Users\JBR\source\repos\Retailer-Pintar\RetailerPintar\obj\Debug\RetailerPinta
 C:\Users\JBR\source\repos\Retailer-Pintar\RetailerPintar\obj\Debug\RetailerPintar.TambahUserFrm.resources
 C:\Users\JBR\source\repos\Retailer-Pintar\RetailerPintar\obj\Debug\RetailerPintar.PengaturanUmumFrm.resources
 C:\Users\JBR\source\repos\Retailer-Pintar\RetailerPintar\obj\Debug\RetailerPintar.ProfilPerusahaanFrm.resources
+C:\Users\JBR\source\repos\Retailer-Pintar\RetailerPintar\obj\Debug\RetailerPintar.BantuanFrm.resources
