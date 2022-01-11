@@ -80,7 +80,7 @@ Partial Class EditUserFrm
         Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Panel1.Controls.Add(Me.btnSimpan)
         Me.Panel1.Controls.Add(Me.btnSelesai)
-        Me.Panel1.Location = New System.Drawing.Point(3, 133)
+        Me.Panel1.Location = New System.Drawing.Point(3, 122)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(421, 35)
         Me.Panel1.TabIndex = 30
@@ -183,7 +183,7 @@ Partial Class EditUserFrm
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(427, 171)
+        Me.ClientSize = New System.Drawing.Size(427, 160)
         Me.Controls.Add(Me.txtPassword)
         Me.Controls.Add(Me.pnlHeader)
         Me.Controls.Add(Me.Panel1)
@@ -199,6 +199,7 @@ Partial Class EditUserFrm
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "EditUserFrm"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Retailer Pintar"
         Me.pnlHeader.ResumeLayout(False)
         Me.pnlHeader.PerformLayout()

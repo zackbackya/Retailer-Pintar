@@ -56,7 +56,7 @@ Partial Class ProdukFrm
         Me.lblHeader.AutoSize = True
         Me.lblHeader.Font = New System.Drawing.Font("Tahoma", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblHeader.ForeColor = System.Drawing.Color.White
-        Me.lblHeader.Location = New System.Drawing.Point(3, 7)
+        Me.lblHeader.Location = New System.Drawing.Point(2, 7)
         Me.lblHeader.Name = "lblHeader"
         Me.lblHeader.Size = New System.Drawing.Size(58, 17)
         Me.lblHeader.TabIndex = 0

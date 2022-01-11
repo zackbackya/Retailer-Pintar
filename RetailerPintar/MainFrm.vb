@@ -127,7 +127,11 @@
     End Sub
 
     Private Sub tbPembelianProduk_Click(sender As Object, e As EventArgs) Handles tbPembelianProduk.Click
-
+        Me.WindowState = FormWindowState.Maximized
+        PembelianProdukFrm.MdiParent = Me
+        PembelianProdukFrm.Dock = DockStyle.Fill
+        PembelianProdukFrm.Show()
+        PembelianProdukFrm.Focus()
     End Sub
 
     Private Sub mnuPromoProduk_Click(sender As Object, e As EventArgs) Handles mnuPromoProduk.Click
@@ -262,5 +266,45 @@
 
     Private Sub mnuLapPemasukanPengeluaran_Click(sender As Object, e As EventArgs) Handles mnuLapPemasukanPengeluaran.Click
         MasukKeluarFrm.Show()
+    End Sub
+
+    Private Sub TbPromoProduk_Click(sender As Object, e As EventArgs) Handles tbPromoProduk.Click
+        Me.WindowState = FormWindowState.Maximized
+        PromoFrm.MdiParent = Me
+        PromoFrm.Dock = DockStyle.Fill
+        PromoFrm.Show()
+        PromoFrm.Focus()
+    End Sub
+
+    Private Sub TbSupplier_Click(sender As Object, e As EventArgs) Handles tbSupplier.Click
+        Me.WindowState = FormWindowState.Maximized
+        SupplierFrm.MdiParent = Me
+        SupplierFrm.Dock = DockStyle.Fill
+        SupplierFrm.Show()
+        SupplierFrm.Focus()
+    End Sub
+
+    Private Sub TbCustomer_Click(sender As Object, e As EventArgs) Handles tbCustomer.Click
+        Me.WindowState = FormWindowState.Maximized
+        CustomerFrm.MdiParent = Me
+        CustomerFrm.Dock = DockStyle.Fill
+        CustomerFrm.Show()
+        CustomerFrm.Focus()
+    End Sub
+
+    Private Sub TbPengeluaranBiaya_Click(sender As Object, e As EventArgs) Handles tbPengeluaranBiaya.Click
+        Me.WindowState = FormWindowState.Maximized
+        PengeluaranBiayaFrm.MdiParent = Me
+        PengeluaranBiayaFrm.Dock = DockStyle.Fill
+        PengeluaranBiayaFrm.Show()
+        PengeluaranBiayaFrm.Focus()
+    End Sub
+
+    Private Sub TbLapPembelianProduk_Click(sender As Object, e As EventArgs) Handles tbLapPembelianProduk.Click
+        BeliProdukFrm.Show()
+    End Sub
+
+    Private Sub TbLapPenjualanProduk_Click(sender As Object, e As EventArgs) Handles tbLapPenjualanProduk.Click
+        PenjualanProdukFrm.Show()
     End Sub
 End Class

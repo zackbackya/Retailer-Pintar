@@ -5,7 +5,7 @@ Public Class EditProdukFrm
     Private Sub editProduk()
         Call koneksi()
         Try
-            Dim aktif As String
+            Dim aktif, harga2, harga3 As String
 
             If cbAktifProduk.Checked = True Then
                 aktif = "T"
@@ -13,12 +13,25 @@ Public Class EditProdukFrm
                 aktif = "F"
             End If
 
+            If cbAktif2.Checked = True Then
+                harga2 = "T"
+            Else
+                harga2 = "F"
+            End If
+
+            If cbAktif3.Checked = True Then
+                harga3 = "T"
+            Else
+                harga3 = "F"
+            End If
 
             cmd = New MySqlConnector.MySqlCommand("update ms_Produk set barcode = '" & txtBarcode.Text & "', nama_produk = '" & txtNamaProduk.Text & "',
                                                     nama_pendek = '" & txtNamaPendekProduk.Text & "', aktif = '" & aktif & "', 
                                                     id_supplier = '" & txtIdSupplier.Text & "', id_golongan = '" & txtIdGolongan.Text & "',
                                                     lokasi = '" & txtLokasiProduk.Text & "',harga_beli = '" & txtHargaBeliProduk.Text & "',
-                                                    harga_jual = '" & txtHargaJualProduk.Text & "',stok = '" & txtStokProduk.Text & "'
+                                                    harga_jual_1 = '" & txtHargaJualProduk1.Text & "',stok = '" & txtStokProduk.Text & "',
+                                                    harga_jual_2 = '" & txtHargaJualProduk2.Text & "', min_jual_2 = '" & txtJmlMin2.Text & "', flag_harga_2 = '" & harga2 & "',
+                                                    harga_jual_3 = '" & txtHargaJualProduk3.Text & "', min_jual_3 = '" & txtJmlMin3.Text & "', flag_harga_3 = '" & harga3 & "',
                                                     where id_produk  = '" & txtIdProduk.Text & "'", conn)
             cmd.ExecuteNonQuery()
 
@@ -43,8 +56,12 @@ Public Class EditProdukFrm
         txtIdGolongan.Text = ProdukFrm.id_golongan
         txtLokasiProduk.Text = ProdukFrm.lokasi
         txtHargaBeliProduk.Text = ProdukFrm.harga_beli
-        txtHargaJualProduk.Text = ProdukFrm.harga_jual
+        txtHargaJualProduk1.Text = ProdukFrm.harga_jual1
         txtStokProduk.Text = ProdukFrm.stok.ToString
+        txtHargaJualProduk2.Text = ProdukFrm.harga_jual2
+        txtHargaJualProduk3.Text = ProdukFrm.harga_jual3
+        txtJmlMin2.Text = ProdukFrm.min_jual2
+        txtJmlMin3.Text = ProdukFrm.min_jual3
         Call loadSupplierName()
         Call loadAllSupplierName()
         Call loadGolonganName()
@@ -58,6 +75,17 @@ Public Class EditProdukFrm
             cbAktifProduk.Checked = False
         End If
 
+        If ProdukFrm.flag_min2 = "T" Then
+            cbAktif2.Checked = True
+        Else
+            cbAktif2.Checked = False
+        End If
+
+        If ProdukFrm.flag_min3 = "T" Then
+            cbAktif3.Checked = True
+        Else
+            cbAktif3.Checked = False
+        End If
         txtNamaProduk.Focus()
         Me.KeyPreview = True
 
@@ -68,21 +96,13 @@ Public Class EditProdukFrm
     End Sub
 
     Private Sub EditProdukFrm_KeyDown(sender As Object, e As KeyEventArgs) Handles Me.KeyDown
-
         If e.KeyCode = Keys.Escape Then
             Me.Dispose()
         ElseIf e.KeyCode = Keys.F11 Then
             Call editProduk()
         End If
-
-
-
-
     End Sub
 
-    Private Sub btnSimpan_Click_1(sender As Object, e As EventArgs)
-
-    End Sub
 
     Private Sub loadSupplierName()
 
@@ -220,12 +240,44 @@ Public Class EditProdukFrm
         txtHargaBeliProduk.BackColor = Color.White
     End Sub
 
-    Private Sub txtHargaJualProduk_GotFocus(sender As Object, e As EventArgs) Handles txtHargaJualProduk.GotFocus
-        txtHargaJualProduk.BackColor = Color.LightYellow
+    Private Sub txtHargaJualProduk1_GotFocus(sender As Object, e As EventArgs) Handles txtHargaJualProduk1.GotFocus
+        txtHargaJualProduk1.BackColor = Color.LightYellow
     End Sub
 
-    Private Sub txtHargaJualProduk_LostFocus(sender As Object, e As EventArgs) Handles txtHargaJualProduk.LostFocus
-        txtHargaJualProduk.BackColor = Color.White
+    Private Sub txtHargaJualProduk1_LostFocus(sender As Object, e As EventArgs) Handles txtHargaJualProduk1.LostFocus
+        txtHargaJualProduk1.BackColor = Color.White
+    End Sub
+
+    Private Sub txtHargaJualProduk2_GotFocus(sender As Object, e As EventArgs) Handles txtHargaJualProduk2.GotFocus
+        txtHargaJualProduk2.BackColor = Color.LightYellow
+    End Sub
+
+    Private Sub txtHargaJualProduk2_LostFocus(sender As Object, e As EventArgs) Handles txtHargaJualProduk2.LostFocus
+        txtHargaJualProduk2.BackColor = Color.White
+    End Sub
+
+    Private Sub txtHargaJualProduk3_GotFocus(sender As Object, e As EventArgs) Handles txtHargaJualProduk3.GotFocus
+        txtHargaJualProduk3.BackColor = Color.LightYellow
+    End Sub
+
+    Private Sub txtHargaJualProduk3_LostFocus(sender As Object, e As EventArgs) Handles txtHargaJualProduk3.LostFocus
+        txtHargaJualProduk3.BackColor = Color.White
+    End Sub
+
+    Private Sub txtJmlMin2_GotFocus(sender As Object, e As EventArgs) Handles txtJmlMin2.GotFocus
+        txtJmlMin2.BackColor = Color.LightYellow
+    End Sub
+
+    Private Sub txtJmlMin2_LostFocus(sender As Object, e As EventArgs) Handles txtJmlMin2.LostFocus
+        txtJmlMin2.BackColor = Color.White
+    End Sub
+
+    Private Sub txtJmlMin3_GotFocus(sender As Object, e As EventArgs) Handles txtJmlMin3.GotFocus
+        txtJmlMin3.BackColor = Color.LightYellow
+    End Sub
+
+    Private Sub txtJmlMin3_LostFocus(sender As Object, e As EventArgs) Handles txtJmlMin3.LostFocus
+        txtJmlMin3.BackColor = Color.White
     End Sub
 
     Private Sub txtLokasiProduk_GotFocus(sender As Object, e As EventArgs) Handles txtLokasiProduk.GotFocus

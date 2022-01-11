@@ -90,12 +90,16 @@ Public Class LoginFrm
                     MainFrm.Show()
                 Else
                     MessageBox.Show("Password dan Username Anda salah", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                    txtUsername.ResetText()
+                    txtPassword.ResetText()
+                    txtUsername.Select()
                 End If
             End If
         Catch ex As Exception
             MessageBox.Show("Password dan Username Anda salah", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
             txtUsername.ResetText()
             txtPassword.ResetText()
+            txtUsername.Select()
         End Try
     End Sub
 

@@ -38,24 +38,37 @@ Partial Class TambahProdukFrm
         Me.txtIdGolongan = New System.Windows.Forms.TextBox()
         Me.txtLokasiProduk = New System.Windows.Forms.TextBox()
         Me.txtHargaBeliProduk = New System.Windows.Forms.TextBox()
-        Me.txtHargaJualProduk = New System.Windows.Forms.TextBox()
-        Me.txtStokProduk = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
-        Me.Label10 = New System.Windows.Forms.Label()
-        Me.Label11 = New System.Windows.Forms.Label()
         Me.cbAktifProduk = New System.Windows.Forms.CheckBox()
         Me.cbSupplier = New System.Windows.Forms.ComboBox()
         Me.cbGolongan = New System.Windows.Forms.ComboBox()
-        Me.Label12 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label13 = New System.Windows.Forms.Label()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.cbAktif3 = New System.Windows.Forms.CheckBox()
+        Me.cbAktif2 = New System.Windows.Forms.CheckBox()
+        Me.txtJmlMin3 = New System.Windows.Forms.TextBox()
+        Me.Label15 = New System.Windows.Forms.Label()
+        Me.Label17 = New System.Windows.Forms.Label()
+        Me.txtHargaJualProduk3 = New System.Windows.Forms.TextBox()
+        Me.txtJmlMin2 = New System.Windows.Forms.TextBox()
+        Me.Label14 = New System.Windows.Forms.Label()
+        Me.Label16 = New System.Windows.Forms.Label()
+        Me.txtHargaJualProduk2 = New System.Windows.Forms.TextBox()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.txtHargaJualProduk1 = New System.Windows.Forms.TextBox()
+        Me.Label12 = New System.Windows.Forms.Label()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.txtStokProduk = New System.Windows.Forms.TextBox()
+        Me.Label18 = New System.Windows.Forms.Label()
         Me.pnlHeader.SuspendLayout()
         Me.Panel1.SuspendLayout()
+        Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
         'pnlHeader
@@ -89,7 +102,7 @@ Partial Class TambahProdukFrm
         Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Panel1.Controls.Add(Me.btnSimpan)
         Me.Panel1.Controls.Add(Me.btnSelesai)
-        Me.Panel1.Location = New System.Drawing.Point(3, 395)
+        Me.Panel1.Location = New System.Drawing.Point(3, 538)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(602, 35)
         Me.Panel1.TabIndex = 28
@@ -202,22 +215,7 @@ Partial Class TambahProdukFrm
         Me.txtHargaBeliProduk.Name = "txtHargaBeliProduk"
         Me.txtHargaBeliProduk.Size = New System.Drawing.Size(200, 20)
         Me.txtHargaBeliProduk.TabIndex = 11
-        '
-        'txtHargaJualProduk
-        '
-        Me.txtHargaJualProduk.Location = New System.Drawing.Point(134, 332)
-        Me.txtHargaJualProduk.MaxLength = 12
-        Me.txtHargaJualProduk.Name = "txtHargaJualProduk"
-        Me.txtHargaJualProduk.Size = New System.Drawing.Size(200, 20)
-        Me.txtHargaJualProduk.TabIndex = 12
-        '
-        'txtStokProduk
-        '
-        Me.txtStokProduk.Location = New System.Drawing.Point(134, 358)
-        Me.txtStokProduk.MaxLength = 12
-        Me.txtStokProduk.Name = "txtStokProduk"
-        Me.txtStokProduk.Size = New System.Drawing.Size(116, 20)
-        Me.txtStokProduk.TabIndex = 13
+        Me.txtHargaBeliProduk.Text = "0"
         '
         'Label2
         '
@@ -279,26 +277,6 @@ Partial Class TambahProdukFrm
         Me.Label9.Text = "Id Golongan"
         Me.Label9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'Label10
-        '
-        Me.Label10.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Label10.Location = New System.Drawing.Point(3, 332)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(125, 20)
-        Me.Label10.TabIndex = 52
-        Me.Label10.Text = "Harga Jual"
-        Me.Label10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'Label11
-        '
-        Me.Label11.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Label11.Location = New System.Drawing.Point(3, 358)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(125, 20)
-        Me.Label11.TabIndex = 53
-        Me.Label11.Text = "Stok"
-        Me.Label11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
         'cbAktifProduk
         '
         Me.cbAktifProduk.AutoSize = True
@@ -325,16 +303,6 @@ Partial Class TambahProdukFrm
         Me.cbGolongan.Size = New System.Drawing.Size(312, 21)
         Me.cbGolongan.TabIndex = 9
         '
-        'Label12
-        '
-        Me.Label12.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Label12.Location = New System.Drawing.Point(256, 358)
-        Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(78, 20)
-        Me.Label12.TabIndex = 59
-        Me.Label12.Text = "/ Pcs"
-        Me.Label12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
         'Label4
         '
         Me.Label4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
@@ -355,28 +323,203 @@ Partial Class TambahProdukFrm
         Me.Label13.Text = "Nama Golongan"
         Me.Label13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
+        'GroupBox1
+        '
+        Me.GroupBox1.Controls.Add(Me.Label18)
+        Me.GroupBox1.Controls.Add(Me.cbAktif3)
+        Me.GroupBox1.Controls.Add(Me.cbAktif2)
+        Me.GroupBox1.Controls.Add(Me.txtJmlMin3)
+        Me.GroupBox1.Controls.Add(Me.Label15)
+        Me.GroupBox1.Controls.Add(Me.Label17)
+        Me.GroupBox1.Controls.Add(Me.txtHargaJualProduk3)
+        Me.GroupBox1.Controls.Add(Me.txtJmlMin2)
+        Me.GroupBox1.Controls.Add(Me.Label14)
+        Me.GroupBox1.Controls.Add(Me.Label16)
+        Me.GroupBox1.Controls.Add(Me.txtHargaJualProduk2)
+        Me.GroupBox1.Controls.Add(Me.Label10)
+        Me.GroupBox1.Controls.Add(Me.txtHargaJualProduk1)
+        Me.GroupBox1.Location = New System.Drawing.Point(3, 358)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(602, 174)
+        Me.GroupBox1.TabIndex = 62
+        Me.GroupBox1.TabStop = False
+        Me.GroupBox1.Text = "[ Harga Jual Retail ]"
+        '
+        'cbAktif3
+        '
+        Me.cbAktif3.AutoSize = True
+        Me.cbAktif3.Location = New System.Drawing.Point(508, 71)
+        Me.cbAktif3.Name = "cbAktif3"
+        Me.cbAktif3.Size = New System.Drawing.Size(47, 17)
+        Me.cbAktif3.TabIndex = 77
+        Me.cbAktif3.Text = "Akitf"
+        Me.cbAktif3.UseVisualStyleBackColor = True
+        '
+        'cbAktif2
+        '
+        Me.cbAktif2.AutoSize = True
+        Me.cbAktif2.Location = New System.Drawing.Point(508, 45)
+        Me.cbAktif2.Name = "cbAktif2"
+        Me.cbAktif2.Size = New System.Drawing.Size(47, 17)
+        Me.cbAktif2.TabIndex = 76
+        Me.cbAktif2.Text = "Akitf"
+        Me.cbAktif2.UseVisualStyleBackColor = True
+        '
+        'txtJmlMin3
+        '
+        Me.txtJmlMin3.Location = New System.Drawing.Point(442, 68)
+        Me.txtJmlMin3.MaxLength = 12
+        Me.txtJmlMin3.Name = "txtJmlMin3"
+        Me.txtJmlMin3.Size = New System.Drawing.Size(60, 20)
+        Me.txtJmlMin3.TabIndex = 73
+        Me.txtJmlMin3.Text = "0"
+        '
+        'Label15
+        '
+        Me.Label15.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.Label15.Location = New System.Drawing.Point(311, 68)
+        Me.Label15.Name = "Label15"
+        Me.Label15.Size = New System.Drawing.Size(125, 20)
+        Me.Label15.TabIndex = 72
+        Me.Label15.Text = "Jumlah Minimal 3"
+        Me.Label15.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'Label17
+        '
+        Me.Label17.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.Label17.Location = New System.Drawing.Point(6, 68)
+        Me.Label17.Name = "Label17"
+        Me.Label17.Size = New System.Drawing.Size(125, 20)
+        Me.Label17.TabIndex = 71
+        Me.Label17.Text = "Harga Jual 3"
+        Me.Label17.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'txtHargaJualProduk3
+        '
+        Me.txtHargaJualProduk3.Location = New System.Drawing.Point(137, 68)
+        Me.txtHargaJualProduk3.MaxLength = 12
+        Me.txtHargaJualProduk3.Name = "txtHargaJualProduk3"
+        Me.txtHargaJualProduk3.Size = New System.Drawing.Size(168, 20)
+        Me.txtHargaJualProduk3.TabIndex = 70
+        Me.txtHargaJualProduk3.Text = "0"
+        '
+        'txtJmlMin2
+        '
+        Me.txtJmlMin2.Location = New System.Drawing.Point(442, 42)
+        Me.txtJmlMin2.MaxLength = 12
+        Me.txtJmlMin2.Name = "txtJmlMin2"
+        Me.txtJmlMin2.Size = New System.Drawing.Size(60, 20)
+        Me.txtJmlMin2.TabIndex = 69
+        Me.txtJmlMin2.Text = "0"
+        '
+        'Label14
+        '
+        Me.Label14.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.Label14.Location = New System.Drawing.Point(311, 42)
+        Me.Label14.Name = "Label14"
+        Me.Label14.Size = New System.Drawing.Size(125, 20)
+        Me.Label14.TabIndex = 68
+        Me.Label14.Text = "Jumlah Minimal 2"
+        Me.Label14.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'Label16
+        '
+        Me.Label16.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.Label16.Location = New System.Drawing.Point(6, 42)
+        Me.Label16.Name = "Label16"
+        Me.Label16.Size = New System.Drawing.Size(125, 20)
+        Me.Label16.TabIndex = 67
+        Me.Label16.Text = "Harga Jual 2"
+        Me.Label16.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'txtHargaJualProduk2
+        '
+        Me.txtHargaJualProduk2.Location = New System.Drawing.Point(137, 42)
+        Me.txtHargaJualProduk2.MaxLength = 12
+        Me.txtHargaJualProduk2.Name = "txtHargaJualProduk2"
+        Me.txtHargaJualProduk2.Size = New System.Drawing.Size(168, 20)
+        Me.txtHargaJualProduk2.TabIndex = 65
+        Me.txtHargaJualProduk2.Text = "0"
+        '
+        'Label10
+        '
+        Me.Label10.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.Label10.Location = New System.Drawing.Point(6, 16)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(125, 20)
+        Me.Label10.TabIndex = 62
+        Me.Label10.Text = "Harga Jual 1"
+        Me.Label10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'txtHargaJualProduk1
+        '
+        Me.txtHargaJualProduk1.Location = New System.Drawing.Point(137, 16)
+        Me.txtHargaJualProduk1.MaxLength = 12
+        Me.txtHargaJualProduk1.Name = "txtHargaJualProduk1"
+        Me.txtHargaJualProduk1.Size = New System.Drawing.Size(168, 20)
+        Me.txtHargaJualProduk1.TabIndex = 60
+        Me.txtHargaJualProduk1.Text = "0"
+        '
+        'Label12
+        '
+        Me.Label12.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.Label12.Location = New System.Drawing.Point(256, 332)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(78, 20)
+        Me.Label12.TabIndex = 67
+        Me.Label12.Text = "/ Pcs"
+        Me.Label12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'Label11
+        '
+        Me.Label11.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.Label11.Location = New System.Drawing.Point(3, 332)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(125, 20)
+        Me.Label11.TabIndex = 66
+        Me.Label11.Text = "Stok"
+        Me.Label11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'txtStokProduk
+        '
+        Me.txtStokProduk.Location = New System.Drawing.Point(134, 332)
+        Me.txtStokProduk.MaxLength = 12
+        Me.txtStokProduk.Name = "txtStokProduk"
+        Me.txtStokProduk.Size = New System.Drawing.Size(116, 20)
+        Me.txtStokProduk.TabIndex = 65
+        Me.txtStokProduk.Text = "0"
+        '
+        'Label18
+        '
+        Me.Label18.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.Label18.Location = New System.Drawing.Point(6, 105)
+        Me.Label18.Name = "Label18"
+        Me.Label18.Size = New System.Drawing.Size(587, 66)
+        Me.Label18.TabIndex = 78
+        Me.Label18.Text = resources.GetString("Label18.Text")
+        Me.Label18.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
         'TambahProdukFrm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(608, 434)
+        Me.ClientSize = New System.Drawing.Size(608, 577)
+        Me.Controls.Add(Me.Label12)
+        Me.Controls.Add(Me.Label11)
+        Me.Controls.Add(Me.txtStokProduk)
+        Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.Label13)
         Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.Label12)
         Me.Controls.Add(Me.cbGolongan)
         Me.Controls.Add(Me.cbSupplier)
         Me.Controls.Add(Me.cbAktifProduk)
-        Me.Controls.Add(Me.Label11)
-        Me.Controls.Add(Me.Label10)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.txtStokProduk)
-        Me.Controls.Add(Me.txtHargaJualProduk)
         Me.Controls.Add(Me.txtHargaBeliProduk)
         Me.Controls.Add(Me.txtLokasiProduk)
         Me.Controls.Add(Me.txtIdGolongan)
@@ -399,6 +542,8 @@ Partial Class TambahProdukFrm
         Me.pnlHeader.ResumeLayout(False)
         Me.pnlHeader.PerformLayout()
         Me.Panel1.ResumeLayout(False)
+        Me.GroupBox1.ResumeLayout(False)
+        Me.GroupBox1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -419,20 +564,32 @@ Partial Class TambahProdukFrm
     Friend WithEvents txtIdGolongan As TextBox
     Friend WithEvents txtLokasiProduk As TextBox
     Friend WithEvents txtHargaBeliProduk As TextBox
-    Friend WithEvents txtHargaJualProduk As TextBox
-    Friend WithEvents txtStokProduk As TextBox
     Friend WithEvents Label2 As Label
     Friend WithEvents Label5 As Label
     Friend WithEvents Label6 As Label
     Friend WithEvents Label7 As Label
     Friend WithEvents Label8 As Label
     Friend WithEvents Label9 As Label
-    Friend WithEvents Label10 As Label
-    Friend WithEvents Label11 As Label
     Friend WithEvents cbAktifProduk As CheckBox
     Friend WithEvents cbSupplier As ComboBox
     Friend WithEvents cbGolongan As ComboBox
-    Friend WithEvents Label12 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents Label13 As Label
+    Friend WithEvents GroupBox1 As GroupBox
+    Friend WithEvents Label10 As Label
+    Friend WithEvents txtHargaJualProduk1 As TextBox
+    Friend WithEvents Label16 As Label
+    Friend WithEvents txtHargaJualProduk2 As TextBox
+    Friend WithEvents Label12 As Label
+    Friend WithEvents Label11 As Label
+    Friend WithEvents txtStokProduk As TextBox
+    Friend WithEvents txtJmlMin2 As TextBox
+    Friend WithEvents Label14 As Label
+    Friend WithEvents txtJmlMin3 As TextBox
+    Friend WithEvents Label15 As Label
+    Friend WithEvents Label17 As Label
+    Friend WithEvents txtHargaJualProduk3 As TextBox
+    Friend WithEvents cbAktif3 As CheckBox
+    Friend WithEvents cbAktif2 As CheckBox
+    Friend WithEvents Label18 As Label
 End Class
