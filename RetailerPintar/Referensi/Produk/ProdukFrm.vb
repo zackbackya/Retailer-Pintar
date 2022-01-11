@@ -3,8 +3,33 @@
 Public Class ProdukFrm
     Public id_produk, barcode, nama_produk, nama_pendek, aktif, id_supplier, id_golongan_terpilih, lokasi, id_golongan, flag_min2, flag_min3 As String
     Public harga_beli, harga_jual1, harga_jual2, min_jual2, harga_jual3, min_jual3, stok As Integer
-    Private Sub btnTambah_Click(sender As Object, e As EventArgs) Handles btnTambah.Click
+
+    Private Sub btnPerbaiki_Click_1(sender As Object, e As EventArgs) Handles btnPerbaiki.Click
+        Call editProduk()
+    End Sub
+
+    Private Sub btnTambah_Click_1(sender As Object, e As EventArgs) Handles btnTambah.Click
         TambahProdukFrm.ShowDialog()
+    End Sub
+
+    Private Sub btnHapus_Click_1(sender As Object, e As EventArgs) Handles btnHapus.Click
+        Call hapusProduk()
+    End Sub
+
+    Private Sub btnSelesai_Click_1(sender As Object, e As EventArgs) Handles btnSelesai.Click
+        Me.Dispose()
+    End Sub
+
+    Private Sub btUpload_Click(sender As Object, e As EventArgs) Handles btUpload.Click
+        UploadProdukFrm.Show()
+    End Sub
+
+    Private Sub txtCari_TextChanged(sender As Object, e As EventArgs) Handles txtCari.TextChanged
+
+    End Sub
+
+    Private Sub btnTambah_Click(sender As Object, e As EventArgs)
+
 
     End Sub
     Private Sub ProdukFrm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -29,7 +54,7 @@ Public Class ProdukFrm
         End If
     End Sub
 
-    Private Sub btnSelesai_Click(sender As Object, e As EventArgs) Handles btnSelesai.Click
+    Private Sub btnSelesai_Click(sender As Object, e As EventArgs)
         Me.Dispose()
     End Sub
 
@@ -53,8 +78,14 @@ Public Class ProdukFrm
             id_golongan = DataGridView1.CurrentRow.Cells(6).Value.ToString
             lokasi = DataGridView1.CurrentRow.Cells(7).Value.ToString
             harga_beli = DataGridView1.CurrentRow.Cells(8).Value.ToString
-            harga_jual = DataGridView1.CurrentRow.Cells(9).Value.ToString
-            stok = DataGridView1.CurrentRow.Cells(10).Value.ToString
+            harga_jual1 = DataGridView1.CurrentRow.Cells(9).Value.ToString
+            harga_jual2 = DataGridView1.CurrentRow.Cells(10).Value.ToString
+            min_jual2 = DataGridView1.CurrentRow.Cells(11).Value.ToString
+            flag_min2 = DataGridView1.CurrentRow.Cells(12).Value.ToString
+            harga_jual3 = DataGridView1.CurrentRow.Cells(13).Value.ToString
+            min_jual3 = DataGridView1.CurrentRow.Cells(14).Value.ToString
+            flag_min3 = DataGridView1.CurrentRow.Cells(15).Value.ToString
+            stok = DataGridView1.CurrentRow.Cells(16).Value.ToString
 
             EditProdukFrm.ShowDialog()
 
@@ -93,11 +124,11 @@ Public Class ProdukFrm
         End Try
     End Sub
 
-    Private Sub btnPerbaiki_Click(sender As Object, e As EventArgs) Handles btnPerbaiki.Click
+    Private Sub btnPerbaiki_Click(sender As Object, e As EventArgs)
         Call editProduk()
     End Sub
 
-    Private Sub btnHapus_Click(sender As Object, e As EventArgs) Handles btnHapus.Click
+    Private Sub btnHapus_Click(sender As Object, e As EventArgs)
         Call hapusProduk()
     End Sub
 
@@ -138,7 +169,7 @@ Public Class ProdukFrm
 
 
 
-    Private Sub cbGolongan_SelectionChangeCommitted(sender As Object, e As EventArgs) Handles cbGolongan.SelectionChangeCommitted
+    Private Sub cbGolongan_SelectionChangeCommitted(sender As Object, e As EventArgs)
         Try
             Call koneksi()
             da = New MySqlDataAdapter("Select * From ms_produk Where id_golongan In (Select id_golongan from ms_golongan where nama_golongan = '" & cbGolongan.Text & "')", conn)
@@ -153,11 +184,11 @@ Public Class ProdukFrm
         End Try
     End Sub
 
-    Private Sub txtCari_GotFocus(sender As Object, e As EventArgs) Handles txtCari.GotFocus
+    Private Sub txtCari_GotFocus(sender As Object, e As EventArgs)
         txtCari.BackColor = Color.LightYellow
     End Sub
 
-    Private Sub txtCari_LostFocus(sender As Object, e As EventArgs) Handles txtCari.LostFocus
+    Private Sub txtCari_LostFocus(sender As Object, e As EventArgs)
         txtCari.BackColor = Color.White
     End Sub
 End Class
