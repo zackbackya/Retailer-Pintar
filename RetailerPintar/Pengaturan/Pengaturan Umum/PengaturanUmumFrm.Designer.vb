@@ -57,10 +57,10 @@ Partial Class PengaturanUmumFrm
         '
         Me.tabSetting.Controls.Add(Me.tabNota)
         Me.tabSetting.Controls.Add(Me.tabPrinter)
-        Me.tabSetting.Location = New System.Drawing.Point(4, 43)
+        Me.tabSetting.Location = New System.Drawing.Point(3, 43)
         Me.tabSetting.Name = "tabSetting"
         Me.tabSetting.SelectedIndex = 0
-        Me.tabSetting.Size = New System.Drawing.Size(461, 289)
+        Me.tabSetting.Size = New System.Drawing.Size(541, 289)
         Me.tabSetting.TabIndex = 1
         '
         'tabNota
@@ -80,7 +80,7 @@ Partial Class PengaturanUmumFrm
         Me.tabNota.Location = New System.Drawing.Point(4, 22)
         Me.tabNota.Name = "tabNota"
         Me.tabNota.Padding = New System.Windows.Forms.Padding(3)
-        Me.tabNota.Size = New System.Drawing.Size(453, 263)
+        Me.tabNota.Size = New System.Drawing.Size(533, 263)
         Me.tabNota.TabIndex = 0
         Me.tabNota.Text = "Nota Penjualan"
         Me.tabNota.UseVisualStyleBackColor = True
@@ -89,9 +89,9 @@ Partial Class PengaturanUmumFrm
         '
         Me.btGambar.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btGambar.Location = New System.Drawing.Point(160, 230)
+        Me.btGambar.Location = New System.Drawing.Point(137, 234)
         Me.btGambar.Name = "btGambar"
-        Me.btGambar.Size = New System.Drawing.Size(75, 27)
+        Me.btGambar.Size = New System.Drawing.Size(75, 23)
         Me.btGambar.TabIndex = 134
         Me.btGambar.Text = "Pilih Logo"
         Me.btGambar.UseVisualStyleBackColor = True
@@ -100,24 +100,25 @@ Partial Class PengaturanUmumFrm
         '
         Me.PictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.PictureBox1.ImageLocation = ""
-        Me.PictureBox1.Location = New System.Drawing.Point(14, 155)
+        Me.PictureBox1.Location = New System.Drawing.Point(5, 135)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(109, 102)
+        Me.PictureBox1.Size = New System.Drawing.Size(126, 122)
         Me.PictureBox1.TabIndex = 133
         Me.PictureBox1.TabStop = False
         '
         'txtFooter2
         '
-        Me.txtFooter2.Location = New System.Drawing.Point(160, 122)
+        Me.txtFooter2.Location = New System.Drawing.Point(137, 112)
+        Me.txtFooter2.MaxLength = 30
         Me.txtFooter2.Multiline = True
         Me.txtFooter2.Name = "txtFooter2"
-        Me.txtFooter2.Size = New System.Drawing.Size(276, 19)
+        Me.txtFooter2.Size = New System.Drawing.Size(390, 19)
         Me.txtFooter2.TabIndex = 132
         '
         'Label4
         '
         Me.Label4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Label4.Location = New System.Drawing.Point(14, 121)
+        Me.Label4.Location = New System.Drawing.Point(6, 112)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(125, 20)
         Me.Label4.TabIndex = 131
@@ -126,16 +127,17 @@ Partial Class PengaturanUmumFrm
         '
         'txtFooter1
         '
-        Me.txtFooter1.Location = New System.Drawing.Point(160, 97)
+        Me.txtFooter1.Location = New System.Drawing.Point(137, 87)
+        Me.txtFooter1.MaxLength = 25
         Me.txtFooter1.Multiline = True
         Me.txtFooter1.Name = "txtFooter1"
-        Me.txtFooter1.Size = New System.Drawing.Size(276, 19)
+        Me.txtFooter1.Size = New System.Drawing.Size(390, 19)
         Me.txtFooter1.TabIndex = 130
         '
         'Label2
         '
         Me.Label2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Label2.Location = New System.Drawing.Point(14, 96)
+        Me.Label2.Location = New System.Drawing.Point(6, 87)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(125, 20)
         Me.Label2.TabIndex = 129
@@ -144,16 +146,17 @@ Partial Class PengaturanUmumFrm
         '
         'txtHeader3
         '
-        Me.txtHeader3.Location = New System.Drawing.Point(160, 72)
+        Me.txtHeader3.Location = New System.Drawing.Point(137, 62)
+        Me.txtHeader3.MaxLength = 20
         Me.txtHeader3.Multiline = True
         Me.txtHeader3.Name = "txtHeader3"
-        Me.txtHeader3.Size = New System.Drawing.Size(276, 19)
+        Me.txtHeader3.Size = New System.Drawing.Size(390, 19)
         Me.txtHeader3.TabIndex = 128
         '
         'Label1
         '
         Me.Label1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Label1.Location = New System.Drawing.Point(14, 71)
+        Me.Label1.Location = New System.Drawing.Point(6, 62)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(125, 20)
         Me.Label1.TabIndex = 127
@@ -162,24 +165,26 @@ Partial Class PengaturanUmumFrm
         '
         'txtHeader2
         '
-        Me.txtHeader2.Location = New System.Drawing.Point(160, 47)
+        Me.txtHeader2.Location = New System.Drawing.Point(137, 37)
+        Me.txtHeader2.MaxLength = 20
         Me.txtHeader2.Multiline = True
         Me.txtHeader2.Name = "txtHeader2"
-        Me.txtHeader2.Size = New System.Drawing.Size(276, 19)
+        Me.txtHeader2.Size = New System.Drawing.Size(390, 19)
         Me.txtHeader2.TabIndex = 126
         '
         'txtHeader1
         '
-        Me.txtHeader1.Location = New System.Drawing.Point(160, 22)
+        Me.txtHeader1.Location = New System.Drawing.Point(137, 12)
+        Me.txtHeader1.MaxLength = 25
         Me.txtHeader1.Multiline = True
         Me.txtHeader1.Name = "txtHeader1"
-        Me.txtHeader1.Size = New System.Drawing.Size(276, 19)
+        Me.txtHeader1.Size = New System.Drawing.Size(390, 19)
         Me.txtHeader1.TabIndex = 125
         '
         'Label3
         '
         Me.Label3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Label3.Location = New System.Drawing.Point(14, 21)
+        Me.Label3.Location = New System.Drawing.Point(6, 12)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(125, 20)
         Me.Label3.TabIndex = 120
@@ -189,7 +194,7 @@ Partial Class PengaturanUmumFrm
         'Label6
         '
         Me.Label6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Label6.Location = New System.Drawing.Point(14, 46)
+        Me.Label6.Location = New System.Drawing.Point(6, 37)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(125, 20)
         Me.Label6.TabIndex = 124
@@ -203,7 +208,7 @@ Partial Class PengaturanUmumFrm
         Me.tabPrinter.Location = New System.Drawing.Point(4, 22)
         Me.tabPrinter.Name = "tabPrinter"
         Me.tabPrinter.Padding = New System.Windows.Forms.Padding(3)
-        Me.tabPrinter.Size = New System.Drawing.Size(453, 263)
+        Me.tabPrinter.Size = New System.Drawing.Size(533, 263)
         Me.tabPrinter.TabIndex = 1
         Me.tabPrinter.Text = "Printer"
         Me.tabPrinter.UseVisualStyleBackColor = True
@@ -211,7 +216,7 @@ Partial Class PengaturanUmumFrm
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(40, 61)
+        Me.Label5.Location = New System.Drawing.Point(6, 30)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(68, 13)
         Me.Label5.TabIndex = 1
@@ -220,9 +225,9 @@ Partial Class PengaturanUmumFrm
         'ComboBox1
         '
         Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(147, 58)
+        Me.ComboBox1.Location = New System.Drawing.Point(80, 27)
         Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(265, 21)
+        Me.ComboBox1.Size = New System.Drawing.Size(368, 21)
         Me.ComboBox1.TabIndex = 0
         '
         'Panel1
@@ -235,14 +240,14 @@ Partial Class PengaturanUmumFrm
         Me.Panel1.Controls.Add(Me.btnSelesai)
         Me.Panel1.Location = New System.Drawing.Point(4, 333)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(461, 35)
+        Me.Panel1.Size = New System.Drawing.Size(540, 35)
         Me.Panel1.TabIndex = 119
         '
         'btnSimpan
         '
         Me.btnSimpan.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnSimpan.Location = New System.Drawing.Point(296, 4)
+        Me.btnSimpan.Location = New System.Drawing.Point(375, 4)
         Me.btnSimpan.Name = "btnSimpan"
         Me.btnSimpan.Size = New System.Drawing.Size(75, 23)
         Me.btnSimpan.TabIndex = 120
@@ -253,7 +258,7 @@ Partial Class PengaturanUmumFrm
         '
         Me.btnSelesai.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnSelesai.Location = New System.Drawing.Point(377, 4)
+        Me.btnSelesai.Location = New System.Drawing.Point(456, 4)
         Me.btnSelesai.Name = "btnSelesai"
         Me.btnSelesai.Size = New System.Drawing.Size(75, 23)
         Me.btnSelesai.TabIndex = 121
@@ -278,20 +283,24 @@ Partial Class PengaturanUmumFrm
         Me.pnlHeader.BackColor = System.Drawing.Color.FromArgb(CType(CType(13, Byte), Integer), CType(CType(59, Byte), Integer), CType(CType(102, Byte), Integer))
         Me.pnlHeader.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.pnlHeader.Controls.Add(Me.lblHeader)
-        Me.pnlHeader.Location = New System.Drawing.Point(4, 2)
+        Me.pnlHeader.Location = New System.Drawing.Point(3, 3)
         Me.pnlHeader.Name = "pnlHeader"
-        Me.pnlHeader.Size = New System.Drawing.Size(461, 35)
+        Me.pnlHeader.Size = New System.Drawing.Size(540, 35)
         Me.pnlHeader.TabIndex = 118
         '
         'PengaturanUmumFrm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(468, 371)
+        Me.BackColor = System.Drawing.Color.White
+        Me.ClientSize = New System.Drawing.Size(547, 371)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.pnlHeader)
         Me.Controls.Add(Me.tabSetting)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
         Me.Name = "PengaturanUmumFrm"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Retailer Pintar"

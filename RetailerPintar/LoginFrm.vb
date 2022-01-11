@@ -10,7 +10,6 @@ Public Class LoginFrm
         Call login()
     End Sub
 
-
     Private Sub txtUsername_GotFocus(sender As Object, e As EventArgs) Handles txtUsername.GotFocus
         txtUsername.BackColor = Color.LightYellow
     End Sub

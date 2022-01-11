@@ -127,6 +127,12 @@
     <Compile Include="Ambil\AmbilProdukPenyesuaianStokFrm.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Bantuan\BantuanFrm.Designer.vb">
+      <DependentUpon>BantuanFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Bantuan\BantuanFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="HomeFrm.Designer.vb">
       <DependentUpon>HomeFrm.vb</DependentUpon>
     </Compile>
@@ -436,6 +442,9 @@
     <EmbeddedResource Include="Ambil\AmbilSupplierFrm.resx">
       <DependentUpon>AmbilSupplierFrm.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Bantuan\BantuanFrm.resx">
+      <DependentUpon>BantuanFrm.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="HomeFrm.resx">
       <DependentUpon>HomeFrm.vb</DependentUpon>
     </EmbeddedResource>
@@ -597,9 +606,7 @@
   <ItemGroup>
     <Content Include="logo retailerpintar.ico" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Bantuan\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <COMReference Include="Office">
       <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>

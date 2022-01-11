@@ -31,7 +31,6 @@ Partial Class EditUserFrm
         Me.btnSelesai = New System.Windows.Forms.Button()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.rdKasir = New System.Windows.Forms.RadioButton()
-        Me.rdUser = New System.Windows.Forms.RadioButton()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.rdAdmin = New System.Windows.Forms.RadioButton()
         Me.rdSuperAdmin = New System.Windows.Forms.RadioButton()
@@ -44,11 +43,11 @@ Partial Class EditUserFrm
         'txtPassword
         '
         Me.txtPassword.Location = New System.Drawing.Point(134, 70)
-        Me.txtPassword.MaxLength = 25
+        Me.txtPassword.MaxLength = 8
         Me.txtPassword.Name = "txtPassword"
         Me.txtPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(9679)
-        Me.txtPassword.Size = New System.Drawing.Size(290, 20)
-        Me.txtPassword.TabIndex = 36
+        Me.txtPassword.Size = New System.Drawing.Size(204, 20)
+        Me.txtPassword.TabIndex = 2
         '
         'pnlHeader
         '
@@ -93,7 +92,7 @@ Partial Class EditUserFrm
         Me.btnSimpan.Location = New System.Drawing.Point(259, 5)
         Me.btnSimpan.Name = "btnSimpan"
         Me.btnSimpan.Size = New System.Drawing.Size(75, 23)
-        Me.btnSimpan.TabIndex = 5
+        Me.btnSimpan.TabIndex = 6
         Me.btnSimpan.Text = "F11 Simpan"
         Me.btnSimpan.UseVisualStyleBackColor = True
         '
@@ -104,7 +103,7 @@ Partial Class EditUserFrm
         Me.btnSelesai.Location = New System.Drawing.Point(340, 5)
         Me.btnSelesai.Name = "btnSelesai"
         Me.btnSelesai.Size = New System.Drawing.Size(75, 23)
-        Me.btnSelesai.TabIndex = 6
+        Me.btnSelesai.TabIndex = 7
         Me.btnSelesai.Text = "Esc Selesai"
         Me.btnSelesai.UseVisualStyleBackColor = True
         '
@@ -121,24 +120,13 @@ Partial Class EditUserFrm
         'rdKasir
         '
         Me.rdKasir.AutoSize = True
-        Me.rdKasir.Location = New System.Drawing.Point(331, 102)
+        Me.rdKasir.Location = New System.Drawing.Point(278, 102)
         Me.rdKasir.Name = "rdKasir"
         Me.rdKasir.Size = New System.Drawing.Size(48, 17)
-        Me.rdKasir.TabIndex = 35
+        Me.rdKasir.TabIndex = 5
         Me.rdKasir.TabStop = True
         Me.rdKasir.Text = "Kasir"
         Me.rdKasir.UseVisualStyleBackColor = True
-        '
-        'rdUser
-        '
-        Me.rdUser.AutoSize = True
-        Me.rdUser.Location = New System.Drawing.Point(278, 102)
-        Me.rdUser.Name = "rdUser"
-        Me.rdUser.Size = New System.Drawing.Size(47, 17)
-        Me.rdUser.TabIndex = 34
-        Me.rdUser.TabStop = True
-        Me.rdUser.Text = "User"
-        Me.rdUser.UseVisualStyleBackColor = True
         '
         'Label1
         '
@@ -156,7 +144,7 @@ Partial Class EditUserFrm
         Me.rdAdmin.Location = New System.Drawing.Point(218, 101)
         Me.rdAdmin.Name = "rdAdmin"
         Me.rdAdmin.Size = New System.Drawing.Size(54, 17)
-        Me.rdAdmin.TabIndex = 31
+        Me.rdAdmin.TabIndex = 4
         Me.rdAdmin.TabStop = True
         Me.rdAdmin.Text = "Admin"
         Me.rdAdmin.UseVisualStyleBackColor = True
@@ -166,19 +154,19 @@ Partial Class EditUserFrm
         Me.rdSuperAdmin.AutoSize = True
         Me.rdSuperAdmin.Location = New System.Drawing.Point(134, 101)
         Me.rdSuperAdmin.Name = "rdSuperAdmin"
-        Me.rdSuperAdmin.Size = New System.Drawing.Size(85, 17)
-        Me.rdSuperAdmin.TabIndex = 29
+        Me.rdSuperAdmin.Size = New System.Drawing.Size(81, 17)
+        Me.rdSuperAdmin.TabIndex = 3
         Me.rdSuperAdmin.TabStop = True
-        Me.rdSuperAdmin.Text = "Super Admin"
+        Me.rdSuperAdmin.Text = "Superadmin"
         Me.rdSuperAdmin.UseVisualStyleBackColor = True
         '
         'txtUsername
         '
         Me.txtUsername.Location = New System.Drawing.Point(134, 44)
-        Me.txtUsername.MaxLength = 25
+        Me.txtUsername.MaxLength = 8
         Me.txtUsername.Name = "txtUsername"
-        Me.txtUsername.Size = New System.Drawing.Size(290, 20)
-        Me.txtUsername.TabIndex = 27
+        Me.txtUsername.Size = New System.Drawing.Size(204, 20)
+        Me.txtUsername.TabIndex = 1
         '
         'Label2
         '
@@ -187,7 +175,7 @@ Partial Class EditUserFrm
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(125, 20)
         Me.Label2.TabIndex = 32
-        Me.Label2.Text = "Nama / Username"
+        Me.Label2.Text = "Username"
         Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'EditUserFrm
@@ -201,13 +189,15 @@ Partial Class EditUserFrm
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.rdKasir)
-        Me.Controls.Add(Me.rdUser)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.rdAdmin)
         Me.Controls.Add(Me.rdSuperAdmin)
         Me.Controls.Add(Me.txtUsername)
         Me.Controls.Add(Me.Label2)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
         Me.Name = "EditUserFrm"
         Me.Text = "Retailer Pintar"
         Me.pnlHeader.ResumeLayout(False)
@@ -226,7 +216,6 @@ Partial Class EditUserFrm
     Private WithEvents btnSelesai As Button
     Friend WithEvents Label3 As Label
     Friend WithEvents rdKasir As RadioButton
-    Friend WithEvents rdUser As RadioButton
     Friend WithEvents Label1 As Label
     Friend WithEvents rdAdmin As RadioButton
     Friend WithEvents rdSuperAdmin As RadioButton

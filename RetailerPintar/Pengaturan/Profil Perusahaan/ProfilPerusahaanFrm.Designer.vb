@@ -46,7 +46,7 @@ Partial Class ProfilPerusahaanFrm
         'Label5
         '
         Me.Label5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Label5.Location = New System.Drawing.Point(4, 197)
+        Me.Label5.Location = New System.Drawing.Point(3, 198)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(125, 20)
         Me.Label5.TabIndex = 111
@@ -56,7 +56,7 @@ Partial Class ProfilPerusahaanFrm
         'Label4
         '
         Me.Label4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Label4.Location = New System.Drawing.Point(4, 223)
+        Me.Label4.Location = New System.Drawing.Point(3, 224)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(125, 20)
         Me.Label4.TabIndex = 110
@@ -65,18 +65,19 @@ Partial Class ProfilPerusahaanFrm
         '
         'txtAlamatToko
         '
-        Me.txtAlamatToko.Location = New System.Drawing.Point(135, 95)
+        Me.txtAlamatToko.BackColor = System.Drawing.Color.White
+        Me.txtAlamatToko.Location = New System.Drawing.Point(134, 96)
         Me.txtAlamatToko.MaxLength = 50
         Me.txtAlamatToko.Multiline = True
         Me.txtAlamatToko.Name = "txtAlamatToko"
         Me.txtAlamatToko.ReadOnly = True
         Me.txtAlamatToko.Size = New System.Drawing.Size(330, 70)
-        Me.txtAlamatToko.TabIndex = 102
+        Me.txtAlamatToko.TabIndex = 3
         '
         'Label1
         '
         Me.Label1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Label1.Location = New System.Drawing.Point(4, 95)
+        Me.Label1.Location = New System.Drawing.Point(3, 96)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(125, 20)
         Me.Label1.TabIndex = 109
@@ -86,7 +87,7 @@ Partial Class ProfilPerusahaanFrm
         'Label3
         '
         Me.Label3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Label3.Location = New System.Drawing.Point(4, 43)
+        Me.Label3.Location = New System.Drawing.Point(3, 44)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(125, 20)
         Me.Label3.TabIndex = 108
@@ -95,28 +96,30 @@ Partial Class ProfilPerusahaanFrm
         '
         'txtIdToko
         '
-        Me.txtIdToko.Location = New System.Drawing.Point(135, 43)
+        Me.txtIdToko.BackColor = System.Drawing.Color.White
+        Me.txtIdToko.Location = New System.Drawing.Point(134, 44)
         Me.txtIdToko.MaxLength = 10
         Me.txtIdToko.Name = "txtIdToko"
         Me.txtIdToko.ReadOnly = True
         Me.txtIdToko.Size = New System.Drawing.Size(119, 20)
-        Me.txtIdToko.TabIndex = 100
+        Me.txtIdToko.TabIndex = 1
         '
         'txtTeleponToko
         '
-        Me.txtTeleponToko.Location = New System.Drawing.Point(135, 223)
+        Me.txtTeleponToko.BackColor = System.Drawing.Color.White
+        Me.txtTeleponToko.Location = New System.Drawing.Point(134, 224)
         Me.txtTeleponToko.MaxLength = 12
         Me.txtTeleponToko.Name = "txtTeleponToko"
         Me.txtTeleponToko.ReadOnly = True
-        Me.txtTeleponToko.Size = New System.Drawing.Size(290, 20)
-        Me.txtTeleponToko.TabIndex = 105
+        Me.txtTeleponToko.Size = New System.Drawing.Size(178, 20)
+        Me.txtTeleponToko.TabIndex = 6
         '
         'lblHeader
         '
         Me.lblHeader.AutoSize = True
         Me.lblHeader.Font = New System.Drawing.Font("Tahoma", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblHeader.ForeColor = System.Drawing.Color.White
-        Me.lblHeader.Location = New System.Drawing.Point(3, 7)
+        Me.lblHeader.Location = New System.Drawing.Point(2, 8)
         Me.lblHeader.Name = "lblHeader"
         Me.lblHeader.Size = New System.Drawing.Size(128, 17)
         Me.lblHeader.TabIndex = 0
@@ -126,26 +129,27 @@ Partial Class ProfilPerusahaanFrm
         '
         Me.btnSelesai.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnSelesai.Location = New System.Drawing.Point(380, 5)
+        Me.btnSelesai.Location = New System.Drawing.Point(379, 6)
         Me.btnSelesai.Name = "btnSelesai"
         Me.btnSelesai.Size = New System.Drawing.Size(75, 23)
-        Me.btnSelesai.TabIndex = 8
+        Me.btnSelesai.TabIndex = 7
         Me.btnSelesai.Text = "Esc Selesai"
         Me.btnSelesai.UseVisualStyleBackColor = True
         '
         'txtKotaToko
         '
-        Me.txtKotaToko.Location = New System.Drawing.Point(135, 171)
+        Me.txtKotaToko.BackColor = System.Drawing.Color.White
+        Me.txtKotaToko.Location = New System.Drawing.Point(134, 172)
         Me.txtKotaToko.MaxLength = 25
         Me.txtKotaToko.Name = "txtKotaToko"
         Me.txtKotaToko.ReadOnly = True
         Me.txtKotaToko.Size = New System.Drawing.Size(330, 20)
-        Me.txtKotaToko.TabIndex = 103
+        Me.txtKotaToko.TabIndex = 4
         '
         'Label2
         '
         Me.Label2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Label2.Location = New System.Drawing.Point(4, 171)
+        Me.Label2.Location = New System.Drawing.Point(3, 172)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(125, 20)
         Me.Label2.TabIndex = 113
@@ -154,17 +158,18 @@ Partial Class ProfilPerusahaanFrm
         '
         'txtNamaToko
         '
-        Me.txtNamaToko.Location = New System.Drawing.Point(135, 69)
+        Me.txtNamaToko.BackColor = System.Drawing.Color.White
+        Me.txtNamaToko.Location = New System.Drawing.Point(134, 70)
         Me.txtNamaToko.MaxLength = 25
         Me.txtNamaToko.Name = "txtNamaToko"
         Me.txtNamaToko.ReadOnly = True
         Me.txtNamaToko.Size = New System.Drawing.Size(330, 20)
-        Me.txtNamaToko.TabIndex = 101
+        Me.txtNamaToko.TabIndex = 2
         '
         'Label6
         '
         Me.Label6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Label6.Location = New System.Drawing.Point(4, 69)
+        Me.Label6.Location = New System.Drawing.Point(3, 70)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(125, 20)
         Me.Label6.TabIndex = 112
@@ -178,7 +183,7 @@ Partial Class ProfilPerusahaanFrm
         Me.pnlHeader.BackColor = System.Drawing.Color.FromArgb(CType(CType(13, Byte), Integer), CType(CType(59, Byte), Integer), CType(CType(102, Byte), Integer))
         Me.pnlHeader.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.pnlHeader.Controls.Add(Me.lblHeader)
-        Me.pnlHeader.Location = New System.Drawing.Point(4, 2)
+        Me.pnlHeader.Location = New System.Drawing.Point(3, 3)
         Me.pnlHeader.Name = "pnlHeader"
         Me.pnlHeader.Size = New System.Drawing.Size(461, 35)
         Me.pnlHeader.TabIndex = 106
@@ -190,25 +195,27 @@ Partial Class ProfilPerusahaanFrm
         Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(13, Byte), Integer), CType(CType(59, Byte), Integer), CType(CType(102, Byte), Integer))
         Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Panel1.Controls.Add(Me.btnSelesai)
-        Me.Panel1.Location = New System.Drawing.Point(4, 253)
+        Me.Panel1.Location = New System.Drawing.Point(3, 254)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(461, 35)
         Me.Panel1.TabIndex = 107
         '
         'txtTanggalBuka
         '
-        Me.txtTanggalBuka.Location = New System.Drawing.Point(135, 197)
+        Me.txtTanggalBuka.BackColor = System.Drawing.Color.White
+        Me.txtTanggalBuka.Location = New System.Drawing.Point(134, 198)
         Me.txtTanggalBuka.MaxLength = 10
         Me.txtTanggalBuka.Name = "txtTanggalBuka"
         Me.txtTanggalBuka.ReadOnly = True
-        Me.txtTanggalBuka.Size = New System.Drawing.Size(119, 20)
-        Me.txtTanggalBuka.TabIndex = 114
+        Me.txtTanggalBuka.Size = New System.Drawing.Size(178, 20)
+        Me.txtTanggalBuka.TabIndex = 5
         '
         'ProfilPerusahaanFrm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(468, 291)
+        Me.BackColor = System.Drawing.Color.White
+        Me.ClientSize = New System.Drawing.Size(468, 292)
         Me.Controls.Add(Me.txtTanggalBuka)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label4)
@@ -223,7 +230,10 @@ Partial Class ProfilPerusahaanFrm
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.pnlHeader)
         Me.Controls.Add(Me.Panel1)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
         Me.Name = "ProfilPerusahaanFrm"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Retailer Pintar"

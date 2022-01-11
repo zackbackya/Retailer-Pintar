@@ -33,7 +33,6 @@ Partial Class TambahUserFrm
         Me.rdSuperAdmin = New System.Windows.Forms.RadioButton()
         Me.txtUsername = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.rdUser = New System.Windows.Forms.RadioButton()
         Me.rdKasir = New System.Windows.Forms.RadioButton()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -84,7 +83,7 @@ Partial Class TambahUserFrm
         Me.btnSimpan.Location = New System.Drawing.Point(259, 5)
         Me.btnSimpan.Name = "btnSimpan"
         Me.btnSimpan.Size = New System.Drawing.Size(75, 23)
-        Me.btnSimpan.TabIndex = 5
+        Me.btnSimpan.TabIndex = 6
         Me.btnSimpan.Text = "F11 Simpan"
         Me.btnSimpan.UseVisualStyleBackColor = True
         '
@@ -95,7 +94,7 @@ Partial Class TambahUserFrm
         Me.btnSelesai.Location = New System.Drawing.Point(340, 5)
         Me.btnSelesai.Name = "btnSelesai"
         Me.btnSelesai.Size = New System.Drawing.Size(75, 23)
-        Me.btnSelesai.TabIndex = 6
+        Me.btnSelesai.TabIndex = 7
         Me.btnSelesai.Text = "Esc Selesai"
         Me.btnSelesai.UseVisualStyleBackColor = True
         '
@@ -115,7 +114,7 @@ Partial Class TambahUserFrm
         Me.rdAdmin.Location = New System.Drawing.Point(218, 101)
         Me.rdAdmin.Name = "rdAdmin"
         Me.rdAdmin.Size = New System.Drawing.Size(54, 17)
-        Me.rdAdmin.TabIndex = 20
+        Me.rdAdmin.TabIndex = 4
         Me.rdAdmin.TabStop = True
         Me.rdAdmin.Text = "Admin"
         Me.rdAdmin.UseVisualStyleBackColor = True
@@ -125,19 +124,19 @@ Partial Class TambahUserFrm
         Me.rdSuperAdmin.AutoSize = True
         Me.rdSuperAdmin.Location = New System.Drawing.Point(134, 101)
         Me.rdSuperAdmin.Name = "rdSuperAdmin"
-        Me.rdSuperAdmin.Size = New System.Drawing.Size(85, 17)
-        Me.rdSuperAdmin.TabIndex = 18
+        Me.rdSuperAdmin.Size = New System.Drawing.Size(81, 17)
+        Me.rdSuperAdmin.TabIndex = 3
         Me.rdSuperAdmin.TabStop = True
-        Me.rdSuperAdmin.Text = "Super Admin"
+        Me.rdSuperAdmin.Text = "Superadmin"
         Me.rdSuperAdmin.UseVisualStyleBackColor = True
         '
         'txtUsername
         '
         Me.txtUsername.Location = New System.Drawing.Point(134, 44)
-        Me.txtUsername.MaxLength = 25
+        Me.txtUsername.MaxLength = 8
         Me.txtUsername.Name = "txtUsername"
-        Me.txtUsername.Size = New System.Drawing.Size(290, 20)
-        Me.txtUsername.TabIndex = 16
+        Me.txtUsername.Size = New System.Drawing.Size(204, 20)
+        Me.txtUsername.TabIndex = 1
         '
         'Label2
         '
@@ -146,27 +145,16 @@ Partial Class TambahUserFrm
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(125, 20)
         Me.Label2.TabIndex = 21
-        Me.Label2.Text = "Nama / Username"
+        Me.Label2.Text = "Username"
         Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'rdUser
-        '
-        Me.rdUser.AutoSize = True
-        Me.rdUser.Location = New System.Drawing.Point(278, 102)
-        Me.rdUser.Name = "rdUser"
-        Me.rdUser.Size = New System.Drawing.Size(47, 17)
-        Me.rdUser.TabIndex = 23
-        Me.rdUser.TabStop = True
-        Me.rdUser.Text = "User"
-        Me.rdUser.UseVisualStyleBackColor = True
         '
         'rdKasir
         '
         Me.rdKasir.AutoSize = True
-        Me.rdKasir.Location = New System.Drawing.Point(331, 102)
+        Me.rdKasir.Location = New System.Drawing.Point(278, 102)
         Me.rdKasir.Name = "rdKasir"
         Me.rdKasir.Size = New System.Drawing.Size(48, 17)
-        Me.rdKasir.TabIndex = 24
+        Me.rdKasir.TabIndex = 5
         Me.rdKasir.TabStop = True
         Me.rdKasir.Text = "Kasir"
         Me.rdKasir.UseVisualStyleBackColor = True
@@ -174,11 +162,11 @@ Partial Class TambahUserFrm
         'TextBox1
         '
         Me.TextBox1.Location = New System.Drawing.Point(134, 70)
-        Me.TextBox1.MaxLength = 25
+        Me.TextBox1.MaxLength = 8
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.PasswordChar = Global.Microsoft.VisualBasic.ChrW(9679)
-        Me.TextBox1.Size = New System.Drawing.Size(290, 20)
-        Me.TextBox1.TabIndex = 25
+        Me.TextBox1.Size = New System.Drawing.Size(204, 20)
+        Me.TextBox1.TabIndex = 2
         '
         'Label3
         '
@@ -194,11 +182,11 @@ Partial Class TambahUserFrm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(427, 171)
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.rdKasir)
-        Me.Controls.Add(Me.rdUser)
         Me.Controls.Add(Me.pnlHeader)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.Label1)
@@ -206,7 +194,10 @@ Partial Class TambahUserFrm
         Me.Controls.Add(Me.rdSuperAdmin)
         Me.Controls.Add(Me.txtUsername)
         Me.Controls.Add(Me.Label2)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
         Me.Name = "TambahUserFrm"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Retailer Pintar"
@@ -228,7 +219,6 @@ Partial Class TambahUserFrm
     Friend WithEvents rdSuperAdmin As RadioButton
     Friend WithEvents txtUsername As TextBox
     Friend WithEvents Label2 As Label
-    Friend WithEvents rdUser As RadioButton
     Friend WithEvents rdKasir As RadioButton
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents Label3 As Label

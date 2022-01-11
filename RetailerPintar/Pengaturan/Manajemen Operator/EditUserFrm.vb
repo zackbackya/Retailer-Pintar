@@ -16,8 +16,6 @@
                 role = "SUPERUSER"
             ElseIf rdKasir.Checked = True Then
                 role = "KASIR"
-            ElseIf rdUser.Checked = True Then
-                role = "USER"
             End If
 
             Dim userLama As String = ManajemenUserFrm.username
@@ -30,9 +28,8 @@
             Me.Close()
 
         Catch ex As Exception
-            MessageBox.Show(ex.ToString)
-            'MessageBox.Show("Update data gagal, Silahkan cek kembali data Anda", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-
+            'MessageBox.Show(ex.ToString)
+            MessageBox.Show("Update data gagal, Silahkan cek kembali data Anda", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -47,8 +44,6 @@
             rdSuperAdmin.Checked = True
         ElseIf ManajemenUserFrm.role = "KASIR" Then
             rdKasir.Checked = True
-        Else
-            rdUser.Checked = True
         End If
 
         txtPassword.Focus()
@@ -66,10 +61,23 @@
             Me.Dispose()
         ElseIf e.KeyCode = Keys.F11 Then
             Call editUser()
-
         End If
 
     End Sub
 
+    Private Sub txtUsername_GotFocus(sender As Object, e As EventArgs) Handles txtUsername.GotFocus
+        txtUsername.BackColor = Color.LightYellow
+    End Sub
 
+    Private Sub txtUsername_LostFocus(sender As Object, e As EventArgs) Handles txtUsername.LostFocus
+        txtUsername.BackColor = Color.White
+    End Sub
+
+    Private Sub txtPassword_GotFocus(sender As Object, e As EventArgs) Handles txtPassword.GotFocus
+        txtPassword.BackColor = Color.LightYellow
+    End Sub
+
+    Private Sub txtPassword_LostFocus(sender As Object, e As EventArgs) Handles txtPassword.LostFocus
+        txtPassword.BackColor = Color.White
+    End Sub
 End Class
