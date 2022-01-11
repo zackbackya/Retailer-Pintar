@@ -100,7 +100,7 @@ Public Class UploadProdukFrm
 
 
 
-                    str = " insert into ms_produk (id_produk,barcode,nama_produk,nama_pendek,aktif,id_supplier,id_golongan,lokasi,harga_beli,harga_jual_1,stok)" +
+                    str = " insert into ms_produk (id_produk,barcode,nama_produk,nama_pendek,aktif,id_supplier,id_golongan,lokasi,harga_beli,harga_jual,stok)" +
               "Values ('" & DGV.Rows(baris).Cells(0).Value & "','" & DGV.Rows(baris).Cells(1).Value & "','" & DGV.Rows(baris).Cells(2).Value & "'," +
                      "'" & DGV.Rows(baris).Cells(3).Value & "','F','" & DGV.Rows(baris).Cells(4).Value & "','" & DGV.Rows(baris).Cells(5).Value & "'," +
                     "'" & DGV.Rows(baris).Cells(6).Value & "','" & DGV.Rows(baris).Cells(7).Value & "','" & DGV.Rows(baris).Cells(8).Value & "','" & DGV.Rows(baris).Cells(9).Value & "')"
