@@ -28,11 +28,11 @@ Partial Class PenjualanProdukFrm
         Me.btnPrint = New System.Windows.Forms.Button()
         Me.btnSelesai = New System.Windows.Forms.Button()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.cbLaporan = New System.Windows.Forms.ComboBox()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.btTampil = New System.Windows.Forms.Button()
-        Me.DateTimePicker2 = New System.Windows.Forms.DateTimePicker()
-        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
+        Me.dtTanggalAkhir = New System.Windows.Forms.DateTimePicker()
+        Me.dtTanggalAwal = New System.Windows.Forms.DateTimePicker()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
@@ -95,13 +95,13 @@ Partial Class PenjualanProdukFrm
         Me.Label4.TabIndex = 156
         Me.Label4.Text = "Jenis Laporan"
         '
-        'ComboBox1
+        'cbLaporan
         '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(108, 48)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(399, 21)
-        Me.ComboBox1.TabIndex = 155
+        Me.cbLaporan.FormattingEnabled = True
+        Me.cbLaporan.Location = New System.Drawing.Point(108, 48)
+        Me.cbLaporan.Name = "cbLaporan"
+        Me.cbLaporan.Size = New System.Drawing.Size(399, 21)
+        Me.cbLaporan.TabIndex = 155
         '
         'DataGridView1
         '
@@ -122,19 +122,19 @@ Partial Class PenjualanProdukFrm
         Me.btTampil.Text = "F9 Tampil"
         Me.btTampil.UseVisualStyleBackColor = True
         '
-        'DateTimePicker2
+        'dtTanggalAkhir
         '
-        Me.DateTimePicker2.Location = New System.Drawing.Point(275, 80)
-        Me.DateTimePicker2.Name = "DateTimePicker2"
-        Me.DateTimePicker2.Size = New System.Drawing.Size(138, 20)
-        Me.DateTimePicker2.TabIndex = 153
+        Me.dtTanggalAkhir.Location = New System.Drawing.Point(275, 80)
+        Me.dtTanggalAkhir.Name = "dtTanggalAkhir"
+        Me.dtTanggalAkhir.Size = New System.Drawing.Size(138, 20)
+        Me.dtTanggalAkhir.TabIndex = 153
         '
-        'DateTimePicker1
+        'dtTanggalAwal
         '
-        Me.DateTimePicker1.Location = New System.Drawing.Point(73, 80)
-        Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(138, 20)
-        Me.DateTimePicker1.TabIndex = 152
+        Me.dtTanggalAwal.Location = New System.Drawing.Point(73, 80)
+        Me.dtTanggalAwal.Name = "dtTanggalAwal"
+        Me.dtTanggalAwal.Size = New System.Drawing.Size(138, 20)
+        Me.dtTanggalAwal.TabIndex = 152
         '
         'Label2
         '
@@ -174,11 +174,11 @@ Partial Class PenjualanProdukFrm
         Me.ClientSize = New System.Drawing.Size(519, 618)
         Me.Controls.Add(Me.pnlHeader)
         Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.ComboBox1)
+        Me.Controls.Add(Me.cbLaporan)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.btTampil)
-        Me.Controls.Add(Me.DateTimePicker2)
-        Me.Controls.Add(Me.DateTimePicker1)
+        Me.Controls.Add(Me.dtTanggalAkhir)
+        Me.Controls.Add(Me.dtTanggalAwal)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Panel1)
@@ -200,11 +200,11 @@ Partial Class PenjualanProdukFrm
     Private WithEvents btnPrint As Button
     Private WithEvents btnSelesai As Button
     Friend WithEvents Label4 As Label
-    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents cbLaporan As ComboBox
     Friend WithEvents DataGridView1 As DataGridView
     Private WithEvents btTampil As Button
-    Friend WithEvents DateTimePicker2 As DateTimePicker
-    Friend WithEvents DateTimePicker1 As DateTimePicker
+    Friend WithEvents dtTanggalAkhir As DateTimePicker
+    Friend WithEvents dtTanggalAwal As DateTimePicker
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
     Private WithEvents Panel1 As Panel

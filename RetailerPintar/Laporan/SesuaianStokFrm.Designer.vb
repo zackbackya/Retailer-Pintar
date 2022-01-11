@@ -29,8 +29,8 @@ Partial Class SesuaianStokFrm
         Me.btnSelesai = New System.Windows.Forms.Button()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.btTampil = New System.Windows.Forms.Button()
-        Me.DateTimePicker2 = New System.Windows.Forms.DateTimePicker()
-        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
+        Me.dtTanggalAkhir = New System.Windows.Forms.DateTimePicker()
+        Me.dtTanggalAwal = New System.Windows.Forms.DateTimePicker()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
@@ -103,19 +103,19 @@ Partial Class SesuaianStokFrm
         Me.btTampil.Text = "F9 Tampil"
         Me.btTampil.UseVisualStyleBackColor = True
         '
-        'DateTimePicker2
+        'dtTanggalAkhir
         '
-        Me.DateTimePicker2.Location = New System.Drawing.Point(271, 50)
-        Me.DateTimePicker2.Name = "DateTimePicker2"
-        Me.DateTimePicker2.Size = New System.Drawing.Size(138, 20)
-        Me.DateTimePicker2.TabIndex = 134
+        Me.dtTanggalAkhir.Location = New System.Drawing.Point(271, 50)
+        Me.dtTanggalAkhir.Name = "dtTanggalAkhir"
+        Me.dtTanggalAkhir.Size = New System.Drawing.Size(138, 20)
+        Me.dtTanggalAkhir.TabIndex = 134
         '
-        'DateTimePicker1
+        'dtTanggalAwal
         '
-        Me.DateTimePicker1.Location = New System.Drawing.Point(69, 50)
-        Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(138, 20)
-        Me.DateTimePicker1.TabIndex = 133
+        Me.dtTanggalAwal.Location = New System.Drawing.Point(69, 50)
+        Me.dtTanggalAwal.Name = "dtTanggalAwal"
+        Me.dtTanggalAwal.Size = New System.Drawing.Size(138, 20)
+        Me.dtTanggalAwal.TabIndex = 133
         '
         'Label2
         '
@@ -156,8 +156,8 @@ Partial Class SesuaianStokFrm
         Me.Controls.Add(Me.pnlHeader)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.btTampil)
-        Me.Controls.Add(Me.DateTimePicker2)
-        Me.Controls.Add(Me.DateTimePicker1)
+        Me.Controls.Add(Me.dtTanggalAkhir)
+        Me.Controls.Add(Me.dtTanggalAwal)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Panel1)
@@ -180,8 +180,8 @@ Partial Class SesuaianStokFrm
     Private WithEvents btnSelesai As Button
     Friend WithEvents DataGridView1 As DataGridView
     Private WithEvents btTampil As Button
-    Friend WithEvents DateTimePicker2 As DateTimePicker
-    Friend WithEvents DateTimePicker1 As DateTimePicker
+    Friend WithEvents dtTanggalAkhir As DateTimePicker
+    Friend WithEvents dtTanggalAwal As DateTimePicker
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
     Private WithEvents Panel1 As Panel

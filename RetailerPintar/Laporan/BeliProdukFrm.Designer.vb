@@ -32,9 +32,9 @@ Partial Class BeliProdukFrm
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
-        Me.DateTimePicker2 = New System.Windows.Forms.DateTimePicker()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.dtTanggalAwal = New System.Windows.Forms.DateTimePicker()
+        Me.dtTanggalAkhir = New System.Windows.Forms.DateTimePicker()
+        Me.cbLaporan = New System.Windows.Forms.ComboBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.pnlHeader.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -136,27 +136,27 @@ Partial Class BeliProdukFrm
         Me.Label2.TabIndex = 140
         Me.Label2.Text = "s.d"
         '
-        'DateTimePicker1
+        'dtTanggalAwal
         '
-        Me.DateTimePicker1.Location = New System.Drawing.Point(73, 80)
-        Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(138, 20)
-        Me.DateTimePicker1.TabIndex = 141
+        Me.dtTanggalAwal.Location = New System.Drawing.Point(73, 80)
+        Me.dtTanggalAwal.Name = "dtTanggalAwal"
+        Me.dtTanggalAwal.Size = New System.Drawing.Size(138, 20)
+        Me.dtTanggalAwal.TabIndex = 141
         '
-        'DateTimePicker2
+        'dtTanggalAkhir
         '
-        Me.DateTimePicker2.Location = New System.Drawing.Point(275, 80)
-        Me.DateTimePicker2.Name = "DateTimePicker2"
-        Me.DateTimePicker2.Size = New System.Drawing.Size(138, 20)
-        Me.DateTimePicker2.TabIndex = 142
+        Me.dtTanggalAkhir.Location = New System.Drawing.Point(275, 80)
+        Me.dtTanggalAkhir.Name = "dtTanggalAkhir"
+        Me.dtTanggalAkhir.Size = New System.Drawing.Size(138, 20)
+        Me.dtTanggalAkhir.TabIndex = 142
         '
-        'ComboBox1
+        'cbLaporan
         '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(108, 48)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(399, 21)
-        Me.ComboBox1.TabIndex = 145
+        Me.cbLaporan.FormattingEnabled = True
+        Me.cbLaporan.Location = New System.Drawing.Point(108, 48)
+        Me.cbLaporan.Name = "cbLaporan"
+        Me.cbLaporan.Size = New System.Drawing.Size(399, 21)
+        Me.cbLaporan.TabIndex = 145
         '
         'Label4
         '
@@ -173,12 +173,12 @@ Partial Class BeliProdukFrm
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(519, 618)
         Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.ComboBox1)
+        Me.Controls.Add(Me.cbLaporan)
         Me.Controls.Add(Me.pnlHeader)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.btTampil)
-        Me.Controls.Add(Me.DateTimePicker2)
-        Me.Controls.Add(Me.DateTimePicker1)
+        Me.Controls.Add(Me.dtTanggalAkhir)
+        Me.Controls.Add(Me.dtTanggalAwal)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Panel1)
@@ -205,8 +205,8 @@ Partial Class BeliProdukFrm
     Private WithEvents Panel1 As Panel
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
-    Friend WithEvents DateTimePicker1 As DateTimePicker
-    Friend WithEvents DateTimePicker2 As DateTimePicker
-    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents dtTanggalAwal As DateTimePicker
+    Friend WithEvents dtTanggalAkhir As DateTimePicker
+    Friend WithEvents cbLaporan As ComboBox
     Friend WithEvents Label4 As Label
 End Class
