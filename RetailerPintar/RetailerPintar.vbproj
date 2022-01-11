@@ -133,10 +133,10 @@
     <Compile Include="HomeFrm.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Laporan\Pembelian\BeliProdukFrm.Designer.vb">
-      <DependentUpon>BeliProdukFrm.vb</DependentUpon>
+    <Compile Include="Laporan\StokProdukFrm.Designer.vb">
+      <DependentUpon>StokProdukFrm.vb</DependentUpon>
     </Compile>
-    <Compile Include="Laporan\Pembelian\BeliProdukFrm.vb">
+    <Compile Include="Laporan\StokProdukFrm.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="LoginFrm.vb">
@@ -403,8 +403,8 @@
     <EmbeddedResource Include="HomeFrm.resx">
       <DependentUpon>HomeFrm.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Laporan\Pembelian\BeliProdukFrm.resx">
-      <DependentUpon>BeliProdukFrm.vb</DependentUpon>
+    <EmbeddedResource Include="Laporan\StokProdukFrm.resx">
+      <DependentUpon>StokProdukFrm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginFrm.resx">
       <DependentUpon>LoginFrm.vb</DependentUpon>
