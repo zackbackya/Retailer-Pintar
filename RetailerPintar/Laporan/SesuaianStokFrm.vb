@@ -19,7 +19,7 @@ Public Class SesuaianStokFrm
 
 
 
-            str = ""
+            str = "select * from tx_penyesuaian_stok"
             da = New MySqlDataAdapter(str, conn)
             ds = New DataSet
             da.Fill(ds)

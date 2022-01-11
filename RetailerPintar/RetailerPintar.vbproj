@@ -133,6 +133,36 @@
     <Compile Include="HomeFrm.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Laporan\BeliProdukFrm.Designer.vb">
+      <DependentUpon>BeliProdukFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Laporan\BeliProdukFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Laporan\KartuStokFrm.Designer.vb">
+      <DependentUpon>KartuStokFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Laporan\KartuStokFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Laporan\KeluarBiayaFrm.Designer.vb">
+      <DependentUpon>KeluarBiayaFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Laporan\KeluarBiayaFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Laporan\MasukKeluarFrm.Designer.vb">
+      <DependentUpon>MasukKeluarFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Laporan\MasukKeluarFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Laporan\PenjualanProdukFrm.Designer.vb">
+      <DependentUpon>PenjualanProdukFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Laporan\PenjualanProdukFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Laporan\SesuaianStokFrm.Designer.vb">
       <DependentUpon>SesuaianStokFrm.vb</DependentUpon>
     </Compile>
@@ -408,6 +438,21 @@
     </EmbeddedResource>
     <EmbeddedResource Include="HomeFrm.resx">
       <DependentUpon>HomeFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Laporan\BeliProdukFrm.resx">
+      <DependentUpon>BeliProdukFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Laporan\KartuStokFrm.resx">
+      <DependentUpon>KartuStokFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Laporan\KeluarBiayaFrm.resx">
+      <DependentUpon>KeluarBiayaFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Laporan\MasukKeluarFrm.resx">
+      <DependentUpon>MasukKeluarFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Laporan\PenjualanProdukFrm.resx">
+      <DependentUpon>PenjualanProdukFrm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Laporan\SesuaianStokFrm.resx">
       <DependentUpon>SesuaianStokFrm.vb</DependentUpon>
