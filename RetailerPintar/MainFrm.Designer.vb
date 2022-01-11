@@ -94,6 +94,7 @@ Partial Class MainFrm
         Me.ToolStripStatusLabel4 = New System.Windows.Forms.ToolStripStatusLabel()
         Me.ToolStripStatusLabel7 = New System.Windows.Forms.ToolStripStatusLabel()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.TestToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.menuStrip1.SuspendLayout()
         Me.toolStrip1.SuspendLayout()
         Me.StatusStrip1.SuspendLayout()
@@ -101,7 +102,7 @@ Partial Class MainFrm
         '
         'menuStrip1
         '
-        Me.menuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mnuReferensi, Me.mnuTransaksi, Me.mnuPengeluaran, Me.mnuLaporan, Me.mnuPengaturan, Me.mnuBantuan, Me.mnuKeluar})
+        Me.menuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mnuReferensi, Me.mnuTransaksi, Me.mnuPengeluaran, Me.mnuLaporan, Me.mnuPengaturan, Me.mnuBantuan, Me.mnuKeluar, Me.TestToolStripMenuItem})
         Me.menuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.menuStrip1.Name = "menuStrip1"
         Me.menuStrip1.Size = New System.Drawing.Size(963, 24)
@@ -587,6 +588,12 @@ Partial Class MainFrm
         'Timer1
         '
         '
+        'TestToolStripMenuItem
+        '
+        Me.TestToolStripMenuItem.Name = "TestToolStripMenuItem"
+        Me.TestToolStripMenuItem.Size = New System.Drawing.Size(38, 20)
+        Me.TestToolStripMenuItem.Text = "test"
+        '
         'MainFrm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -682,4 +689,5 @@ Partial Class MainFrm
     Friend WithEvents ToolStripStatusLabel3 As ToolStripStatusLabel
     Friend WithEvents PenyesuaianStokToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents Timer1 As Timer
+    Friend WithEvents TestToolStripMenuItem As ToolStripMenuItem
 End Class
