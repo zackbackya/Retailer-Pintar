@@ -19,7 +19,7 @@ Public Class StokProdukFrm
 
 
 
-            str = ""
+            str = "select * from tx_stok"
             da = New MySqlDataAdapter(str, conn)
             ds = New DataSet
             da.Fill(ds)

@@ -140,4 +140,8 @@ Public Class BeliProdukFrm
     Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbLaporan.SelectedIndexChanged
 
     End Sub
+
+    Private Sub BeliProdukFrm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
 End Class
