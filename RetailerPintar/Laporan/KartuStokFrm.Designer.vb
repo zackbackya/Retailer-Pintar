@@ -34,6 +34,9 @@ Partial Class KartuStokFrm
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.ckbItem = New System.Windows.Forms.CheckBox()
+        Me.btItem = New System.Windows.Forms.Button()
         Me.pnlHeader.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
@@ -87,16 +90,16 @@ Partial Class KartuStokFrm
         'DataGridView1
         '
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(3, 76)
+        Me.DataGridView1.Location = New System.Drawing.Point(3, 104)
         Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(514, 504)
+        Me.DataGridView1.Size = New System.Drawing.Size(514, 458)
         Me.DataGridView1.TabIndex = 135
         '
         'btTampil
         '
         Me.btTampil.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btTampil.Location = New System.Drawing.Point(428, 50)
+        Me.btTampil.Location = New System.Drawing.Point(442, 72)
         Me.btTampil.Name = "btTampil"
         Me.btTampil.Size = New System.Drawing.Size(75, 23)
         Me.btTampil.TabIndex = 129
@@ -105,22 +108,22 @@ Partial Class KartuStokFrm
         '
         'dtTanggalAkhir
         '
-        Me.dtTanggalAkhir.Location = New System.Drawing.Point(271, 50)
+        Me.dtTanggalAkhir.Location = New System.Drawing.Point(263, 75)
         Me.dtTanggalAkhir.Name = "dtTanggalAkhir"
-        Me.dtTanggalAkhir.Size = New System.Drawing.Size(138, 20)
+        Me.dtTanggalAkhir.Size = New System.Drawing.Size(171, 20)
         Me.dtTanggalAkhir.TabIndex = 134
         '
         'dtTanggalAwal
         '
-        Me.dtTanggalAwal.Location = New System.Drawing.Point(69, 50)
+        Me.dtTanggalAwal.Location = New System.Drawing.Point(56, 75)
         Me.dtTanggalAwal.Name = "dtTanggalAwal"
-        Me.dtTanggalAwal.Size = New System.Drawing.Size(138, 20)
+        Me.dtTanggalAwal.Size = New System.Drawing.Size(171, 20)
         Me.dtTanggalAwal.TabIndex = 133
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(229, 56)
+        Me.Label2.Location = New System.Drawing.Point(235, 78)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(21, 13)
         Me.Label2.TabIndex = 132
@@ -129,7 +132,7 @@ Partial Class KartuStokFrm
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(17, 56)
+        Me.Label1.Location = New System.Drawing.Point(5, 78)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(46, 13)
         Me.Label1.TabIndex = 131
@@ -148,11 +151,44 @@ Partial Class KartuStokFrm
         Me.Panel1.Size = New System.Drawing.Size(514, 35)
         Me.Panel1.TabIndex = 130
         '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(5, 48)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(49, 13)
+        Me.Label3.TabIndex = 136
+        Me.Label3.Text = "Pilih Item"
+        '
+        'ckbItem
+        '
+        Me.ckbItem.AutoSize = True
+        Me.ckbItem.Location = New System.Drawing.Point(56, 47)
+        Me.ckbItem.Name = "ckbItem"
+        Me.ckbItem.Size = New System.Drawing.Size(60, 17)
+        Me.ckbItem.TabIndex = 137
+        Me.ckbItem.Text = "All Item"
+        Me.ckbItem.UseVisualStyleBackColor = True
+        '
+        'btItem
+        '
+        Me.btItem.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btItem.Location = New System.Drawing.Point(152, 43)
+        Me.btItem.Name = "btItem"
+        Me.btItem.Size = New System.Drawing.Size(75, 23)
+        Me.btItem.TabIndex = 138
+        Me.btItem.Text = "Pilih Item"
+        Me.btItem.UseVisualStyleBackColor = True
+        '
         'KartuStokFrm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(519, 618)
+        Me.Controls.Add(Me.btItem)
+        Me.Controls.Add(Me.ckbItem)
+        Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.pnlHeader)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.btTampil)
@@ -185,4 +221,7 @@ Partial Class KartuStokFrm
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
     Private WithEvents Panel1 As Panel
+    Friend WithEvents Label3 As Label
+    Friend WithEvents ckbItem As CheckBox
+    Private WithEvents btItem As Button
 End Class

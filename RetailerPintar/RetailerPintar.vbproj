@@ -103,6 +103,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Ambil\AmbilItemLaporan.Designer.vb">
+      <DependentUpon>AmbilItemLaporan.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ambil\AmbilItemLaporan.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Ambil\AmbilProdukPembelianFrm.Designer.vb">
       <DependentUpon>AmbilProdukPembelianFrm.vb</DependentUpon>
     </Compile>
@@ -436,6 +442,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Ambil\AmbilItemLaporan.resx">
+      <DependentUpon>AmbilItemLaporan.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Ambil\AmbilProdukPembelianFrm.resx">
       <DependentUpon>AmbilProdukPembelianFrm.vb</DependentUpon>
     </EmbeddedResource>

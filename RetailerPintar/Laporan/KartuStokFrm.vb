@@ -6,6 +6,7 @@ Imports ClosedXML.Excel
 
 Public Class KartuStokFrm
     Dim Proses As New Process
+
     Private Sub btTampil_Click(sender As Object, e As EventArgs) Handles btTampil.Click
 
         Call tampilData()
@@ -87,6 +88,20 @@ Public Class KartuStokFrm
 
 
     Private Sub KartuStokFrm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
+
+    Private Sub CheckBox1_CheckedChanged(sender As Object, e As EventArgs) Handles ckbItem.CheckedChanged
+        If ckbItem.Checked = True Then
+            btItem.Enabled = False
+        ElseIf ckbItem.Checked = False Then
+            btItem.Enabled = True
+        End If
+    End Sub
+
+    Private Sub btItem_Click(sender As Object, e As EventArgs) Handles btItem.Click
+        AmbilItemLaporan.flag_form = "Kartu"
+        AmbilItemLaporan.Show()
 
     End Sub
 End Class

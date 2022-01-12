@@ -391,3 +391,4 @@ D:\Programming\VB.net\Project\Retailer-Pintar-old\RetailerPintar\bin\Debug\Syste
 D:\Programming\VB.net\Project\Retailer-Pintar-old\RetailerPintar\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 D:\Programming\VB.net\Project\Retailer-Pintar-old\RetailerPintar\bin\Debug\System.Threading.Tasks.Extensions.xml
 D:\Programming\VB.net\Project\Retailer-Pintar-old\RetailerPintar\obj\Debug\RetailerPintar.vbproj.CopyComplete
+D:\Programming\VB.net\Project\Retailer-Pintar-old\RetailerPintar\obj\Debug\RetailerPintar.AmbilItemLaporan.resources
