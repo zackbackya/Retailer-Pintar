@@ -108,7 +108,7 @@ Public Class KartuStokFrm
     End Sub
 
     Private Sub btItem_Click(sender As Object, e As EventArgs) Handles btItem.Click
-        AmbilItemLaporan.flag_form = "Kartu"
+        AmbilItemLaporan.flag_form = "Kartu Stok"
         AmbilItemLaporan.Show()
 
     End Sub

@@ -7,7 +7,7 @@ Public Class AmbilItemLaporan
 
 
     Private Sub AmbilItemLaporan_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        If flag_form = "Produk" Then
+        If flag_form = "Kartu Stok" Then
             lblHeader.Text = "Ambil Data Produk"
             tampilDataProduk()
         ElseIf flag_form = "Penjualan Produk" Then
@@ -64,7 +64,7 @@ Public Class AmbilItemLaporan
     Private Sub btnSimpan_Click(sender As Object, e As EventArgs) Handles btnSimpan.Click
         'MsgBox(ckItem.Item("nama_produk").ToString)
 
-        If flag_form = "Produk" Then
+        If flag_form = "Kartu Stok" Then
 
             KartuStokFrm.ListItems.Clear()
 

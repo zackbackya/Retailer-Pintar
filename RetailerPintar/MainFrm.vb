@@ -1,4 +1,6 @@
 ﻿Public Class MainFrm
+
+    Public id_toko As String
     Protected Overrides ReadOnly Property CreateParams() As CreateParams
         Get
             Dim param As CreateParams = MyBase.CreateParams
@@ -18,6 +20,8 @@
             Dim isi As String = lines(itung)
 
             ToolStripStatusLabel1.Text = isi
+            id_toko = isi
+
         Catch ex As Exception
             MsgBox(ex.ToString)
         End Try

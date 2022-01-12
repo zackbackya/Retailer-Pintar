@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class PenjualanProdukFrm
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class PenjualanProdukFrm
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(PenjualanProdukFrm))
         Me.lblHeader = New System.Windows.Forms.Label()
@@ -36,9 +36,8 @@ Partial Class PenjualanProdukFrm
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.btItem = New System.Windows.Forms.Button()
-        Me.ckbItem = New System.Windows.Forms.CheckBox()
         Me.Label3 = New System.Windows.Forms.Label()
+        Me.txJumlahProduk = New System.Windows.Forms.TextBox()
         Me.pnlHeader.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
@@ -170,46 +169,28 @@ Partial Class PenjualanProdukFrm
         Me.Panel1.Size = New System.Drawing.Size(514, 35)
         Me.Panel1.TabIndex = 149
         '
-        'btItem
-        '
-        Me.btItem.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btItem.Enabled = False
-        Me.btItem.Location = New System.Drawing.Point(168, 77)
-        Me.btItem.Name = "btItem"
-        Me.btItem.Size = New System.Drawing.Size(75, 23)
-        Me.btItem.TabIndex = 159
-        Me.btItem.Text = "Pilih Item"
-        Me.btItem.UseVisualStyleBackColor = True
-        '
-        'ckbItem
-        '
-        Me.ckbItem.AutoSize = True
-        Me.ckbItem.Enabled = False
-        Me.ckbItem.Location = New System.Drawing.Point(76, 83)
-        Me.ckbItem.Name = "ckbItem"
-        Me.ckbItem.Size = New System.Drawing.Size(60, 17)
-        Me.ckbItem.TabIndex = 158
-        Me.ckbItem.Text = "All Item"
-        Me.ckbItem.UseVisualStyleBackColor = True
-        '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Enabled = False
-        Me.Label3.Location = New System.Drawing.Point(21, 82)
+        Me.Label3.Location = New System.Drawing.Point(21, 83)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(49, 13)
+        Me.Label3.Size = New System.Drawing.Size(77, 13)
         Me.Label3.TabIndex = 157
-        Me.Label3.Text = "Pilih Item"
+        Me.Label3.Text = "Jumlah Produk"
+        '
+        'txJumlahProduk
+        '
+        Me.txJumlahProduk.Location = New System.Drawing.Point(108, 80)
+        Me.txJumlahProduk.Name = "txJumlahProduk"
+        Me.txJumlahProduk.Size = New System.Drawing.Size(100, 20)
+        Me.txJumlahProduk.TabIndex = 158
         '
         'PenjualanProdukFrm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(519, 618)
-        Me.Controls.Add(Me.btItem)
-        Me.Controls.Add(Me.ckbItem)
+        Me.Controls.Add(Me.txJumlahProduk)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.pnlHeader)
         Me.Controls.Add(Me.Label4)
@@ -247,7 +228,6 @@ Partial Class PenjualanProdukFrm
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
     Private WithEvents Panel1 As Panel
-    Private WithEvents btItem As Button
-    Friend WithEvents ckbItem As CheckBox
     Friend WithEvents Label3 As Label
+    Friend WithEvents txJumlahProduk As TextBox
 End Class

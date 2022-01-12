@@ -11,7 +11,7 @@ Public Class PenjualanProdukFrm
 
         If cbLaporan.SelectedItem = "" Then
 
-            MessageBox.Show("Mophon Pilih Jenis Laporan Dahulu", "Reatiler Pintar", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            MessageBox.Show("Mohon Pilih Jenis Laporan Dahulu", "Reatiler Pintar", MessageBoxButtons.OK, MessageBoxIcon.Information)
 
         Else
 
@@ -31,51 +31,27 @@ Public Class PenjualanProdukFrm
 
             If cbLaporan.SelectedItem = "Penjualan Produk" Then
 
-
-
-                Label3.Enabled = True
-                ckbItem.Enabled = True
-                btItem.Enabled = True
-
-                Label3.Text = "Pilih Member"
-                ckbItem.Text = "All Member"
-                btItem.Text = "Pilih Member"
-
-                Dim member As String
-                member = String.Join(",", ListMembers)
-
-
-                If ckbItem.Checked = True Then
-
-                    str = "SELECT tanggal, nota, member, barcode, (Select nama_produk from ms_produk where barcode = a.barcode) nama_produk, qty, harga, diskon FROM `tx_penjualan_det` a where tanggal between '" & Format(dtTanggalAwal.Value, "yyyy-MM-dd") & "' and '" & Format(dtTanggalAkhir.Value, "yyyy-MM-dd") & "' and tipe = 'N'"
-
-                ElseIf ckbItem.Checked = False Then
-
-                    str = "SELECT tanggal, nota, member, barcode, (Select nama_produk from ms_produk where barcode = a.barcode) nama_produk, qty, harga, diskon FROM `tx_penjualan_det` a where tanggal between '" & Format(dtTanggalAwal.Value, "yyyy-MM-dd") & "' and '" & Format(dtTanggalAkhir.Value, "yyyy-MM-dd") & "' and tipe = 'N' and member in (" & member & ")"
-
-                End If
-
+                str = "SELECT tanggal, nota, member, barcode, (Select nama_produk from ms_produk where barcode = a.barcode) nama_produk, qty, harga, diskon FROM `tx_penjualan_det` a where tanggal between '" & Format(dtTanggalAwal.Value, "yyyy-MM-dd") & "' and '" & Format(dtTanggalAkhir.Value, "yyyy-MM-dd") & "' and tipe = 'N' and id_toko = '" & MainFrm.id_toko & "'"
 
             ElseIf cbLaporan.SelectedItem = "Penjualan Per Produk" Then
 
-                str = "SELECT id_produk, (select nama_produk from ms_produk where id_produk = a.id_produk) Nama_produk, sum(qty) Total_QTY, sum(harga) Total_Harga, sum(diskon) Total_Diskon  FROM `tx_penjualan_det` a where tanggal between '" & Format(dtTanggalAwal.Value, "yyyy-MM-dd") & "' and '" & Format(dtTanggalAkhir.Value, "yyyy-MM-dd") & "' and tipe = 'N' GROUP by id_produk, nama_produk"
+                str = "SELECT id_produk, (select nama_produk from ms_produk where id_produk = a.id_produk) Nama_produk, sum(qty) Total_QTY, sum(harga) Total_Harga, sum(diskon) Total_Diskon  FROM tx_penjualan_det a where tanggal between '" & Format(dtTanggalAwal.Value, "yyyy-MM-dd") & "' and '" & Format(dtTanggalAkhir.Value, "yyyy-MM-dd") & "' and tipe = 'N' and id_toko = '" & MainFrm.id_toko & "' GROUP by id_produk, nama_produk"
 
             ElseIf cbLaporan.SelectedItem = "Penjualan Per Golongan" Then
 
                 str = ""
+
             ElseIf cbLaporan.SelectedItem = "Penjualan Per Kasir" Then
 
-                str = "SELECT id_toko, kasir, sum(total_qty) total_qty, sum(total_harga) total_harga, sum(total_diskon) total_diskon FROM tx_penjualan_head where tanggal between '" & Format(dtTanggalAwal.Value, "yyyy-MM-dd") & "' and '" & Format(dtTanggalAkhir.Value, "yyyy-MM-dd") & "' group by id_toko, kasir"
+                str = "SELECT id_toko, kasir, sum(total_qty) total_qty, sum(total_harga) total_harga, sum(total_diskon) total_diskon FROM tx_penjualan_head where tanggal between '" & Format(dtTanggalAwal.Value, "yyyy-MM-dd") & "' and '" & Format(dtTanggalAkhir.Value, "yyyy-MM-dd") & "' and id_toko = '" & MainFrm.id_toko & "' group by id_toko, kasir"
 
             ElseIf cbLaporan.SelectedItem = "Penjualan Produk Favorit" Then
 
-                str = ""
-            ElseIf cbLaporan.SelectedItem = "Customer Produk" Then
+                str = "SELECT barcode, (SELECT nama_produk from ms_produk where barcode = a.barcode) nama_produk, sum(qty) QTY FROM tx_penjualan_det a where tanggal between '" & Format(dtTanggalAwal.Value, "yyyy-MM-dd") & "' and '" & Format(dtTanggalAkhir.Value, "yyyy-MM-dd") & "' and id_toko = '" & MainFrm.id_toko & "' group by barcode order by qty DESC limit " & txJumlahProduk.Text & ""
 
-                str = ""
             ElseIf cbLaporan.SelectedItem = "Retur Penjualan Produk" Then
 
-                str = "select * from tx_penjualan_head where tipe = 'X' and tanggal between '" & Format(dtTanggalAwal.Value, "yyyy-MM-dd") & "' and '" & Format(dtTanggalAkhir.Value, "yyyy-MM-dd") & "' "
+                str = "select * from tx_penjualan_head where tipe = 'X' and tanggal between '" & Format(dtTanggalAwal.Value, "yyyy-MM-dd") & "' and '" & Format(dtTanggalAkhir.Value, "yyyy-MM-dd") & "' and id_toko = '" & MainFrm.id_toko & "' "
 
             ElseIf cbLaporan.SelectedItem = "Laba/ Rugi Penjualan" Then
 
@@ -180,6 +156,32 @@ Public Class PenjualanProdukFrm
 
     Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbLaporan.SelectedIndexChanged
 
+        If cbLaporan.SelectedItem = "Penjualan Produk" Then
+
+        ElseIf cbLaporan.SelectedItem = "Penjualan Per Produk" Then
+
+
+        ElseIf cbLaporan.SelectedItem = "Penjualan Per Golongan" Then
+
+
+
+        ElseIf cbLaporan.SelectedItem = "Penjualan Per Kasir" Then
+
+
+        ElseIf cbLaporan.SelectedItem = "Penjualan Produk Favorit" Then
+
+            Label3.Visible = True
+            txJumlahProduk.Visible = True
+
+        ElseIf cbLaporan.SelectedItem = "Retur Penjualan Produk" Then
+
+
+        ElseIf cbLaporan.SelectedItem = "Laba/ Rugi Penjualan" Then
+
+
+        End If
+
+
     End Sub
 
     Private Sub PenjualanProdukFrm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -189,13 +191,15 @@ Public Class PenjualanProdukFrm
         cbLaporan.Items.Add("Penjualan Per Golongan")
         cbLaporan.Items.Add("Penjualan Per Kasir")
         cbLaporan.Items.Add("Penjualan Produk Favorit")
-        cbLaporan.Items.Add("Customer Produk")
         cbLaporan.Items.Add("Retur Penjualan Produk")
         cbLaporan.Items.Add("Laba/ Rugi Penjualan")
 
+        Label3.Visible = False
+        txJumlahProduk.Visible = False
+
     End Sub
 
-    Private Sub btItem_Click(sender As Object, e As EventArgs) Handles btItem.Click
+    Private Sub btItem_Click(sender As Object, e As EventArgs)
 
 
         If cbLaporan.SelectedItem = "Penjualan Produk" Then
@@ -224,10 +228,6 @@ Public Class PenjualanProdukFrm
 
 
         End If
-
-
-
-
 
         AmbilItemLaporan.Show()
 
