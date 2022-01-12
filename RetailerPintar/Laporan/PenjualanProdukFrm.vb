@@ -31,27 +31,31 @@ Public Class PenjualanProdukFrm
 
             If cbLaporan.SelectedItem = "Penjualan Produk" Then
 
-                str = "SELECT tanggal, nota, member, barcode, (Select nama_produk from ms_produk where barcode = a.barcode) nama_produk, qty, harga, diskon FROM `tx_penjualan_det` a where tanggal between '" & Format(dtTanggalAwal.Value, "yyyy-MM-dd") & "' and '" & Format(dtTanggalAkhir.Value, "yyyy-MM-dd") & "' and tipe = 'N' and id_toko = '" & MainFrm.id_toko & "'"
+                str = "SELECT tanggal, nota, member, barcode, (Select nama_produk from ms_produk where barcode = a.barcode) nama_produk, qty, harga, diskon FROM tx_penjualan_det a where tanggal between '" & Format(dtTanggalAwal.Value, "yyyy-MM-dd") & "' and '" & Format(dtTanggalAkhir.Value, "yyyy-MM-dd") & "' and tipe = 'N' and id_toko = '" & MainFrm.id_toko & "' "
 
             ElseIf cbLaporan.SelectedItem = "Penjualan Per Produk" Then
 
-                str = "SELECT id_produk, (select nama_produk from ms_produk where id_produk = a.id_produk) Nama_produk, sum(qty) Total_QTY, sum(harga) Total_Harga, sum(diskon) Total_Diskon  FROM tx_penjualan_det a where tanggal between '" & Format(dtTanggalAwal.Value, "yyyy-MM-dd") & "' and '" & Format(dtTanggalAkhir.Value, "yyyy-MM-dd") & "' and tipe = 'N' and id_toko = '" & MainFrm.id_toko & "' GROUP by id_produk, nama_produk"
+                str = "SELECT barcode, (select nama_produk from ms_produk where barcode = a.barcode) Nama_produk, sum(qty) Total_QTY, sum(harga) Total_Harga, sum(diskon) Total_Diskon  FROM tx_penjualan_det a where tanggal between '" & Format(dtTanggalAwal.Value, "yyyy-MM-dd") & "' and '" & Format(dtTanggalAkhir.Value, "yyyy-MM-dd") & "' and tipe = 'N' and id_toko = '" & MainFrm.id_toko & "' GROUP by barcode, nama_produk"
 
             ElseIf cbLaporan.SelectedItem = "Penjualan Per Golongan" Then
 
-                str = ""
+                str = "select nama_golongan, sum(qty) QTY, sum(harga) Harga from 
+                        (SELECT tanggal,id_toko,tipe, barcode,(select id_golongan from ms_produk where barcode = a.barcode) id_golongan , sum(qty) QTY, sum(harga) Harga FROM tx_penjualan_det a group by tanggal, barcode,id_toko,tipe) jual,
+                        (select * from ms_golongan)golongan
+                        where jual.id_golongan = golongan.id_golongan
+                        and jual.tanggal between '" & Format(dtTanggalAwal.Value, "yyyy-MM-dd") & "' and '" & Format(dtTanggalAkhir.Value, "yyyy-MM-dd") & "' and jual.tipe = 'N' and jual.id_toko = '" & MainFrm.id_toko & "';"
 
             ElseIf cbLaporan.SelectedItem = "Penjualan Per Kasir" Then
 
-                str = "SELECT id_toko, kasir, sum(total_qty) total_qty, sum(total_harga) total_harga, sum(total_diskon) total_diskon FROM tx_penjualan_head where tanggal between '" & Format(dtTanggalAwal.Value, "yyyy-MM-dd") & "' and '" & Format(dtTanggalAkhir.Value, "yyyy-MM-dd") & "' and id_toko = '" & MainFrm.id_toko & "' group by id_toko, kasir"
+                str = "select kasir, barcode, (Select nama_produk from ms_produk where barcode = a.barcode) nama_produk, sum(qty) qty, sum(harga) Harga, sum(diskon) diskon FROM tx_penjualan_det a where tanggal between '" & Format(dtTanggalAwal.Value, "yyyy-MM-dd") & "' and '" & Format(dtTanggalAkhir.Value, "yyyy-MM-dd") & "' and id_toko = '" & MainFrm.id_toko & "' and tipe = 'N' group by kasir order by harga desc"
 
             ElseIf cbLaporan.SelectedItem = "Penjualan Produk Favorit" Then
 
-                str = "SELECT barcode, (SELECT nama_produk from ms_produk where barcode = a.barcode) nama_produk, sum(qty) QTY FROM tx_penjualan_det a where tanggal between '" & Format(dtTanggalAwal.Value, "yyyy-MM-dd") & "' and '" & Format(dtTanggalAkhir.Value, "yyyy-MM-dd") & "' and id_toko = '" & MainFrm.id_toko & "' group by barcode order by qty DESC limit " & txJumlahProduk.Text & ""
+                str = "SELECT barcode, (SELECT nama_produk from ms_produk where barcode = a.barcode) nama_produk, sum(qty) QTY FROM tx_penjualan_det a where tanggal between '" & Format(dtTanggalAwal.Value, "yyyy-MM-dd") & "' and '" & Format(dtTanggalAkhir.Value, "yyyy-MM-dd") & "' and id_toko = '" & MainFrm.id_toko & "' and tipe = 'N' group by barcode order by qty DESC limit " & txJumlahProduk.Text & ""
 
             ElseIf cbLaporan.SelectedItem = "Retur Penjualan Produk" Then
 
-                str = "select * from tx_penjualan_head where tipe = 'X' and tanggal between '" & Format(dtTanggalAwal.Value, "yyyy-MM-dd") & "' and '" & Format(dtTanggalAkhir.Value, "yyyy-MM-dd") & "' and id_toko = '" & MainFrm.id_toko & "' "
+                str = "select * from tx_penjualan_det where tipe = 'X' and tanggal between '" & Format(dtTanggalAwal.Value, "yyyy-MM-dd") & "' and '" & Format(dtTanggalAkhir.Value, "yyyy-MM-dd") & "' and id_toko = '" & MainFrm.id_toko & "' "
 
             ElseIf cbLaporan.SelectedItem = "Laba/ Rugi Penjualan" Then
 
@@ -158,15 +162,24 @@ Public Class PenjualanProdukFrm
 
         If cbLaporan.SelectedItem = "Penjualan Produk" Then
 
+            Label3.Visible = False
+            txJumlahProduk.Visible = False
+
         ElseIf cbLaporan.SelectedItem = "Penjualan Per Produk" Then
 
+            Label3.Visible = False
+            txJumlahProduk.Visible = False
 
         ElseIf cbLaporan.SelectedItem = "Penjualan Per Golongan" Then
 
+            Label3.Visible = False
+            txJumlahProduk.Visible = False
 
 
         ElseIf cbLaporan.SelectedItem = "Penjualan Per Kasir" Then
 
+            Label3.Visible = False
+            txJumlahProduk.Visible = False
 
         ElseIf cbLaporan.SelectedItem = "Penjualan Produk Favorit" Then
 
@@ -175,9 +188,13 @@ Public Class PenjualanProdukFrm
 
         ElseIf cbLaporan.SelectedItem = "Retur Penjualan Produk" Then
 
+            Label3.Visible = False
+            txJumlahProduk.Visible = False
 
         ElseIf cbLaporan.SelectedItem = "Laba/ Rugi Penjualan" Then
 
+            Label3.Visible = False
+            txJumlahProduk.Visible = False
 
         End If
 

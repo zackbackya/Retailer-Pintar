@@ -73,17 +73,6 @@ Public Class AmbilItemLaporan
                     KartuStokFrm.ListItems.Add(ckItem.Items(i)("id_produk").ToString)
                 End If
             Next
-
-        ElseIf flag_form = "Penjualan Produk" Then
-
-            KartuStokFrm.ListItems.Clear()
-
-            For i = 0 To (ckItem.Items.Count - 1)
-                If ckItem.GetItemChecked(i) = True Then
-                    PenjualanProdukFrm.ListMembers.Add(ckItem.Items(i)("member").ToString)
-                End If
-            Next
-
         End If
 
         Me.Dispose()
