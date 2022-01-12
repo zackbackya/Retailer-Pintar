@@ -6,6 +6,7 @@ Imports ClosedXML.Excel
 
 Public Class PenjualanProdukFrm
     Dim Proses As New Process
+    Public ListMembers = New List(Of String)
     Private Sub btTampil_Click(sender As Object, e As EventArgs) Handles btTampil.Click
 
         If cbLaporan.SelectedItem = "" Then
@@ -30,7 +31,30 @@ Public Class PenjualanProdukFrm
 
             If cbLaporan.SelectedItem = "Penjualan Produk" Then
 
-                str = ""
+
+
+                Label3.Enabled = True
+                ckbItem.Enabled = True
+                btItem.Enabled = True
+
+                Label3.Text = "Pilih Member"
+                ckbItem.Text = "All Member"
+                btItem.Text = "Pilih Member"
+
+                Dim member As String
+                member = String.Join(",", ListMembers)
+
+
+                If ckbItem.Checked = True Then
+
+                    str = "SELECT tanggal, nota, member, barcode, (Select nama_produk from ms_produk where barcode = a.barcode) nama_produk, qty, harga, diskon FROM `tx_penjualan_det` a where tanggal between '" & Format(dtTanggalAwal.Value, "yyyy-MM-dd") & "' and '" & Format(dtTanggalAkhir.Value, "yyyy-MM-dd") & "' and tipe = 'N'"
+
+                ElseIf ckbItem.Checked = False Then
+
+                    str = "SELECT tanggal, nota, member, barcode, (Select nama_produk from ms_produk where barcode = a.barcode) nama_produk, qty, harga, diskon FROM `tx_penjualan_det` a where tanggal between '" & Format(dtTanggalAwal.Value, "yyyy-MM-dd") & "' and '" & Format(dtTanggalAkhir.Value, "yyyy-MM-dd") & "' and tipe = 'N' and member in (" & member & ")"
+
+                End If
+
 
             ElseIf cbLaporan.SelectedItem = "Penjualan Per Produk" Then
 
@@ -159,6 +183,53 @@ Public Class PenjualanProdukFrm
     End Sub
 
     Private Sub PenjualanProdukFrm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+        cbLaporan.Items.Add("Penjualan Produk")
+        cbLaporan.Items.Add("Penjualan Per Produk")
+        cbLaporan.Items.Add("Penjualan Per Golongan")
+        cbLaporan.Items.Add("Penjualan Per Kasir")
+        cbLaporan.Items.Add("Penjualan Produk Favorit")
+        cbLaporan.Items.Add("Customer Produk")
+        cbLaporan.Items.Add("Retur Penjualan Produk")
+        cbLaporan.Items.Add("Laba/ Rugi Penjualan")
+
+    End Sub
+
+    Private Sub btItem_Click(sender As Object, e As EventArgs) Handles btItem.Click
+
+
+        If cbLaporan.SelectedItem = "Penjualan Produk" Then
+
+            AmbilItemLaporan.flag_form = "Penjualan Produk"
+
+        ElseIf cbLaporan.SelectedItem = "Penjualan Per Produk" Then
+
+
+        ElseIf cbLaporan.SelectedItem = "Penjualan Per Golongan" Then
+
+
+        ElseIf cbLaporan.SelectedItem = "Penjualan Per Kasir" Then
+
+
+        ElseIf cbLaporan.SelectedItem = "Penjualan Produk Favorit" Then
+
+
+        ElseIf cbLaporan.SelectedItem = "Customer Produk" Then
+
+
+        ElseIf cbLaporan.SelectedItem = "Retur Penjualan Produk" Then
+
+
+        ElseIf cbLaporan.SelectedItem = "Laba/ Rugi Penjualan" Then
+
+
+        End If
+
+
+
+
+
+        AmbilItemLaporan.Show()
 
     End Sub
 End Class

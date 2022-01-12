@@ -31,7 +31,7 @@
             HomeFrm.Focus()
             toko()
             sbOperator.Text = LoginFrm.txtUsername.Text
-            Timer1.Start()
+            'Timer1.Start()
 
         Catch ex As Exception
 

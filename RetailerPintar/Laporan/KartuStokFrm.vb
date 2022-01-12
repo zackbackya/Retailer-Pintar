@@ -6,7 +6,7 @@ Imports ClosedXML.Excel
 
 Public Class KartuStokFrm
     Dim Proses As New Process
-
+    Public ListItems As New List(Of String)
     Private Sub btTampil_Click(sender As Object, e As EventArgs) Handles btTampil.Click
 
         Call tampilData()
@@ -18,9 +18,17 @@ Public Class KartuStokFrm
         Try
             Call koneksi()
 
+            If ckbItem.Checked = True Then
+                str = "select * from tx_Stok where tanggal between '" & Format(dtTanggalAwal.Value, "yyyy-MM-dd") & "' and '" & Format(dtTanggalAkhir.Value, "yyyy-MM-dd") & "'"
+            ElseIf ckbItem.Checked = False Then
+
+                Dim idprod As String
+                idprod = String.Join(",", ListItems)
+
+                str = "select * from tx_Stok where id_produk in (" & idprod & ") and tanggal between '" & Format(dtTanggalAwal.Value, "yyyy-MM-dd") & "' and '" & Format(dtTanggalAkhir.Value, "yyyy-MM-dd") & "'"
+            End If
 
 
-            str = "select * from tx_Stok"
             da = New MySqlDataAdapter(str, conn)
             ds = New DataSet
             da.Fill(ds)
@@ -88,7 +96,7 @@ Public Class KartuStokFrm
 
 
     Private Sub KartuStokFrm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        ckbItem.Checked = True
     End Sub
 
     Private Sub CheckBox1_CheckedChanged(sender As Object, e As EventArgs) Handles ckbItem.CheckedChanged

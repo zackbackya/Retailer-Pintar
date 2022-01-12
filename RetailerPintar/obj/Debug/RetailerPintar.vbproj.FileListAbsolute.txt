@@ -274,7 +274,6 @@ D:\zacky\project\Retailer-Pintar\RetailerPintar\bin\Debug\ClosedXML.pdb
 D:\zacky\project\Retailer-Pintar\RetailerPintar\bin\Debug\ClosedXML.xml
 D:\zacky\project\Retailer-Pintar\RetailerPintar\bin\Debug\DocumentFormat.OpenXml.xml
 D:\zacky\project\Retailer-Pintar\RetailerPintar\bin\Debug\ExcelNumberFormat.xml
-D:\zacky\project\Retailer-Pintar\RetailerPintar\obj\Debug\Interop.Office.dll
 D:\zacky\project\Retailer-Pintar\RetailerPintar\obj\Debug\RetailerPintar.vbproj.ResolveComReference.cache
 D:\Programming\VB.net\Project\Retailer-Pintar\RetailerPintar\bin\Debug\ClosedXML.dll
 D:\Programming\VB.net\Project\Retailer-Pintar\RetailerPintar\bin\Debug\DocumentFormat.OpenXml.dll
@@ -392,3 +391,13 @@ D:\Programming\VB.net\Project\Retailer-Pintar-old\RetailerPintar\bin\Debug\Syste
 D:\Programming\VB.net\Project\Retailer-Pintar-old\RetailerPintar\bin\Debug\System.Threading.Tasks.Extensions.xml
 D:\Programming\VB.net\Project\Retailer-Pintar-old\RetailerPintar\obj\Debug\RetailerPintar.vbproj.CopyComplete
 D:\Programming\VB.net\Project\Retailer-Pintar-old\RetailerPintar\obj\Debug\RetailerPintar.AmbilItemLaporan.resources
+D:\zacky\project\Retailer-Pintar\RetailerPintar\obj\Debug\RetailerPintar.vbproj.SuggestedBindingRedirects.cache
+D:\zacky\project\Retailer-Pintar\RetailerPintar\obj\Debug\RetailerPintar.AmbilItemLaporan.resources
+D:\zacky\project\Retailer-Pintar\RetailerPintar\obj\Debug\RetailerPintar.BantuanFrm.resources
+D:\zacky\project\Retailer-Pintar\RetailerPintar\obj\Debug\RetailerPintar.KartuStokFrm.resources
+D:\zacky\project\Retailer-Pintar\RetailerPintar\obj\Debug\RetailerPintar.KeluarBiayaFrm.resources
+D:\zacky\project\Retailer-Pintar\RetailerPintar\obj\Debug\RetailerPintar.MasukKeluarFrm.resources
+D:\zacky\project\Retailer-Pintar\RetailerPintar\obj\Debug\RetailerPintar.PenjualanProdukFrm.resources
+D:\zacky\project\Retailer-Pintar\RetailerPintar\obj\Debug\RetailerPintar.SesuaianStokFrm.resources
+D:\zacky\project\Retailer-Pintar\RetailerPintar\obj\Debug\RetailerPintar.StokProdukFrm.resources
+D:\zacky\project\Retailer-Pintar\RetailerPintar\obj\Debug\RetailerPintar.UploadProdukFrm.resources

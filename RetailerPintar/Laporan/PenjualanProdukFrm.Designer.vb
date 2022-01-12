@@ -36,6 +36,9 @@ Partial Class PenjualanProdukFrm
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.btItem = New System.Windows.Forms.Button()
+        Me.ckbItem = New System.Windows.Forms.CheckBox()
+        Me.Label3 = New System.Windows.Forms.Label()
         Me.pnlHeader.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
@@ -106,16 +109,16 @@ Partial Class PenjualanProdukFrm
         'DataGridView1
         '
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(3, 109)
+        Me.DataGridView1.Location = New System.Drawing.Point(3, 140)
         Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(514, 471)
+        Me.DataGridView1.Size = New System.Drawing.Size(514, 440)
         Me.DataGridView1.TabIndex = 154
         '
         'btTampil
         '
         Me.btTampil.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btTampil.Location = New System.Drawing.Point(432, 80)
+        Me.btTampil.Location = New System.Drawing.Point(432, 106)
         Me.btTampil.Name = "btTampil"
         Me.btTampil.Size = New System.Drawing.Size(75, 23)
         Me.btTampil.TabIndex = 148
@@ -124,14 +127,14 @@ Partial Class PenjualanProdukFrm
         '
         'dtTanggalAkhir
         '
-        Me.dtTanggalAkhir.Location = New System.Drawing.Point(275, 80)
+        Me.dtTanggalAkhir.Location = New System.Drawing.Point(275, 106)
         Me.dtTanggalAkhir.Name = "dtTanggalAkhir"
         Me.dtTanggalAkhir.Size = New System.Drawing.Size(138, 20)
         Me.dtTanggalAkhir.TabIndex = 153
         '
         'dtTanggalAwal
         '
-        Me.dtTanggalAwal.Location = New System.Drawing.Point(73, 80)
+        Me.dtTanggalAwal.Location = New System.Drawing.Point(73, 106)
         Me.dtTanggalAwal.Name = "dtTanggalAwal"
         Me.dtTanggalAwal.Size = New System.Drawing.Size(138, 20)
         Me.dtTanggalAwal.TabIndex = 152
@@ -139,7 +142,7 @@ Partial Class PenjualanProdukFrm
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(233, 86)
+        Me.Label2.Location = New System.Drawing.Point(233, 112)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(21, 13)
         Me.Label2.TabIndex = 151
@@ -148,7 +151,7 @@ Partial Class PenjualanProdukFrm
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(21, 86)
+        Me.Label1.Location = New System.Drawing.Point(21, 112)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(46, 13)
         Me.Label1.TabIndex = 150
@@ -167,11 +170,47 @@ Partial Class PenjualanProdukFrm
         Me.Panel1.Size = New System.Drawing.Size(514, 35)
         Me.Panel1.TabIndex = 149
         '
+        'btItem
+        '
+        Me.btItem.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btItem.Enabled = False
+        Me.btItem.Location = New System.Drawing.Point(168, 77)
+        Me.btItem.Name = "btItem"
+        Me.btItem.Size = New System.Drawing.Size(75, 23)
+        Me.btItem.TabIndex = 159
+        Me.btItem.Text = "Pilih Item"
+        Me.btItem.UseVisualStyleBackColor = True
+        '
+        'ckbItem
+        '
+        Me.ckbItem.AutoSize = True
+        Me.ckbItem.Enabled = False
+        Me.ckbItem.Location = New System.Drawing.Point(76, 83)
+        Me.ckbItem.Name = "ckbItem"
+        Me.ckbItem.Size = New System.Drawing.Size(60, 17)
+        Me.ckbItem.TabIndex = 158
+        Me.ckbItem.Text = "All Item"
+        Me.ckbItem.UseVisualStyleBackColor = True
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Enabled = False
+        Me.Label3.Location = New System.Drawing.Point(21, 82)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(49, 13)
+        Me.Label3.TabIndex = 157
+        Me.Label3.Text = "Pilih Item"
+        '
         'PenjualanProdukFrm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(519, 618)
+        Me.Controls.Add(Me.btItem)
+        Me.Controls.Add(Me.ckbItem)
+        Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.pnlHeader)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.cbLaporan)
@@ -208,4 +247,7 @@ Partial Class PenjualanProdukFrm
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
     Private WithEvents Panel1 As Panel
+    Private WithEvents btItem As Button
+    Friend WithEvents ckbItem As CheckBox
+    Friend WithEvents Label3 As Label
 End Class

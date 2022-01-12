@@ -6,6 +6,7 @@ Imports ClosedXML.Excel
 
 Public Class StokProdukFrm
     Dim Proses As New Process
+    Public ListItems As New List(Of String)
     Private Sub btTampil_Click(sender As Object, e As EventArgs) Handles btTampil.Click
 
         Call tampilData()
@@ -17,9 +18,17 @@ Public Class StokProdukFrm
         Try
             Call koneksi()
 
+            If ckbItem.Checked = True Then
+                str = "select * from tx_Stok where tanggal between '" & Format(dtTanggalAwal.Value, "yyyy-MM-dd") & "' and '" & Format(dtTanggalAkhir.Value, "yyyy-MM-dd") & "'"
+            ElseIf ckbItem.Checked = False Then
+
+                Dim idprod As String
+                idprod = String.Join(",", ListItems)
+
+                str = "select * from tx_Stok where id_produk in (" & idprod & ") and tanggal between '" & Format(dtTanggalAwal.Value, "yyyy-MM-dd") & "' and '" & Format(dtTanggalAkhir.Value, "yyyy-MM-dd") & "'"
+            End If
 
 
-            str = "select * from tx_stok"
             da = New MySqlDataAdapter(str, conn)
             ds = New DataSet
             da.Fill(ds)
@@ -43,7 +52,7 @@ Public Class StokProdukFrm
 
 
 
-        fileName = "Laporan Data Stok Produk" + DateTime.Now.ToString("yyyy-MM-dd HH-mm-ss") + ".xlsx"
+        fileName = "Laporan Data Stok Produk " + DateTime.Now.ToString("yyyy-MM-dd HH-mm-ss") + ".xlsx"
 
         Using sfd As SaveFileDialog = New SaveFileDialog() With {.Filter = "Excel Workbook|*.xlsx"}
             sfd.FileName = fileName
@@ -75,7 +84,7 @@ Public Class StokProdukFrm
         Me.Dispose()
     End Sub
 
-    Private Sub StokProdukFrm_KeyDown(sender As Object, e As KeyEventArgs) Handles Me.KeyDown
+    Private Sub KartuStokFrm_KeyDown(sender As Object, e As KeyEventArgs) Handles Me.KeyDown
         If e.KeyCode = Keys.Escape Then
             Me.Dispose()
         ElseIf e.KeyCode = Keys.F9 Then
@@ -86,7 +95,21 @@ Public Class StokProdukFrm
     End Sub
 
 
-    Private Sub StokProdukFrm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Private Sub KartuStokFrm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        ckbItem.Checked = True
+    End Sub
+
+    Private Sub CheckBox1_CheckedChanged(sender As Object, e As EventArgs) Handles ckbItem.CheckedChanged
+        If ckbItem.Checked = True Then
+            btItem.Enabled = False
+        ElseIf ckbItem.Checked = False Then
+            btItem.Enabled = True
+        End If
+    End Sub
+
+    Private Sub btItem_Click(sender As Object, e As EventArgs) Handles btItem.Click
+        AmbilItemLaporan.flag_form = "Produk"
+        AmbilItemLaporan.Show()
 
     End Sub
 End Class
